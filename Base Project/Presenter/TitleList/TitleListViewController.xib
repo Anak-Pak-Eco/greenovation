@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TitleListViewController" customModule="Base_Project" customModuleProvider="target">
+            <connections>
+                <outlet property="titleLoading" destination="lyt-dk-jnF" id="faZ-ny-A3n"/>
+                <outlet property="titleTableView" destination="Glf-Sx-wyP" id="0iY-R3-AXP"/>
+                <outlet property="view" destination="9kj-4U-Ndm" id="yf1-K7-PJc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9kj-4U-Ndm">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Glf-Sx-wyP">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="lyt-dk-jnF">
+                    <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="yE1-3R-Dq9"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="yE1-3R-Dq9" firstAttribute="bottom" secondItem="Glf-Sx-wyP" secondAttribute="bottom" id="2SF-AM-K3O"/>
+                <constraint firstItem="lyt-dk-jnF" firstAttribute="centerY" secondItem="9kj-4U-Ndm" secondAttribute="centerY" id="G2M-87-hUQ"/>
+                <constraint firstItem="yE1-3R-Dq9" firstAttribute="trailing" secondItem="Glf-Sx-wyP" secondAttribute="trailing" id="N1M-Tu-FJ8"/>
+                <constraint firstItem="Glf-Sx-wyP" firstAttribute="leading" secondItem="yE1-3R-Dq9" secondAttribute="leading" id="QMl-Re-SJm"/>
+                <constraint firstItem="lyt-dk-jnF" firstAttribute="centerX" secondItem="9kj-4U-Ndm" secondAttribute="centerX" id="WBx-D9-W4l"/>
+                <constraint firstItem="Glf-Sx-wyP" firstAttribute="top" secondItem="yE1-3R-Dq9" secondAttribute="top" id="jV1-lS-SZ7"/>
+            </constraints>
+            <point key="canvasLocation" x="117" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
