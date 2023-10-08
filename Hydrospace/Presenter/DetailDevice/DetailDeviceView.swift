@@ -28,91 +28,132 @@ struct NutritionHistoryModel: Identifiable {
 struct DetailDeviceView: View {
     
     @Environment(\.dismiss) var dismiss
+    @ObservedObject private var viewModel = DetailDeviceViewModel()
     
     var body: some View {
         ScrollView {
-            LazyVStack(alignment: .leading, spacing: 0) {
-                Text("Terakhir diperbarui: 12.00")
-                    .font(.subheadline)
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(.circular)
+            } else if let deviceStatus = viewModel.deviceStatus {
+                LazyVStack(alignment: .leading, spacing: 0) {
+                    Text("Terakhir diperbarui: 12.00")
+                        .font(.subheadline)
+                        .padding(.horizontal)
+                    
+                    HStack {
+                        HStack(alignment: .bottom) {
+                            Image("ImageSeedlingBig")
+                            Text(viewModel.deviceStatus?.currentSteps ?? "")
+                                .font(.body)
+                                .fontWeight(.semibold)
+                                .padding(.bottom)
+                        }
+                        .padding(.top, 60)
+                        
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("\(String(format: "%.2f", viewModel.deviceStatus?.currentPpm ?? 0))")
+                                .foregroundStyle(ColorConstants.primaryAccentColor)
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            
+                            Text("ppm")
+                            
+                            Text("\(String(format: "%.2f", viewModel.deviceStatus?.currentPh ?? 0))")
+                                .foregroundStyle(ColorConstants.primaryAccentColor)
+                                .font(.title)
+                                .fontWeight(.semibold)
+                                .padding(.top, 14)
+                            
+                            Text("ph")
+                        }
+                        .padding(.leading, 60)
+                    }
                     .padding(.horizontal)
-                
-                HStack {
-                    HStack(alignment: .bottom) {
-                        Image("ImageSeedlingBig")
-                        Text("Anakan")
+                    .padding(.top)
+                    
+                    Rectangle()
+                        .foregroundStyle(ColorConstants.backgroundColor)
+                        .frame(height: 16)
+                    
+                    if deviceStatus.currentPpm < 4 {
+                        alertItem(
+                            title: "⚠️ Nilai PPM rendah",
+                            message: "Tambahkan larutan nutrisi B sebanyak 100ml untuk menjaga keseimbangan nutrisi.",
+                            onButtonClicked: {
+                                print("Clicked Button")
+                            }
+                        )
+                    } else if deviceStatus.currentPpm > 10 {
+                        alertItem(
+                            title: "⚠️ Nilai PPM terlalu tinggi",
+                            message: "Kurangi larutan nutrisi.",
+                            onButtonClicked: {
+                                print("Clicked Button")
+                            }
+                        )
+                    }
+                    
+                    if deviceStatus.currentPh < 4 {
+                        alertItem(
+                            title: "⚠️ Nilai PH rendah",
+                            message: "Tambahkan air",
+                            onButtonClicked: {
+                                print("Clicked Button")
+                            }
+                        )
+                    } else if deviceStatus.currentPh > 10 {
+                        alertItem(
+                            title: "⚠️ Nilai PH terlalu tinggi",
+                            message: "Kurangi air.",
+                            onButtonClicked: {
+                                print("Clicked Button")
+                            }
+                        )
+                    }
+                    
+                    if (deviceStatus.currentPh < 4 || deviceStatus.currentPh > 10) || (deviceStatus.currentPpm < 4 || deviceStatus.currentPpm > 10) {
+                        Rectangle()
+                            .foregroundStyle(ColorConstants.backgroundColor)
+                            .frame(height: 16)
+                            .padding(.top)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Hari Ini")
                             .font(.body)
                             .fontWeight(.semibold)
-                            .padding(.bottom)
-                    }
-                    .padding(.trailing, 80)
-                    .padding(.top, 60)
-                    
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("880")
-                            .foregroundStyle(ColorConstants.primaryAccentColor)
-                            .font(.title)
-                            .fontWeight(.semibold)
                         
-                        Text("ppm")
-                        
-                        Text("6")
-                            .foregroundStyle(ColorConstants.primaryAccentColor)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .padding(.top, 14)
-                        
-                        Text("ph")
-                    }
-                }
-                .padding(.horizontal)
-                .padding(.top)
-                
-                Rectangle()
-                    .foregroundStyle(ColorConstants.backgroundColor)
-                    .frame(height: 16)
-                
-                alertItem
-                alertItem
-                
-                Rectangle()
-                    .foregroundStyle(ColorConstants.backgroundColor)
-                    .frame(height: 16)
-                    .padding(.top)
-                
-                VStack(alignment: .leading) {
-                    Text("Hari Ini")
-                        .font(.body)
-                        .fontWeight(.semibold)
-                    
-                    VStack(alignment: .leading, spacing: 14) {
-                        HStack(spacing: 0) {
-                            Text("Kepekatan Nutrisi ")
-                            Text("(ppm)")
-                                .foregroundStyle(ColorConstants.onSurfaceLowColor)
+                        VStack(alignment: .leading, spacing: 14) {
+                            HStack(spacing: 0) {
+                                Text("Kepekatan Nutrisi ")
+                                Text("(ppm)")
+                                    .foregroundStyle(ColorConstants.onSurfaceLowColor)
+                            }
+                            .font(.callout)
+                            
+                            Chart(NutritionHistoryModel.nutritionHistoriesDummy) {
+                                LineMark(
+                                    x: .value("Jam", $0.hour),
+                                    y: .value("Kepekatan (PPM)", $0.ppm)
+                                )
+                                .foregroundStyle(ColorConstants.primaryAccentColor)
+                            }
                         }
-                        .font(.callout)
-                        
-                        Chart(NutritionHistoryModel.nutritionHistoriesDummy) {
-                            LineMark(
-                                x: .value("Jam", $0.hour),
-                                y: .value("Kepekatan (PPM)", $0.ppm)
-                            )
-                            .foregroundStyle(ColorConstants.primaryAccentColor)
-                        }
+                        .padding()
+                        .background(ColorConstants.surfaceContainerHighColor)
+                        .clipShape(.rect(cornerRadius: 8))
                     }
                     .padding()
-                    .background(ColorConstants.surfaceContainerHighColor)
-                    .clipShape(.rect(cornerRadius: 8))
+                    
+                    Rectangle()
+                        .foregroundStyle(ColorConstants.backgroundColor)
+                        .frame(height: 16)
+                        .padding(.top)
                 }
-                .padding()
-                
-                Rectangle()
-                    .foregroundStyle(ColorConstants.backgroundColor)
-                    .frame(height: 16)
-                    .padding(.top)
             }
         }
-        .navigationTitle("Perangkat 1")
+        .navigationTitle(viewModel.deviceStatus?.name ?? "")
         .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden()
         .toolbar {
@@ -132,21 +173,24 @@ struct DetailDeviceView: View {
                     .fontWeight(.semibold)
             }
         }
+        .onAppear {
+            viewModel.initData()
+        }
     }
     
-    var alertItem: some View {
+    func alertItem(title: LocalizedStringKey, message: LocalizedStringKey, onButtonClicked: @escaping () -> Void) -> some View {
         HStack {
             VStack {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("􀇿 Nilai PPM rendah")
+                    Text(title)
                         .font(.caption)
                         .fontWeight(.semibold)
                     
-                    Text("Tambahkan larutan nutrisi B sebanyak 100ml untuk menjaga keseimbangan nutrisi")
+                    Text(message)
                         .font(.caption)
                     
                     Button {
-                        
+                        onButtonClicked()
                     } label: {
                         Text("Sudah Perbaiki Larutan")
                             .frame(maxWidth: .infinity)

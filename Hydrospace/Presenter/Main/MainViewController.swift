@@ -53,7 +53,11 @@ class MainViewController: UITabBarController, NavigatorDelegate {
             tag: 2
         )
         
-        viewControllers = [deviceViewController, notificationViewController, formulaSettingViewController]
+        viewControllers = [
+            deviceViewController,
+            notificationViewController,
+            formulaSettingViewController
+        ]
     }
     
     func navigateToDetailPage() {

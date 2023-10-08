@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.andriawan.base-project</string>
+	<string>com.pak-eco.hydrospace</string>
 	<key>PROJECT_ID</key>
 	<string>pak-eco</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,7 +25,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:680026761797:ios:e313099df89658541b112c</string>
+	<string>1:680026761797:ios:d0768fb1aa7db4f51b112c</string>
 	<key>DATABASE_URL</key>
 	<string>https://pak-eco-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
