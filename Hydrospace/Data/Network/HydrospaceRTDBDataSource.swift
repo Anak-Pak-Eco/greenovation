@@ -14,7 +14,7 @@ class HydrospaceRTDBDataSource {
     static let shared = HydrospaceRTDBDataSource()
     private let db = Database.database().reference()
     
-    func    getDeviceStatus(id: String) -> AnyPublisher<DeviceStatusResponse?, Never> {
+    func getDeviceStatus(id: String) -> AnyPublisher<DeviceStatusResponse?, Never> {
         let subject = CurrentValueSubject<DeviceStatusResponse?, Never>(nil)
         
         let handle = db.child("devices").child(id).observe(.value) { snapshot in

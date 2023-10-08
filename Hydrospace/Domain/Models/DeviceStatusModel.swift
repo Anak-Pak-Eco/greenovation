@@ -8,7 +8,6 @@
 import Foundation
 
 struct DeviceStatusModel: Identifiable {
-    
     let id: UUID = UUID()
     let currentPh: Double
     let currentSteps: String

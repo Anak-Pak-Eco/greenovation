@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import Charts
 
+// TODO: This struct is dummy and should be move to domain model
 struct NutritionHistoryModel: Identifiable {
     let id: UUID = UUID()
     let hour: String
