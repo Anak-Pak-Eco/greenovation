@@ -38,35 +38,35 @@ struct DetailDeviceView: View {
                     .progressViewStyle(.circular)
             } else if let deviceStatus = viewModel.deviceStatus {
                 LazyVStack(alignment: .leading, spacing: 0) {
-                    Text("Terakhir diperbarui: 12.00")
-                        .font(.subheadline)
+                    Text("last-updated \("11.00")")
+                        .font(.customSubheadline)
+                        .foregroundStyle(.onSurfaceLow)
                         .padding(.horizontal)
                     
                     HStack {
                         HStack(alignment: .bottom) {
-                            Image("ImageSeedlingBig")
+                            Image("image-seedling-big")
                             Text(viewModel.deviceStatus?.currentSteps ?? "")
                                 .font(.body)
-                                .fontWeight(.semibold)
                                 .padding(.bottom)
                         }
                         .padding(.top, 60)
                         
                         VStack(alignment: .leading, spacing: 2) {
                             Text("\(String(format: "%.2f", viewModel.deviceStatus?.currentPpm ?? 0))")
-                                .foregroundStyle(ColorConstants.primaryAccentColor)
-                                .font(.title)
-                                .fontWeight(.semibold)
+                                .foregroundStyle(.primaryAccent)
+                                .font(.customTitle3Bold)
                             
                             Text("ppm")
+                                .font(.title3)
+                                .padding(.bottom)
                             
                             Text("\(String(format: "%.2f", viewModel.deviceStatus?.currentPh ?? 0))")
-                                .foregroundStyle(ColorConstants.primaryAccentColor)
-                                .font(.title)
-                                .fontWeight(.semibold)
-                                .padding(.top, 14)
+                                .foregroundStyle(.primaryAccent)
+                                .font(.customTitle3Bold)
                             
                             Text("ph")
+                                .font(.title3)
                         }
                         .padding(.leading, 60)
                     }
@@ -74,12 +74,12 @@ struct DetailDeviceView: View {
                     .padding(.top)
                     
                     Rectangle()
-                        .foregroundStyle(ColorConstants.backgroundColor)
+                        .foregroundStyle(.surface)
                         .frame(height: 16)
                     
                     if deviceStatus.currentPpm < 4 {
                         alertItem(
-                            title: "⚠️ Nilai PPM rendah",
+                            title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PPM rendah",
                             message: "Tambahkan larutan nutrisi B sebanyak 100ml untuk menjaga keseimbangan nutrisi.",
                             onButtonClicked: {
                                 print("Clicked Button")
@@ -87,7 +87,7 @@ struct DetailDeviceView: View {
                         )
                     } else if deviceStatus.currentPpm > 10 {
                         alertItem(
-                            title: "⚠️ Nilai PPM terlalu tinggi",
+                            title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PPM terlalu tinggi",
                             message: "Kurangi larutan nutrisi.",
                             onButtonClicked: {
                                 print("Clicked Button")
@@ -97,7 +97,7 @@ struct DetailDeviceView: View {
                     
                     if deviceStatus.currentPh < 4 {
                         alertItem(
-                            title: "⚠️ Nilai PH rendah",
+                            title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PH rendah",
                             message: "Tambahkan air",
                             onButtonClicked: {
                                 print("Clicked Button")
@@ -105,7 +105,7 @@ struct DetailDeviceView: View {
                         )
                     } else if deviceStatus.currentPh > 10 {
                         alertItem(
-                            title: "⚠️ Nilai PH terlalu tinggi",
+                            title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PH terlalu tinggi",
                             message: "Kurangi air.",
                             onButtonClicked: {
                                 print("Clicked Button")
@@ -115,21 +115,20 @@ struct DetailDeviceView: View {
                     
                     if (deviceStatus.currentPh < 4 || deviceStatus.currentPh > 10) || (deviceStatus.currentPpm < 4 || deviceStatus.currentPpm > 10) {
                         Rectangle()
-                            .foregroundStyle(ColorConstants.backgroundColor)
+                            .foregroundStyle(.surface)
                             .frame(height: 16)
                             .padding(.top)
                     }
                     
                     VStack(alignment: .leading) {
-                        Text("Hari Ini")
-                            .font(.body)
-                            .fontWeight(.semibold)
+                        Text("today")
+                            .font(.customBodyBold)
                         
                         VStack(alignment: .leading, spacing: 14) {
                             HStack(spacing: 0) {
-                                Text("Kepekatan Nutrisi ")
-                                Text("(ppm)")
-                                    .foregroundStyle(ColorConstants.onSurfaceLowColor)
+                                Text("nutrient-density")
+                                Text(" (\(String(localized: "ppm")))")
+                                    .foregroundStyle(.onSurfaceLow)
                             }
                             .font(.callout)
                             
@@ -138,17 +137,17 @@ struct DetailDeviceView: View {
                                     x: .value("Jam", $0.hour),
                                     y: .value("Kepekatan (PPM)", $0.ppm)
                                 )
-                                .foregroundStyle(ColorConstants.primaryAccentColor)
+                                .foregroundStyle(.primaryAccent)
                             }
                         }
                         .padding()
-                        .background(ColorConstants.surfaceContainerHighColor)
+                        .background(.surfaceContainerHigh)
                         .clipShape(.rect(cornerRadius: 8))
                     }
                     .padding()
                     
                     Rectangle()
-                        .foregroundStyle(ColorConstants.backgroundColor)
+                        .foregroundStyle(.surface)
                         .frame(height: 16)
                         .padding(.top)
                 }
@@ -163,14 +162,14 @@ struct DetailDeviceView: View {
                     dismiss()
                 } label: {
                     Image(systemName: "chevron.left")
-                        .foregroundStyle(ColorConstants.primaryAccentColor)
+                        .foregroundStyle(.primaryAccent)
                         .fontWeight(.semibold)
                 }
             }
             
             ToolbarItem(placement: .topBarTrailing) {
                 Image(systemName: "gearshape.fill")
-                    .foregroundStyle(ColorConstants.primaryAccentColor)
+                    .foregroundStyle(.primaryAccent)
                     .fontWeight(.semibold)
             }
         }
@@ -193,21 +192,21 @@ struct DetailDeviceView: View {
                     Button {
                         onButtonClicked()
                     } label: {
-                        Text("Sudah Perbaiki Larutan")
+                        Text("sollution-corrected")
                             .frame(maxWidth: .infinity)
                             .font(.caption)
                             .fontWeight(.semibold)
                             .foregroundStyle(.white)
                     }
                     .buttonStyle(.borderedProminent)
-                    .tint(ColorConstants.primaryAccentColor)
+                    .tint(.primaryAccent)
                 }
             }
             
             Spacer()
         }
         .padding()
-        .background(ColorConstants.secondaryColor)
+        .background(.secondaryContainer)
         .clipShape(.rect(cornerRadius: 8))
         .padding(.horizontal)
         .padding(.top)

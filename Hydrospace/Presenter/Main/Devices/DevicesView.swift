@@ -10,11 +10,14 @@ import SwiftUI
 
 struct DevicesView: View {
     
-    let navigator: NavigatorDelegate?
-    @ObservedObject private var viewModel: DevicesViewModel = DevicesViewModel()
+    @ObservedObject private var viewModel: DevicesViewModel
+    private var controller: NavigatorDelegate?
     
-    init(navigator: NavigatorDelegate?) {
-        self.navigator = navigator
+    init(controller: NavigatorDelegate?, viewModel: DevicesViewModel) {
+        self.viewModel = viewModel
+        self.controller = controller
+        
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font: UIFont(name: "DMSans-Bold", size: 34)!]
     }
     
     var body: some View {
@@ -24,15 +27,15 @@ struct DevicesView: View {
                     if let deviceStatus = viewModel.deviceStatus {
                         deviceItem(deviceStatus: deviceStatus)
                             .onTapGesture {
-                                navigator?.navigateToDetailPage()
+                                controller?.navigate(.detail)
                             }
                     }
                 }
                 .padding(.vertical)
             }
         }
-        .background(ColorConstants.backgroundColor)
-        .navigationTitle("Perangkat")
+        .background(.surface)
+        .navigationTitle(String(localized: "devices"))
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -40,7 +43,7 @@ struct DevicesView: View {
                     
                 } label: {
                     Image(systemName: "plus")
-                        .foregroundStyle(ColorConstants.primaryAccentColor)
+                        .foregroundStyle(.primaryAccent)
                         .fontWeight(.semibold)
                 }
             }
@@ -55,51 +58,53 @@ struct DevicesView: View {
             VStack(alignment: .leading, spacing: 8) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(deviceStatus.name)
-                        .font(.body)
+                        .font(.customBody)
                     
                     Text(deviceStatus.plantId)
-                        .font(.title3)
+                        .font(.customTitle3Bold)
+                        .foregroundStyle(.primaryAccent)
                         .bold()
                 }
                 
                 HStack(alignment: .bottom) {
                     VStack(alignment: .leading) {
                         Text(String(format: "%.2f", deviceStatus.currentPpm))
-                            .font(.title3)
-                            .bold()
+                            .font(.customTitle3Bold)
+                            .foregroundStyle(.primaryAccent)
                         
                         Text("ppm")
                     }
                     
                     VStack(alignment: .leading) {
                         Text(String(format: "%.2f", deviceStatus.currentPh))
-                            .font(.title3)
-                            .bold()
+                            .font(.customTitle3Bold)
+                            .foregroundStyle(.primaryAccent)
                         
-                        Text("ph")
+                        Text(String(localized: "ph"))
                     }
                     .padding(.leading, 20)
                     
                     Spacer()
                     
                     VStack {
-                        Image("ImageSeedling")
+                        Image("image-seedling")
                         Text(deviceStatus.currentSteps)
                             .font(.body)
                             .fontWeight(.semibold)
                     }
                 }
+                .padding(.bottom)
                 
                 if deviceStatus.currentPpm < 4 {
-                    alertItem(message: "⚠️ Nilai PPM **rendah**. Tambahkan larutan nutrisi")
+                    alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PPM **rendah**. Tambahkan larutan nutrisi")
                 } else if deviceStatus.currentPpm > 10 {
-                    alertItem(message: "⚠️ Nilai PPM **terlalu tinggi**. Kurangi larutan nutrisi")
+                    alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PPM **terlalu tinggi**. Kurangi larutan nutrisi")
                 }
                 
                 if deviceStatus.currentPh < 4 {
-                    alertItem(message: "⚠️ Nilai PH **rendah**. Tambahkan air")
+                    alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PH **rendah**. Tambahkan air")
                 } else if deviceStatus.currentPh > 10 {
-                    alertItem(message: "⚠️ Nilai PH **terlalu tinggi**. Kurangi air")
+                    alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PH **terlalu tinggi**. Kurangi air")
                 }
             }
             
@@ -124,12 +129,13 @@ struct DevicesView: View {
             Spacer()
         }
         .padding()
-        .background(ColorConstants.secondaryColor)
+        .background(.secondaryContainer)
         .clipShape(.rect(cornerRadius: 8))
-        .padding(.top)
     }
 }
 
-#Preview {
-    DevicesView(navigator: nil)
+#Preview("Devices View") {
+    NavigationStack {
+        DevicesView(controller: nil, viewModel: DevicesViewModel())
+    }
 }

@@ -1,0 +1,262 @@
+{
+  "sourceLanguage" : "id",
+  "strings" : {
+    " (%@)" : {
+
+    },
+    "(%@)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%@)"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%@)"
+          }
+        }
+      }
+    },
+    "%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@ Nilai PH **rendah**. Tambahkan air" : {
+
+    },
+    "%@ Nilai PH **terlalu tinggi**. Kurangi air" : {
+
+    },
+    "%@ Nilai PH rendah" : {
+
+    },
+    "%@ Nilai PH terlalu tinggi" : {
+
+    },
+    "%@ Nilai PPM **rendah**. Tambahkan larutan nutrisi" : {
+
+    },
+    "%@ Nilai PPM **terlalu tinggi**. Kurangi larutan nutrisi" : {
+
+    },
+    "%@ Nilai PPM rendah" : {
+
+    },
+    "%@ Nilai PPM terlalu tinggi" : {
+
+    },
+    "devices" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devices"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perangkat"
+          }
+        }
+      }
+    },
+    "formula-setting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formula Setting"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengaturan Formula"
+          }
+        }
+      }
+    },
+    "Jam" : {
+
+    },
+    "Kepekatan (PPM)" : {
+
+    },
+    "Kurangi air." : {
+
+    },
+    "Kurangi larutan nutrisi." : {
+
+    },
+    "last-updated %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last updated: %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terakhir diperbarui: %@"
+          }
+        }
+      }
+    },
+    "notification" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notification"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifikasi"
+          }
+        }
+      }
+    },
+    "notification-view-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halaman Notifikasi"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halaman Notifikasi"
+          }
+        }
+      }
+    },
+    "Notifikasi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notification"
+          }
+        }
+      }
+    },
+    "nutrient-density" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutrient Density"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kepekatan Nutrisi"
+          }
+        }
+      }
+    },
+    "ph" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pH"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pH"
+          }
+        }
+      }
+    },
+    "ppm" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ppm"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ppm"
+          }
+        }
+      }
+    },
+    "sollution-corrected" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I Have Correct the Sollution"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sudah Perbaiki Larutan"
+          }
+        }
+      }
+    },
+    "Tambahkan air" : {
+
+    },
+    "Tambahkan larutan nutrisi B sebanyak 100ml untuk menjaga keseimbangan nutrisi." : {
+
+    },
+    "today" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hari Ini"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

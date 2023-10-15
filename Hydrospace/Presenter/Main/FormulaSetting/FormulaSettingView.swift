@@ -10,7 +10,10 @@ import SwiftUI
 
 struct FormulaSettingView: View {
     var body: some View {
-        Text("Formula Setting")
+        VStack {
+            Text("formula-setting")
+        }
+        .navigationTitle("formula-setting")
     }
 }
 
