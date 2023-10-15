@@ -14,7 +14,6 @@ class DevicesViewModel: ObservableObject {
     @Published var deviceStatus: DeviceStatusModel? = nil
     @Published var isLoading: Bool = false
     private let repository = HydrospaceRepository.shared
-    
     private var cancellables: Set<AnyCancellable> = []
     
     func initData() {

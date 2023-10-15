@@ -10,7 +10,10 @@ import SwiftUI
 
 struct NotificationView: View {
     var body: some View {
-        Text("Notification View")
+        VStack {
+            Text("notification-view-title")
+        }
+        .navigationTitle("Notifikasi")
     }
 }
 
