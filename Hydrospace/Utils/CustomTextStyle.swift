@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension Font {
+    static let customTitle1Bold = Font.custom("DMSans-Bold", size: 28, relativeTo: .title)
     static let customTitle3 = Font.custom("DMSans-Regular", size: 20, relativeTo: .title3)
     static let customTitle3Bold = Font.custom("DMSans-Bold", size: 20, relativeTo: .title3)
     static let customBody = Font.custom("DMSans-Regular", size: 17, relativeTo: .body)
