@@ -31,6 +31,8 @@ struct DetailDeviceView: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject private var viewModel = DetailDeviceViewModel()
     
+    private var controller: NavigatorDelegate?
+    
     var body: some View {
         ScrollView {
             if viewModel.isLoading {
@@ -38,14 +40,14 @@ struct DetailDeviceView: View {
                     .progressViewStyle(.circular)
             } else if let deviceStatus = viewModel.deviceStatus {
                 LazyVStack(alignment: .leading, spacing: 0) {
-                    Text("last-updated \("11.00")")
-                        .font(.customSubheadline)
-                        .foregroundStyle(.onSurfaceLow)
+                    Text("caisim")
+                        .font(.customTitle3Bold)
+                        .foregroundStyle(.primaryAccent)
                         .padding(.horizontal)
                     
                     HStack {
                         HStack(alignment: .bottom) {
-                            Image("image-seedling-big")
+                            Image("image-anakan")
                             Text(viewModel.deviceStatus?.currentSteps ?? "")
                                 .font(.body)
                                 .padding(.bottom)
@@ -55,7 +57,7 @@ struct DetailDeviceView: View {
                         VStack(alignment: .leading, spacing: 2) {
                             Text("\(String(format: "%.2f", viewModel.deviceStatus?.currentPpm ?? 0))")
                                 .foregroundStyle(.primaryAccent)
-                                .font(.customTitle3Bold)
+                                .font(.customTitle1Bold)
                             
                             Text("ppm")
                                 .font(.title3)
@@ -63,12 +65,13 @@ struct DetailDeviceView: View {
                             
                             Text("\(String(format: "%.2f", viewModel.deviceStatus?.currentPh ?? 0))")
                                 .foregroundStyle(.primaryAccent)
-                                .font(.customTitle3Bold)
+                                .font(.customTitle1Bold)
                             
                             Text("ph")
                                 .font(.title3)
+                                .padding(.bottom)
                         }
-                        .padding(.leading, 60)
+                        .padding(.leading, 80)
                     }
                     .padding(.horizontal)
                     .padding(.top)
@@ -154,7 +157,7 @@ struct DetailDeviceView: View {
             }
         }
         .navigationTitle(viewModel.deviceStatus?.name ?? "")
-        .navigationBarTitleDisplayMode(.large)
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden()
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -168,9 +171,11 @@ struct DetailDeviceView: View {
             }
             
             ToolbarItem(placement: .topBarTrailing) {
-                Image(systemName: "gearshape.fill")
-                    .foregroundStyle(.primaryAccent)
-                    .fontWeight(.semibold)
+//                NavigationLink(destination: SettingDeviceView()) {
+                    Image(systemName: "gearshape.fill")
+                        .foregroundStyle(.primaryAccent)
+                        .fontWeight(.semibold)
+//                }
             }
         }
         .onAppear {

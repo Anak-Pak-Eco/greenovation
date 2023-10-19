@@ -38,28 +38,118 @@
       }
     },
     "%@ Nilai PH **rendah**. Tambahkan air" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ PH value **low**. Add air"
+          }
+        }
+      }
     },
     "%@ Nilai PH **terlalu tinggi**. Kurangi air" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ PH value **too high**. Reduce air"
+          }
+        }
+      }
     },
     "%@ Nilai PH rendah" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ PH value low"
+          }
+        }
+      }
     },
     "%@ Nilai PH terlalu tinggi" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ PH value too high"
+          }
+        }
+      }
     },
     "%@ Nilai PPM **rendah**. Tambahkan larutan nutrisi" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ PPM value **low**. Add nutrient solution"
+          }
+        }
+      }
     },
     "%@ Nilai PPM **terlalu tinggi**. Kurangi larutan nutrisi" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ PPM value **too high**. Reduce nutrient solution"
+          }
+        }
+      }
     },
     "%@ Nilai PPM rendah" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ PPM value low"
+          }
+        }
+      }
     },
     "%@ Nilai PPM terlalu tinggi" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ PPM value too high"
+          }
+        }
+      }
+    },
+    "anakan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menyemai"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anakan"
+          }
+        }
+      }
+    },
+    "caisim" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choy sum"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caisim"
+          }
+        }
+      }
     },
     "devices" : {
       "extractionState" : "manual",
@@ -101,11 +191,28 @@
     "Kepekatan (PPM)" : {
 
     },
+    "Key" : {
+      "extractionState" : "manual"
+    },
     "Kurangi air." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reduce water."
+          }
+        }
+      }
     },
     "Kurangi larutan nutrisi." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reduce nutrient solution."
+          }
+        }
+      }
     },
     "last-updated %@" : {
       "extractionState" : "manual",
@@ -217,6 +324,17 @@
         }
       }
     },
+    "seeding" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menyemai"
+          }
+        }
+      }
+    },
     "sollution-corrected" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -235,10 +353,24 @@
       }
     },
     "Tambahkan air" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add water"
+          }
+        }
+      }
     },
     "Tambahkan larutan nutrisi B sebanyak 100ml untuk menjaga keseimbangan nutrisi." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add 100ml of nutrient solution B to maintain nutritional balance."
+          }
+        }
+      }
     },
     "today" : {
       "extractionState" : "manual",
