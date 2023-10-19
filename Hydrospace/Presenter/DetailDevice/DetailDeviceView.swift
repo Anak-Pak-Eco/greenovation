@@ -31,6 +31,9 @@ struct DetailDeviceView: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject private var viewModel = DetailDeviceViewModel()
     
+    @State private var ml = "100ml"
+    @State private var jangkauan = "800-1200"
+    
     private var controller: NavigatorDelegate?
     
     var body: some View {
@@ -83,15 +86,15 @@ struct DetailDeviceView: View {
                     if deviceStatus.currentPpm < 4 {
                         alertItem(
                             title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PPM rendah",
-                            message: "Tambahkan larutan nutrisi B sebanyak 100ml untuk menjaga keseimbangan nutrisi.",
+                            message: "Sekitar \(ml) untuk tiap liter untuk mengembalikan keseimbangan ppm di jangkauan \(jangkauan)",
                             onButtonClicked: {
                                 print("Clicked Button")
                             }
                         )
                     } else if deviceStatus.currentPpm > 10 {
                         alertItem(
-                            title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PPM terlalu tinggi",
-                            message: "Kurangi larutan nutrisi.",
+                            title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PPM tinggi",
+                            message: "Sekitar \(ml) untuk tiap liter untuk mengembalikan keseimbangan ppm di jangkauan \(jangkauan)",
                             onButtonClicked: {
                                 print("Clicked Button")
                             }
@@ -100,16 +103,16 @@ struct DetailDeviceView: View {
                     
                     if deviceStatus.currentPh < 4 {
                         alertItem(
-                            title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PH rendah",
-                            message: "Tambahkan air",
+                            title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai pH rendah",
+                            message: "Sekitar \(ml) untuk tiap liter untuk mengembalikan keseimbangan ppm di jangkauan \(jangkauan)",
                             onButtonClicked: {
                                 print("Clicked Button")
                             }
                         )
                     } else if deviceStatus.currentPh > 10 {
                         alertItem(
-                            title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PH terlalu tinggi",
-                            message: "Kurangi air.",
+                            title: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai pH tinggi",
+                            message: "Sekitar \(ml) untuk tiap liter untuk mengembalikan keseimbangan ppm di jangkauan \(jangkauan)",
                             onButtonClicked: {
                                 print("Clicked Button")
                             }

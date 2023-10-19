@@ -98,13 +98,13 @@ struct DevicesView: View {
                 if deviceStatus.currentPpm < 4 {
                     alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PPM **rendah**. Tambahkan larutan nutrisi")
                 } else if deviceStatus.currentPpm > 10 {
-                    alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PPM **terlalu tinggi**. Kurangi larutan nutrisi")
+                    alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PPM **tinggi**. Kurangi larutan nutrisi")
                 }
                 
                 if deviceStatus.currentPh < 4 {
-                    alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PH **rendah**. Tambahkan air")
+                    alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai pH **rendah**. Tambahkan larutan pH UP")
                 } else if deviceStatus.currentPh > 10 {
-                    alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai PH **terlalu tinggi**. Kurangi air")
+                    alertItem(message: "\(Image(systemName: "exclamationmark.triangle.fill")) Nilai pH **tinggi**. Tambahkan larutan pH Down")
                 }
             }
             
