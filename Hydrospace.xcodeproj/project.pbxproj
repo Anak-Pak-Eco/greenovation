@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A76E32892AE239B7007B861C /* FormulaBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76E32882AE239B7007B861C /* FormulaBottomView.swift */; };
+		A76E328B2AE27C47007B861C /* PendaftaranPerangkatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76E328A2AE27C47007B861C /* PendaftaranPerangkatModel.swift */; };
+		A7B6986C2AE110A900152DB9 /* PendaftaranPerangkatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B6986B2AE110A900152DB9 /* PendaftaranPerangkatView.swift */; };
+		A7B6986E2AE110B500152DB9 /* PendaftaranPerangkatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B6986D2AE110B500152DB9 /* PendaftaranPerangkatViewModel.swift */; };
+		A7B698712AE1366E00152DB9 /* TahapPertumbuhanButtomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B698702AE1366E00152DB9 /* TahapPertumbuhanButtomView.swift */; };
 		D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */; };
 		D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */; };
 		D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */; };
@@ -75,6 +80,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A76E32882AE239B7007B861C /* FormulaBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaBottomView.swift; sourceTree = "<group>"; };
+		A76E328A2AE27C47007B861C /* PendaftaranPerangkatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendaftaranPerangkatModel.swift; sourceTree = "<group>"; };
+		A7B6986B2AE110A900152DB9 /* PendaftaranPerangkatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendaftaranPerangkatView.swift; sourceTree = "<group>"; };
+		A7B6986D2AE110B500152DB9 /* PendaftaranPerangkatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendaftaranPerangkatViewModel.swift; sourceTree = "<group>"; };
+		A7B698702AE1366E00152DB9 /* TahapPertumbuhanButtomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TahapPertumbuhanButtomView.swift; sourceTree = "<group>"; };
 		D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Thin.ttf"; sourceTree = "<group>"; };
@@ -155,6 +165,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7B6986A2AE1109200152DB9 /* PendaftaranPerangkatView */ = {
+			isa = PBXGroup;
+			children = (
+				A7B6986F2AE1364A00152DB9 /* Component */,
+				A7B6986B2AE110A900152DB9 /* PendaftaranPerangkatView.swift */,
+				A7B6986D2AE110B500152DB9 /* PendaftaranPerangkatViewModel.swift */,
+				A76E328A2AE27C47007B861C /* PendaftaranPerangkatModel.swift */,
+			);
+			path = PendaftaranPerangkatView;
+			sourceTree = "<group>";
+		};
+		A7B6986F2AE1364A00152DB9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				A7B698702AE1366E00152DB9 /* TahapPertumbuhanButtomView.swift */,
+				A76E32882AE239B7007B861C /* FormulaBottomView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		D630F4ED2AD8111700A355D0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +386,7 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A7B6986A2AE1109200152DB9 /* PendaftaranPerangkatView */,
 				D6AC85862AD013B80033B665 /* DetailDevice */,
 				D6AC85702ACFF4860033B665 /* Main */,
 			);
@@ -547,16 +578,21 @@
 				D6AC85772ACFFAD30033B665 /* DevicesView.swift in Sources */,
 				D68003ED2ADB860600AAED95 /* NavigatorDelegate.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
+				A7B6986E2AE110B500152DB9 /* PendaftaranPerangkatViewModel.swift in Sources */,
+				A76E328B2AE27C47007B861C /* PendaftaranPerangkatModel.swift in Sources */,
 				D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */,
 				D6BD3B732AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift in Sources */,
 				D6BD3B712AD0CAB6005B85C3 /* DeviceStatusResponse.swift in Sources */,
 				D6AC857D2ACFFD260033B665 /* NotificationView.swift in Sources */,
+				A7B698712AE1366E00152DB9 /* TahapPertumbuhanButtomView.swift in Sources */,
 				D6BD3B792AD123C4005B85C3 /* DeviceStatusModel.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
 				D6AC85792ACFFADC0033B665 /* DevicesViewModel.swift in Sources */,
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,
+				A7B6986C2AE110A900152DB9 /* PendaftaranPerangkatView.swift in Sources */,
 				D6AC858A2AD013DF0033B665 /* DetailDeviceViewModel.swift in Sources */,
 				D630F5132AD84BEF00A355D0 /* CustomTextStyle.swift in Sources */,
+				A76E32892AE239B7007B861C /* FormulaBottomView.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
 				D6AC85882AD013D60033B665 /* DetailDeviceView.swift in Sources */,
 				D6AC85812ACFFD6C0033B665 /* FormulaSettingView.swift in Sources */,
