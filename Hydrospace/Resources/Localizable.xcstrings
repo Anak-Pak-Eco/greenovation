@@ -42,7 +42,18 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ PH value **low**. Add air"
+            "value" : "%@ **Low**PH value. Add air"
+          }
+        }
+      }
+    },
+    "%@ Nilai pH **rendah**. Tambahkan larutan pH UP" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ **Low** pH value. Add pH UP solution."
           }
         }
       }
@@ -52,7 +63,29 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ PH value **too high**. Reduce air"
+            "value" : "%@ **Too high** PH value. Reduce air"
+          }
+        }
+      }
+    },
+    "%@ Nilai pH **tinggi**. Tambahkan larutan pH Down" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ **High** pH value. Add pH Down solution."
+          }
+        }
+      }
+    },
+    "%@ Nilai pH rendah" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Low pH value"
           }
         }
       }
@@ -62,7 +95,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ PH value low"
+            "value" : "%@ Low PH value"
           }
         }
       }
@@ -72,7 +105,18 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ PH value too high"
+            "value" : "%@ Too high PH value"
+          }
+        }
+      }
+    },
+    "%@ Nilai pH tinggi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ High pH value"
           }
         }
       }
@@ -82,7 +126,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ PPM value **low**. Add nutrient solution"
+            "value" : "%@ **Low** PPM value. Add nutrient solution"
           }
         }
       }
@@ -92,7 +136,18 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ PPM value **too high**. Reduce nutrient solution"
+            "value" : "%@ **Too High** PPM value. Reduce nutrient solution"
+          }
+        }
+      }
+    },
+    "%@ Nilai PPM **tinggi**. Kurangi larutan nutrisi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ **High** PPM value. Reduce nutrient solution"
           }
         }
       }
@@ -102,7 +157,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ PPM value low"
+            "value" : "%@ Low PPM value"
           }
         }
       }
@@ -112,7 +167,18 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ PPM value too high"
+            "value" : "%@ Too high PPM value"
+          }
+        }
+      }
+    },
+    "%@ Nilai PPM tinggi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ High PPM value"
           }
         }
       }
@@ -192,6 +258,9 @@
 
     },
     "Key" : {
+      "extractionState" : "manual"
+    },
+    "Key 1" : {
       "extractionState" : "manual"
     },
     "Kurangi air." : {
@@ -331,6 +400,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menyemai"
+          }
+        }
+      }
+    },
+    "Sekitar %@ untuk tiap liter untuk mengembalikan keseimbangan ppm di jangkauan %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Approximately %@ for each liter to restore ppm balance within the %@ range"
           }
         }
       }
