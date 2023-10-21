@@ -59,24 +59,42 @@ struct PendaftaranPerangkatView: View {
                         Text("cari-tanaman")
                             .font(.customCalloutSemiBold)
                             .foregroundStyle(.primaryAccent)
-                        SearchBar(searchText: $plantName)
+                        HStack {
+                            TextField("jenis-tanaman", text: $plantName)
+                                .onChange(of: plantName) {
+                                    self.isOverlayVisible = true
+                                }
+                                .padding(.all, 12)
+                                .background(.white)
+                                .overlay(
+                                    Image(systemName: "magnifyingglass")
+                                        .foregroundStyle(Color.secondaryAccent)
+                                        .fontWeight(.semibold)
+                                        .padding(.trailing)
+                                    , alignment: .trailing
+
+                                )
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .strokeBorder(Color.secondaryAccent, lineWidth: 2)
+                                    )
+                        }
                     })
                     .padding(.top)
 
                 }
-                .onTapGesture {
-                    self.isOverlayVisible.toggle()
-                }
+//                .onTapGesture {
+//                    self.isOverlayVisible.toggle()
+//                }
                 ZStack {
-                    Color.clear
-
+                    
                     VStack {
                         if isOverlayVisible {
                             if filteredPlants.isEmpty {
                                 VStack(alignment: .leading) {
                                     Text("tanaman-tidak-ditemukan")
                                     Button(action: {
-                                        
+                                        self.isOverlayVisible = false
                                     }) {
                                         Text("tambah-pengaturan-baru")
                                             .frame(maxWidth: .infinity)
@@ -92,9 +110,8 @@ struct PendaftaranPerangkatView: View {
                                     RoundedRectangle(cornerRadius: 10)
                                         .strokeBorder(Color.secondaryAccent, lineWidth: 2)
                                 )
-                                .offset(y: -80)
                             } else {
-                                ScrollView {
+//                                ScrollView {
                                     ForEach(filteredPlants) { plant in
                                         HStack {
                                             Image("\(plant.imageName)")
@@ -117,45 +134,43 @@ struct PendaftaranPerangkatView: View {
                                     }
                                     .listStyle(PlainListStyle())
                                     .background(Color.clear)
-                                }
+//                                }
                             }
                         }
                     }
-                }
-                .zIndex(1)
-                
-                // MARK: GROWTH STEP FIELD
-                VStack (alignment: .leading, content: {
-                    Text("tahap-pertumbuhan")
-                        .font(.customCalloutSemiBold)
-                        .foregroundStyle(.primaryAccent)
-                    TextField("fase-anakan", text: $growthStage)
-                        .tint(Color.clear)
-                        .padding(.all, 12)
-                        .background(.white)
-                        .overlay(
-                            Image(systemName: "chevron.down")
-                                .foregroundStyle(Color.secondaryAccent)
-                                .fontWeight(.semibold)
-                                .padding(.trailing)
-                            , alignment: .trailing
+                    .zIndex(1)
+                    
+                    // MARK: GROWTH STEP FIELD
+                    VStack (alignment: .leading, content: {
+                        Text("tahap-pertumbuhan")
+                            .font(.customCalloutSemiBold)
+                            .foregroundStyle(.primaryAccent)
+                        TextField("fase-anakan", text: $growthStage)
+                            .tint(Color.clear)
+                            .padding(.all, 12)
+                            .background(.white)
+                            .overlay(
+                                Image(systemName: "chevron.down")
+                                    .foregroundStyle(Color.secondaryAccent)
+                                    .fontWeight(.semibold)
+                                    .padding(.trailing)
+                                , alignment: .trailing
 
-                        )
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-//                                .inset(by: 10)
-                                .strokeBorder(Color.secondaryAccent, lineWidth: 2)
                             )
-                        .onTapGesture {
-                            self.showingSheets = true
-                        }
-                })
-                .offset(y: -260)
-                .padding(.top)
-                .padding(.bottom)
-                .sheet(isPresented: $showingSheets) {
-                    TahapPertumbuhanButtomView(plantName: plantName)
-                        .presentationDetents([.height(360)])
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .strokeBorder(Color.secondaryAccent, lineWidth: 2)
+                                )
+                            .onTapGesture {
+                                self.showingSheets = true
+                            }
+                    })
+                    .padding(.top)
+                    .sheet(isPresented: $showingSheets) {
+                        TahapPertumbuhanButtomView(plantName: plantName)
+                            .presentationDetents([.height(360)])
+                    }
+                    
                 }
                 
                 if isSaved == true {
@@ -191,31 +206,6 @@ struct PendaftaranPerangkatView: View {
                         .fontWeight(.semibold)
                 }
             }
-        }
-    }
-}
-
-struct SearchBar: View {
-    @Binding var searchText: String
-
-    var body: some View {
-        HStack {
-            TextField("jenis-tanaman", text: $searchText)
-                .padding(.all, 12)
-                .background(.white)
-                .overlay(
-                    Image(systemName: "magnifyingglass")
-                        .foregroundStyle(Color.secondaryAccent)
-                        .fontWeight(.semibold)
-                        .padding(.trailing)
-                    , alignment: .trailing
-
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-//                                .inset(by: 10)
-                        .strokeBorder(Color.secondaryAccent, lineWidth: 2)
-                    )
         }
     }
 }
