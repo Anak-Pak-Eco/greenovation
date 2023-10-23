@@ -38,6 +38,7 @@
       }
     },
     "%@ Nilai PH **rendah**. Tambahkan air" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -59,6 +60,7 @@
       }
     },
     "%@ Nilai PH **terlalu tinggi**. Kurangi air" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -91,6 +93,7 @@
       }
     },
     "%@ Nilai PH rendah" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -101,6 +104,7 @@
       }
     },
     "%@ Nilai PH terlalu tinggi" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -132,6 +136,7 @@
       }
     },
     "%@ Nilai PPM **terlalu tinggi**. Kurangi larutan nutrisi" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -163,6 +168,7 @@
       }
     },
     "%@ Nilai PPM terlalu tinggi" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -251,8 +257,52 @@
         }
       }
     },
+    "gabung" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Join"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gabung"
+          }
+        }
+      }
+    },
     "Jam" : {
 
+    },
+    "Kamu berhasil tersambung dengan **\"Pak Melon\"**" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You have successfully connected to **\"Pak Melon\"**"
+          }
+        }
+      }
+    },
+    "kata-sandi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kata Sandi"
+          }
+        }
+      }
     },
     "Kepekatan (PPM)" : {
 
@@ -264,6 +314,7 @@
       "extractionState" : "manual"
     },
     "Kurangi air." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -274,11 +325,29 @@
       }
     },
     "Kurangi larutan nutrisi." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reduce nutrient solution."
+          }
+        }
+      }
+    },
+    "lanjut-pendaftaran-perangkat" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue Device Registration"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanjut Pendaftaran Perangkat"
           }
         }
       }
@@ -296,6 +365,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terakhir diperbarui: %@"
+          }
+        }
+      }
+    },
+    "Masukkan kata sandi untuk Wifi **\"%@\"**" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the password for wifi **\"%@\"**"
           }
         }
       }
@@ -393,9 +473,26 @@
         }
       }
     },
+    "Sambungkan **Hydro's Device** Ke Wifi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connect **Hydro's Device** to Wifi"
+          }
+        }
+      }
+    },
     "seeding" : {
       "extractionState" : "manual",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seeding"
+          }
+        },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
@@ -433,6 +530,7 @@
       }
     },
     "Tambahkan air" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -443,6 +541,7 @@
       }
     },
     "Tambahkan larutan nutrisi B sebanyak 100ml untuk menjaga keseimbangan nutrisi." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -468,6 +567,9 @@
           }
         }
       }
+    },
+    "Wifi" : {
+
     }
   },
   "version" : "1.0"

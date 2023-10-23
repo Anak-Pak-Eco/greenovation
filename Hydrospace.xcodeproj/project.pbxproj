@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A701E4EA2AE648AF0025BBFF /* WifiSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A701E4E92AE648AF0025BBFF /* WifiSetupView.swift */; };
+		A701E4ED2AE65D1B0025BBFF /* PasswordWifiButtomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A701E4EC2AE65D1B0025BBFF /* PasswordWifiButtomView.swift */; };
+		A701E4EF2AE6692A0025BBFF /* WifiSetupDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A701E4EE2AE6692A0025BBFF /* WifiSetupDoneView.swift */; };
 		D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */; };
 		D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */; };
 		D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */; };
@@ -75,6 +78,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A701E4E92AE648AF0025BBFF /* WifiSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiSetupView.swift; sourceTree = "<group>"; };
+		A701E4EC2AE65D1B0025BBFF /* PasswordWifiButtomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWifiButtomView.swift; sourceTree = "<group>"; };
+		A701E4EE2AE6692A0025BBFF /* WifiSetupDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiSetupDoneView.swift; sourceTree = "<group>"; };
 		D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Thin.ttf"; sourceTree = "<group>"; };
@@ -155,6 +161,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A701E4E82AE648940025BBFF /* WifiSetup */ = {
+			isa = PBXGroup;
+			children = (
+				A701E4EB2AE65CB80025BBFF /* Component */,
+				A701E4E92AE648AF0025BBFF /* WifiSetupView.swift */,
+				A701E4EE2AE6692A0025BBFF /* WifiSetupDoneView.swift */,
+			);
+			path = WifiSetup;
+			sourceTree = "<group>";
+		};
+		A701E4EB2AE65CB80025BBFF /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				A701E4EC2AE65D1B0025BBFF /* PasswordWifiButtomView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		D630F4ED2AD8111700A355D0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +380,7 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A701E4E82AE648940025BBFF /* WifiSetup */,
 				D6AC85862AD013B80033B665 /* DetailDevice */,
 				D6AC85702ACFF4860033B665 /* Main */,
 			);
@@ -553,6 +578,8 @@
 				D6AC857D2ACFFD260033B665 /* NotificationView.swift in Sources */,
 				D6BD3B792AD123C4005B85C3 /* DeviceStatusModel.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
+				A701E4EA2AE648AF0025BBFF /* WifiSetupView.swift in Sources */,
+				A701E4EF2AE6692A0025BBFF /* WifiSetupDoneView.swift in Sources */,
 				D6AC85792ACFFADC0033B665 /* DevicesViewModel.swift in Sources */,
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,
 				D6AC858A2AD013DF0033B665 /* DetailDeviceViewModel.swift in Sources */,
@@ -560,6 +587,7 @@
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
 				D6AC85882AD013D60033B665 /* DetailDeviceView.swift in Sources */,
 				D6AC85812ACFFD6C0033B665 /* FormulaSettingView.swift in Sources */,
+				A701E4ED2AE65D1B0025BBFF /* PasswordWifiButtomView.swift in Sources */,
 				D68003E92ADB813400AAED95 /* ViewController+Extension.swift in Sources */,
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
