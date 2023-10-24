@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) {
         print("didRegisterForRemoteNotificationsWithDeviceToken: \(deviceToken)")
         Messaging.messaging().apnsToken = deviceToken
-        Messaging.messaging().subscribe(toTopic: "device_alert") { error in
+        Messaging.messaging().subscribe(toTopic: "device_alert_new") { error in
             if let error = error {
                 print("Error subscribing topic: \(error.localizedDescription)")
             } else {

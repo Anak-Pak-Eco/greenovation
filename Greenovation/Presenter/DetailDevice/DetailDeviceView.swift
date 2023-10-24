@@ -38,7 +38,9 @@ struct DetailDeviceView: View {
             if viewModel.isLoading {
                 ProgressView()
                     .progressViewStyle(.circular)
-            } else if let deviceStatus = viewModel.deviceStatus {
+            }
+            
+            if let deviceStatus = viewModel.deviceStatus {
                 LazyVStack(alignment: .leading, spacing: 0) {
                     Text("caisim")
                         .font(.customTitle3Bold)
@@ -55,7 +57,7 @@ struct DetailDeviceView: View {
                         .padding(.top, 60)
                         
                         VStack(alignment: .leading, spacing: 2) {
-                            Text("\(String(format: "%.2f", viewModel.deviceStatus?.currentPpm ?? 0))")
+                            Text(String.formatNullable(viewModel.deviceStatus?.currentPpm, format: "%.2f"))
                                 .foregroundStyle(.primaryAccent)
                                 .font(.customTitle1Bold)
                             
@@ -63,7 +65,7 @@ struct DetailDeviceView: View {
                                 .font(.title3)
                                 .padding(.bottom)
                             
-                            Text("\(String(format: "%.2f", viewModel.deviceStatus?.currentPh ?? 0))")
+                            Text(String.formatNullable(viewModel.deviceStatus?.currentPh, format: "%.2f"))
                                 .foregroundStyle(.primaryAccent)
                                 .font(.customTitle1Bold)
                             
@@ -157,7 +159,7 @@ struct DetailDeviceView: View {
             }
         }
         .navigationTitle(viewModel.deviceStatus?.name ?? "")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden()
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {

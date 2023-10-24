@@ -16,7 +16,6 @@ struct DevicesView: View {
     init(controller: NavigatorDelegate?, viewModel: DevicesViewModel) {
         self.viewModel = viewModel
         self.controller = controller
-        
         UINavigationBar.appearance().largeTitleTextAttributes = [.font: UIFont(name: "DMSans-Bold", size: 34)!]
     }
     
@@ -68,7 +67,7 @@ struct DevicesView: View {
                 
                 HStack(alignment: .bottom) {
                     VStack(alignment: .leading) {
-                        Text(String(format: "%.2f", deviceStatus.currentPpm))
+                        Text(String.format(deviceStatus.currentPpm, format: "%.2f"))
                             .font(.customTitle3Bold)
                             .foregroundStyle(.primaryAccent)
                         
@@ -76,7 +75,7 @@ struct DevicesView: View {
                     }
                     
                     VStack(alignment: .leading) {
-                        Text(String(format: "%.2f", deviceStatus.currentPh))
+                        Text(String.format(deviceStatus.currentPh, format: "%.2f"))
                             .font(.customTitle3Bold)
                             .foregroundStyle(.primaryAccent)
                         
