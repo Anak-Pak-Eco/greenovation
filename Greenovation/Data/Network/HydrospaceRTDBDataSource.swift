@@ -17,15 +17,15 @@ class HydrospaceRTDBDataSource {
     func getDeviceStatus(id: String) -> AnyPublisher<DeviceStatusResponse?, Never> {
         let subject = CurrentValueSubject<DeviceStatusResponse?, Never>(nil)
         
-        let handle = db.child("devices").child(id).observe(.value) { snapshot in
+        let handle = db.child(DeviceStatusResponse.reference).child(id).observe(.value) { snapshot in
             let value = snapshot.value as? NSDictionary
             if let value = value {
-                let currentPpm = value["current_tds"] as? Double ?? 0.0
-                let currentPh = value["current_ph"] as? Double ?? 0.0
-                let name = value["name"] as? String ?? ""
-                let currentSteps = value["current_steps"] as? String ?? ""
-                let plantId = value["plant_id"] as? String ?? ""
-                let userId = value["user_id"] as? String ?? ""
+                let currentPpm = value[DeviceStatusResponse.currentPpmReference] as? Double ?? 0.0
+                let currentPh = value[DeviceStatusResponse.currentPhReference] as? Double ?? 0.0
+                let name = value[DeviceStatusResponse.nameReference] as? String ?? ""
+                let currentSteps = value[DeviceStatusResponse.currentStepsReference] as? String ?? ""
+                let plantId = value[DeviceStatusResponse.plantIdReference] as? String ?? ""
+                let userId = value[DeviceStatusResponse.userIdReference] as? String ?? ""
                 
                 let response = DeviceStatusResponse(
                     currentPh: currentPh,

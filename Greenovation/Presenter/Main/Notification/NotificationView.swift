@@ -10,10 +10,14 @@ import SwiftUI
 
 struct NotificationView: View {
     var body: some View {
-        VStack {
-            Text("notification-view-title")
+        ScrollView {
+            LazyVStack {
+                ForEach(1...100, id: \.self) { _ in
+                    Text("notification-view-title")
+                }
+            }
         }
-        .navigationTitle("Notifikasi")
+        .background(.surface)
     }
 }
 

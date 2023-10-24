@@ -12,10 +12,7 @@ import SwiftUI
 class MainViewController: UITabBarController {
     
     lazy var deviceViewController: UINavigationController = {
-        let viewController = UINavigationController(
-            rootViewController: UIHostingController(rootView: DevicesView(controller: self, viewModel: DevicesViewModel()))
-        )
-        viewController.navigationBar.prefersLargeTitles = true
+        let viewController = UINavigationController(rootViewController: DevicesUIKitViewController())
         return viewController
     }()
     
@@ -37,6 +34,7 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         deviceViewController.tabBarItem = UITabBarItem(
             title: String(localized: "devices"),
             image: UIImage(systemName: "platter.2.filled.iphone.landscape"),
@@ -69,6 +67,7 @@ extension MainViewController: NavigatorDelegate {
         case .detail:
             let detailVC = UIHostingController(rootView: DetailDeviceView())
             detailVC.navigationItem.setHidesBackButton(true, animated: true)
+            detailVC.hidesBottomBarWhenPushed = true
             deviceViewController.pushViewController(detailVC, animated: true)
         }
     }
