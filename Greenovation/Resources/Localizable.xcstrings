@@ -62,7 +62,6 @@
       }
     },
     "%@" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -613,6 +612,22 @@
         }
       }
     },
+    "pengaturan-perangkat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Device Setting"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengaturan Perangkat"
+          }
+        }
+      }
+    },
     "ph" : {
       "localizations" : {
         "en" : {
@@ -702,6 +717,33 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menyemai"
+          }
+        }
+      }
+    },
+    "Sekitar %@ untuk tiap liter untuk mengembalikan keseimbangan ppm di jangkauan %@" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Sekitar %1$@ untuk tiap liter untuk mengembalikan keseimbangan ppm di jangkauan %2$@"
+          }
+        }
+      }
+    },
+    "sensor-perangkat" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Device Censor"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensor Perangkat"
           }
         }
       }

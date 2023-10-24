@@ -111,7 +111,7 @@ struct PendaftaranPerangkatView: View {
                                         .strokeBorder(Color.secondaryAccent, lineWidth: 2)
                                 )
                             } else {
-//                                ScrollView {
+                                ScrollView {
                                     ForEach(filteredPlants) { plant in
                                         HStack {
                                             Image("\(plant.imageName)")
@@ -134,7 +134,7 @@ struct PendaftaranPerangkatView: View {
                                     }
                                     .listStyle(PlainListStyle())
                                     .background(Color.clear)
-//                                }
+                                }
                             }
                         }
                     }

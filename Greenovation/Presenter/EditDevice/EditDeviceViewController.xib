@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditDeviceViewController" customModule="Hydrospace" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-6o-1Yo">
+                    <rect key="frame" x="0.0" y="74" width="390" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Censor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEz-aM-caR" customClass="LocalizableLabel" customModule="Hydrospace" customModuleProvider="target">
+                            <rect key="frame" x="19" y="19" width="334" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="334" id="F57-5f-IJJ"/>
+                                <constraint firstAttribute="height" constant="22" id="ZzN-AG-B5D"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localisedKey" value="sensor-perangkat"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="sensor-perangkat"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8HQ-rs-XWe">
+                            <rect key="frame" x="324" y="15" width="49" height="31"/>
+                            <color key="onTintColor" name="primary-accent"/>
+                        </switch>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="PEz-aM-caR" secondAttribute="trailing" constant="37" id="8O2-AM-mjP"/>
+                        <constraint firstItem="PEz-aM-caR" firstAttribute="leading" secondItem="eXq-6o-1Yo" secondAttribute="leading" constant="19" id="DaA-7x-7Zi"/>
+                        <constraint firstAttribute="trailing" secondItem="8HQ-rs-XWe" secondAttribute="trailing" constant="19" id="JFt-h9-VEN"/>
+                        <constraint firstAttribute="bottom" secondItem="8HQ-rs-XWe" secondAttribute="bottom" constant="14" id="LCq-D9-GqK"/>
+                        <constraint firstAttribute="bottom" secondItem="PEz-aM-caR" secondAttribute="bottom" constant="19" id="hVO-ro-uOg"/>
+                        <constraint firstAttribute="height" constant="60" id="mOD-ny-h22"/>
+                        <constraint firstAttribute="width" constant="390" id="seu-p5-Tun"/>
+                        <constraint firstItem="8HQ-rs-XWe" firstAttribute="top" secondItem="eXq-6o-1Yo" secondAttribute="top" constant="15" id="ujQ-7r-OVG"/>
+                        <constraint firstItem="PEz-aM-caR" firstAttribute="top" secondItem="eXq-6o-1Yo" secondAttribute="top" constant="19" id="w8M-M5-E9Z"/>
+                        <constraint firstItem="8HQ-rs-XWe" firstAttribute="leading" secondItem="eXq-6o-1Yo" secondAttribute="leading" constant="324" id="wBr-hK-iEE"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQP-Ek-rWP" customClass="CustomLabel" customModule="Hydrospace" customModuleProvider="target">
+                    <rect key="frame" x="33" y="196" width="240" height="128"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dQP-Ek-rWP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="50W-Af-eNc"/>
+                <constraint firstItem="eXq-6o-1Yo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6NW-6D-Brc"/>
+                <constraint firstItem="dQP-Ek-rWP" firstAttribute="top" secondItem="eXq-6o-1Yo" secondAttribute="bottom" constant="62" id="6id-mB-0Bs"/>
+                <constraint firstItem="eXq-6o-1Yo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="85j-5g-7c3"/>
+                <constraint firstItem="eXq-6o-1Yo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Afs-j0-hHO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dQP-Ek-rWP" secondAttribute="trailing" constant="117" id="e58-Fa-NUt"/>
+            </constraints>
+            <point key="canvasLocation" x="58" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
