@@ -14,28 +14,31 @@ class HydrospaceRTDBDataSource {
     static let shared = HydrospaceRTDBDataSource()
     private let db = Database.database().reference()
     
-    func getDeviceStatus(id: String) -> AnyPublisher<DeviceStatusResponse?, Never> {
-        let subject = CurrentValueSubject<DeviceStatusResponse?, Never>(nil)
+    func getDevicesStatus() -> AnyPublisher<[DeviceResponse], Never> {
+        let subject = CurrentValueSubject<[DeviceResponse], Never>([])
         
-        let handle = db.child(DeviceStatusResponse.reference).child(id).observe(.value) { snapshot in
+        let handle = db.child(DeviceResponse.reference).observe(.value) { snapshot in
             let value = snapshot.value as? NSDictionary
             if let value = value {
-                let currentPpm = value[DeviceStatusResponse.currentPpmReference] as? Double ?? 0.0
-                let currentPh = value[DeviceStatusResponse.currentPhReference] as? Double ?? 0.0
-                let name = value[DeviceStatusResponse.nameReference] as? String ?? ""
-                let currentSteps = value[DeviceStatusResponse.currentStepsReference] as? String ?? ""
-                let plantId = value[DeviceStatusResponse.plantIdReference] as? String ?? ""
-                let userId = value[DeviceStatusResponse.userIdReference] as? String ?? ""
-                
-                let response = DeviceStatusResponse(
-                    currentPh: currentPh,
-                    currentSteps: currentSteps,
-                    currentPpm: currentPpm,
-                    name: name,
-                    plantId: plantId,
-                    userId: userId
-                )
-                
+                let responses = value.allKeys.map { key in
+                    DeviceResponse.from(response: value.object(forKey: key) as! NSDictionary)
+                }
+                subject.send(responses)
+            }
+        }
+        
+        return subject.handleEvents(receiveCancel: { [weak self] in
+            self?.db.removeObserver(withHandle: handle)
+        }).eraseToAnyPublisher()
+    }
+    
+    func getDeviceStatus(id: String) -> AnyPublisher<DeviceResponse?, Never> {
+        let subject = CurrentValueSubject<DeviceResponse?, Never>(nil)
+        
+        let handle = db.child(DeviceResponse.reference).child(id).observe(.value) { snapshot in
+            let value = snapshot.value as? NSDictionary
+            if let value = value {
+                let response = DeviceResponse.from(response: value)
                 subject.send(response)
             }
         }

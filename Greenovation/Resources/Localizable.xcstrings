@@ -127,6 +127,7 @@
       }
     },
     "%@ Nilai PPM **rendah**. Tambahkan larutan nutrisi" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

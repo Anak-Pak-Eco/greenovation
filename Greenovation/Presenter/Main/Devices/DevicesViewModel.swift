@@ -1,29 +1,27 @@
 //
 //  DevicesViewModel.swift
-//  Hydrospace
+//  Greenovation
 //
-//  Created by Naufal Fawwaz Andriawan on 06/10/23.
+//  Created by Naufal Fawwaz Andriawan on 25/10/23.
 //
 
-import Foundation
-import SwiftUI
 import Combine
 
-class DevicesViewModel: ObservableObject {
+final class DevicesViewModel {
     
-    @Published var deviceStatus: DeviceStatusModel? = nil
-    @Published var isLoading: Bool = false
-    private let repository = HydrospaceRepository.shared
+    let successGetDevices = Box(false)
+    var devices: [DeviceModel] = []
+    
     private var cancellables: Set<AnyCancellable> = []
+    private let repository = HydrospaceRepository.shared
     
-    func initData() {
-        self.isLoading = true
-        repository.observeDeviceValue(id: "device_001")
-            .sink { [weak self] deviceStatus in
-                DispatchQueue.main.async {
-                    self?.deviceStatus = deviceStatus
-                    self?.isLoading = false
-                }
+    func getDevices() {
+        repository
+            .observeDevicesValue()
+            .sink { [weak self] model in
+                guard let self = self else { return }
+                self.devices = model
+                self.successGetDevices.value = true
             }
             .store(in: &cancellables)
     }

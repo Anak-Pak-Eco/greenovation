@@ -8,12 +8,27 @@
 import UIKit
 import SwiftUI
 
-class DevicesUIKitViewController: UIViewController {
+class DevicesViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
+    private let viewModel = DevicesViewModel()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.forceUpdateNavbar()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupToolbar()
+        setupUI()
+        viewModel.successGetDevices.bind { [weak self] _ in
+            guard let self = self else { return }
+            mainTableView.reloadData()
+        }
+        viewModel.getDevices()
+    }
+    
+    private func setupToolbar() {
         title = "Perangkat"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.setRightBarButton(
@@ -25,7 +40,9 @@ class DevicesUIKitViewController: UIViewController {
             ),
             animated: true
         )
-        
+    }
+    
+    private func setupUI() {
         mainTableView.register(
             UINib(nibName: "DevicesItemTableViewCell", bundle: nil),
             forCellReuseIdentifier: "DeviceItemCell"
@@ -33,33 +50,35 @@ class DevicesUIKitViewController: UIViewController {
         mainTableView.backgroundColor = .surface
         mainTableView.dataSource = self
         mainTableView.delegate = self
-        mainTableView.reloadData()
     }
 }
 
-extension DevicesUIKitViewController: UITableViewDelegate, UITableViewDataSource {
+extension DevicesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return viewModel.devices.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = mainTableView.dequeueReusableCell(
-            withIdentifier: "DeviceItemCell",
-            for: indexPath
-        ) as! DevicesItemTableViewCell
+        let cell = mainTableView.dequeueReusableCell(withIdentifier: "DeviceItemCell", for: indexPath) as! DevicesItemTableViewCell
         
-        cell.backgroundColor = .surface
+        let device = viewModel.devices[indexPath.row]
+        cell.setup(device: device)
+        cell.selectionStyle = .gray
         
         return cell
     }
     
-    func tableView(
-        _ tableView: UITableView,
-        didSelectRowAt indexPath: IndexPath
-    ) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIHostingController(rootView: DetailDeviceView())
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
-        mainTableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension UINavigationController {
+    func forceUpdateNavbar() {
+        DispatchQueue.main.async {
+            self.navigationBar.sizeToFit()
+        }
     }
 }

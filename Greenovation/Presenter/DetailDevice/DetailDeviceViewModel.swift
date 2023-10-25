@@ -11,7 +11,7 @@ import Combine
 
 class DetailDeviceViewModel: ObservableObject {
     
-    @Published var deviceStatus: DeviceStatusModel? = nil
+    @Published var deviceStatus: DeviceModel? = nil
     @Published var isLoading: Bool = false
     @Published var ml = "100ml"
     @Published var range = "800-1200"

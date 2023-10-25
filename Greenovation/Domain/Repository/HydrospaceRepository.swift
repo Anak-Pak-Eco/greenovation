@@ -11,13 +11,30 @@ import Combine
 class HydrospaceRepository: HydrospaceRepositoryProtocol {
     
     private let hydrospaceDataSource = HydrospaceRTDBDataSource.shared
-    static let shared = HydrospaceRepository()
+    static let shared: HydrospaceRepositoryProtocol = HydrospaceRepository()
     
-    func observeDeviceValue(id: String) -> AnyPublisher<DeviceStatusModel?, Never> {
+    func observeDevicesValue() -> AnyPublisher<[DeviceModel], Never> {
+        return hydrospaceDataSource.getDevicesStatus()
+            .map { responses in
+                return responses.map { response in
+                    DeviceModel(
+                        currentPh: response.currentPh ?? 0,
+                        currentSteps: response.currentSteps ?? "",
+                        currentPpm: response.currentPpm ?? 0,
+                        name: response.name ?? "",
+                        plantId: response.plantId ?? "",
+                        userId: response.userId ?? ""
+                    )
+                }
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    func observeDeviceValue(id: String) -> AnyPublisher<DeviceModel?, Never> {
         return hydrospaceDataSource.getDeviceStatus(id: id)
             .map { response in
                 if let response = response {
-                    return DeviceStatusModel(
+                    return DeviceModel(
                         currentPh: response.currentPh ?? 0.0,
                         currentSteps: response.currentSteps ?? "",
                         currentPpm: response.currentPpm ?? 0.0,

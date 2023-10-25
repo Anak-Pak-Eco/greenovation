@@ -9,5 +9,6 @@ import Foundation
 import Combine
 
 protocol HydrospaceRepositoryProtocol {
-    func observeDeviceValue(id: String) -> AnyPublisher<DeviceStatusModel?, Never>
+    func observeDeviceValue(id: String) -> AnyPublisher<DeviceModel?, Never>
+    func observeDevicesValue() -> AnyPublisher<[DeviceModel], Never>
 }

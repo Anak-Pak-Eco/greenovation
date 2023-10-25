@@ -12,7 +12,7 @@ import SwiftUI
 class MainViewController: UITabBarController {
     
     lazy var deviceViewController: UINavigationController = {
-        let viewController = UINavigationController(rootViewController: DevicesUIKitViewController())
+        let viewController = UINavigationController(rootViewController: DevicesViewController())
         return viewController
     }()
     
