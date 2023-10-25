@@ -252,6 +252,7 @@
 		D640E2002AC7A322007E993F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D646B4572AE91F0700BE78EC /* Components */,
 				D640E2012AC7A32D007E993F /* Box.swift */,
 				D630F5122AD84BEF00A355D0 /* CustomTextStyle.swift */,
 				D68003EC2ADB860600AAED95 /* NavigatorDelegate.swift */,
@@ -259,6 +260,21 @@
 				D6DFD64D2AE7DEE200215428 /* View+Extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D646B4572AE91F0700BE78EC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D646B4582AE91F1100BE78EC /* Alert */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D646B4582AE91F1100BE78EC /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		D681D56F2AE68CB3005A0BAC /* Devices */ = {
@@ -311,13 +327,13 @@
 			path = FormulaSetting;
 			sourceTree = "<group>";
 		};
-		D6AC85862AD013B80033B665 /* DetailDevice */ = {
+		D6AC85862AD013B80033B665 /* Detail Device */ = {
 			isa = PBXGroup;
 			children = (
 				D6AC85872AD013D60033B665 /* DetailDeviceView.swift */,
 				D6AC85892AD013DF0033B665 /* DetailDeviceViewModel.swift */,
 			);
-			path = DetailDevice;
+			path = "Detail Device";
 			sourceTree = "<group>";
 		};
 		D6D010182AC6C60800EC51FB = {
@@ -375,7 +391,7 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				D6AC85862AD013B80033B665 /* DetailDevice */,
+				D6AC85862AD013B80033B665 /* Detail Device */,
 				D6AC85702ACFF4860033B665 /* Main */,
 			);
 			path = Presenter;
