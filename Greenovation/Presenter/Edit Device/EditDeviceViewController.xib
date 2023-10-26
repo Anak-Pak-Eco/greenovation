@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditDeviceViewController" customModule="Greenovation" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteButton" destination="hOA-4F-ovg" id="H1w-At-cUQ"/>
+                <outlet property="saveButton" destination="eED-ae-vlC" id="NEp-bJ-cQN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnL-FP-8TC">
+                    <rect key="frame" x="0.0" y="74" width="390" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWC-4o-CpX" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="16" y="19" width="334" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="YqO-zF-Eji"/>
+                                <constraint firstAttribute="width" constant="334" id="bZ9-Rx-8vs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="sensor-perangkat"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07P-x4-Qra">
+                            <rect key="frame" x="325" y="15" width="51" height="31"/>
+                        </switch>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="cWC-4o-CpX" firstAttribute="leading" secondItem="dnL-FP-8TC" secondAttribute="leading" constant="16" id="2lp-eh-3B6"/>
+                        <constraint firstAttribute="width" constant="390" id="359-Pp-Q6s"/>
+                        <constraint firstAttribute="bottom" secondItem="cWC-4o-CpX" secondAttribute="bottom" constant="19" id="4Sv-Kp-592"/>
+                        <constraint firstAttribute="bottom" secondItem="07P-x4-Qra" secondAttribute="bottom" constant="14" id="7Ez-X8-WfB"/>
+                        <constraint firstAttribute="height" constant="60" id="U10-M5-rr3"/>
+                        <constraint firstItem="07P-x4-Qra" firstAttribute="top" secondItem="dnL-FP-8TC" secondAttribute="top" constant="15" id="VLN-oK-N7I"/>
+                        <constraint firstAttribute="trailing" secondItem="07P-x4-Qra" secondAttribute="trailing" constant="16" id="cca-uW-NUW"/>
+                        <constraint firstItem="cWC-4o-CpX" firstAttribute="top" secondItem="dnL-FP-8TC" secondAttribute="top" constant="19" id="fQb-Cn-Q7Y"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPM-ag-Hgx" customClass="CustomFieldView" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="149" width="390" height="258"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="258" id="GYl-x7-nqd"/>
+                        <constraint firstAttribute="width" constant="390" id="paF-5P-GGG"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6Q-UV-zGx" customClass="CustomMyChoiceView" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="407" width="390" height="248"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="248" id="Un9-Hv-gYt"/>
+                        <constraint firstAttribute="width" constant="390" id="WKi-wq-34J"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eED-ae-vlC" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="16" y="670" width="358" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="358" id="M7U-1O-vUj"/>
+                        <constraint firstAttribute="height" constant="40" id="y5E-dj-WgF"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="**simpan-perubahan**"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOA-4F-ovg" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="16" y="726" width="358" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="358" id="6ae-FN-Mpf"/>
+                        <constraint firstAttribute="height" constant="40" id="91Y-mH-7ax"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button">
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="**hapus-perangkat**"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eED-ae-vlC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="0Qd-ke-QS7"/>
+                <constraint firstItem="R6Q-UV-zGx" firstAttribute="top" secondItem="LPM-ag-Hgx" secondAttribute="bottom" id="14H-4b-wjf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dnL-FP-8TC" secondAttribute="trailing" id="BhH-QH-IC8"/>
+                <constraint firstItem="LPM-ag-Hgx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="E2d-gh-0Xk"/>
+                <constraint firstItem="eED-ae-vlC" firstAttribute="top" secondItem="R6Q-UV-zGx" secondAttribute="bottom" constant="15" id="FnL-HV-RfP"/>
+                <constraint firstItem="hOA-4F-ovg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JRC-OC-cOi"/>
+                <constraint firstItem="R6Q-UV-zGx" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="OAy-eH-PQe"/>
+                <constraint firstAttribute="trailing" secondItem="LPM-ag-Hgx" secondAttribute="trailing" id="OfL-J1-OiF"/>
+                <constraint firstItem="dnL-FP-8TC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="Rna-Zj-XDQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hOA-4F-ovg" secondAttribute="trailing" constant="16" id="Thy-Ij-d63"/>
+                <constraint firstItem="dnL-FP-8TC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vag-qu-Lxk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eED-ae-vlC" secondAttribute="trailing" constant="16" id="cOf-Bd-bIT"/>
+                <constraint firstItem="hOA-4F-ovg" firstAttribute="top" secondItem="eED-ae-vlC" secondAttribute="bottom" constant="16" id="evB-uT-0TT"/>
+                <constraint firstItem="R6Q-UV-zGx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vfJ-Oh-Xyp"/>
+                <constraint firstItem="LPM-ag-Hgx" firstAttribute="top" secondItem="dnL-FP-8TC" secondAttribute="bottom" constant="15" id="yCr-En-Jf7"/>
+            </constraints>
+            <point key="canvasLocation" x="53" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
