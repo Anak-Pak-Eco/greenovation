@@ -15,6 +15,8 @@
 		A7E23C572AE922E80065F24F /* EditDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E23C552AE922E80065F24F /* EditDeviceViewController.swift */; };
 		A7E23C582AE922E80065F24F /* EditDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E23C562AE922E80065F24F /* EditDeviceViewController.xib */; };
 		A7E23C5A2AE924A10065F24F /* CustomFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E23C592AE924A10065F24F /* CustomFieldView.swift */; };
+		D60892252AEA5CC500A1C530 /* AlertViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60892232AEA5CC500A1C530 /* AlertViewCell.swift */; };
+		D60892262AEA5CC500A1C530 /* AlertViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60892242AEA5CC500A1C530 /* AlertViewCell.xib */; };
 		D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */; };
 		D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */; };
 		D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */; };
@@ -98,6 +100,8 @@
 		A7E23C552AE922E80065F24F /* EditDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeviceViewController.swift; sourceTree = "<group>"; };
 		A7E23C562AE922E80065F24F /* EditDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDeviceViewController.xib; sourceTree = "<group>"; };
 		A7E23C592AE924A10065F24F /* CustomFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomFieldView.swift; path = Greenovation/Utils/Components/CustomFieldView.swift; sourceTree = SOURCE_ROOT; };
+		D60892232AEA5CC500A1C530 /* AlertViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewCell.swift; sourceTree = "<group>"; };
+		D60892242AEA5CC500A1C530 /* AlertViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewCell.xib; sourceTree = "<group>"; };
 		D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Thin.ttf"; sourceTree = "<group>"; };
@@ -209,6 +213,13 @@
 				A7E23C562AE922E80065F24F /* EditDeviceViewController.xib */,
 			);
 			path = "Edit Device";
+		D60892222AEA5CB300A1C530 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				D60892232AEA5CC500A1C530 /* AlertViewCell.swift */,
+				D60892242AEA5CC500A1C530 /* AlertViewCell.xib */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		D630F4ED2AD8111700A355D0 /* Fonts */ = {
@@ -312,15 +323,9 @@
 				A7E23C592AE924A10065F24F /* CustomFieldView.swift */,
 				A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */,
 				D646B4582AE91F1100BE78EC /* Alert */,
+				D60892222AEA5CB300A1C530 /* Alert */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		D646B4582AE91F1100BE78EC /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Alert;
 			sourceTree = "<group>";
 		};
 		D681D56F2AE68CB3005A0BAC /* Devices */ = {
@@ -601,6 +606,7 @@
 				A7D78E202AEA6CA6006577AE /* GrowthStepViewController.xib in Resources */,
 				A7E23C582AE922E80065F24F /* EditDeviceViewController.xib in Resources */,
 				D630F5042AD8112A00A355D0 /* DMSans-Bold.ttf in Resources */,
+				D60892262AEA5CC500A1C530 /* AlertViewCell.xib in Resources */,
 				D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */,
 				D630F50C2AD8112A00A355D0 /* DMSans-Light.ttf in Resources */,
 				D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */,
@@ -661,6 +667,7 @@
 				D6AC858A2AD013DF0033B665 /* DetailDeviceViewModel.swift in Sources */,
 				D630F5132AD84BEF00A355D0 /* CustomTextStyle.swift in Sources */,
 				A7D78E1F2AEA6CA6006577AE /* GrowthStepViewController.swift in Sources */,
+				D60892252AEA5CC500A1C530 /* AlertViewCell.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
 				D6AC85882AD013D60033B665 /* DetailDeviceView.swift in Sources */,
 				D6AC85812ACFFD6C0033B665 /* FormulaSettingView.swift in Sources */,
