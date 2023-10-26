@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D60892252AEA5CC500A1C530 /* AlertViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60892232AEA5CC500A1C530 /* AlertViewCell.swift */; };
-		D60892262AEA5CC500A1C530 /* AlertViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60892242AEA5CC500A1C530 /* AlertViewCell.xib */; };
+		D608922A2AEA760200A1C530 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60892282AEA760200A1C530 /* OnboardingViewController.swift */; };
+		D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60892292AEA760200A1C530 /* OnboardingViewController.xib */; };
+		D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D608922C2AEA7A8300A1C530 /* GradientView.swift */; };
 		D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */; };
 		D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */; };
 		D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */; };
@@ -84,8 +85,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D60892232AEA5CC500A1C530 /* AlertViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewCell.swift; sourceTree = "<group>"; };
-		D60892242AEA5CC500A1C530 /* AlertViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewCell.xib; sourceTree = "<group>"; };
+		D60892282AEA760200A1C530 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		D60892292AEA760200A1C530 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		D608922C2AEA7A8300A1C530 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Thin.ttf"; sourceTree = "<group>"; };
@@ -173,13 +175,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D60892222AEA5CB300A1C530 /* Alert */ = {
+		D60892272AEA75EE00A1C530 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				D60892232AEA5CC500A1C530 /* AlertViewCell.swift */,
-				D60892242AEA5CC500A1C530 /* AlertViewCell.xib */,
+				D60892282AEA760200A1C530 /* OnboardingViewController.swift */,
+				D60892292AEA760200A1C530 /* OnboardingViewController.xib */,
 			);
-			path = Alert;
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		D630F4ED2AD8111700A355D0 /* Fonts */ = {
@@ -265,7 +267,7 @@
 		D640E2002AC7A322007E993F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D646B4572AE91F0700BE78EC /* Components */,
+				D608922C2AEA7A8300A1C530 /* GradientView.swift */,
 				D640E2012AC7A32D007E993F /* Box.swift */,
 				D630F5122AD84BEF00A355D0 /* CustomTextStyle.swift */,
 				D68003EC2ADB860600AAED95 /* NavigatorDelegate.swift */,
@@ -273,14 +275,6 @@
 				D6DFD64D2AE7DEE200215428 /* View+Extension.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		D646B4572AE91F0700BE78EC /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				D60892222AEA5CB300A1C530 /* Alert */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		D681D56F2AE68CB3005A0BAC /* Devices */ = {
@@ -342,6 +336,13 @@
 			path = "Detail Device";
 			sourceTree = "<group>";
 		};
+		D6BB280D2AEA81250084FD00 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
 		D6D010182AC6C60800EC51FB = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +398,8 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D6BB280D2AEA81250084FD00 /* Sign In */,
+				D60892272AEA75EE00A1C530 /* Onboarding */,
 				D6AC85862AD013B80033B665 /* Detail Device */,
 				D6AC85702ACFF4860033B665 /* Main */,
 			);
@@ -557,7 +560,6 @@
 				D630F50A2AD8112A00A355D0 /* DMSans-BlackItalic.ttf in Resources */,
 				D630F5052AD8112A00A355D0 /* DMSans-SemiBold.ttf in Resources */,
 				D630F5042AD8112A00A355D0 /* DMSans-Bold.ttf in Resources */,
-				D60892262AEA5CC500A1C530 /* AlertViewCell.xib in Resources */,
 				D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */,
 				D630F50C2AD8112A00A355D0 /* DMSans-Light.ttf in Resources */,
 				D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */,
@@ -570,6 +572,7 @@
 				D68003EB2ADB838D00AAED95 /* Localizable.xcstrings in Resources */,
 				D681D5782AE68D0E005A0BAC /* DevicesItemTableViewCell.xib in Resources */,
 				D630F50B2AD8112A00A355D0 /* DMSans-ThinItalic.ttf in Resources */,
+				D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */,
 				D6B98BFD2AE7BE7F0077E33E /* GoogleService-Info.plist in Resources */,
 				D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */,
 				D630F5082AD8112A00A355D0 /* DMSans-Black.ttf in Resources */,
@@ -614,11 +617,12 @@
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,
 				D6AC858A2AD013DF0033B665 /* DetailDeviceViewModel.swift in Sources */,
 				D630F5132AD84BEF00A355D0 /* CustomTextStyle.swift in Sources */,
-				D60892252AEA5CC500A1C530 /* AlertViewCell.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
 				D6AC85882AD013D60033B665 /* DetailDeviceView.swift in Sources */,
 				D6AC85812ACFFD6C0033B665 /* FormulaSettingView.swift in Sources */,
+				D608922A2AEA760200A1C530 /* OnboardingViewController.swift in Sources */,
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
+				D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
 				D6AC85722ACFF7700033B665 /* MainViewController.swift in Sources */,
 			);
