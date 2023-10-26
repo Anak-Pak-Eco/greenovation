@@ -33,7 +33,11 @@ public class Gradient: UIView {
     }
     
     override public func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        let _ = UITraitCollection.current.changedTraits(from: previousTraitCollection)
+        if #available(iOS 17.0, *) {
+            let _ = UITraitCollection.current.changedTraits(from: previousTraitCollection)
+        } else {
+            super.traitCollectionDidChange(previousTraitCollection)
+        }
         updatePoints()
         updateLocations()
         updateColors()

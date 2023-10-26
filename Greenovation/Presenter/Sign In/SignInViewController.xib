@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+        <array key="DMSans-SemiBold.ttf">
+            <string>DMSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="Greenovation" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="HGe-g3-yEI" id="NL8-dh-uBJ"/>
+                <outlet property="passwordTextField" destination="8Dc-aY-tDz" id="ZBW-Au-be6"/>
+                <outlet property="registerButton" destination="NmZ-T1-oDW" id="gkz-fN-vIw"/>
+                <outlet property="signInAppleButton" destination="3pf-Yu-bfY" id="vwI-Ud-SYc"/>
+                <outlet property="signInButton" destination="Fpb-Gs-wow" id="Ao5-pA-qg8"/>
+                <outlet property="signInGoogleButton" destination="TyH-jL-TXb" id="wI1-T8-uXq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBk-dm-PzB" userLabel="label_email">
+                    <rect key="frame" x="16" y="84" width="361" height="21"/>
+                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="16"/>
+                    <color key="textColor" name="primary-accent"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email@example.com" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HGe-g3-yEI" userLabel="textField_email">
+                    <rect key="frame" x="16" y="107" width="361" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="VtG-ln-tBs"/>
+                    </constraints>
+                    <color key="textColor" name="on primary-container"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kata Sandi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBe-fX-3IN" userLabel="label_password">
+                    <rect key="frame" x="16" y="161" width="361" height="21"/>
+                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="16"/>
+                    <color key="textColor" name="primary-accent"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="min. 8 karakter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Dc-aY-tDz" userLabel="textField_password">
+                    <rect key="frame" x="16" y="184" width="361" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="kW2-Ak-trs"/>
+                    </constraints>
+                    <color key="textColor" name="on primary-container"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpb-Gs-wow">
+                    <rect key="frame" x="16" y="273" width="361" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="B9f-lt-Xta"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Masuk" cornerStyle="fixed">
+                        <backgroundConfiguration key="background" cornerRadius="10"/>
+                        <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
+                        <color key="baseForegroundColor" name="on primary-accent"/>
+                        <color key="baseBackgroundColor" name="primary-accent"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pf-Yu-bfY">
+                    <rect key="frame" x="16" y="323" width="361" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2Lj-yT-IgR"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Lanjutkan dengan Apple" imagePadding="15">
+                        <imageReference key="image" image="apple.logo" catalog="system" symbolScale="large"/>
+                        <backgroundConfiguration key="background" cornerRadius="8">
+                            <color key="strokeColor" systemColor="labelColor"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                        <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyH-jL-TXb">
+                    <rect key="frame" x="16" y="383" width="361" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Ytx-NI-PuI"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="image-google" title="Lanjutkan dengan Google" imagePadding="15">
+                        <backgroundConfiguration key="background" cornerRadius="8">
+                            <color key="strokeColor" systemColor="labelColor"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                        <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                    </buttonConfiguration>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NBY-vk-0Fm">
+                    <rect key="frame" x="90.666666666666671" y="473" width="211.66666666666663" height="21"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Belum memiliki akun? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pa7-SB-rlc">
+                            <rect key="frame" x="0.0" y="0.0" width="163" height="21"/>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
+                            <color key="textColor" name="on primary-fixed"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" text="Daftar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmZ-T1-oDW">
+                            <rect key="frame" x="163" y="0.0" width="48.666666666666657" height="21"/>
+                            <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="16"/>
+                            <color key="textColor" name="on primary-fixed"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="surface"/>
+            <constraints>
+                <constraint firstItem="kBe-fX-3IN" firstAttribute="top" secondItem="HGe-g3-yEI" secondAttribute="bottom" constant="15" id="4M9-zb-W95"/>
+                <constraint firstItem="kBe-fX-3IN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5qT-1r-9LL"/>
+                <constraint firstItem="HGe-g3-yEI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="8MM-0v-Pei"/>
+                <constraint firstItem="HGe-g3-yEI" firstAttribute="top" secondItem="CBk-dm-PzB" secondAttribute="bottom" constant="2" id="A5Z-Yq-Ll8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3pf-Yu-bfY" secondAttribute="trailing" constant="16" id="Abn-yd-gRa"/>
+                <constraint firstItem="3pf-Yu-bfY" firstAttribute="top" secondItem="Fpb-Gs-wow" secondAttribute="bottom" constant="10" id="BAr-VU-QDK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TyH-jL-TXb" secondAttribute="trailing" constant="16" id="BsG-XZ-z49"/>
+                <constraint firstItem="3pf-Yu-bfY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ca7-uo-STr"/>
+                <constraint firstItem="NBY-vk-0Fm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LQL-jb-G04"/>
+                <constraint firstItem="8Dc-aY-tDz" firstAttribute="top" secondItem="kBe-fX-3IN" secondAttribute="bottom" constant="2" id="NEk-Rw-hvN"/>
+                <constraint firstItem="Fpb-Gs-wow" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="NrL-Ag-6Io"/>
+                <constraint firstItem="Fpb-Gs-wow" firstAttribute="top" secondItem="8Dc-aY-tDz" secondAttribute="bottom" constant="50" id="Tq5-TD-XqU"/>
+                <constraint firstItem="8Dc-aY-tDz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VCU-s3-sl0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fpb-Gs-wow" secondAttribute="trailing" constant="16" id="W3t-MW-Pf8"/>
+                <constraint firstItem="CBk-dm-PzB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="YcO-gp-114"/>
+                <constraint firstItem="CBk-dm-PzB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Z6o-4p-khX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CBk-dm-PzB" secondAttribute="trailing" constant="16" id="bIW-eo-2re"/>
+                <constraint firstItem="TyH-jL-TXb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cBA-B6-9x2"/>
+                <constraint firstItem="NBY-vk-0Fm" firstAttribute="top" secondItem="TyH-jL-TXb" secondAttribute="bottom" constant="40" id="dsN-fC-ioV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Dc-aY-tDz" secondAttribute="trailing" constant="16" id="gOv-Mc-W1F"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HGe-g3-yEI" secondAttribute="trailing" constant="16" id="iW1-VU-ube"/>
+                <constraint firstItem="8Dc-aY-tDz" firstAttribute="top" secondItem="kBe-fX-3IN" secondAttribute="bottom" constant="2" id="odh-2g-B4E"/>
+                <constraint firstItem="TyH-jL-TXb" firstAttribute="top" secondItem="3pf-Yu-bfY" secondAttribute="bottom" constant="10" id="soy-fK-8vm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kBe-fX-3IN" secondAttribute="trailing" constant="16" id="ypM-B8-glT"/>
+            </constraints>
+            <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="apple.logo" catalog="system" width="105" height="128"/>
+        <image name="image-google" width="18.333333969116211" height="18.666666030883789"/>
+        <namedColor name="on primary-accent">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="on primary-container">
+            <color red="0.0" green="0.13300000131130219" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="on primary-fixed">
+            <color red="0.0" green="0.13300000131130219" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface">
+            <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

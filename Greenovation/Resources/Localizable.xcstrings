@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "id",
   "strings" : {
-    " (%@)" : {
-
-    },
     "(%@)" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -160,6 +157,7 @@
       }
     },
     "%@ Nilai PPM rendah" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -258,12 +256,6 @@
           }
         }
       }
-    },
-    "Jam" : {
-
-    },
-    "Kepekatan (PPM)" : {
-
     },
     "Key" : {
       "extractionState" : "manual"
@@ -373,6 +365,7 @@
       }
     },
     "ph" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -389,6 +382,7 @@
       }
     },
     "ppm" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

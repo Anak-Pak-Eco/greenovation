@@ -15,22 +15,20 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // MARK: Button Configuration
         signUpButton.layer.cornerRadius = 10
         signUpButton.layer.borderWidth = 1
         signUpButton.layer.borderColor = UIColor.primaryAccent.cgColor
-        
         signInButton.layer.cornerRadius = 10
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onSignUpButtonClicked(_ sender: UIButton) {
+        let viewController = SignUpViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
-    */
-
+    
+    @IBAction func onSignInButtonClicked(_ sender: UIButton) {
+        let viewController = SignInViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }

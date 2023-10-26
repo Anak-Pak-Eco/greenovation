@@ -24,8 +24,9 @@
 		D630F50D2AD8112A00A355D0 /* DMSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4FB2AD8112A00A355D0 /* DMSans-LightItalic.ttf */; };
 		D630F50F2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4FD2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf */; };
 		D630F5112AD8112A00A355D0 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4FF2AD8112A00A355D0 /* DMSans-Medium.ttf */; };
-		D630F5132AD84BEF00A355D0 /* CustomTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D630F5122AD84BEF00A355D0 /* CustomTextStyle.swift */; };
 		D640E2022AC7A32D007E993F /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D640E2012AC7A32D007E993F /* Box.swift */; };
+		D64547092AEA96FE0077DA04 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64547072AEA96FE0077DA04 /* SignInViewController.swift */; };
+		D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64547082AEA96FE0077DA04 /* SignInViewController.xib */; };
 		D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646B4552AE902CA00BE78EC /* DevicesViewModel.swift */; };
 		D65C58832AE26D2F00FE8D1E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C58822AE26D2F00FE8D1E /* String+Extension.swift */; };
 		D68003EB2ADB838D00AAED95 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D68003EA2ADB838D00AAED95 /* Localizable.xcstrings */; };
@@ -34,14 +35,15 @@
 		D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D681D5712AE68CD3005A0BAC /* DevicesViewController.xib */; };
 		D681D5772AE68D0E005A0BAC /* DevicesItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681D5752AE68D0E005A0BAC /* DevicesItemTableViewCell.swift */; };
 		D681D5782AE68D0E005A0BAC /* DevicesItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D681D5762AE68D0E005A0BAC /* DevicesItemTableViewCell.xib */; };
+		D6917A2E2AEA9E6B00CD7F5C /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6917A2D2AEA9E6B00CD7F5C /* UITextField+Extensions.swift */; };
+		D6917A322AEAB4F800CD7F5C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6917A302AEAB4F800CD7F5C /* SignUpViewController.swift */; };
+		D6917A332AEAB4F800CD7F5C /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6917A312AEAB4F800CD7F5C /* SignUpViewController.xib */; };
 		D6AC85722ACFF7700033B665 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC85712ACFF7700033B665 /* MainViewController.swift */; };
 		D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6AC85732ACFFA000033B665 /* MainViewController.xib */; };
 		D6AC857D2ACFFD260033B665 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC857C2ACFFD260033B665 /* NotificationView.swift */; };
 		D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC857E2ACFFD2F0033B665 /* NotificationViewModel.swift */; };
 		D6AC85812ACFFD6C0033B665 /* FormulaSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC85802ACFFD6C0033B665 /* FormulaSettingView.swift */; };
 		D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC85822ACFFD7E0033B665 /* FormulaSettingViewModel.swift */; };
-		D6AC85882AD013D60033B665 /* DetailDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC85872AD013D60033B665 /* DetailDeviceView.swift */; };
-		D6AC858A2AD013DF0033B665 /* DetailDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC85892AD013DF0033B665 /* DetailDeviceViewModel.swift */; };
 		D6B98BFD2AE7BE7F0077E33E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B98BFC2AE7BE7F0077E33E /* GoogleService-Info.plist */; };
 		D6BD3B712AD0CAB6005B85C3 /* DeviceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD3B702AD0CAB6005B85C3 /* DeviceResponse.swift */; };
 		D6BD3B732AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD3B722AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift */; };
@@ -102,8 +104,9 @@
 		D630F4FB2AD8112A00A355D0 /* DMSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		D630F4FD2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		D630F4FF2AD8112A00A355D0 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
-		D630F5122AD84BEF00A355D0 /* CustomTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextStyle.swift; sourceTree = "<group>"; };
 		D640E2012AC7A32D007E993F /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		D64547072AEA96FE0077DA04 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D64547082AEA96FE0077DA04 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		D646B4552AE902CA00BE78EC /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
 		D65C58822AE26D2F00FE8D1E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D68003EA2ADB838D00AAED95 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -112,14 +115,15 @@
 		D681D5712AE68CD3005A0BAC /* DevicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevicesViewController.xib; sourceTree = "<group>"; };
 		D681D5752AE68D0E005A0BAC /* DevicesItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesItemTableViewCell.swift; sourceTree = "<group>"; };
 		D681D5762AE68D0E005A0BAC /* DevicesItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevicesItemTableViewCell.xib; sourceTree = "<group>"; };
+		D6917A2D2AEA9E6B00CD7F5C /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		D6917A302AEAB4F800CD7F5C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D6917A312AEAB4F800CD7F5C /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		D6AC85712ACFF7700033B665 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D6AC85732ACFFA000033B665 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		D6AC857C2ACFFD260033B665 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		D6AC857E2ACFFD2F0033B665 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		D6AC85802ACFFD6C0033B665 /* FormulaSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaSettingView.swift; sourceTree = "<group>"; };
 		D6AC85822ACFFD7E0033B665 /* FormulaSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaSettingViewModel.swift; sourceTree = "<group>"; };
-		D6AC85872AD013D60033B665 /* DetailDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeviceView.swift; sourceTree = "<group>"; };
-		D6AC85892AD013DF0033B665 /* DetailDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeviceViewModel.swift; sourceTree = "<group>"; };
 		D6B98BFC2AE7BE7F0077E33E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6BD3B702AD0CAB6005B85C3 /* DeviceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceResponse.swift; sourceTree = "<group>"; };
 		D6BD3B722AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrospaceRTDBDataSource.swift; sourceTree = "<group>"; };
@@ -269,10 +273,10 @@
 			children = (
 				D608922C2AEA7A8300A1C530 /* GradientView.swift */,
 				D640E2012AC7A32D007E993F /* Box.swift */,
-				D630F5122AD84BEF00A355D0 /* CustomTextStyle.swift */,
 				D68003EC2ADB860600AAED95 /* NavigatorDelegate.swift */,
 				D65C58822AE26D2F00FE8D1E /* String+Extension.swift */,
 				D6DFD64D2AE7DEE200215428 /* View+Extension.swift */,
+				D6917A2D2AEA9E6B00CD7F5C /* UITextField+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -295,6 +299,15 @@
 				D681D5762AE68D0E005A0BAC /* DevicesItemTableViewCell.xib */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D6917A2F2AEAB4E400CD7F5C /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				D6917A302AEAB4F800CD7F5C /* SignUpViewController.swift */,
+				D6917A312AEAB4F800CD7F5C /* SignUpViewController.xib */,
+			);
+			path = "Sign Up";
 			sourceTree = "<group>";
 		};
 		D6AC85702ACFF4860033B665 /* Main */ = {
@@ -330,8 +343,6 @@
 		D6AC85862AD013B80033B665 /* Detail Device */ = {
 			isa = PBXGroup;
 			children = (
-				D6AC85872AD013D60033B665 /* DetailDeviceView.swift */,
-				D6AC85892AD013DF0033B665 /* DetailDeviceViewModel.swift */,
 			);
 			path = "Detail Device";
 			sourceTree = "<group>";
@@ -339,6 +350,8 @@
 		D6BB280D2AEA81250084FD00 /* Sign In */ = {
 			isa = PBXGroup;
 			children = (
+				D64547072AEA96FE0077DA04 /* SignInViewController.swift */,
+				D64547082AEA96FE0077DA04 /* SignInViewController.xib */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -398,6 +411,7 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D6917A2F2AEAB4E400CD7F5C /* Sign Up */,
 				D6BB280D2AEA81250084FD00 /* Sign In */,
 				D60892272AEA75EE00A1C530 /* Onboarding */,
 				D6AC85862AD013B80033B665 /* Detail Device */,
@@ -573,9 +587,11 @@
 				D681D5782AE68D0E005A0BAC /* DevicesItemTableViewCell.xib in Resources */,
 				D630F50B2AD8112A00A355D0 /* DMSans-ThinItalic.ttf in Resources */,
 				D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */,
+				D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */,
 				D6B98BFD2AE7BE7F0077E33E /* GoogleService-Info.plist in Resources */,
 				D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */,
 				D630F5082AD8112A00A355D0 /* DMSans-Black.ttf in Resources */,
+				D6917A332AEAB4F800CD7F5C /* SignUpViewController.xib in Resources */,
 				D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,23 +619,23 @@
 			files = (
 				D65C58832AE26D2F00FE8D1E /* String+Extension.swift in Sources */,
 				D68003ED2ADB860600AAED95 /* NavigatorDelegate.swift in Sources */,
+				D6917A2E2AEA9E6B00CD7F5C /* UITextField+Extensions.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
 				D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */,
 				D6BD3B732AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift in Sources */,
 				D6BD3B712AD0CAB6005B85C3 /* DeviceResponse.swift in Sources */,
 				D681D5772AE68D0E005A0BAC /* DevicesItemTableViewCell.swift in Sources */,
 				D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */,
+				D64547092AEA96FE0077DA04 /* SignInViewController.swift in Sources */,
 				D6AC857D2ACFFD260033B665 /* NotificationView.swift in Sources */,
 				D6BD3B792AD123C4005B85C3 /* DeviceModel.swift in Sources */,
 				D6DFD64E2AE7DEE200215428 /* View+Extension.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
 				D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */,
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,
-				D6AC858A2AD013DF0033B665 /* DetailDeviceViewModel.swift in Sources */,
-				D630F5132AD84BEF00A355D0 /* CustomTextStyle.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
-				D6AC85882AD013D60033B665 /* DetailDeviceView.swift in Sources */,
 				D6AC85812ACFFD6C0033B665 /* FormulaSettingView.swift in Sources */,
+				D6917A322AEAB4F800CD7F5C /* SignUpViewController.swift in Sources */,
 				D608922A2AEA760200A1C530 /* OnboardingViewController.swift in Sources */,
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
 				D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */,
@@ -807,8 +823,9 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -839,8 +856,9 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
