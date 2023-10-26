@@ -337,6 +337,17 @@
         }
       }
     },
+    "Fase dimulai dari benih dan berlanjut dengan tanaman mulai mengembangkan daun sejati." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The phase starts from the seed and continues with the plant starting to develop true leaves."
+          }
+        }
+      }
+    },
     "fase-anakan" : {
       "localizations" : {
         "en" : {
@@ -349,6 +360,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fase Anakan"
+          }
+        }
+      }
+    },
+    "fase-vegetatif-awal" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Early Vegetative Phase"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fase Vegetatif Awal"
+          }
+        }
+      }
+    },
+    "fase-vegetatif-menengah" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intermediate Vegetative Phase"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fase Vegetatif Menengah"
           }
         }
       }
@@ -690,6 +735,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add 100ml of nutrient solution B to maintain nutritional balance."
+          }
+        }
+      }
+    },
+    "Tanaman mengalami pertumbuhan daun, batang, dan akar yang berlangsung dengan cepat hingga masa panen sayuran daun tiba." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plants experience rapid growth of leaves, stems and roots until the harvest time for leaf vegetables arrives."
+          }
+        }
+      }
+    },
+    "Tanaman mulai mempunyai akar yang kuat dan mengembangkan daun dan cabang." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plants begin to have strong roots and develop leaves and branches."
           }
         }
       }
