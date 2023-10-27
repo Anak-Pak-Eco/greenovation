@@ -457,6 +457,9 @@
     "Key 1" : {
       "extractionState" : "manual"
     },
+    "Key 2" : {
+      "extractionState" : "manual"
+    },
     "Kurangi air." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -570,6 +573,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kepekatan Nutrisi"
+          }
+        }
+      }
+    },
+    "pendaftaran-perangkat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Device Register"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pendaftaran Perangkat"
           }
         }
       }

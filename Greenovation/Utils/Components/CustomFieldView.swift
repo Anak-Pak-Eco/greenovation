@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import SheetViewController
 
 final class CustomFieldView: UIView, UITableViewDataSource, UITableViewDelegate {
     
@@ -210,8 +211,12 @@ final class CustomFieldView: UIView, UITableViewDataSource, UITableViewDelegate 
     }
     
     @objc func growthStepTextFieldDidTap(_ textField: UITextField) {
-        print("Growth Step Text Field Tapped")
+//        print("Growth Step Text Field Tapped")
+        
         // Show bottom sheet
+        let bottomSheetVC = ChooseFormulationViewController()
+        bottomSheetVC.modalPresentationStyle = .overCurrentContext // For transparency
+        self.present(bottomSheetVC, animated: true, completion: nil)
     }
     
 }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GrowthStepViewController" customModule="Greenovation" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDeviceViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,23 +18,23 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-3g-m4h" customClass="CustomGrowthStepView" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="59" width="393" height="249"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXO-mU-rk3" customClass="CustomFieldView" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="1" y="59" width="390" height="258"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="390" id="UAx-LD-H0R"/>
-                        <constraint firstAttribute="height" constant="249" id="fur-AB-Ih5"/>
+                        <constraint firstAttribute="height" constant="258" id="Rr8-yv-0X8"/>
+                        <constraint firstAttribute="width" constant="390" id="jX1-W6-sco"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>
             <constraints>
-                <constraint firstItem="LnD-3g-m4h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0kH-xe-2r6"/>
-                <constraint firstItem="LnD-3g-m4h" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Wqe-Aa-nA6"/>
-                <constraint firstItem="LnD-3g-m4h" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="py2-qv-oIq"/>
+                <constraint firstItem="wXO-mU-rk3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="D8y-kK-LjZ"/>
+                <constraint firstItem="wXO-mU-rk3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DfP-gA-Mbp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wXO-mU-rk3" secondAttribute="trailing" id="s5z-rW-jsN"/>
             </constraints>
-            <point key="canvasLocation" x="52.671755725190835" y="19.718309859154932"/>
+            <point key="canvasLocation" x="50" y="20"/>
         </view>
     </objects>
     <resources>

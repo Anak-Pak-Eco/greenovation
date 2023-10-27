@@ -14,7 +14,14 @@ class EditDeviceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = String(localized: "pengaturan-perangkat")
+        
+        // Set Title
+        self.title = String(localized: "pengaturan-perangkat")
+        
+        // Set Back Button
+        let customBackButtonImage = UIImage(systemName: "chevron.left")
+        let backButton = UIBarButtonItem(image: customBackButtonImage, style: .plain, target: self, action: #selector(backButtonTapped))
+        self.navigationItem.leftBarButtonItem = backButton
         
         saveButtonStyle()
         deleteButtonStyle()
@@ -33,6 +40,11 @@ class EditDeviceViewController: UIViewController {
         deleteButton.layer.borderColor = UIColor.primaryAccent.cgColor
         deleteButton.layer.borderWidth = 1.0
         deleteButton.layer.cornerRadius = 10.0
+    }
+    
+    @objc func backButtonTapped() {
+//        self.navigationController?.popViewController(animated: true)
+        
     }
 
 }
