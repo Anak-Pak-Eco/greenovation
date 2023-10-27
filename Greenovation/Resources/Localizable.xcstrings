@@ -270,6 +270,9 @@
     "750" : {
 
     },
+    "900" : {
+
+    },
     "anakan" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -394,6 +397,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fase Vegetatif Menengah"
+          }
+        }
+      }
+    },
+    "Formula di bawah ini merupakan formula yang kamu buat untuk **%@** pada **%@**" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The formula below is the formula you created for **%@** on **%@**"
           }
         }
       }
@@ -592,6 +606,23 @@
         }
       }
     },
+    "pilih-satu-formula" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose One Formula"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih Satu Formula"
+          }
+        }
+      }
+    },
     "ppm" : {
       "localizations" : {
         "en" : {
@@ -680,6 +711,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sensor Perangkat"
+          }
+        }
+      }
+    },
+    "simpan-pilihan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Selection"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan Pilihan"
           }
         }
       }

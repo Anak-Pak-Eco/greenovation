@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71FC0A72AEBA3F000875CBF /* ChooseFormulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0A52AEBA3F000875CBF /* ChooseFormulationViewController.swift */; };
+		A71FC0A82AEBA3F000875CBF /* ChooseFormulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71FC0A62AEBA3F000875CBF /* ChooseFormulationViewController.xib */; };
+		A71FC0AA2AEBA40E00875CBF /* CustomChooseFormulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0A92AEBA40E00875CBF /* CustomChooseFormulationView.swift */; };
 		A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */; };
 		A7D78E182AE929F6006577AE /* CustomMyChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */; };
 		A7D78E1A2AEA6C26006577AE /* CustomGrowthStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */; };
@@ -90,6 +93,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A71FC0A52AEBA3F000875CBF /* ChooseFormulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseFormulationViewController.swift; sourceTree = "<group>"; };
+		A71FC0A62AEBA3F000875CBF /* ChooseFormulationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseFormulationViewController.xib; sourceTree = "<group>"; };
+		A71FC0A92AEBA40E00875CBF /* CustomChooseFormulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChooseFormulationView.swift; sourceTree = "<group>"; };
 		A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalizationStoryboard.swift; path = Greenovation/Utils/LocalizationStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomMyChoiceView.swift; path = Greenovation/Utils/Components/CustomMyChoiceView.swift; sourceTree = SOURCE_ROOT; };
 		A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGrowthStepView.swift; sourceTree = "<group>"; };
@@ -185,9 +191,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A71FC0A22AEBA3B700875CBF /* Choose Formulation Bottom Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				A71FC0A52AEBA3F000875CBF /* ChooseFormulationViewController.swift */,
+				A71FC0A62AEBA3F000875CBF /* ChooseFormulationViewController.xib */,
+			);
+			path = "Choose Formulation Bottom Sheet";
+			sourceTree = "<group>";
+		};
 		A7D78E1B2AEA6C62006577AE /* Bottom Sheet */ = {
 			isa = PBXGroup;
 			children = (
+				A71FC0A22AEBA3B700875CBF /* Choose Formulation Bottom Sheet */,
 				A7D78E1C2AEA6C87006577AE /* Growth Step Bottom Sheet */,
 			);
 			path = "Bottom Sheet";
@@ -311,6 +327,7 @@
 				A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */,
 				A7E23C592AE924A10065F24F /* CustomFieldView.swift */,
 				A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */,
+				A71FC0A92AEBA40E00875CBF /* CustomChooseFormulationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -382,7 +399,6 @@
 				D6D010442AC6C60900EC51FB /* HydrospaceUITests */,
 				D6D010222AC6C60800EC51FB /* Products */,
 				D6DFD63A2AE7C6DF00215428 /* Frameworks */,
-				A7D78E212AEA6E50006577AE /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -591,6 +607,7 @@
 				D6D010312AC6C60900EC51FB /* LaunchScreen.storyboard in Resources */,
 				D630F50A2AD8112A00A355D0 /* DMSans-BlackItalic.ttf in Resources */,
 				D630F5052AD8112A00A355D0 /* DMSans-SemiBold.ttf in Resources */,
+				A71FC0A82AEBA3F000875CBF /* ChooseFormulationViewController.xib in Resources */,
 				A7D78E202AEA6CA6006577AE /* GrowthStepViewController.xib in Resources */,
 				A7E23C582AE922E80065F24F /* EditDeviceViewController.xib in Resources */,
 				D630F5042AD8112A00A355D0 /* DMSans-Bold.ttf in Resources */,
@@ -637,8 +654,10 @@
 				D65C58832AE26D2F00FE8D1E /* String+Extension.swift in Sources */,
 				D68003ED2ADB860600AAED95 /* NavigatorDelegate.swift in Sources */,
 				A7E23C5A2AE924A10065F24F /* CustomFieldView.swift in Sources */,
+				A71FC0AA2AEBA40E00875CBF /* CustomChooseFormulationView.swift in Sources */,
 				A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
+				A71FC0A72AEBA3F000875CBF /* ChooseFormulationViewController.swift in Sources */,
 				D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */,
 				D6BD3B732AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift in Sources */,
 				D6BD3B712AD0CAB6005B85C3 /* DeviceResponse.swift in Sources */,
