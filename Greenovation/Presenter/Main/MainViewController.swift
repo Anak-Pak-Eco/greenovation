@@ -61,11 +61,6 @@ class MainViewController: UITabBarController {
     }
 }
 
-extension MainViewController: NavigatorDelegate {
-    func navigate(_ routes: Routes) {
-    }
-}
-
 extension UINavigationController: UIGestureRecognizerDelegate {
     override open func viewDidLoad() {
         super.viewDidLoad()

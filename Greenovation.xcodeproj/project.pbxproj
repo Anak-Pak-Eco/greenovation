@@ -30,7 +30,6 @@
 		D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646B4552AE902CA00BE78EC /* DevicesViewModel.swift */; };
 		D65C58832AE26D2F00FE8D1E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C58822AE26D2F00FE8D1E /* String+Extension.swift */; };
 		D68003EB2ADB838D00AAED95 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D68003EA2ADB838D00AAED95 /* Localizable.xcstrings */; };
-		D68003ED2ADB860600AAED95 /* NavigatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68003EC2ADB860600AAED95 /* NavigatorDelegate.swift */; };
 		D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681D5702AE68CD3005A0BAC /* DevicesViewController.swift */; };
 		D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D681D5712AE68CD3005A0BAC /* DevicesViewController.xib */; };
 		D681D5772AE68D0E005A0BAC /* DevicesItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681D5752AE68D0E005A0BAC /* DevicesItemTableViewCell.swift */; };
@@ -110,7 +109,6 @@
 		D646B4552AE902CA00BE78EC /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
 		D65C58822AE26D2F00FE8D1E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D68003EA2ADB838D00AAED95 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		D68003EC2ADB860600AAED95 /* NavigatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorDelegate.swift; sourceTree = "<group>"; };
 		D681D5702AE68CD3005A0BAC /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
 		D681D5712AE68CD3005A0BAC /* DevicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevicesViewController.xib; sourceTree = "<group>"; };
 		D681D5752AE68D0E005A0BAC /* DevicesItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 			children = (
 				D608922C2AEA7A8300A1C530 /* GradientView.swift */,
 				D640E2012AC7A32D007E993F /* Box.swift */,
-				D68003EC2ADB860600AAED95 /* NavigatorDelegate.swift */,
 				D65C58822AE26D2F00FE8D1E /* String+Extension.swift */,
 				D6DFD64D2AE7DEE200215428 /* View+Extension.swift */,
 				D6917A2D2AEA9E6B00CD7F5C /* UITextField+Extensions.swift */,
@@ -618,7 +615,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65C58832AE26D2F00FE8D1E /* String+Extension.swift in Sources */,
-				D68003ED2ADB860600AAED95 /* NavigatorDelegate.swift in Sources */,
 				D6917A2E2AEA9E6B00CD7F5C /* UITextField+Extensions.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
 				D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */,

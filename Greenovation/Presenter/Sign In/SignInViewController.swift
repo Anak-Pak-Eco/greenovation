@@ -45,4 +45,9 @@ class SignInViewController: UIViewController {
     @objc func onBackButtonClicked(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func onSignInButtonClicked(_ sender: UIButton) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.setViewControllers([MainViewController()], animated: true)
+    }
 }
