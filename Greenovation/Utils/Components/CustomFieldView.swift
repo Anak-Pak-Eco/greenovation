@@ -6,15 +6,46 @@
 //
 
 import UIKit
+import SwiftUI
 //import SheetViewController
 
-final class CustomFieldView: UIView, UITableViewDataSource, UITableViewDelegate {
+struct plantModel {
+    var image: UIImage
+    var name: String
+}
+
+final class CustomFieldView: UIView {
     
-    var items: [String] = ["Item 1", "Item 2", "Item 3"]
+//    var items: [String] = ["Kangkung", "Caisim", "Pisang", "Mangga", "Nanas"]
+//    
+//    private let image: [UIImage] = [
+//        UIImage(named: "image-anakan")!,
+//        UIImage(named: "image-awal")!,
+//        UIImage(named: "image-anakan")!,
+//        UIImage(named: "image-anakan")!,
+//        UIImage(named: "image-anakan")!
+//    ]
     
-    var filteredItems: [String] = []
+    let modelArray: [plantModel] = [
+        plantModel(image: UIImage(named: "image-anakan")!, name: "Kangkung"),
+        plantModel(image: UIImage(named: "image-awal")!, name: "Jeruk"),
+        plantModel(image: UIImage(named: "image-anakan")!, name: "Duren"),
+        plantModel(image: UIImage(named: "image-awal")!, name: "Jambu"),
+        plantModel(image: UIImage(named: "image-anakan")!, name: "Timun")
+    ]
+    
+    var filteredItems: [plantModel] = []
     
     var searchBarTableViewIsShow: Bool = false
+    
+    func makeLabel(text: String, color: UIColor) -> UILabel {
+        let component = UILabel()
+        component.text = text
+        component.font = UIFont.systemFont(ofSize: 17)
+        component.textColor = color
+        component.translatesAutoresizingMaskIntoConstraints = false
+        return component
+    }
     
     func makeFieldLabel(text: String) -> UILabel {
         let component = UILabel()
@@ -47,6 +78,18 @@ final class CustomFieldView: UIView, UITableViewDataSource, UITableViewDelegate 
         return component
     }
     
+    func makeButtonField(text: String) -> UIButton {
+        let component = UIButton()
+        component.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+        component.backgroundColor = .white
+        component.layer.cornerRadius = 10.0
+        component.layer.borderColor = UIColor.secondaryAccent.cgColor
+        component.layer.borderWidth = 2.0
+        component.setTitle(text, for: .normal)
+        component.translatesAutoresizingMaskIntoConstraints = false
+        return component
+    }
+    
     func makeFieldImage(image: UIImage) -> UIImageView {
         let component = UIImageView()
         component.image = image
@@ -57,18 +100,66 @@ final class CustomFieldView: UIView, UITableViewDataSource, UITableViewDelegate 
     
     let searchBarTableView: UITableView = {
         let component = UITableView()
-        component.backgroundColor = .red
         component.separatorStyle = .none
+        component.allowsSelection = true
+        component.register(UINib(nibName: "CustomSearchItemCell", bundle: nil), forCellReuseIdentifier: "CustomSearchCell")
         component.translatesAutoresizingMaskIntoConstraints = false
         return component
     } ()
     
+    let plantSearchTextField: UITextField = {
+        let component = UITextField()
+        component.placeholder = String(localized: "fase-anakan")
+        component.font = UIFont.boldSystemFont(ofSize: 16)
+        component.returnKeyType = UIReturnKeyType.done
+        component.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+        component.backgroundColor = .white
+        component.layer.cornerRadius = 10.0
+        component.layer.borderColor = UIColor.secondaryAccent.cgColor
+        component.layer.borderWidth = 2.0
+        component.adjustsFontSizeToFitWidth = true
+        component.translatesAutoresizingMaskIntoConstraints = false
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: component.frame.size.height))
+        component.leftView = paddingView
+        component.leftViewMode = .always
+        
+        return component
+    } ()
+    
+    let plantNotFountViiew: UIView = {
+        let component = UIView()
+        component.backgroundColor = .white
+        component.layer.cornerRadius = 10.0
+        component.layer.borderWidth = 1.0
+        component.layer.borderColor = UIColor.secondaryAccent.cgColor
+        component.translatesAutoresizingMaskIntoConstraints = false
+        return component
+    } ()
+    
+    let notFoundLabel: UILabel = {
+        let component = UILabel()
+        component.text = String(localized: "tanaman-tidak-ditemukan")
+        component.font = UIFont.systemFont(ofSize: 17)
+        component.textColor = .label
+        component.translatesAutoresizingMaskIntoConstraints = false
+        return component
+    } ()
+    
+    let addButton: UIButton = {
+        let component = UIButton()
+        component.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+        component.backgroundColor = UIColor.primaryAccent
+        component.layer.cornerRadius = 10.0
+        component.setTitle(String(localized: "tambah-pengaturan-baru"), for: .normal)
+        component.translatesAutoresizingMaskIntoConstraints = false
+        return component
+    } ()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         buildLayout()
-        
-        searchBarTableView.dataSource = self
-        searchBarTableView.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -82,8 +173,10 @@ final class CustomFieldView: UIView, UITableViewDataSource, UITableViewDelegate 
         let plantSearchLabel = makeFieldLabel(text: String(localized: "cari-tanaman"))
         let growthStepLabel = makeFieldLabel(text: String(localized: "tahap-pertumbuhan"))
         let deviceNameTextField = makeTextField(text: String(localized: ""))
-        let plantSearchTextField = makeTextField(text: String(localized: "jenis-tanaman"))
-        let growthStepTextField = makeTextField(text: String(localized: "fase-anakan"))
+//        let plantSearchTextField = makeTextField(text: String(localized: "jenis-tanaman"))
+//        let growthStepTextField = makeTextField(text: String(localized: "fase-anakan"))
+        let growthStepPlaceholder = makeLabel(text: String(localized: "fase-anakan"), color: .surfaceContainerHigh)
+        let growthStepTextField = makeButtonField(text: String(localized: "fase-anakan"))
         let plantSearchImage = makeFieldImage(image: UIImage(systemName: "magnifyingglass")!)
         let growthStepImage = makeFieldImage(image: UIImage(systemName: "chevron.down")!)
         
@@ -96,6 +189,7 @@ final class CustomFieldView: UIView, UITableViewDataSource, UITableViewDelegate 
         self.addSubview(plantSearchImage)
         self.addSubview(growthStepLabel)
         self.addSubview(growthStepTextField)
+        self.addSubview(growthStepPlaceholder)
         self.addSubview(growthStepImage)
         
         plantSearchTextField.addTarget(self, action: #selector(plantSearchTextFieldDidChange(_:)), for: .editingChanged)
@@ -157,6 +251,14 @@ final class CustomFieldView: UIView, UITableViewDataSource, UITableViewDelegate 
         ])
         
         NSLayoutConstraint.activate([
+            growthStepPlaceholder.topAnchor.constraint(equalTo: growthStepTextField.topAnchor, constant: 11.5),
+            growthStepPlaceholder.leftAnchor.constraint(equalTo: growthStepTextField.leftAnchor, constant: 10),
+            growthStepPlaceholder.bottomAnchor.constraint(equalTo: growthStepTextField.bottomAnchor, constant: -11.5),
+            growthStepPlaceholder.widthAnchor.constraint(equalToConstant: 319),
+            growthStepPlaceholder.heightAnchor.constraint(equalToConstant: 22)
+        ])
+        
+        NSLayoutConstraint.activate([
             growthStepImage.topAnchor.constraint(equalTo: growthStepTextField.topAnchor, constant: 12),
             growthStepImage.rightAnchor.constraint(equalTo: growthStepTextField.rightAnchor, constant: -12),
             growthStepImage.widthAnchor.constraint(equalToConstant: 19),
@@ -165,26 +267,17 @@ final class CustomFieldView: UIView, UITableViewDataSource, UITableViewDelegate 
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredItems.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "YourCellIdentifier", for: indexPath)
-        cell.textLabel?.text = filteredItems[indexPath.row]
-        return cell
-    }
-    
     func filterItems(with searchText: String) {
         if searchText.isEmpty {
-            filteredItems = items
+            filteredItems = []
         } else {
-            filteredItems = items.filter { $0.lowercased().contains(searchText.lowercased()) }
+            filteredItems = modelArray.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
-        searchBarTableView.reloadData() // Refresh the table view with filtered data
+        searchBarTableView.reloadData()
     }
     
     @objc func plantSearchTextFieldDidChange(_ textField: UITextField) {
+        
         let searchText = textField.text ?? ""
         filterItems(with: searchText)
         
@@ -194,29 +287,118 @@ final class CustomFieldView: UIView, UITableViewDataSource, UITableViewDelegate 
         }
         
         if searchBarTableViewIsShow == true {
-            self.addSubview(searchBarTableView)
-            
-            NSLayoutConstraint.activate([
-                searchBarTableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 172),
-                searchBarTableView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-                searchBarTableView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16),
-//                searchBarTableView.topAnchor.constraint(equalTo: plantSearchTextField.bottomAnchor),
-//                searchBarTableView.leftAnchor.constraint(equalTo: plantSearchTextField.leftAnchor),
-//                searchBarTableView.rightAnchor.constraint(equalTo: plantSearchTextField.rightAnchor),
-                searchBarTableView.widthAnchor.constraint(equalToConstant: 358),
-                searchBarTableView.heightAnchor.constraint(equalToConstant: 100)
-            ])
+            if filteredItems.isEmpty {
+                searchBarTableView.removeFromSuperview()
+                
+                self.addSubview(plantNotFountViiew)
+                self.addSubview(notFoundLabel)
+                self.addSubview(addButton)
+                
+                addButton.addTarget(self, action: #selector(addButtonDidTap(_:)), for: .touchUpInside)
+                
+                NSLayoutConstraint.activate([
+                    plantNotFountViiew.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 182),
+                    plantNotFountViiew.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
+                    plantNotFountViiew.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16),
+                    plantNotFountViiew.widthAnchor.constraint(equalToConstant: 358),
+                    plantNotFountViiew.heightAnchor.constraint(equalToConstant: 116),
+                    notFoundLabel.topAnchor.constraint(equalTo: plantNotFountViiew.topAnchor, constant: 20),
+                    notFoundLabel.leftAnchor.constraint(equalTo: plantNotFountViiew.leftAnchor, constant: 10),
+                    notFoundLabel.widthAnchor.constraint(equalToConstant: 195),
+                    notFoundLabel.heightAnchor.constraint(equalToConstant: 21),
+                    addButton.topAnchor.constraint(equalTo: notFoundLabel.bottomAnchor, constant: 15),
+                    addButton.leftAnchor.constraint(equalTo: plantNotFountViiew.leftAnchor, constant: 15),
+                    addButton.rightAnchor.constraint(equalTo: plantNotFountViiew.rightAnchor, constant: -15),
+                    addButton.widthAnchor.constraint(equalToConstant: 328),
+                    addButton.heightAnchor.constraint(equalToConstant: 40)
+                ])
+                
+            } else {
+                plantNotFountViiew.removeFromSuperview()
+                notFoundLabel.removeFromSuperview()
+                addButton.removeFromSuperview()
+                
+                self.addSubview(searchBarTableView)
+                searchBarTableView.dataSource = self
+                searchBarTableView.delegate = self
+                searchBarTableView.backgroundColor = .clear
+                
+                NSLayoutConstraint.activate([
+                    searchBarTableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 182),
+                    searchBarTableView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
+                    searchBarTableView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16),
+                    searchBarTableView.widthAnchor.constraint(equalToConstant: 358),
+                    searchBarTableView.heightAnchor.constraint(equalToConstant: 150)
+                ])
+            }
         }
         
     }
     
-    @objc func growthStepTextFieldDidTap(_ textField: UITextField) {
-//        print("Growth Step Text Field Tapped")
+    @objc func addButtonDidTap(_ textField: UITextField) {
+        print("Add Button Tapped")
+        plantNotFountViiew.removeFromSuperview()
+        notFoundLabel.removeFromSuperview()
+        addButton.removeFromSuperview()
         
         // Show bottom sheet
-        let bottomSheetVC = ChooseFormulationViewController()
-        bottomSheetVC.modalPresentationStyle = .overCurrentContext // For transparency
-        self.present(bottomSheetVC, animated: true, completion: nil)
+//        let bottomSheetVC = ChooseFormulationViewController()
+//        bottomSheetVC.modalPresentationStyle = .overCurrentContext // For transparency
+//        self.present(bottomSheetVC, animated: true, completion: nil)
     }
+    
+    @objc func growthStepTextFieldDidTap(_ textField: UITextField) {
+        print("Growth Step Text Field Tapped")
+        
+        // Show bottom sheet
+//        let bottomSheetVC = ChooseFormulationViewController()
+//        bottomSheetVC.modalPresentationStyle = .overCurrentContext // For transparency
+//        self.present(bottomSheetVC, animated: true, completion: nil)
+    }
+    
+}
+
+extension CustomFieldView: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredItems.count
+//        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomSearchCell", for: indexPath) as! CustomSearchItemCell
+        
+        if indexPath.row < filteredItems.count {
+            let filteredItem = filteredItems[indexPath.row]
+            cell.configure(with: filteredItem.image, and: filteredItem.name)
+        }
+        
+        print("id: \(indexPath.row), filter: \(filteredItems) \(filteredItems.count)")
+        
+//        let image = self.image[indexPath.row]
+//        let item = items[indexPath.row]
+//        cell.configure(with: image, and: item)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = filteredItems[indexPath.row]
+        
+        plantSearchTextField.text = selectedItem.name
+        searchBarTableView.removeFromSuperview()
+//        let vc = UIHostingController(rootView: DetailDeviceView())
+//        vc.hidesBottomBarWhenPushed = true
+//        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 76.0
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 100.0
+//    }
+
     
 }

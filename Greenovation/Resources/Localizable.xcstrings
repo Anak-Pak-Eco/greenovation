@@ -433,6 +433,7 @@
 
     },
     "jenis-tanaman" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -784,6 +785,23 @@
         }
       }
     },
+    "tambah-pengaturan-baru" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add New Setting"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah Pengaturan Baru"
+          }
+        }
+      }
+    },
     "Tambahkan air" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -824,6 +842,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plants begin to have strong roots and develop leaves and branches."
+          }
+        }
+      }
+    },
+    "tanaman-tidak-ditemukan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plant Not Found!"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanaman Tidak Ditemukan!"
           }
         }
       }

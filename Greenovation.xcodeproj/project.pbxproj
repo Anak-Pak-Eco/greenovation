@@ -12,6 +12,8 @@
 		A71FC0AA2AEBA40E00875CBF /* CustomChooseFormulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0A92AEBA40E00875CBF /* CustomChooseFormulationView.swift */; };
 		A71FC0B42AEBCF8A00875CBF /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0B22AEBCF8A00875CBF /* AddDeviceViewController.swift */; };
 		A71FC0B52AEBCF8A00875CBF /* AddDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71FC0B32AEBCF8A00875CBF /* AddDeviceViewController.xib */; };
+		A71FC0BA2AEC0A3B00875CBF /* CustomSearchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0B82AEC0A3B00875CBF /* CustomSearchItemCell.swift */; };
+		A71FC0BB2AEC0A3B00875CBF /* CustomSearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71FC0B92AEC0A3B00875CBF /* CustomSearchItemCell.xib */; };
 		A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */; };
 		A7D78E182AE929F6006577AE /* CustomMyChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */; };
 		A7D78E1A2AEA6C26006577AE /* CustomGrowthStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */; };
@@ -100,6 +102,8 @@
 		A71FC0A92AEBA40E00875CBF /* CustomChooseFormulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChooseFormulationView.swift; sourceTree = "<group>"; };
 		A71FC0B22AEBCF8A00875CBF /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
 		A71FC0B32AEBCF8A00875CBF /* AddDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceViewController.xib; sourceTree = "<group>"; };
+		A71FC0B82AEC0A3B00875CBF /* CustomSearchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchItemCell.swift; sourceTree = "<group>"; };
+		A71FC0B92AEC0A3B00875CBF /* CustomSearchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSearchItemCell.xib; sourceTree = "<group>"; };
 		A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalizationStoryboard.swift; path = Greenovation/Utils/LocalizationStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomMyChoiceView.swift; path = Greenovation/Utils/Components/CustomMyChoiceView.swift; sourceTree = SOURCE_ROOT; };
 		A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGrowthStepView.swift; sourceTree = "<group>"; };
@@ -211,6 +215,15 @@
 				A71FC0B32AEBCF8A00875CBF /* AddDeviceViewController.xib */,
 			);
 			path = "Add Device";
+			sourceTree = "<group>";
+		};
+		A71FC0B72AEC0A0E00875CBF /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				A71FC0B82AEC0A3B00875CBF /* CustomSearchItemCell.swift */,
+				A71FC0B92AEC0A3B00875CBF /* CustomSearchItemCell.xib */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		A7D78E1B2AEA6C62006577AE /* Bottom Sheet */ = {
@@ -337,6 +350,7 @@
 		D646B4572AE91F0700BE78EC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A71FC0B72AEC0A0E00875CBF /* CustomCell */,
 				A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */,
 				A7E23C592AE924A10065F24F /* CustomFieldView.swift */,
 				A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */,
@@ -632,6 +646,7 @@
 				D630F50F2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf in Resources */,
 				D6D0102E2AC6C60900EC51FB /* Assets.xcassets in Resources */,
 				D630F50D2AD8112A00A355D0 /* DMSans-LightItalic.ttf in Resources */,
+				A71FC0BB2AEC0A3B00875CBF /* CustomSearchItemCell.xib in Resources */,
 				D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */,
 				D630F5112AD8112A00A355D0 /* DMSans-Medium.ttf in Resources */,
 				D68003EB2ADB838D00AAED95 /* Localizable.xcstrings in Resources */,
@@ -687,6 +702,7 @@
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,
 				D6AC858A2AD013DF0033B665 /* DetailDeviceViewModel.swift in Sources */,
 				D630F5132AD84BEF00A355D0 /* CustomTextStyle.swift in Sources */,
+				A71FC0BA2AEC0A3B00875CBF /* CustomSearchItemCell.swift in Sources */,
 				A7D78E1F2AEA6CA6006577AE /* GrowthStepViewController.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
 				D6AC85882AD013D60033B665 /* DetailDeviceView.swift in Sources */,
