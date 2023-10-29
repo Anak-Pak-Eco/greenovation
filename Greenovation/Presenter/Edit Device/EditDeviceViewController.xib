@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnL-FP-8TC">
-                    <rect key="frame" x="0.0" y="74" width="390" height="60"/>
+                    <rect key="frame" x="0.0" y="74" width="393" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWC-4o-CpX" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
                             <rect key="frame" x="16" y="19" width="334" height="22"/>
@@ -37,7 +37,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07P-x4-Qra">
-                            <rect key="frame" x="325" y="15" width="51" height="31"/>
+                            <rect key="frame" x="328" y="15" width="51" height="31"/>
                         </switch>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,7 +61,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6Q-UV-zGx" customClass="CustomMyChoiceView" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="407" width="390" height="248"/>
+                    <rect key="frame" x="0.0" y="407" width="393" height="248"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="248" id="Un9-Hv-gYt"/>
@@ -69,7 +69,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eED-ae-vlC" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="670" width="358" height="40"/>
+                    <rect key="frame" x="16" y="670" width="361" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="358" id="M7U-1O-vUj"/>
                         <constraint firstAttribute="height" constant="40" id="y5E-dj-WgF"/>
@@ -81,7 +81,7 @@
                     </userDefinedRuntimeAttributes>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOA-4F-ovg" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="726" width="358" height="40"/>
+                    <rect key="frame" x="16" y="726" width="361" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="358" id="6ae-FN-Mpf"/>
                         <constraint firstAttribute="height" constant="40" id="91Y-mH-7ax"/>

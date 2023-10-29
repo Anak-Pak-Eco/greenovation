@@ -9,8 +9,12 @@ import UIKit
 
 final class CustomChooseFormulationView: UIView {
     
+    let sharedData = SharedData.shared
+    
     let kailan = "Kailan"
     let phaseName = String(localized: "fase-anakan")
+    
+    let isHave = false
     
     var label: UILabel?
     var ppmLabel: UILabel?
@@ -21,6 +25,14 @@ final class CustomChooseFormulationView: UIView {
     var phMinField: UITextField?
     var strip2: UILabel?
     var phMaxField: UITextField?
+    
+    let backgroundView: UIView = {
+        let component = UIView()
+        component.backgroundColor = UIColor.surface
+        component.layer.cornerRadius = 10.0
+        component.translatesAutoresizingMaskIntoConstraints = false
+        return component
+    } ()
     
     let picker: UISegmentedControl = {
         let component = UISegmentedControl(items: ["formula-saya", "rekomendasi"])
@@ -53,7 +65,7 @@ final class CustomChooseFormulationView: UIView {
         return component
     }
     
-    func makeTextField(text: String) -> UITextField {
+    func makeTextField(text: String, color: UIColor) -> UITextField {
         let component = UITextField()
         component.placeholder = text
         component.font = UIFont.systemFont(ofSize: 17)
@@ -67,11 +79,43 @@ final class CustomChooseFormulationView: UIView {
         component.translatesAutoresizingMaskIntoConstraints = false
         component.keyboardType = .numberPad
         component.textAlignment = .center
-        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: color]
         let attributedPlaceholder = NSAttributedString(string: text, attributes: attributes)
         component.attributedPlaceholder = attributedPlaceholder
         return component
     }
+    
+    let saveButton: UIButton = {
+        let component = UIButton()
+        component.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+        component.backgroundColor = UIColor.primaryAccent
+        component.layer.cornerRadius = 10.0
+        component.setTitle(String(localized: "simpan-pilihan"), for: .normal)
+        component.translatesAutoresizingMaskIntoConstraints = false
+        return component
+    } ()
+    
+    let title: UILabel = {
+        let component = UILabel()
+        component.text = String(localized: "pilih-satu-formula")
+        component.font = UIFont.boldSystemFont(ofSize: 25)
+        component.adjustsFontSizeToFitWidth = true
+        component.textAlignment = .left
+        component.translatesAutoresizingMaskIntoConstraints = false
+        component.widthAnchor.constraint(equalToConstant: 169).isActive = true
+        component.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        return component
+    } ()
+    
+    let dismis: UIButton = {
+        let component = UIButton()
+        component.setBackgroundImage(UIImage(systemName: "x.circle.fill"), for: .normal)
+        component.translatesAutoresizingMaskIntoConstraints = false
+        component.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        component.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        component.addTarget(self, action: #selector(handleDismissTap), for: .touchUpInside)
+        return component
+    } ()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -85,19 +129,31 @@ final class CustomChooseFormulationView: UIView {
     
     func buildLayout() {
         
-        self.addSubview(picker)
+        self.layer.cornerRadius = 10.0
         
-        label = makeDesc(text: String(localized: "Formula di bawah ini merupakan formula yang kamu buat untuk **\(kailan)** pada **\(phaseName)**"), size: 12)
+        if isHave {
+            label = makeDesc(text: String(localized: "Formula di bawah ini merupakan formula yang kamu buat untuk **\(kailan)** pada **\(phaseName)**"), size: 12)
+            ppmMinField = makeTextField(text: String(localized: "750"), color: .black)
+            ppmMaxField = makeTextField(text: "1200", color: .black)
+            phMinField = makeTextField(text: "5.5", color: .black)
+            phMaxField = makeTextField(text: "7.5", color: .black)
+        } else {
+            label = makeDesc(text: String(localized: "Kamu belum pernah membuat formula untuk Jenis Tanaman dan Tahap Pertumbuhan ini. Silahkan buat."), size: 12)
+            ppmMinField = makeTextField(text: String(localized: "Min"), color: .gray)
+            ppmMaxField = makeTextField(text: "Max", color: .gray)
+            phMinField = makeTextField(text: "Min", color: .gray)
+            phMaxField = makeTextField(text: "Max", color: .gray)
+        }
         ppmLabel = makeLabel(text: String(localized: "**Kepekatan Nutrisi** (ppm)"), size: 15)
-        ppmMinField = makeTextField(text: String(localized: "750"))
         strip1 = makeLabel(text: "-", size: 17)
-        ppmMaxField = makeTextField(text: "1200")
         phLabel = makeLabel(text: String(localized: "**Tingkat pH**"), size: 15)
-        phMinField = makeTextField(text: "5.5")
         strip2 = makeLabel(text: "-", size: 17)
-        phMaxField = makeTextField(text: "7.5")
         
         // Add View
+        self.addSubview(backgroundView)
+        self.addSubview(title)
+        self.addSubview(dismis)
+        self.addSubview(picker)
         self.addSubview(label!)
         self.addSubview(ppmLabel!)
         self.addSubview(ppmMinField!)
@@ -107,8 +163,23 @@ final class CustomChooseFormulationView: UIView {
         self.addSubview(phMinField!)
         self.addSubview(strip2!)
         self.addSubview(phMaxField!)
+        self.addSubview(saveButton)
+        
+        saveButton.addTarget(self, action: #selector(saveButtonDidTap(_:)), for: .touchUpInside)
         
         Layout()
+    }
+    
+    @objc func handleDismissTap() {
+        SharedData.shared.isBottomSheetVisible = false
+        self.removeFromSuperview()
+    }
+    
+    @objc func saveButtonDidTap(_ button: UIButton) {
+        sharedData.isDone = true
+        self.removeFromSuperview()
+        sharedData.isBottomSheetVisible = false
+//        AddDeviceViewController().viewDidLoad()
     }
     
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
@@ -126,15 +197,23 @@ final class CustomChooseFormulationView: UIView {
             strip2?.removeFromSuperview()
             phMaxField?.removeFromSuperview()
             
-            label = makeDesc(text: String(localized: "Formula di bawah ini merupakan formula yang kamu buat untuk **\(kailan)** pada **\(phaseName)**"), size: 12)
+            if isHave {
+                label = makeDesc(text: String(localized: "Formula di bawah ini merupakan formula yang kamu buat untuk **\(kailan)** pada **\(phaseName)**"), size: 12)
+                ppmMinField = makeTextField(text: String(localized: "750"), color: .black)
+                ppmMaxField = makeTextField(text: "1200", color: .black)
+                phMinField = makeTextField(text: "5.5", color: .black)
+                phMaxField = makeTextField(text: "7.5", color: .black)
+            } else {
+                label = makeDesc(text: String(localized: "Kamu belum pernah membuat formula untuk Jenis Tanaman dan Tahap Pertumbuhan ini. Silahkan buat."), size: 12)
+                ppmMinField = makeTextField(text: String(localized: "Min"), color: .gray)
+                ppmMaxField = makeTextField(text: "Max", color: .gray)
+                phMinField = makeTextField(text: "Min", color: .gray)
+                phMaxField = makeTextField(text: "Max", color: .gray)
+            }
             ppmLabel = makeLabel(text: String(localized: "**Kepekatan Nutrisi** (ppm)"), size: 15)
-            ppmMinField = makeTextField(text: String(localized: "750"))
             strip1 = makeLabel(text: "-", size: 17)
-            ppmMaxField = makeTextField(text: "1200")
             phLabel = makeLabel(text: String(localized: "**Tingkat pH**"), size: 15)
-            phMinField = makeTextField(text: "5.5")
             strip2 = makeLabel(text: "-", size: 17)
-            phMaxField = makeTextField(text: "7.5")
             
             // Add View
             self.addSubview(label!)
@@ -164,13 +243,13 @@ final class CustomChooseFormulationView: UIView {
             
             label = makeDesc(text: String(localized: "Formula di bawah ini merupakan formula yang kamu buat untuk **\(kailan)** pada **\(phaseName)**"), size: 12)
             ppmLabel = makeLabel(text: String(localized: "**Kepekatan Nutrisi** (ppm)"), size: 15)
-            ppmMinField = makeTextField(text: String(localized: "900"))
+            ppmMinField = makeTextField(text: String(localized: "900"), color: .black)
             strip1 = makeLabel(text: "-", size: 17)
-            ppmMaxField = makeTextField(text: "1200")
+            ppmMaxField = makeTextField(text: "1200", color: .black)
             phLabel = makeLabel(text: String(localized: "**Tingkat pH**"), size: 15)
-            phMinField = makeTextField(text: "5.5")
+            phMinField = makeTextField(text: "5.5", color: .black)
             strip2 = makeLabel(text: "-", size: 17)
-            phMaxField = makeTextField(text: "6.5")
+            phMaxField = makeTextField(text: "6.5", color: .black)
             
             // Add View
             self.addSubview(label!)
@@ -187,20 +266,44 @@ final class CustomChooseFormulationView: UIView {
         default:
             break
         }
+        
     }
     
     func Layout() {
         NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            backgroundView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
+            backgroundView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            title.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 20.5),
+            title.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 16)
+        ])
+        
+        NSLayoutConstraint.activate([
+            dismis.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 18),
+            dismis.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -13)
+        ])
+        
+        NSLayoutConstraint.activate([
+            picker.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 22.5),
+            picker.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 15),
+            picker.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -17),
+        ])
+        
+        NSLayoutConstraint.activate([
             label!.topAnchor.constraint(equalTo: picker.bottomAnchor, constant: 15),
-            label!.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            label!.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16),
+            label!.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 16),
+            label!.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -16),
             label!.widthAnchor.constraint(equalToConstant: 358),
             label!.heightAnchor.constraint(equalToConstant: 32)
         ])
         
         NSLayoutConstraint.activate([
             ppmLabel!.topAnchor.constraint(equalTo: label!.bottomAnchor, constant: 22),
-            ppmLabel!.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 15),
+            ppmLabel!.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 15),
             ppmLabel!.widthAnchor.constraint(equalToConstant: 183),
             ppmLabel!.heightAnchor.constraint(equalToConstant: 20)
         ])
@@ -222,14 +325,14 @@ final class CustomChooseFormulationView: UIView {
         NSLayoutConstraint.activate([
             ppmMaxField!.topAnchor.constraint(equalTo: ppmMinField!.topAnchor),
             ppmMaxField!.leftAnchor.constraint(equalTo: strip1!.rightAnchor, constant: 2),
-            ppmMaxField!.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -19),
+            ppmMaxField!.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -19),
             ppmMaxField!.widthAnchor.constraint(equalToConstant: 65),
             ppmMaxField!.heightAnchor.constraint(equalToConstant: 34)
         ])
         
         NSLayoutConstraint.activate([
             phLabel!.topAnchor.constraint(equalTo: ppmLabel!.bottomAnchor, constant: 17),
-            phLabel!.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 15),
+            phLabel!.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 15),
             phLabel!.widthAnchor.constraint(equalToConstant: 79),
             phLabel!.heightAnchor.constraint(equalToConstant: 20)
         ])
@@ -251,15 +354,15 @@ final class CustomChooseFormulationView: UIView {
         NSLayoutConstraint.activate([
             phMaxField!.topAnchor.constraint(equalTo: phMinField!.topAnchor),
             phMaxField!.leftAnchor.constraint(equalTo: strip2!.rightAnchor, constant: 2),
-            phMaxField!.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -19),
+            phMaxField!.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -19),
             phMaxField!.widthAnchor.constraint(equalToConstant: 65),
             phMaxField!.heightAnchor.constraint(equalToConstant: 34)
         ])
         
         NSLayoutConstraint.activate([
-            picker.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 8),
-            picker.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 15),
-            picker.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -17),
+            saveButton.topAnchor.constraint(equalTo: ppmMinField!.bottomAnchor, constant: 91),
+            saveButton.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 16),
+            saveButton.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -16)
         ])
     }
     

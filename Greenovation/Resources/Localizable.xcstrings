@@ -449,6 +449,17 @@
         }
       }
     },
+    "Kamu belum pernah membuat formula untuk Jenis Tanaman dan Tahap Pertumbuhan ini. Silahkan buat." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You have never made a formula for this type of plant and growth stage. Please do it."
+          }
+        }
+      }
+    },
     "Kepekatan (PPM)" : {
 
     },
@@ -456,9 +467,6 @@
       "extractionState" : "manual"
     },
     "Key 1" : {
-      "extractionState" : "manual"
-    },
-    "Key 2" : {
       "extractionState" : "manual"
     },
     "Kurangi air." : {
@@ -499,6 +507,9 @@
           }
         }
       }
+    },
+    "Min" : {
+
     },
     "nama-perangkat" : {
       "localizations" : {
@@ -731,6 +742,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sensor Perangkat"
+          }
+        }
+      }
+    },
+    "simpan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
           }
         }
       }

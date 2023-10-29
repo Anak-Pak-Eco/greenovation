@@ -14,6 +14,7 @@
 		A71FC0B52AEBCF8A00875CBF /* AddDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71FC0B32AEBCF8A00875CBF /* AddDeviceViewController.xib */; };
 		A71FC0BA2AEC0A3B00875CBF /* CustomSearchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0B82AEC0A3B00875CBF /* CustomSearchItemCell.swift */; };
 		A71FC0BB2AEC0A3B00875CBF /* CustomSearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71FC0B92AEC0A3B00875CBF /* CustomSearchItemCell.xib */; };
+		A71FC0BE2AEE19E000875CBF /* CustomFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0BD2AEE19E000875CBF /* CustomFieldViewModel.swift */; };
 		A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */; };
 		A7D78E182AE929F6006577AE /* CustomMyChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */; };
 		A7D78E1A2AEA6C26006577AE /* CustomGrowthStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */; };
@@ -104,6 +105,7 @@
 		A71FC0B32AEBCF8A00875CBF /* AddDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceViewController.xib; sourceTree = "<group>"; };
 		A71FC0B82AEC0A3B00875CBF /* CustomSearchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchItemCell.swift; sourceTree = "<group>"; };
 		A71FC0B92AEC0A3B00875CBF /* CustomSearchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSearchItemCell.xib; sourceTree = "<group>"; };
+		A71FC0BD2AEE19E000875CBF /* CustomFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFieldViewModel.swift; sourceTree = "<group>"; };
 		A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalizationStoryboard.swift; path = Greenovation/Utils/LocalizationStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomMyChoiceView.swift; path = Greenovation/Utils/Components/CustomMyChoiceView.swift; sourceTree = SOURCE_ROOT; };
 		A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGrowthStepView.swift; sourceTree = "<group>"; };
@@ -111,7 +113,7 @@
 		A7D78E1E2AEA6CA6006577AE /* GrowthStepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowthStepViewController.xib; sourceTree = "<group>"; };
 		A7E23C552AE922E80065F24F /* EditDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeviceViewController.swift; sourceTree = "<group>"; };
 		A7E23C562AE922E80065F24F /* EditDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDeviceViewController.xib; sourceTree = "<group>"; };
-		A7E23C592AE924A10065F24F /* CustomFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomFieldView.swift; path = Greenovation/Utils/Components/CustomFieldView.swift; sourceTree = SOURCE_ROOT; };
+		A7E23C592AE924A10065F24F /* CustomFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomFieldView.swift; path = "Greenovation/Utils/Components/Custom Field View/CustomFieldView.swift"; sourceTree = SOURCE_ROOT; };
 		D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Thin.ttf"; sourceTree = "<group>"; };
@@ -224,6 +226,15 @@
 				A71FC0B92AEC0A3B00875CBF /* CustomSearchItemCell.xib */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		A71FC0BC2AEE19C900875CBF /* Custom Field View */ = {
+			isa = PBXGroup;
+			children = (
+				A7E23C592AE924A10065F24F /* CustomFieldView.swift */,
+				A71FC0BD2AEE19E000875CBF /* CustomFieldViewModel.swift */,
+			);
+			path = "Custom Field View";
 			sourceTree = "<group>";
 		};
 		A7D78E1B2AEA6C62006577AE /* Bottom Sheet */ = {
@@ -350,9 +361,9 @@
 		D646B4572AE91F0700BE78EC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A71FC0BC2AEE19C900875CBF /* Custom Field View */,
 				A71FC0B72AEC0A0E00875CBF /* CustomCell */,
 				A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */,
-				A7E23C592AE924A10065F24F /* CustomFieldView.swift */,
 				A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */,
 				A71FC0A92AEBA40E00875CBF /* CustomChooseFormulationView.swift */,
 			);
@@ -697,6 +708,7 @@
 				D6AC857D2ACFFD260033B665 /* NotificationView.swift in Sources */,
 				D6BD3B792AD123C4005B85C3 /* DeviceModel.swift in Sources */,
 				D6DFD64E2AE7DEE200215428 /* View+Extension.swift in Sources */,
+				A71FC0BE2AEE19E000875CBF /* CustomFieldViewModel.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
 				D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */,
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,

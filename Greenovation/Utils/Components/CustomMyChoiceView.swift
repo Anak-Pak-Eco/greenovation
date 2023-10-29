@@ -97,9 +97,9 @@ final class CustomMyChoiceView: UIView {
         self.addSubview(phMaxField)
         
         NSLayoutConstraint.activate([
-            backgroundWhite.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            backgroundWhite.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16),
-            backgroundWhite.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16),
+            backgroundWhite.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            backgroundWhite.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
+            backgroundWhite.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor),
             backgroundWhite.widthAnchor.constraint(equalToConstant: 358),
             backgroundWhite.heightAnchor.constraint(equalToConstant: 213)
         ])

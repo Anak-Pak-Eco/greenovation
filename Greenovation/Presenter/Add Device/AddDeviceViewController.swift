@@ -8,7 +8,12 @@
 import UIKit
 
 class AddDeviceViewController: UIViewController {
-
+    
+    let sharedData = SharedData.shared
+    
+    @IBOutlet var myChoiceView: UIView!
+    @IBOutlet var saveBtn: LocalizableButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,11 +25,17 @@ class AddDeviceViewController: UIViewController {
         let backButton = UIBarButtonItem(image: customBackButtonImage, style: .plain, target: self, action: #selector(backButtonTapped))
         self.navigationItem.leftBarButtonItem = backButton
         
+        saveBtn.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        myChoiceView.isHidden = !SharedData.shared.isDone
     }
     
     @objc func backButtonTapped() {
 //        self.navigationController?.popViewController(animated: true)
         
+    }
+    
+    @objc func saveButtonTapped() {
+        //
     }
 
 }

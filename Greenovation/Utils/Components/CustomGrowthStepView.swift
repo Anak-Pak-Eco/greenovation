@@ -9,6 +9,14 @@ import UIKit
 
 final class CustomGrowthStepView: UIView {
     
+    let backgroundView: UIView = {
+        let component = UIView()
+        component.backgroundColor = UIColor.surface
+        component.layer.cornerRadius = 10.0
+        component.translatesAutoresizingMaskIntoConstraints = false
+        return component
+    } ()
+    
     let stackView: UIStackView = {
         let component = UIStackView()
         component.axis = NSLayoutConstraint.Axis.vertical
@@ -19,12 +27,47 @@ final class CustomGrowthStepView: UIView {
         return component
     } ()
     
-    func makeStackViewContainer(height: CGFloat) -> UIView {
+    func makeStackViewContainer(height: CGFloat, tag: Int) -> UIView {
         let component = UIView()
         component.backgroundColor = .clear
+        component.tag = tag // Assign a unique tag to each container
         component.translatesAutoresizingMaskIntoConstraints = false
         component.heightAnchor.constraint(equalToConstant: height).isActive = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleStackViewContainerTap(_:)))
+        component.addGestureRecognizer(tapGesture)
+        component.isUserInteractionEnabled = true
         return component
+    }
+    
+    @objc func handleStackViewContainerTap(_ sender: UITapGestureRecognizer) {
+        guard let view = sender.view, let index = stackView.arrangedSubviews.firstIndex(of: view) else {
+            return
+        }
+        
+        switch index {
+        case 0:
+            
+            let secondView = CustomChooseFormulationView()
+            self.addSubview(backgroundView)
+            self.addSubview(secondView)
+            
+            NSLayoutConstraint.activate([
+                secondView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+                secondView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
+                secondView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor),
+                secondView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
+            ])
+            
+            print("Tapped on the first container")
+        case 1:
+            
+            print("Tapped on the second container")
+        case 2:
+            
+            print("Tapped on the third container")
+        default:
+            break
+        }
     }
     
     func makePicture(imageName: String, width: CGFloat, height: CGFloat) -> UIImageView {
@@ -36,10 +79,10 @@ final class CustomGrowthStepView: UIView {
         return component
     }
     
-    func makeTitleLabel(text: String, width: CGFloat, height: CGFloat) -> UILabel {
+    func makeTitleLabel(text: String, width: CGFloat, height: CGFloat, size: CGFloat) -> UILabel {
         let component = UILabel()
         component.text = text
-        component.font = UIFont.boldSystemFont(ofSize: 16)
+        component.font = UIFont.boldSystemFont(ofSize: size)
         component.adjustsFontSizeToFitWidth = true
         component.textAlignment = .left
         component.translatesAutoresizingMaskIntoConstraints = false
@@ -61,6 +104,27 @@ final class CustomGrowthStepView: UIView {
         return component
     }
     
+    func makeDismiss() -> UIButton {
+        let component = UIButton()
+        component.setBackgroundImage(UIImage(systemName: "x.circle.fill"), for: .normal)
+        component.translatesAutoresizingMaskIntoConstraints = false
+        component.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        component.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        component.addTarget(self, action: #selector(handleDismissTap), for: .touchUpInside)
+        return component
+    }
+    
+    @objc func handleDismissTap() {
+        SharedData.shared.isBottomSheetVisible = false
+        self.removeFromSuperview()
+    }
+    
+    func animateBottomSheet(toY: CGFloat) {
+        UIView.animate(withDuration: 0.3) {
+            self.frame.origin.y = toY
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         buildLayout()
@@ -72,22 +136,24 @@ final class CustomGrowthStepView: UIView {
     }
     
     func buildLayout() {
-        let stackViewContainer = makeStackViewContainer(height: 77)
-        let stackViewContainer2 = makeStackViewContainer(height: 77)
-        let stackViewContainer3 = makeStackViewContainer(height: 95)
+        let title = makeTitleLabel(text: String(localized: "tahap-pertumbuhan"), width: 198, height: 25, size: 20)
+        let dismis = makeDismiss()
+        let stackViewContainer = makeStackViewContainer(height: 77, tag: 0)
+        let stackViewContainer2 = makeStackViewContainer(height: 77, tag: 1)
+        let stackViewContainer3 = makeStackViewContainer(height: 95, tag: 2)
         // MARK: Container 1
         let imageViewContainer = makePicture(imageName: "image-anakan-growthstep", width: 61, height: 61)
-        let titleLabelContainer = makeTitleLabel(text: String(localized: "fase-anakan"), width: 100, height: 21)
+        let titleLabelContainer = makeTitleLabel(text: String(localized: "fase-anakan"), width: 100, height: 21, size: 16)
         let descriptionContainer = makeDescriptionLabel(text: String(localized: "Fase dimulai dari benih dan berlanjut dengan tanaman mulai mengembangkan daun sejati."), width: 259, height: 36, nol: 2)
         let circleImage = makePicture(imageName: "image-circle-growth", width: 25, height: 25)
         // MARK: Container 2
         let imageViewContainer2 = makePicture(imageName: "image-awal-growthstep", width: 61, height: 61)
-        let titleLabelContainer2 = makeTitleLabel(text: String(localized: "fase-vegetatif-awal"), width: 154, height: 21)
+        let titleLabelContainer2 = makeTitleLabel(text: String(localized: "fase-vegetatif-awal"), width: 154, height: 21, size: 16)
         let descriptionContainer2 = makeDescriptionLabel(text: String(localized: "Tanaman mulai mempunyai akar yang kuat dan mengembangkan daun dan cabang."), width: 259, height: 36, nol: 2)
         let circleImage2 = makePicture(imageName: "image-circle-growth", width: 25, height: 25)
         // MARK: Container 2
         let imageViewContainer3 = makePicture(imageName: "image-menengah-growthstep", width: 61, height: 61)
-        let titleLabelContainer3 = makeTitleLabel(text: String(localized: "fase-vegetatif-menengah"), width: 198, height: 21)
+        let titleLabelContainer3 = makeTitleLabel(text: String(localized: "fase-vegetatif-menengah"), width: 198, height: 21, size: 16)
         let descriptionContainer3 = makeDescriptionLabel(text: String(localized: "Tanaman mengalami pertumbuhan daun, batang, dan akar yang berlangsung dengan cepat hingga masa panen sayuran daun tiba."), width: 259, height: 54, nol: 3)
         let circleImage3 = makePicture(imageName: "image-circle-growth", width: 25, height: 25)
         
@@ -95,6 +161,9 @@ final class CustomGrowthStepView: UIView {
         stackView.addArrangedSubview(stackViewContainer2)
         stackView.addArrangedSubview(stackViewContainer3)
         
+        self.addSubview(backgroundView)
+        self.addSubview(title)
+        self.addSubview(dismis)
         self.addSubview(stackView)
         // MARK: Container 1
         self.addSubview(imageViewContainer)
@@ -113,10 +182,27 @@ final class CustomGrowthStepView: UIView {
         self.addSubview(circleImage3)
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            stackView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
-            stackView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor),
-            stackView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            backgroundView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            backgroundView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor),
+            backgroundView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            title.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 20.5),
+            title.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 16)
+        ])
+        
+        NSLayoutConstraint.activate([
+            dismis.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 18),
+            dismis.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -13)
+        ])
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 24.5),
+            stackView.leftAnchor.constraint(equalTo: backgroundView.leftAnchor),
+            stackView.rightAnchor.constraint(equalTo: backgroundView.rightAnchor),
+            stackView.heightAnchor.constraint(equalToConstant: 249)
         ])
         
         NSLayoutConstraint.activate([

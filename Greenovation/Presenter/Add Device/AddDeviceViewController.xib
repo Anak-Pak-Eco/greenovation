@@ -5,11 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDeviceViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
+                <outlet property="myChoiceView" destination="RFZ-uf-Dep" id="jIc-wL-mDE"/>
+                <outlet property="saveBtn" destination="HmP-8Z-8MT" id="Jcb-qX-rU8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,27 +22,60 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXO-mU-rk3" customClass="CustomFieldView" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="59" width="393" height="358"/>
+                    <rect key="frame" x="0.0" y="59" width="390" height="759"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmP-8Z-8MT" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="16" y="643" width="358" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="358" id="057-UR-GfV"/>
+                                <constraint firstAttribute="height" constant="40" id="duP-Kz-raZ"/>
+                            </constraints>
+                            <color key="tintColor" name="primary-accent"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="simpan"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFZ-uf-Dep" customClass="CustomMyChoiceView" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="17.666666666666657" y="278" width="358" height="213"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="358" id="HtO-oB-2g7"/>
+                                <constraint firstAttribute="height" constant="213" id="qpb-O0-Wwo"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" name="surface"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="358" id="Rr8-yv-0X8"/>
+                        <constraint firstItem="HmP-8Z-8MT" firstAttribute="top" secondItem="wXO-mU-rk3" secondAttribute="top" constant="643" id="D4J-LN-qEq"/>
+                        <constraint firstItem="HmP-8Z-8MT" firstAttribute="leading" secondItem="wXO-mU-rk3" secondAttribute="leading" constant="16" id="LEy-xU-1y8"/>
+                        <constraint firstAttribute="trailing" secondItem="RFZ-uf-Dep" secondAttribute="trailing" constant="17.5" id="OkS-29-3hN"/>
+                        <constraint firstItem="RFZ-uf-Dep" firstAttribute="top" secondItem="wXO-mU-rk3" secondAttribute="top" constant="278" id="QI9-2B-geJ"/>
                         <constraint firstAttribute="width" constant="390" id="jX1-W6-sco"/>
+                        <constraint firstItem="RFZ-uf-Dep" firstAttribute="leading" secondItem="wXO-mU-rk3" secondAttribute="leading" constant="17.5" id="z4w-iM-L7N"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>
             <constraints>
-                <constraint firstItem="wXO-mU-rk3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="D8y-kK-LjZ"/>
-                <constraint firstItem="wXO-mU-rk3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DfP-gA-Mbp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wXO-mU-rk3" secondAttribute="trailing" id="s5z-rW-jsN"/>
+                <constraint firstItem="wXO-mU-rk3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ris-31-rbS"/>
+                <constraint firstItem="wXO-mU-rk3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ky3-do-U76"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wXO-mU-rk3" secondAttribute="bottom" id="yZH-KK-Qjc"/>
             </constraints>
             <point key="canvasLocation" x="50" y="20"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="surface">
             <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

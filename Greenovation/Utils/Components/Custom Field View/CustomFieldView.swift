@@ -7,34 +7,18 @@
 
 import UIKit
 import SwiftUI
-//import SheetViewController
-
-struct plantModel {
-    var image: UIImage
-    var name: String
-}
 
 final class CustomFieldView: UIView {
     
-//    var items: [String] = ["Kangkung", "Caisim", "Pisang", "Mangga", "Nanas"]
-//    
-//    private let image: [UIImage] = [
-//        UIImage(named: "image-anakan")!,
-//        UIImage(named: "image-awal")!,
-//        UIImage(named: "image-anakan")!,
-//        UIImage(named: "image-anakan")!,
-//        UIImage(named: "image-anakan")!
-//    ]
+    let sharedData = SharedData.shared
     
-    let modelArray: [plantModel] = [
-        plantModel(image: UIImage(named: "image-anakan")!, name: "Kangkung"),
-        plantModel(image: UIImage(named: "image-awal")!, name: "Jeruk"),
-        plantModel(image: UIImage(named: "image-anakan")!, name: "Duren"),
-        plantModel(image: UIImage(named: "image-awal")!, name: "Jambu"),
-        plantModel(image: UIImage(named: "image-anakan")!, name: "Timun")
-    ]
+    let bottomSheetView = CustomGrowthStepView()
+    let bottomSheetHeight: CGFloat = 350
     
-    var filteredItems: [plantModel] = []
+    let viewModel = CustomFieldViewModel()
+    var filteredItems: [PlantModel] = []
+    
+    lazy var moodSelectionVC = UIStoryboard(name: "GrowthStepViewController", bundle: nil).instantiateViewController(withIdentifier: "GrowthStepViewController")
     
     var searchBarTableViewIsShow: Bool = false
     
@@ -156,7 +140,6 @@ final class CustomFieldView: UIView {
         return component
     } ()
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         buildLayout()
@@ -193,7 +176,7 @@ final class CustomFieldView: UIView {
         self.addSubview(growthStepImage)
         
         plantSearchTextField.addTarget(self, action: #selector(plantSearchTextFieldDidChange(_:)), for: .editingChanged)
-        growthStepTextField.addTarget(self, action: #selector(growthStepTextFieldDidTap(_:)), for: .editingDidBegin)
+        growthStepTextField.addTarget(self, action: #selector(growthStepTextFieldDidTap(_:)), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             deviceNameLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 15),
@@ -271,7 +254,7 @@ final class CustomFieldView: UIView {
         if searchText.isEmpty {
             filteredItems = []
         } else {
-            filteredItems = modelArray.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+            filteredItems = viewModel.modelArray.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
         searchBarTableView.reloadData()
     }
@@ -340,20 +323,34 @@ final class CustomFieldView: UIView {
         plantNotFountViiew.removeFromSuperview()
         notFoundLabel.removeFromSuperview()
         addButton.removeFromSuperview()
-        
-        // Show bottom sheet
-//        let bottomSheetVC = ChooseFormulationViewController()
-//        bottomSheetVC.modalPresentationStyle = .overCurrentContext // For transparency
-//        self.present(bottomSheetVC, animated: true, completion: nil)
     }
     
     @objc func growthStepTextFieldDidTap(_ textField: UITextField) {
         print("Growth Step Text Field Tapped")
         
         // Show bottom sheet
-//        let bottomSheetVC = ChooseFormulationViewController()
-//        bottomSheetVC.modalPresentationStyle = .overCurrentContext // For transparency
-//        self.present(bottomSheetVC, animated: true, completion: nil)
+        if sharedData.isBottomSheetVisible {
+            // Hide the bottom sheet with animation
+            animateBottomSheet(toY: frame.height)
+            sharedData.isBottomSheetVisible = false
+            // After the animation, remove it from the view
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.bottomSheetView.removeFromSuperview()
+            }
+        } else {
+            // Show the bottom sheet
+            addSubview(bottomSheetView)
+            bottomSheetView.frame = CGRect(x: 0, y: frame.height, width: frame.width, height: bottomSheetHeight)
+            animateBottomSheet(toY: frame.height - bottomSheetHeight)
+            sharedData.isBottomSheetVisible = true
+        }
+        
+    }
+
+    func animateBottomSheet(toY: CGFloat) {
+        UIView.animate(withDuration: 0.3) {
+            self.bottomSheetView.frame.origin.y = toY
+        }
     }
     
 }
@@ -362,7 +359,6 @@ extension CustomFieldView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredItems.count
-//        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -375,10 +371,6 @@ extension CustomFieldView: UITableViewDataSource, UITableViewDelegate {
         
         print("id: \(indexPath.row), filter: \(filteredItems) \(filteredItems.count)")
         
-//        let image = self.image[indexPath.row]
-//        let item = items[indexPath.row]
-//        cell.configure(with: image, and: item)
-        
         return cell
     }
     
@@ -387,18 +379,11 @@ extension CustomFieldView: UITableViewDataSource, UITableViewDelegate {
         
         plantSearchTextField.text = selectedItem.name
         searchBarTableView.removeFromSuperview()
-//        let vc = UIHostingController(rootView: DetailDeviceView())
-//        vc.hidesBottomBarWhenPushed = true
-//        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 76.0
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 100.0
-//    }
 
     
 }
