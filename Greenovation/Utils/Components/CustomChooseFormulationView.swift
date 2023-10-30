@@ -175,6 +175,7 @@ final class CustomChooseFormulationView: UIView {
             phLabel = makeLabel(text: String(localized: "**Tingkat pH**"), size: 15)
             strip2 = makeLabel(text: "-", size: 17)
             
+            dismis.addTarget(self, action: #selector(handleDismissTap), for: .touchUpInside)
             saveButton?.addTarget(self, action: #selector(saveButtonDidTap(_:)), for: .touchUpInside)
             
             // Add View
@@ -219,6 +220,7 @@ final class CustomChooseFormulationView: UIView {
             phMaxField = makeTextField(text: "6.5", color: .black)
             saveButton = makeButtonEnable()
             
+            dismis.addTarget(self, action: #selector(handleDismissTap), for: .touchUpInside)
             saveButton?.addTarget(self, action: #selector(saveButtonDidTap(_:)), for: .touchUpInside)
             
             // Add View
