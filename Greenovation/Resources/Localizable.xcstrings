@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "id",
   "strings" : {
+    "" : {
+
+    },
     "(%@)" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -424,9 +427,6 @@
         }
       }
     },
-    "Jam" : {
-
-    },
     "jenis-tanaman" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -454,9 +454,6 @@
           }
         }
       }
-    },
-    "Kepekatan (PPM)" : {
-
     },
     "Key" : {
       "extractionState" : "manual"

@@ -21,10 +21,10 @@ struct PlantModel {
 
 final class CustomFieldViewModel {
     let modelArray: [PlantModel] = [
-        PlantModel(image: UIImage(named: "image-anakan")!, name: "Kangkung"),
+        PlantModel(image: UIImage(named: "image-seedling-big")!, name: "Kangkung"),
         PlantModel(image: UIImage(named: "image-awal")!, name: "Jeruk"),
-        PlantModel(image: UIImage(named: "image-anakan")!, name: "Duren"),
+        PlantModel(image: UIImage(named: "image-seedling-big")!, name: "Duren"),
         PlantModel(image: UIImage(named: "image-awal")!, name: "Jambu"),
-        PlantModel(image: UIImage(named: "image-anakan")!, name: "Timun")
+        PlantModel(image: UIImage(named: "image-seedling-big")!, name: "Timun")
     ]
 }
