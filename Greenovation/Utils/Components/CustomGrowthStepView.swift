@@ -8,10 +8,9 @@
 import UIKit
 
 final class CustomGrowthStepView: UIView {
-//    let sharedData = SharedData.shared
     
-    var title: UILabel?
-    var dismis: UIButton?
+//    var title: UILabel?
+//    var dismis: UIButton?
     var stackViewContainer: UIView?
     var stackViewContainer2: UIView?
     var stackViewContainer3: UIView?
@@ -131,7 +130,19 @@ final class CustomGrowthStepView: UIView {
         return component
     }
     
-    func makeDismiss() -> UIButton {
+    let title: UILabel = {
+        let component = UILabel()
+        component.text = String(localized: "tahap-pertumbuhan")
+        component.font = UIFont.boldSystemFont(ofSize: 25)
+        component.adjustsFontSizeToFitWidth = true
+        component.textAlignment = .left
+        component.translatesAutoresizingMaskIntoConstraints = false
+        component.widthAnchor.constraint(equalToConstant: 169).isActive = true
+        component.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        return component
+    } ()
+    
+    let dismis: UIButton = {
         let component = UIButton()
         component.setBackgroundImage(UIImage(systemName: "x.circle.fill"), for: .normal)
         component.translatesAutoresizingMaskIntoConstraints = false
@@ -139,7 +150,7 @@ final class CustomGrowthStepView: UIView {
         component.heightAnchor.constraint(equalToConstant: 30).isActive = true
         component.addTarget(self, action: #selector(handleDismissTap), for: .touchUpInside)
         return component
-    }
+    } ()
     
     @objc func handleDismissTap() {
         SharedData.shared.isBottomSheetVisible.value = false
@@ -152,31 +163,46 @@ final class CustomGrowthStepView: UIView {
         }
     }
     
+    let backgroundShadow: UIView = {
+        let component = UIView()
+        component.backgroundColor = .black
+        component.layer.opacity = 0.2
+        component.translatesAutoresizingMaskIntoConstraints = false
+        return component
+    } ()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        SharedData.shared.isBottomSheetVisible.bind { [weak self] isVisible in
-            guard let self = self else { return }
-            if SharedData.shared.isBottomSheetVisible.value == false {
-                self.removeFromSuperview()
-            }
-        }
+        closeBottomView()
         buildLayout()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        closeBottomView()
+        buildLayout()
+    }
+    
+    func closeBottomView() {
         SharedData.shared.isBottomSheetVisible.bind { [weak self] isVisible in
             guard let self = self else { return }
             if SharedData.shared.isBottomSheetVisible.value == false {
                 self.removeFromSuperview()
+            } else {
+                addSubview(backgroundShadow)
+                NSLayoutConstraint.activate([
+                    backgroundShadow.topAnchor.constraint(equalTo: window!.topAnchor),
+                    backgroundShadow.leftAnchor.constraint(equalTo: window!.leftAnchor),
+                    backgroundShadow.rightAnchor.constraint(equalTo: window!.rightAnchor),
+                    backgroundShadow.bottomAnchor.constraint(equalTo: self.topAnchor, constant: 10)
+                ])
             }
         }
-        buildLayout()
     }
     
     func buildLayout() {
-        title = makeTitleLabel(text: String(localized: "tahap-pertumbuhan"), width: 198, height: 25, size: 20)
-        dismis = makeDismiss()
+        self.layer.cornerRadius = 10.0
+        
         stackViewContainer = makeStackViewContainer(height: 77, tag: 0)
         stackViewContainer2 = makeStackViewContainer(height: 77, tag: 1)
         stackViewContainer3 = makeStackViewContainer(height: 95, tag: 2)
@@ -201,8 +227,8 @@ final class CustomGrowthStepView: UIView {
         stackView.addArrangedSubview(stackViewContainer3!)
         
         self.addSubview(backgroundView)
-        self.addSubview(title!)
-        self.addSubview(dismis!)
+        self.addSubview(title)
+        self.addSubview(dismis)
         self.addSubview(stackView)
         // MARK: Container 1
         self.addSubview(imageViewContainer!)
@@ -233,17 +259,17 @@ final class CustomGrowthStepView: UIView {
         ])
         
         NSLayoutConstraint.activate([
-            title!.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 20.5),
-            title!.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 16)
+            title.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 20.5),
+            title.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 16)
         ])
         
         NSLayoutConstraint.activate([
-            dismis!.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 18),
-            dismis!.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -13)
+            dismis.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 18),
+            dismis.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -13)
         ])
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: title!.bottomAnchor, constant: 24.5),
+            stackView.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 24.5),
             stackView.leftAnchor.constraint(equalTo: backgroundView.leftAnchor),
             stackView.rightAnchor.constraint(equalTo: backgroundView.rightAnchor),
             stackView.heightAnchor.constraint(equalToConstant: 249)

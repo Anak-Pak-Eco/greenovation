@@ -10,8 +10,6 @@ import SwiftUI
 
 final class CustomFieldView: UIView {
     
-    let sharedData = SharedData.shared
-    
     let bottomSheetView = CustomGrowthStepView()
     let bottomSheetHeight: CGFloat = 350
     
@@ -86,7 +84,7 @@ final class CustomFieldView: UIView {
         let component = UITableView()
         component.separatorStyle = .none
         component.allowsSelection = true
-        component.register(UINib(nibName: "CustomSearchItemCell", bundle: nil), forCellReuseIdentifier: "CustomSearchCell")
+        component.register(UINib(nibName: "CustomSearchItemCell", bundle: nil), forCellReuseIdentifier: "CustomSearchItemCell")
         component.translatesAutoresizingMaskIntoConstraints = false
         return component
     } ()
@@ -329,10 +327,10 @@ final class CustomFieldView: UIView {
         print("Growth Step Text Field Tapped")
         
         // Show bottom sheet
-        if sharedData.isBottomSheetVisible.value {
+        if SharedData.shared.isBottomSheetVisible.value {
             // Hide the bottom sheet with animation
             animateBottomSheet(toY: frame.height)
-            sharedData.isBottomSheetVisible.value = false
+            SharedData.shared.isBottomSheetVisible.value = false
             // After the animation, remove it from the view
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 self.bottomSheetView.removeFromSuperview()
@@ -342,7 +340,7 @@ final class CustomFieldView: UIView {
             addSubview(bottomSheetView)
             bottomSheetView.frame = CGRect(x: 0, y: frame.height, width: frame.width, height: bottomSheetHeight)
             animateBottomSheet(toY: frame.height - bottomSheetHeight)
-            sharedData.isBottomSheetVisible.value = true
+            SharedData.shared.isBottomSheetVisible.value = true
         }
         
     }
@@ -362,7 +360,7 @@ extension CustomFieldView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomSearchCell", for: indexPath) as! CustomSearchItemCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomSearchItemCell", for: indexPath) as! CustomSearchItemCell
         
         if indexPath.row < filteredItems.count {
             let filteredItem = filteredItems[indexPath.row]

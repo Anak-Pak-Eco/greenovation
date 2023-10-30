@@ -9,8 +9,6 @@ import UIKit
 
 final class CustomChooseFormulationView: UIView {
     
-//    let sharedData = SharedData.shared
-    
     let kailan = "Kailan"
     let phaseName = String(localized: "fase-anakan")
     
@@ -25,6 +23,7 @@ final class CustomChooseFormulationView: UIView {
     var phMinField: UITextField?
     var strip2: UILabel?
     var phMaxField: UITextField?
+    var saveButton: UIButton?
     
     let backgroundView: UIView = {
         let component = UIView()
@@ -85,15 +84,27 @@ final class CustomChooseFormulationView: UIView {
         return component
     }
     
-    let saveButton: UIButton = {
+    func makeButtonEnable() -> UIButton {
         let component = UIButton()
         component.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         component.backgroundColor = UIColor.primaryAccent
         component.layer.cornerRadius = 10.0
         component.setTitle(String(localized: "simpan-pilihan"), for: .normal)
+        component.isEnabled = true
         component.translatesAutoresizingMaskIntoConstraints = false
         return component
-    } ()
+    }
+    
+    func makeButtonDisabled() -> UIButton {
+        let component = UIButton()
+        component.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+        component.backgroundColor = UIColor.surfaceContainerHighest
+        component.layer.cornerRadius = 10.0
+        component.setTitle(String(localized: "simpan-pilihan"), for: .normal)
+        component.isEnabled = false
+        component.translatesAutoresizingMaskIntoConstraints = false
+        return component
+    }
     
     let title: UILabel = {
         let component = UILabel()
@@ -119,60 +130,18 @@ final class CustomChooseFormulationView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        buildLayout()
+        buildLayout(0)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        buildLayout()
+        buildLayout(0)
     }
     
-    func buildLayout() {
-        
+    func buildLayout(_ selectedSegmentIndex: Int) {
         self.layer.cornerRadius = 10.0
         
-        if isHave {
-            label = makeDesc(text: String(localized: "Formula di bawah ini merupakan formula yang kamu buat untuk **\(kailan)** pada **\(phaseName)**"), size: 12)
-            ppmMinField = makeTextField(text: String(localized: "750"), color: .black)
-            ppmMaxField = makeTextField(text: "1200", color: .black)
-            phMinField = makeTextField(text: "5.5", color: .black)
-            phMaxField = makeTextField(text: "7.5", color: .black)
-        } else {
-            label = makeDesc(text: String(localized: "Kamu belum pernah membuat formula untuk Jenis Tanaman dan Tahap Pertumbuhan ini. Silahkan buat."), size: 12)
-            ppmMinField = makeTextField(text: String(localized: "Min"), color: .gray)
-            ppmMaxField = makeTextField(text: "Max", color: .gray)
-            phMinField = makeTextField(text: "Min", color: .gray)
-            phMaxField = makeTextField(text: "Max", color: .gray)
-            saveButton.isEnabled = false
-        }
-        ppmLabel = makeLabel(text: String(localized: "**Kepekatan Nutrisi** (ppm)"), size: 15)
-        strip1 = makeLabel(text: "-", size: 17)
-        phLabel = makeLabel(text: String(localized: "**Tingkat pH**"), size: 15)
-        strip2 = makeLabel(text: "-", size: 17)
-        
-        // Add View
-        self.addSubview(backgroundView)
-        self.addSubview(title)
-        self.addSubview(dismis)
-        self.addSubview(picker)
-        self.addSubview(label!)
-        self.addSubview(ppmLabel!)
-        self.addSubview(ppmMinField!)
-        self.addSubview(strip1!)
-        self.addSubview(ppmMaxField!)
-        self.addSubview(phLabel!)
-        self.addSubview(phMinField!)
-        self.addSubview(strip2!)
-        self.addSubview(phMaxField!)
-        self.addSubview(saveButton)
-        
-        saveButton.addTarget(self, action: #selector(saveButtonDidTap(_:)), for: .touchUpInside)
-        
-        Layout()
-    }
-    
-    @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
+        switch selectedSegmentIndex {
         case 0:
             
             // Remove if exist
@@ -192,21 +161,27 @@ final class CustomChooseFormulationView: UIView {
                 ppmMaxField = makeTextField(text: "1200", color: .black)
                 phMinField = makeTextField(text: "5.5", color: .black)
                 phMaxField = makeTextField(text: "7.5", color: .black)
-                saveButton.isEnabled = true
+                saveButton = makeButtonEnable()
             } else {
                 label = makeDesc(text: String(localized: "Kamu belum pernah membuat formula untuk Jenis Tanaman dan Tahap Pertumbuhan ini. Silahkan buat."), size: 12)
                 ppmMinField = makeTextField(text: String(localized: "Min"), color: .gray)
                 ppmMaxField = makeTextField(text: "Max", color: .gray)
                 phMinField = makeTextField(text: "Min", color: .gray)
                 phMaxField = makeTextField(text: "Max", color: .gray)
-                saveButton.isEnabled = false
+                saveButton = makeButtonDisabled()
             }
             ppmLabel = makeLabel(text: String(localized: "**Kepekatan Nutrisi** (ppm)"), size: 15)
             strip1 = makeLabel(text: "-", size: 17)
             phLabel = makeLabel(text: String(localized: "**Tingkat pH**"), size: 15)
             strip2 = makeLabel(text: "-", size: 17)
             
+            saveButton?.addTarget(self, action: #selector(saveButtonDidTap(_:)), for: .touchUpInside)
+            
             // Add View
+            self.addSubview(backgroundView)
+            self.addSubview(title)
+            self.addSubview(dismis)
+            self.addSubview(picker)
             self.addSubview(label!)
             self.addSubview(ppmLabel!)
             self.addSubview(ppmMinField!)
@@ -216,6 +191,7 @@ final class CustomChooseFormulationView: UIView {
             self.addSubview(phMinField!)
             self.addSubview(strip2!)
             self.addSubview(phMaxField!)
+            self.addSubview(saveButton!)
             
             Layout()
             
@@ -241,8 +217,15 @@ final class CustomChooseFormulationView: UIView {
             phMinField = makeTextField(text: "5.5", color: .black)
             strip2 = makeLabel(text: "-", size: 17)
             phMaxField = makeTextField(text: "6.5", color: .black)
+            saveButton = makeButtonEnable()
+            
+            saveButton?.addTarget(self, action: #selector(saveButtonDidTap(_:)), for: .touchUpInside)
             
             // Add View
+            self.addSubview(backgroundView)
+            self.addSubview(title)
+            self.addSubview(dismis)
+            self.addSubview(picker)
             self.addSubview(label!)
             self.addSubview(ppmLabel!)
             self.addSubview(ppmMinField!)
@@ -252,11 +235,18 @@ final class CustomChooseFormulationView: UIView {
             self.addSubview(phMinField!)
             self.addSubview(strip2!)
             self.addSubview(phMaxField!)
+            self.addSubview(saveButton!)
             
             Layout()
         default:
             break
         }
+        
+        Layout()
+    }
+    
+    @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        buildLayout(sender.selectedSegmentIndex)
         
     }
     
@@ -364,9 +354,9 @@ final class CustomChooseFormulationView: UIView {
         ])
         
         NSLayoutConstraint.activate([
-            saveButton.topAnchor.constraint(equalTo: ppmMinField!.bottomAnchor, constant: 91),
-            saveButton.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 16),
-            saveButton.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -16)
+            saveButton!.topAnchor.constraint(equalTo: ppmMinField!.bottomAnchor, constant: 91),
+            saveButton!.leftAnchor.constraint(equalTo: backgroundView.leftAnchor, constant: 16),
+            saveButton!.rightAnchor.constraint(equalTo: backgroundView.rightAnchor, constant: -16)
         ])
     }
     
