@@ -329,10 +329,10 @@ final class CustomFieldView: UIView {
         print("Growth Step Text Field Tapped")
         
         // Show bottom sheet
-        if sharedData.isBottomSheetVisible {
+        if sharedData.isBottomSheetVisible.value {
             // Hide the bottom sheet with animation
             animateBottomSheet(toY: frame.height)
-            sharedData.isBottomSheetVisible = false
+            sharedData.isBottomSheetVisible.value = false
             // After the animation, remove it from the view
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 self.bottomSheetView.removeFromSuperview()
@@ -342,7 +342,7 @@ final class CustomFieldView: UIView {
             addSubview(bottomSheetView)
             bottomSheetView.frame = CGRect(x: 0, y: frame.height, width: frame.width, height: bottomSheetHeight)
             animateBottomSheet(toY: frame.height - bottomSheetHeight)
-            sharedData.isBottomSheetVisible = true
+            sharedData.isBottomSheetVisible.value = true
         }
         
     }

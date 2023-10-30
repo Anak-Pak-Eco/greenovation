@@ -9,12 +9,12 @@ import UIKit
 
 final class CustomChooseFormulationView: UIView {
     
-    let sharedData = SharedData.shared
+//    let sharedData = SharedData.shared
     
     let kailan = "Kailan"
     let phaseName = String(localized: "fase-anakan")
     
-    let isHave = false
+    let isHave = true
     
     var label: UILabel?
     var ppmLabel: UILabel?
@@ -143,6 +143,7 @@ final class CustomChooseFormulationView: UIView {
             ppmMaxField = makeTextField(text: "Max", color: .gray)
             phMinField = makeTextField(text: "Min", color: .gray)
             phMaxField = makeTextField(text: "Max", color: .gray)
+            saveButton.isEnabled = false
         }
         ppmLabel = makeLabel(text: String(localized: "**Kepekatan Nutrisi** (ppm)"), size: 15)
         strip1 = makeLabel(text: "-", size: 17)
@@ -170,18 +171,6 @@ final class CustomChooseFormulationView: UIView {
         Layout()
     }
     
-    @objc func handleDismissTap() {
-        SharedData.shared.isBottomSheetVisible = false
-        self.removeFromSuperview()
-    }
-    
-    @objc func saveButtonDidTap(_ button: UIButton) {
-        sharedData.isDone = true
-        self.removeFromSuperview()
-        sharedData.isBottomSheetVisible = false
-//        AddDeviceViewController().viewDidLoad()
-    }
-    
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -203,12 +192,14 @@ final class CustomChooseFormulationView: UIView {
                 ppmMaxField = makeTextField(text: "1200", color: .black)
                 phMinField = makeTextField(text: "5.5", color: .black)
                 phMaxField = makeTextField(text: "7.5", color: .black)
+                saveButton.isEnabled = true
             } else {
                 label = makeDesc(text: String(localized: "Kamu belum pernah membuat formula untuk Jenis Tanaman dan Tahap Pertumbuhan ini. Silahkan buat."), size: 12)
                 ppmMinField = makeTextField(text: String(localized: "Min"), color: .gray)
                 ppmMaxField = makeTextField(text: "Max", color: .gray)
                 phMinField = makeTextField(text: "Min", color: .gray)
                 phMaxField = makeTextField(text: "Max", color: .gray)
+                saveButton.isEnabled = false
             }
             ppmLabel = makeLabel(text: String(localized: "**Kepekatan Nutrisi** (ppm)"), size: 15)
             strip1 = makeLabel(text: "-", size: 17)
@@ -267,6 +258,19 @@ final class CustomChooseFormulationView: UIView {
             break
         }
         
+    }
+    
+    @objc func handleDismissTap() {
+        SharedData.shared.isBottomSheetVisible.value = false
+        SharedData.shared.bottomSheetSecondShow = false
+        self.removeFromSuperview()
+    }
+    
+    @objc func saveButtonDidTap(_ button: UIButton) {
+        SharedData.shared.isDone.value = true
+        SharedData.shared.isBottomSheetVisible.value = false
+        SharedData.shared.bottomSheetSecondShow = false
+        self.removeFromSuperview()
     }
     
     func Layout() {

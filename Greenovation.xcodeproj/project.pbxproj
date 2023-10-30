@@ -15,6 +15,9 @@
 		A71FC0BA2AEC0A3B00875CBF /* CustomSearchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0B82AEC0A3B00875CBF /* CustomSearchItemCell.swift */; };
 		A71FC0BB2AEC0A3B00875CBF /* CustomSearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71FC0B92AEC0A3B00875CBF /* CustomSearchItemCell.xib */; };
 		A71FC0BE2AEE19E000875CBF /* CustomFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0BD2AEE19E000875CBF /* CustomFieldViewModel.swift */; };
+		A71FC0C22AEECFA900875CBF /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0C12AEECFA900875CBF /* BottomSheetView.swift */; };
+		A71FC0C42AEFA6B800875CBF /* ExampleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0C32AEFA6B800875CBF /* ExampleUIView.swift */; };
+		A71FC0C62AEFA6E300875CBF /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71FC0C52AEFA6E300875CBF /* TestView.xib */; };
 		A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */; };
 		A7D78E182AE929F6006577AE /* CustomMyChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */; };
 		A7D78E1A2AEA6C26006577AE /* CustomGrowthStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */; };
@@ -106,6 +109,9 @@
 		A71FC0B82AEC0A3B00875CBF /* CustomSearchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchItemCell.swift; sourceTree = "<group>"; };
 		A71FC0B92AEC0A3B00875CBF /* CustomSearchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSearchItemCell.xib; sourceTree = "<group>"; };
 		A71FC0BD2AEE19E000875CBF /* CustomFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFieldViewModel.swift; sourceTree = "<group>"; };
+		A71FC0C12AEECFA900875CBF /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		A71FC0C32AEFA6B800875CBF /* ExampleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUIView.swift; sourceTree = "<group>"; };
+		A71FC0C52AEFA6E300875CBF /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalizationStoryboard.swift; path = Greenovation/Utils/LocalizationStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomMyChoiceView.swift; path = Greenovation/Utils/Components/CustomMyChoiceView.swift; sourceTree = SOURCE_ROOT; };
 		A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGrowthStepView.swift; sourceTree = "<group>"; };
@@ -366,6 +372,7 @@
 				A7D78E192AEA6C26006577AE /* CustomGrowthStepView.swift */,
 				A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */,
 				A71FC0A92AEBA40E00875CBF /* CustomChooseFormulationView.swift */,
+				A71FC0C12AEECFA900875CBF /* BottomSheetView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -432,6 +439,8 @@
 		D6D010182AC6C60800EC51FB = {
 			isa = PBXGroup;
 			children = (
+				A71FC0C32AEFA6B800875CBF /* ExampleUIView.swift */,
+				A71FC0C52AEFA6E300875CBF /* TestView.xib */,
 				D6D010232AC6C60800EC51FB /* Greenovation */,
 				D6D0103A2AC6C60900EC51FB /* HydrospaceTests */,
 				D6D010442AC6C60900EC51FB /* HydrospaceUITests */,
@@ -666,6 +675,7 @@
 				A71FC0B52AEBCF8A00875CBF /* AddDeviceViewController.xib in Resources */,
 				D6B98BFD2AE7BE7F0077E33E /* GoogleService-Info.plist in Resources */,
 				D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */,
+				A71FC0C62AEFA6E300875CBF /* TestView.xib in Resources */,
 				D630F5082AD8112A00A355D0 /* DMSans-Black.ttf in Resources */,
 				D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */,
 			);
@@ -697,12 +707,14 @@
 				A7E23C5A2AE924A10065F24F /* CustomFieldView.swift in Sources */,
 				A71FC0AA2AEBA40E00875CBF /* CustomChooseFormulationView.swift in Sources */,
 				A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */,
+				A71FC0C42AEFA6B800875CBF /* ExampleUIView.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
 				A71FC0A72AEBA3F000875CBF /* ChooseFormulationViewController.swift in Sources */,
 				D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */,
 				D6BD3B732AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift in Sources */,
 				D6BD3B712AD0CAB6005B85C3 /* DeviceResponse.swift in Sources */,
 				D681D5772AE68D0E005A0BAC /* DevicesItemTableViewCell.swift in Sources */,
+				A71FC0C22AEECFA900875CBF /* BottomSheetView.swift in Sources */,
 				D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */,
 				A7E23C572AE922E80065F24F /* EditDeviceViewController.swift in Sources */,
 				D6AC857D2ACFFD260033B665 /* NotificationView.swift in Sources */,

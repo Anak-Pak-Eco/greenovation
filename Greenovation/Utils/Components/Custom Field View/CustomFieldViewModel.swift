@@ -9,8 +9,8 @@ import UIKit
 
 class SharedData {
     static let shared = SharedData()
-    var isBottomSheetVisible = false
-    var isDone = false
+    var isBottomSheetVisible = Box(false)
+    var isDone = Box(false)
     var bottomSheetSecondShow = false
 }
 

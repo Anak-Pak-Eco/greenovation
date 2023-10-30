@@ -26,7 +26,19 @@ class AddDeviceViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = backButton
         
         saveBtn.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
-        myChoiceView.isHidden = !SharedData.shared.isDone
+        
+        SharedData.shared.isDone.bind { [weak self] isDone in
+            guard let self = self else { return }
+            self.myChoiceView.isHidden = !isDone
+        }
+        
+        // myChoiceView.isHidden = !SharedData.shared.isDone
+    }
+    
+    func showChoicheView() {
+//        if sharedData.isDone {
+            // myChoiceView.isHidden = false
+//        }
     }
     
     @objc func backButtonTapped() {
