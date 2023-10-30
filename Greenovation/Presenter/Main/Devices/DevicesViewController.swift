@@ -29,9 +29,8 @@ class DevicesViewController: UIViewController {
     }
     
     private func setupToolbar() {
-        title = "Perangkat"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.setRightBarButton(
+        tabBarController?.title = "Perangkat"
+        tabBarController?.navigationItem.setRightBarButton(
             UIBarButtonItem(
                 image: UIImage(systemName: "plus"),
                 style: .plain,
@@ -69,7 +68,7 @@ extension DevicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIHostingController(rootView: DetailDeviceView())
+        let vc = DetailDeviceViewController()
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }

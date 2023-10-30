@@ -11,8 +11,8 @@ import SwiftUI
 
 class MainViewController: UITabBarController {
     
-    lazy var deviceViewController: UINavigationController = {
-        let viewController = UINavigationController(rootViewController: DevicesViewController())
+    lazy var deviceViewController: UIViewController = {
+        let viewController = DevicesViewController()
         return viewController
     }()
     
@@ -58,18 +58,6 @@ class MainViewController: UITabBarController {
             notificationViewController,
             formulaSettingViewController
         ]
-    }
-}
-
-extension MainViewController: NavigatorDelegate {
-    func navigate(_ routes: Routes) {
-        switch routes {
-        case .detail:
-            let detailVC = UIHostingController(rootView: DetailDeviceView())
-            detailVC.navigationItem.setHidesBackButton(true, animated: true)
-            detailVC.hidesBottomBarWhenPushed = true
-            deviceViewController.pushViewController(detailVC, animated: true)
-        }
     }
 }
 
