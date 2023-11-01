@@ -21,7 +21,10 @@ class HydrospaceRTDBDataSource {
             let value = snapshot.value as? NSDictionary
             if let value = value {
                 let responses = value.allKeys.map { key in
-                    DeviceResponse.from(response: value.object(forKey: key) as! NSDictionary)
+                    return DeviceResponse.from(
+                        response: value.object(forKey: key) as! NSDictionary,
+                        id: key as! String
+                    )
                 }
                 subject.send(responses)
             }
@@ -35,10 +38,12 @@ class HydrospaceRTDBDataSource {
     func getDeviceStatus(id: String) -> AnyPublisher<DeviceResponse?, Never> {
         let subject = CurrentValueSubject<DeviceResponse?, Never>(nil)
         
+        print("Device ID: \(id)")
+        
         let handle = db.child(DeviceResponse.reference).child(id).observe(.value) { snapshot in
             let value = snapshot.value as? NSDictionary
             if let value = value {
-                let response = DeviceResponse.from(response: value)
+                let response = DeviceResponse.from(response: value, id: snapshot.key)
                 subject.send(response)
             }
         }

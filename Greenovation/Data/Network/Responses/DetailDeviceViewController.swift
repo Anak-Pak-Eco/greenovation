@@ -10,11 +10,30 @@ import UIKit
 class DetailDeviceViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
+    private let viewModel = DetailDeviceViewModel()
+    var deviceId: String!
+    
+    init(deviceId: String) {
+        super.init(nibName: nil, bundle: nil)
+        self.deviceId = deviceId
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupToolbar()
         setupUI()
+        viewModel.device.bind { [weak self] model in
+            guard let self = self else { return }
+            if model != nil {
+                self.title = model?.name
+                self.mainTableView.reloadData()
+            }
+        }
+        viewModel.observeDevice(deviceId: deviceId)
     }
     
     private func setupUI() {
@@ -30,7 +49,6 @@ class DetailDeviceViewController: UIViewController {
             UINib(nibName: "HistoryGraphTableViewCell", bundle: nil),
             forCellReuseIdentifier: "HistoryGraphTableViewCell"
         )
-        
         mainTableView.alwaysBounceVertical = false
         mainTableView.dataSource = self
         mainTableView.delegate = self
@@ -69,11 +87,19 @@ class DetailDeviceViewController: UIViewController {
 extension DetailDeviceViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        if viewModel.device.value != nil {
+            return 1
+        } else {
+            return 0
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        if viewModel.device.value != nil {
+            return 3
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -88,6 +114,9 @@ extension DetailDeviceViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = mainTableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell", for: indexPath) as! HeaderTableViewCell
+            if let model = viewModel.device.value {
+                cell.setupData(device: model)
+            }
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 1 {

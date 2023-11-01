@@ -180,6 +180,7 @@
             <connections>
                 <outlet property="deviceNameLabel" destination="TxX-WB-MbH" id="VDY-vB-KDz"/>
                 <outlet property="deviceStatusLabel" destination="fQz-ft-wBV" id="hWu-3K-0jY"/>
+                <outlet property="errorView" destination="cWy-AP-4nb" id="LZu-bv-54H"/>
                 <outlet property="frameView" destination="0Yc-2M-AZk" id="7H8-Ib-ENg"/>
                 <outlet property="phLabel" destination="FDC-Ny-HN2" id="akF-tn-tIA"/>
                 <outlet property="phaseImage" destination="ECa-hg-5SD" id="Y2i-z3-xR1"/>

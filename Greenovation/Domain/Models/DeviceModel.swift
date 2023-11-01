@@ -8,11 +8,12 @@
 import Foundation
 
 struct DeviceModel: Identifiable {
-    let id: UUID = UUID()
+    let id: String
     let currentPh: Double
     let currentSteps: String
     let currentPpm: Double
     let name: String
     let plantId: String
     let userId: String
+    let deviceStatus: String
 }

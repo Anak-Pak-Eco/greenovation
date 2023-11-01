@@ -34,11 +34,17 @@ class DevicesViewController: UIViewController {
             UIBarButtonItem(
                 image: UIImage(systemName: "plus"),
                 style: .plain,
-                target: nil,
-                action: nil
+                target: self,
+                action: #selector(onAddDeviceClicked(_:))
             ),
             animated: true
         )
+    }
+    
+    @objc private func onAddDeviceClicked(_ sender: UIBarButtonItem) {
+        let vc = ConnectWifiViewController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func setupUI() {
@@ -58,7 +64,10 @@ extension DevicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = mainTableView.dequeueReusableCell(withIdentifier: "DeviceItemCell", for: indexPath) as! DevicesItemTableViewCell
+        let cell = mainTableView.dequeueReusableCell(
+            withIdentifier: "DeviceItemCell",
+            for: indexPath
+        ) as! DevicesItemTableViewCell
         
         let device = viewModel.devices[indexPath.row]
         cell.setup(device: device)
@@ -68,7 +77,7 @@ extension DevicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DetailDeviceViewController()
+        let vc = DetailDeviceViewController(deviceId: viewModel.devices[indexPath.row].id)
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
