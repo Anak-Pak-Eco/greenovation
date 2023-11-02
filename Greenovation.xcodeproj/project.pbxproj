@@ -62,6 +62,16 @@
 		D6917A2E2AEA9E6B00CD7F5C /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6917A2D2AEA9E6B00CD7F5C /* UITextField+Extensions.swift */; };
 		D6917A322AEAB4F800CD7F5C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6917A302AEAB4F800CD7F5C /* SignUpViewController.swift */; };
 		D6917A332AEAB4F800CD7F5C /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6917A312AEAB4F800CD7F5C /* SignUpViewController.xib */; };
+		D69574342AEBA51700565600 /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69574322AEBA51700565600 /* ScanQRViewController.swift */; };
+		D69574352AEBA51700565600 /* ScanQRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69574332AEBA51700565600 /* ScanQRViewController.xib */; };
+		D69D171F2AEEC80100A5347C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D171D2AEEC80100A5347C /* NotificationViewController.swift */; };
+		D69D17202AEEC80100A5347C /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69D171E2AEEC80100A5347C /* NotificationViewController.xib */; };
+		D69D17222AEECA9800A5347C /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D17212AEECA9800A5347C /* BaseResponse.swift */; };
+		D6A8ABBD2AEEADD800D6466B /* HydrospaceAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABBC2AEEADD800D6466B /* HydrospaceAPIDataSource.swift */; };
+		D6A8ABBF2AEEBE6500D6466B /* NotificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABBE2AEEBE6500D6466B /* NotificationResponse.swift */; };
+		D6A8ABC22AEEC0B900D6466B /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABC12AEEC0B900D6466B /* NotificationRepository.swift */; };
+		D6A8ABC42AEEC0C100D6466B /* NotificationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABC32AEEC0C100D6466B /* NotificationRepositoryProtocol.swift */; };
+		D6A8ABC62AEEC0D400D6466B /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABC52AEEC0D400D6466B /* NotificationModel.swift */; };
 		D69D17252AEED5A100A5347C /* DetailDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D17232AEED5A100A5347C /* DetailDeviceViewController.swift */; };
 		D69D17262AEED5A100A5347C /* DetailDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69D17242AEED5A100A5347C /* DetailDeviceViewController.xib */; };
 		D69D172B2AEF600900A5347C /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69D17292AEF600900A5347C /* HeaderTableViewCell.xib */; };
@@ -69,7 +79,6 @@
 		D69D172F2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69D172D2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib */; };
 		D6AC85722ACFF7700033B665 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC85712ACFF7700033B665 /* MainViewController.swift */; };
 		D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6AC85732ACFFA000033B665 /* MainViewController.xib */; };
-		D6AC857D2ACFFD260033B665 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC857C2ACFFD260033B665 /* NotificationView.swift */; };
 		D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC857E2ACFFD2F0033B665 /* NotificationViewModel.swift */; };
 		D6AC85812ACFFD6C0033B665 /* FormulaSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC85802ACFFD6C0033B665 /* FormulaSettingView.swift */; };
 		D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC85822ACFFD7E0033B665 /* FormulaSettingViewModel.swift */; };
@@ -169,6 +178,16 @@
 		D6917A2D2AEA9E6B00CD7F5C /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		D6917A302AEAB4F800CD7F5C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D6917A312AEAB4F800CD7F5C /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		D69574322AEBA51700565600 /* ScanQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
+		D69574332AEBA51700565600 /* ScanQRViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanQRViewController.xib; sourceTree = "<group>"; };
+		D69D171D2AEEC80100A5347C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		D69D171E2AEEC80100A5347C /* NotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
+		D69D17212AEECA9800A5347C /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		D6A8ABBC2AEEADD800D6466B /* HydrospaceAPIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrospaceAPIDataSource.swift; sourceTree = "<group>"; };
+		D6A8ABBE2AEEBE6500D6466B /* NotificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationResponse.swift; sourceTree = "<group>"; };
+		D6A8ABC12AEEC0B900D6466B /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
+		D6A8ABC32AEEC0C100D6466B /* NotificationRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepositoryProtocol.swift; sourceTree = "<group>"; };
+		D6A8ABC52AEEC0D400D6466B /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		D69D17232AEED5A100A5347C /* DetailDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailDeviceViewController.swift; path = Greenovation/Data/Network/Responses/DetailDeviceViewController.swift; sourceTree = SOURCE_ROOT; };
 		D69D17242AEED5A100A5347C /* DetailDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DetailDeviceViewController.xib; path = Greenovation/Data/Network/Responses/DetailDeviceViewController.xib; sourceTree = SOURCE_ROOT; };
 		D69D17292AEF600900A5347C /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -176,7 +195,6 @@
 		D69D172D2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailDeviceAlertTableViewCell.xib; sourceTree = "<group>"; };
 		D6AC85712ACFF7700033B665 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D6AC85732ACFFA000033B665 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		D6AC857C2ACFFD260033B665 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		D6AC857E2ACFFD2F0033B665 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		D6AC85802ACFFD6C0033B665 /* FormulaSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaSettingView.swift; sourceTree = "<group>"; };
 		D6AC85822ACFFD7E0033B665 /* FormulaSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaSettingViewModel.swift; sourceTree = "<group>"; };
@@ -375,6 +393,7 @@
 			children = (
 				D640E1F52AC7387A007E993F /* Responses */,
 				D6BD3B722AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift */,
+				D6A8ABBC2AEEADD800D6466B /* HydrospaceAPIDataSource.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -390,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				D6BD3B782AD123C3005B85C3 /* DeviceModel.swift */,
+				D6A8ABC52AEEC0D400D6466B /* NotificationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -397,6 +417,7 @@
 		D640E1EF2AC732F7007E993F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				D6A8ABC02AEEC0AD00D6466B /* Notifications */,
 				D6BD3B762AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift */,
 				D6BD3B742AD1223C005B85C3 /* HydrospaceRepository.swift */,
 			);
@@ -407,6 +428,8 @@
 			isa = PBXGroup;
 			children = (
 				D6BD3B702AD0CAB6005B85C3 /* DeviceResponse.swift */,
+				D6A8ABBE2AEEBE6500D6466B /* NotificationResponse.swift */,
+				D69D17212AEECA9800A5347C /* BaseResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -455,6 +478,24 @@
 			path = "Sign Up";
 			sourceTree = "<group>";
 		};
+		D69574312AEBA50100565600 /* Add Devices */ = {
+			isa = PBXGroup;
+			children = (
+				D69574322AEBA51700565600 /* ScanQRViewController.swift */,
+				D69574332AEBA51700565600 /* ScanQRViewController.xib */,
+			);
+			path = "Add Devices";
+			sourceTree = "<group>";
+		};
+		D6A8ABC02AEEC0AD00D6466B /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				D6A8ABC12AEEC0B900D6466B /* NotificationRepository.swift */,
+				D6A8ABC32AEEC0C100D6466B /* NotificationRepositoryProtocol.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		D69D17272AEF5FE700A5347C /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,7 +524,8 @@
 		D6AC857A2ACFFD060033B665 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				D6AC857C2ACFFD260033B665 /* NotificationView.swift */,
+				D69D171D2AEEC80100A5347C /* NotificationViewController.swift */,
+				D69D171E2AEEC80100A5347C /* NotificationViewController.xib */,
 				D6AC857E2ACFFD2F0033B665 /* NotificationViewModel.swift */,
 			);
 			path = Notification;
@@ -751,6 +793,7 @@
 				D630F50C2AD8112A00A355D0 /* DMSans-Light.ttf in Resources */,
 				D60950412AEF890000DD5FDD /* HistoryGraphTableViewCell.xib in Resources */,
 				D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */,
+				D69574352AEBA51700565600 /* ScanQRViewController.xib in Resources */,
 				D630F5062AD8112A00A355D0 /* DMSans-Italic.ttf in Resources */,
 				D630F50F2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf in Resources */,
 				D6D0102E2AC6C60900EC51FB /* Assets.xcassets in Resources */,
@@ -770,6 +813,7 @@
 				D630F5082AD8112A00A355D0 /* DMSans-Black.ttf in Resources */,
 				D6917A332AEAB4F800CD7F5C /* SignUpViewController.xib in Resources */,
 				D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */,
+				D69D17202AEEC80100A5347C /* NotificationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,6 +846,7 @@
 				D6917A2E2AEA9E6B00CD7F5C /* UITextField+Extensions.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
 				A71FC0A72AEBA3F000875CBF /* ChooseFormulationViewController.swift in Sources */,
+				D6A8ABBF2AEEBE6500D6466B /* NotificationResponse.swift in Sources */,
 				D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */,
 				D6BD3B732AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift in Sources */,
 				D6BD3B712AD0CAB6005B85C3 /* DeviceResponse.swift in Sources */,
@@ -826,6 +871,15 @@
 				A71FC0B42AEBCF8A00875CBF /* AddDeviceViewController.swift in Sources */,
 				D6AC85812ACFFD6C0033B665 /* FormulaSettingView.swift in Sources */,
 				A7D78E182AE929F6006577AE /* CustomMyChoiceView.swift in Sources */,
+				D6BD3B792AD123C4005B85C3 /* DeviceModel.swift in Sources */,
+				D6DFD64E2AE7DEE200215428 /* View+Extension.swift in Sources */,
+				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
+				D6A8ABC42AEEC0C100D6466B /* NotificationRepositoryProtocol.swift in Sources */,
+				D6A8ABC62AEEC0D400D6466B /* NotificationModel.swift in Sources */,
+				D69D17222AEECA9800A5347C /* BaseResponse.swift in Sources */,
+				D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */,
+				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,
+				D6A8ABBD2AEEADD800D6466B /* HydrospaceAPIDataSource.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
 				D6AC85812ACFFD6C0033B665 /* FormulaSettingView.swift in Sources */,
 				D6917A322AEAB4F800CD7F5C /* SignUpViewController.swift in Sources */,
@@ -833,7 +887,10 @@
 				D69D17252AEED5A100A5347C /* DetailDeviceViewController.swift in Sources */,
 				D608922A2AEA760200A1C530 /* OnboardingViewController.swift in Sources */,
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
+				D6A8ABC22AEEC0B900D6466B /* NotificationRepository.swift in Sources */,
+				D69574342AEBA51700565600 /* ScanQRViewController.swift in Sources */,
 				D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */,
+				D69D171F2AEEC80100A5347C /* NotificationViewController.swift in Sources */,
 				D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */,
 				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
