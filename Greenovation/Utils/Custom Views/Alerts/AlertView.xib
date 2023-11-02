@@ -40,10 +40,10 @@
                                         <constraint firstAttribute="width" constant="14" id="rDf-cz-5zc"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvJ-aA-V8n">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvJ-aA-V8n">
                                     <rect key="frame" x="22" y="356.66666666666669" width="355" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="i6e-JU-iAr"/>
+                                        <constraint firstAttribute="height" constant="30" id="UKQ-S5-Si5"/>
                                     </constraints>
                                     <string key="text">Nilai PPM tinggi. Tambahkan larutan nutrisi  jsojko ko kok ok o ko ko ko ko ko k o  plp lp lp l pl plp lp lplplplpl pl pl pl p lp lp  Nilai PPM tinggi. Tambahkan larutan nutrisi  jsojko ko kok ok o ko ko ko ko ko k o  plp lp lp l pl plp lp lplplp</string>
                                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="11"/>

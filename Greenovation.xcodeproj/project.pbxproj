@@ -83,6 +83,8 @@
 		D6D010462AC6C60900EC51FB /* Base_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D010452AC6C60900EC51FB /* Base_ProjectUITests.swift */; };
 		D6D010482AC6C60900EC51FB /* Base_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D010472AC6C60900EC51FB /* Base_ProjectUITestsLaunchTests.swift */; };
 		D6DFD64E2AE7DEE200215428 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DFD64D2AE7DEE200215428 /* View+Extension.swift */; };
+		D6F463942AF38CE600814C7D /* AlertLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F463932AF38CE600814C7D /* AlertLargeView.swift */; };
+		D6F463962AF38CFF00814C7D /* AlertLargeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F463952AF38CFF00814C7D /* AlertLargeView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +187,8 @@
 		D6D010472AC6C60900EC51FB /* Base_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D6DFD64D2AE7DEE200215428 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		D6E50C1D2ACD60DF00375F9A /* Greenovation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Greenovation.entitlements; sourceTree = "<group>"; };
+		D6F463932AF38CE600814C7D /* AlertLargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLargeView.swift; sourceTree = "<group>"; };
+		D6F463952AF38CFF00814C7D /* AlertLargeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertLargeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +259,8 @@
 			children = (
 				D6239CD32AF22C940097E8D1 /* AlertView.swift */,
 				D6239CD12AF22BEF0097E8D1 /* AlertView.xib */,
+				D6F463932AF38CE600814C7D /* AlertLargeView.swift */,
+				D6F463952AF38CFF00814C7D /* AlertLargeView.xib */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -691,6 +697,7 @@
 				D69D172B2AEF600900A5347C /* HeaderTableViewCell.xib in Resources */,
 				D6B98BFD2AE7BE7F0077E33E /* GoogleService-Info.plist in Resources */,
 				D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */,
+				D6F463962AF38CFF00814C7D /* AlertLargeView.xib in Resources */,
 				D630F5082AD8112A00A355D0 /* DMSans-Black.ttf in Resources */,
 				D6917A332AEAB4F800CD7F5C /* SignUpViewController.xib in Resources */,
 				D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */,
@@ -731,6 +738,7 @@
 				D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */,
 				D64547092AEA96FE0077DA04 /* SignInViewController.swift in Sources */,
 				D6AC857D2ACFFD260033B665 /* NotificationView.swift in Sources */,
+				D6F463942AF38CE600814C7D /* AlertLargeView.swift in Sources */,
 				D6BD3B792AD123C4005B85C3 /* DeviceModel.swift in Sources */,
 				D6DFD64E2AE7DEE200215428 /* View+Extension.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,

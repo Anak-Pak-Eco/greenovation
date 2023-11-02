@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+        <array key="DMSans-SemiBold.ttf">
+            <string>DMSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertLargeView" customModule="Greenovation" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="Y7g-Ty-YAo" id="leG-2y-BnB"/>
+                <outlet property="descriptionLabel" destination="WIp-K3-6a0" id="fkX-vm-xPs"/>
+                <outlet property="doneButton" destination="igw-EL-FCc" id="Ehb-2G-C5h"/>
+                <outlet property="titleLabel" destination="9k9-NS-ZBk" id="GpB-fp-nMJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6Cv-vI-C53">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7g-Ty-YAo" userLabel="AlertView">
+                    <rect key="frame" x="0.0" y="59.000000000000014" width="393" height="154.33333333333337"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ojI-lZ-zVY" userLabel="Header Stack View">
+                            <rect key="frame" x="16" y="14.999999999999998" width="361" height="20.333333333333329"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.triangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nrf-VJ-eoY">
+                                    <rect key="frame" x="0.0" y="1.3333333333333321" width="14" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="14" id="Mfl-gq-9s1"/>
+                                        <constraint firstAttribute="height" constant="14" id="Tps-aY-096"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Nilai PPM Rendah" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k9-NS-ZBk">
+                                    <rect key="frame" x="22" y="0.0" width="339" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="12"/>
+                                    <color key="textColor" name="on secondary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="tintColor" name="on secondary-fixed"/>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Est-6r-YaA">
+                            <rect key="frame" x="16" y="40.333333333333329" width="361" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Sekitar 100ml untuk tiap liter untuk mengembalikan keseimbangan ppm di jangkauan 800 - 1200 ppm. Tambahkan larutan nutrisi A." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIp-K3-6a0">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="50"/>
+                                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <lineBreakStrategy key="lineBreakStrategy" pushOut="YES"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="secondary-container"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="WIp-K3-6a0" secondAttribute="trailing" id="Gfh-vR-J3F"/>
+                                <constraint firstItem="WIp-K3-6a0" firstAttribute="leading" secondItem="Est-6r-YaA" secondAttribute="leading" id="bTS-2B-6bK"/>
+                                <constraint firstAttribute="height" constant="50" id="i6m-Yi-a57"/>
+                                <constraint firstItem="WIp-K3-6a0" firstAttribute="top" secondItem="Est-6r-YaA" secondAttribute="top" id="lZE-8E-yi1"/>
+                                <constraint firstAttribute="bottom" secondItem="WIp-K3-6a0" secondAttribute="bottom" id="u8F-7M-8QW"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igw-EL-FCc">
+                            <rect key="frame" x="16" y="98.333333333333371" width="361" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="gc1-Qf-a0U"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Sudah Perbaiki Larutan">
+                                <backgroundConfiguration key="background" cornerRadius="10"/>
+                                <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
+                                <color key="baseForegroundColor" name="on primary-accent"/>
+                                <color key="baseBackgroundColor" name="primary-accent"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="secondary-container"/>
+                    <constraints>
+                        <constraint firstItem="Est-6r-YaA" firstAttribute="leading" secondItem="Y7g-Ty-YAo" secondAttribute="leading" constant="16" id="4t6-fL-joU"/>
+                        <constraint firstItem="igw-EL-FCc" firstAttribute="leading" secondItem="Y7g-Ty-YAo" secondAttribute="leading" constant="16" id="D2p-qu-0ck"/>
+                        <constraint firstItem="ojI-lZ-zVY" firstAttribute="top" secondItem="Y7g-Ty-YAo" secondAttribute="top" constant="15" id="IHh-rf-phq"/>
+                        <constraint firstItem="igw-EL-FCc" firstAttribute="top" secondItem="Est-6r-YaA" secondAttribute="bottom" constant="8" id="ITG-et-z7c"/>
+                        <constraint firstItem="ojI-lZ-zVY" firstAttribute="leading" secondItem="Y7g-Ty-YAo" secondAttribute="leading" constant="16" id="IzL-Xh-K6v"/>
+                        <constraint firstAttribute="trailing" secondItem="ojI-lZ-zVY" secondAttribute="trailing" constant="16" id="KbF-ed-Aau"/>
+                        <constraint firstAttribute="trailing" secondItem="igw-EL-FCc" secondAttribute="trailing" constant="16" id="Yoa-tC-RfB"/>
+                        <constraint firstItem="Est-6r-YaA" firstAttribute="top" secondItem="ojI-lZ-zVY" secondAttribute="bottom" constant="5" id="euj-96-Wxf"/>
+                        <constraint firstAttribute="bottom" secondItem="igw-EL-FCc" secondAttribute="bottom" constant="16" id="kd8-sa-q7q"/>
+                        <constraint firstAttribute="trailing" secondItem="Est-6r-YaA" secondAttribute="trailing" constant="16" id="lGi-CV-cMy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="lCk-Hs-1eH"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Y7g-Ty-YAo" firstAttribute="leading" secondItem="lCk-Hs-1eH" secondAttribute="leading" id="2bv-8S-H6z"/>
+                <constraint firstItem="Y7g-Ty-YAo" firstAttribute="top" secondItem="lCk-Hs-1eH" secondAttribute="top" id="KIt-25-krH"/>
+                <constraint firstItem="lCk-Hs-1eH" firstAttribute="trailing" secondItem="Y7g-Ty-YAo" secondAttribute="trailing" id="Ohw-Jy-pf9"/>
+                <constraint firstItem="lCk-Hs-1eH" firstAttribute="bottom" secondItem="Y7g-Ty-YAo" secondAttribute="bottom" id="kOJ-t7-eUl"/>
+            </constraints>
+            <point key="canvasLocation" x="32.824427480916029" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="exclamationmark.triangle.fill" catalog="system" width="128" height="109"/>
+        <namedColor name="on primary-accent">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="on secondary-container">
+            <color red="0.13699999451637268" green="0.10599999874830246" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="on secondary-fixed">
+            <color red="0.13699999451637268" green="0.10599999874830246" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary-container">
+            <color red="1" green="0.94099998474121094" blue="0.79199999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
