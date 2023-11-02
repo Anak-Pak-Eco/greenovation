@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -100,7 +101,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="vgP-vl-fcA">
                                                 <rect key="frame" x="91.333333333333343" y="47" width="384.66666666666663" height="62.333333333333343"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-anakan" translatesAutoresizingMaskIntoConstraints="NO" id="ECa-hg-5SD">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-seedling-big" translatesAutoresizingMaskIntoConstraints="NO" id="ECa-hg-5SD">
                                                         <rect key="frame" x="325.66666666666669" y="0.0" width="59" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="ZdA-Nf-tI9"/>
@@ -191,7 +192,7 @@
     </objects>
     <resources>
         <image name="exclamationmark.triangle.fill" catalog="system" width="128" height="109"/>
-        <image name="image-anakan" width="59" height="100"/>
+        <image name="image-seedling-big" width="59" height="100"/>
         <namedColor name="on primary-container">
             <color red="0.0" green="0.13300000131130219" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

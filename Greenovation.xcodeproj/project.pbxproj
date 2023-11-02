@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602258F2AEFA84700F3800F /* Date+Extension.swift */; };
 		D608922A2AEA760200A1C530 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60892282AEA760200A1C530 /* OnboardingViewController.swift */; };
 		D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60892292AEA760200A1C530 /* OnboardingViewController.xib */; };
 		D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D608922C2AEA7A8300A1C530 /* GradientView.swift */; };
+		D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D609503E2AEF890000DD5FDD /* HistoryGraphTableViewCell.swift */; };
+		D60950412AEF890000DD5FDD /* HistoryGraphTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D609503F2AEF890000DD5FDD /* HistoryGraphTableViewCell.xib */; };
+		D60950442AEF8BC000DD5FDD /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = D60950432AEF8BC000DD5FDD /* DGCharts */; };
+		D60950462AEF8BC000DD5FDD /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D60950452AEF8BC000DD5FDD /* DGChartsDynamic */; };
 		D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */; };
 		D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */; };
 		D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */; };
@@ -47,6 +52,12 @@
 		D6A8ABC22AEEC0B900D6466B /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABC12AEEC0B900D6466B /* NotificationRepository.swift */; };
 		D6A8ABC42AEEC0C100D6466B /* NotificationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABC32AEEC0C100D6466B /* NotificationRepositoryProtocol.swift */; };
 		D6A8ABC62AEEC0D400D6466B /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABC52AEEC0D400D6466B /* NotificationModel.swift */; };
+		D69D17252AEED5A100A5347C /* DetailDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D17232AEED5A100A5347C /* DetailDeviceViewController.swift */; };
+		D69D17262AEED5A100A5347C /* DetailDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69D17242AEED5A100A5347C /* DetailDeviceViewController.xib */; };
+		D69D172A2AEF600900A5347C /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D17282AEF600900A5347C /* HeaderTableViewCell.swift */; };
+		D69D172B2AEF600900A5347C /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69D17292AEF600900A5347C /* HeaderTableViewCell.xib */; };
+		D69D172E2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D172C2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift */; };
+		D69D172F2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69D172D2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib */; };
 		D6AC85722ACFF7700033B665 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC85712ACFF7700033B665 /* MainViewController.swift */; };
 		D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6AC85732ACFFA000033B665 /* MainViewController.xib */; };
 		D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC857E2ACFFD2F0033B665 /* NotificationViewModel.swift */; };
@@ -95,9 +106,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D602258F2AEFA84700F3800F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		D60892282AEA760200A1C530 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D60892292AEA760200A1C530 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
 		D608922C2AEA7A8300A1C530 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		D609503E2AEF890000DD5FDD /* HistoryGraphTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGraphTableViewCell.swift; sourceTree = "<group>"; };
+		D609503F2AEF890000DD5FDD /* HistoryGraphTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryGraphTableViewCell.xib; sourceTree = "<group>"; };
 		D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Thin.ttf"; sourceTree = "<group>"; };
@@ -135,6 +149,12 @@
 		D6A8ABC12AEEC0B900D6466B /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
 		D6A8ABC32AEEC0C100D6466B /* NotificationRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepositoryProtocol.swift; sourceTree = "<group>"; };
 		D6A8ABC52AEEC0D400D6466B /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		D69D17232AEED5A100A5347C /* DetailDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailDeviceViewController.swift; path = Greenovation/Data/Network/Responses/DetailDeviceViewController.swift; sourceTree = SOURCE_ROOT; };
+		D69D17242AEED5A100A5347C /* DetailDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DetailDeviceViewController.xib; path = Greenovation/Data/Network/Responses/DetailDeviceViewController.xib; sourceTree = SOURCE_ROOT; };
+		D69D17282AEF600900A5347C /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		D69D17292AEF600900A5347C /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		D69D172C2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeviceAlertTableViewCell.swift; sourceTree = "<group>"; };
+		D69D172D2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailDeviceAlertTableViewCell.xib; sourceTree = "<group>"; };
 		D6AC85712ACFF7700033B665 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D6AC85732ACFFA000033B665 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		D6AC857E2ACFFD2F0033B665 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
@@ -168,6 +188,8 @@
 			files = (
 				D6DFD64C2AE7C6DF00215428 /* FirebaseMessaging in Frameworks */,
 				D6DFD6462AE7C6DF00215428 /* FirebaseDatabaseSwift in Frameworks */,
+				D60950462AEF8BC000DD5FDD /* DGChartsDynamic in Frameworks */,
+				D60950442AEF8BC000DD5FDD /* DGCharts in Frameworks */,
 				D6DFD6442AE7C6DF00215428 /* FirebaseDatabase in Frameworks */,
 				D6DFD6402AE7C6DF00215428 /* FirebaseAnalyticsSwift in Frameworks */,
 				D6DFD63E2AE7C6DF00215428 /* FirebaseAnalytics in Frameworks */,
@@ -297,6 +319,7 @@
 				D65C58822AE26D2F00FE8D1E /* String+Extension.swift */,
 				D6DFD64D2AE7DEE200215428 /* View+Extension.swift */,
 				D6917A2D2AEA9E6B00CD7F5C /* UITextField+Extensions.swift */,
+				D602258F2AEFA84700F3800F /* Date+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -348,6 +371,19 @@
 			path = Notifications;
 			sourceTree = "<group>";
 		};
+		D69D17272AEF5FE700A5347C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D69D17282AEF600900A5347C /* HeaderTableViewCell.swift */,
+				D69D17292AEF600900A5347C /* HeaderTableViewCell.xib */,
+				D69D172C2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift */,
+				D69D172D2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib */,
+				D609503E2AEF890000DD5FDD /* HistoryGraphTableViewCell.swift */,
+				D609503F2AEF890000DD5FDD /* HistoryGraphTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D6AC85702ACFF4860033B665 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +418,9 @@
 		D6AC85862AD013B80033B665 /* Detail Device */ = {
 			isa = PBXGroup;
 			children = (
+				D69D17272AEF5FE700A5347C /* Components */,
+				D69D17232AEED5A100A5347C /* DetailDeviceViewController.swift */,
+				D69D17242AEED5A100A5347C /* DetailDeviceViewController.xib */,
 			);
 			path = "Detail Device";
 			sourceTree = "<group>";
@@ -515,6 +554,8 @@
 				D6DFD6472AE7C6DF00215428 /* FirebaseFirestore */,
 				D6DFD6492AE7C6DF00215428 /* FirebaseFirestoreSwift */,
 				D6DFD64B2AE7C6DF00215428 /* FirebaseMessaging */,
+				D60950432AEF8BC000DD5FDD /* DGCharts */,
+				D60950452AEF8BC000DD5FDD /* DGChartsDynamic */,
 			);
 			productName = "Base Project";
 			productReference = D6D010212AC6C60800EC51FB /* Greenovation.app */;
@@ -592,6 +633,7 @@
 			packageReferences = (
 				D640E1F02AC73809007E993F /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D6E50C122ACD59CF00375F9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D60950422AEF8BC000DD5FDD /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = D6D010222AC6C60800EC51FB /* Products */;
 			projectDirPath = "";
@@ -609,13 +651,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69D172F2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib in Resources */,
 				D630F5092AD8112A00A355D0 /* DMSans-Regular.ttf in Resources */,
 				D6D010312AC6C60900EC51FB /* LaunchScreen.storyboard in Resources */,
+				D69D17262AEED5A100A5347C /* DetailDeviceViewController.xib in Resources */,
 				D630F50A2AD8112A00A355D0 /* DMSans-BlackItalic.ttf in Resources */,
 				D630F5052AD8112A00A355D0 /* DMSans-SemiBold.ttf in Resources */,
 				D630F5042AD8112A00A355D0 /* DMSans-Bold.ttf in Resources */,
 				D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */,
 				D630F50C2AD8112A00A355D0 /* DMSans-Light.ttf in Resources */,
+				D60950412AEF890000DD5FDD /* HistoryGraphTableViewCell.xib in Resources */,
 				D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */,
 				D69574352AEBA51700565600 /* ScanQRViewController.xib in Resources */,
 				D630F5062AD8112A00A355D0 /* DMSans-Italic.ttf in Resources */,
@@ -629,6 +674,7 @@
 				D630F50B2AD8112A00A355D0 /* DMSans-ThinItalic.ttf in Resources */,
 				D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */,
 				D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */,
+				D69D172B2AEF600900A5347C /* HeaderTableViewCell.xib in Resources */,
 				D6B98BFD2AE7BE7F0077E33E /* GoogleService-Info.plist in Resources */,
 				D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */,
 				D630F5082AD8112A00A355D0 /* DMSans-Black.ttf in Resources */,
@@ -660,6 +706,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65C58832AE26D2F00FE8D1E /* String+Extension.swift in Sources */,
+				D69D172A2AEF600900A5347C /* HeaderTableViewCell.swift in Sources */,
 				D6917A2E2AEA9E6B00CD7F5C /* UITextField+Extensions.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
 				D6A8ABBF2AEEBE6500D6466B /* NotificationResponse.swift in Sources */,
@@ -681,12 +728,16 @@
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
 				D6AC85812ACFFD6C0033B665 /* FormulaSettingView.swift in Sources */,
 				D6917A322AEAB4F800CD7F5C /* SignUpViewController.swift in Sources */,
+				D69D172E2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift in Sources */,
+				D69D17252AEED5A100A5347C /* DetailDeviceViewController.swift in Sources */,
 				D608922A2AEA760200A1C530 /* OnboardingViewController.swift in Sources */,
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
 				D6A8ABC22AEEC0B900D6466B /* NotificationRepository.swift in Sources */,
 				D69574342AEBA51700565600 /* ScanQRViewController.swift in Sources */,
 				D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */,
 				D69D171F2AEEC80100A5347C /* NotificationViewController.swift in Sources */,
+				D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */,
+				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
 				D6AC85722ACFF7700033B665 /* MainViewController.swift in Sources */,
 			);
@@ -1039,6 +1090,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D60950422AEF8BC000DD5FDD /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D640E1F02AC73809007E993F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1058,6 +1117,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D60950432AEF8BC000DD5FDD /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D60950422AEF8BC000DD5FDD /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+		D60950452AEF8BC000DD5FDD /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D60950422AEF8BC000DD5FDD /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGChartsDynamic;
+		};
 		D6DFD63B2AE7C6DF00215428 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D640E1F02AC73809007E993F /* XCRemoteSwiftPackageReference "Alamofire" */;
