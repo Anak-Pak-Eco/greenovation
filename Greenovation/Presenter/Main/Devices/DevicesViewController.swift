@@ -34,11 +34,16 @@ class DevicesViewController: UIViewController {
             UIBarButtonItem(
                 image: UIImage(systemName: "plus"),
                 style: .plain,
-                target: nil,
-                action: nil
+                target: self,
+                action: #selector(onAddDeviceClicked(_:))
             ),
             animated: true
         )
+    }
+    
+    @objc private func onAddDeviceClicked(_ sender: UIBarButtonItem) {
+        let viewController = ScanQRViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func setupUI() {
