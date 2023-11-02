@@ -26,6 +26,8 @@
 		D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D608922C2AEA7A8300A1C530 /* GradientView.swift */; };
 		D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D609503E2AEF890000DD5FDD /* HistoryGraphTableViewCell.swift */; };
 		D60950412AEF890000DD5FDD /* HistoryGraphTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D609503F2AEF890000DD5FDD /* HistoryGraphTableViewCell.xib */; };
+		D6239CD22AF22BEF0097E8D1 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6239CD12AF22BEF0097E8D1 /* AlertView.xib */; };
+		D6239CD42AF22C940097E8D1 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6239CD32AF22C940097E8D1 /* AlertView.swift */; };
 		D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */; };
 		D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */; };
 		D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */; };
@@ -122,6 +124,8 @@
 		D608922C2AEA7A8300A1C530 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		D609503E2AEF890000DD5FDD /* HistoryGraphTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGraphTableViewCell.swift; sourceTree = "<group>"; };
 		D609503F2AEF890000DD5FDD /* HistoryGraphTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryGraphTableViewCell.xib; sourceTree = "<group>"; };
+		D6239CD12AF22BEF0097E8D1 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		D6239CD32AF22C940097E8D1 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		D630F4EE2AD8112900A355D0 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F02AD8112A00A355D0 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D630F4F12AD8112A00A355D0 /* DMSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Thin.ttf"; sourceTree = "<group>"; };
@@ -238,6 +242,23 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		D6239CD52AF234330097E8D1 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6239CD62AF2343E0097E8D1 /* Alerts */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		D6239CD62AF2343E0097E8D1 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				D6239CD32AF22C940097E8D1 /* AlertView.swift */,
+				D6239CD12AF22BEF0097E8D1 /* AlertView.xib */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 		D630F4ED2AD8111700A355D0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +342,7 @@
 		D640E2002AC7A322007E993F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D6239CD52AF234330097E8D1 /* Custom Views */,
 				D608922C2AEA7A8300A1C530 /* GradientView.swift */,
 				D640E2012AC7A32D007E993F /* Box.swift */,
 				D65C58822AE26D2F00FE8D1E /* String+Extension.swift */,
@@ -663,6 +685,7 @@
 				D68003EB2ADB838D00AAED95 /* Localizable.xcstrings in Resources */,
 				D681D5782AE68D0E005A0BAC /* DevicesItemTableViewCell.xib in Resources */,
 				D630F50B2AD8112A00A355D0 /* DMSans-ThinItalic.ttf in Resources */,
+				D6239CD22AF22BEF0097E8D1 /* AlertView.xib in Resources */,
 				D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */,
 				D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */,
 				D69D172B2AEF600900A5347C /* HeaderTableViewCell.xib in Resources */,
@@ -724,6 +747,7 @@
 				D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */,
 				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
+				D6239CD42AF22C940097E8D1 /* AlertView.swift in Sources */,
 				D6AC85722ACFF7700033B665 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

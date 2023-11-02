@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     static func formatNullable(_ text: String?, format: String) -> String {
@@ -33,5 +34,27 @@ extension String {
     
     static func format(_ text: Double, format: String) -> String {
         return String(format: format, text)
+    }
+}
+
+
+extension String {
+    static func getStringAttributed(
+        from: String,
+        boldStrings: [String] = [],
+        regularTextStyle: UIFont = UIFont(name: "DMSans-Regular", size: 11)!,
+        boldTextStyle: UIFont = UIFont(name: "DMSans-Bold", size: 11)!
+    ) -> NSMutableAttributedString {
+        let text = from as NSString
+        let attrString = NSMutableAttributedString(
+            string: text as String,
+            attributes: [.font: regularTextStyle]
+        )
+        
+        boldStrings.forEach { boldString in
+            attrString.addAttribute(.font, value: boldTextStyle, range: text.range(of: boldString))
+        }
+        
+        return attrString
     }
 }

@@ -81,6 +81,14 @@ extension DevicesViewController: UITableViewDelegate, UITableViewDataSource {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
 }
 
 extension UINavigationController {
