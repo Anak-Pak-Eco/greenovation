@@ -17,10 +17,7 @@ class MainViewController: UITabBarController {
     }()
     
     lazy var notificationViewController: UIViewController = {
-        let viewController = UINavigationController(
-            rootViewController: UIHostingController(rootView: NotificationView())
-        )
-        viewController.navigationBar.prefersLargeTitles = true
+        let viewController = NotificationViewController()
         return viewController
     }()
     

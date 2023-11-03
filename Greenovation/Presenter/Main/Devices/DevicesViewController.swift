@@ -42,9 +42,8 @@ class DevicesViewController: UIViewController {
     }
     
     @objc private func onAddDeviceClicked(_ sender: UIBarButtonItem) {
-        let vc = ConnectWifiViewController()
-        vc.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(vc, animated: true)
+        let viewController = ScanQRViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func setupUI() {
