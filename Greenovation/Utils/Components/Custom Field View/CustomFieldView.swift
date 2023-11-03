@@ -149,6 +149,7 @@ final class CustomFieldView: UIView {
     }
     
     func buildLayout() {
+        self.backgroundColor = .clear
         
         let deviceNameLabel = makeFieldLabel(text: String(localized: "nama-perangkat"))
         let plantSearchLabel = makeFieldLabel(text: String(localized: "cari-tanaman"))

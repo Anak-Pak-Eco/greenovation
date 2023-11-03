@@ -11,6 +11,12 @@
 		A71FC0A82AEBA3F000875CBF /* ChooseFormulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71FC0A62AEBA3F000875CBF /* ChooseFormulationViewController.xib */; };
 		A71FC0B42AEBCF8A00875CBF /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0B22AEBCF8A00875CBF /* AddDeviceViewController.swift */; };
 		A71FC0B52AEBCF8A00875CBF /* AddDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71FC0B32AEBCF8A00875CBF /* AddDeviceViewController.xib */; };
+		A71FC0D92AF2519300875CBF /* DeleteDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FC0D72AF2519300875CBF /* DeleteDeviceViewController.swift */; };
+		A71FC0DA2AF2519300875CBF /* DeleteDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71FC0D82AF2519300875CBF /* DeleteDeviceViewController.xib */; };
+		A79DB2C22AF39230003D768A /* SuccessDeleteDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DB2C02AF39230003D768A /* SuccessDeleteDeviceViewController.swift */; };
+		A79DB2C32AF39230003D768A /* SuccessDeleteDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79DB2C12AF39230003D768A /* SuccessDeleteDeviceViewController.xib */; };
+		A79DB2C62AF39786003D768A /* SaveSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DB2C42AF39786003D768A /* SaveSuccessViewController.swift */; };
+		A79DB2C72AF39786003D768A /* SaveSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79DB2C52AF39786003D768A /* SaveSuccessViewController.xib */; };
 		A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */; };
 		A7D78E182AE929F6006577AE /* CustomMyChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */; };
 		A7D78E1F2AEA6CA6006577AE /* GrowthStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E1D2AEA6CA6006577AE /* GrowthStepViewController.swift */; };
@@ -120,6 +126,12 @@
 		A71FC0A62AEBA3F000875CBF /* ChooseFormulationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseFormulationViewController.xib; sourceTree = "<group>"; };
 		A71FC0B22AEBCF8A00875CBF /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
 		A71FC0B32AEBCF8A00875CBF /* AddDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceViewController.xib; sourceTree = "<group>"; };
+		A71FC0D72AF2519300875CBF /* DeleteDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDeviceViewController.swift; sourceTree = "<group>"; };
+		A71FC0D82AF2519300875CBF /* DeleteDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteDeviceViewController.xib; sourceTree = "<group>"; };
+		A79DB2C02AF39230003D768A /* SuccessDeleteDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessDeleteDeviceViewController.swift; sourceTree = "<group>"; };
+		A79DB2C12AF39230003D768A /* SuccessDeleteDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessDeleteDeviceViewController.xib; sourceTree = "<group>"; };
+		A79DB2C42AF39786003D768A /* SaveSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSuccessViewController.swift; sourceTree = "<group>"; };
+		A79DB2C52AF39786003D768A /* SaveSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveSuccessViewController.xib; sourceTree = "<group>"; };
 		A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalizationStoryboard.swift; path = Greenovation/Utils/LocalizationStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		A7D78E172AE929F6006577AE /* CustomMyChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomMyChoiceView.swift; path = Greenovation/Utils/Components/CustomMyChoiceView.swift; sourceTree = SOURCE_ROOT; };
 		A7D78E1D2AEA6CA6006577AE /* GrowthStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthStepViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +267,43 @@
 			path = "Add Device";
 			sourceTree = "<group>";
 		};
+		A71FC0C72AF232BC00875CBF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A71FC0CE2AF2510200875CBF /* SaveSuccessView */,
+				A71FC0CD2AF250E100875CBF /* SuccessDeleteDeviceView */,
+				A71FC0CC2AF250D600875CBF /* DeleteDeviceView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A71FC0CC2AF250D600875CBF /* DeleteDeviceView */ = {
+			isa = PBXGroup;
+			children = (
+				A71FC0D72AF2519300875CBF /* DeleteDeviceViewController.swift */,
+				A71FC0D82AF2519300875CBF /* DeleteDeviceViewController.xib */,
+			);
+			path = DeleteDeviceView;
+			sourceTree = "<group>";
+		};
+		A71FC0CD2AF250E100875CBF /* SuccessDeleteDeviceView */ = {
+			isa = PBXGroup;
+			children = (
+				A79DB2C02AF39230003D768A /* SuccessDeleteDeviceViewController.swift */,
+				A79DB2C12AF39230003D768A /* SuccessDeleteDeviceViewController.xib */,
+			);
+			path = SuccessDeleteDeviceView;
+			sourceTree = "<group>";
+		};
+		A71FC0CE2AF2510200875CBF /* SaveSuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				A79DB2C42AF39786003D768A /* SaveSuccessViewController.swift */,
+				A79DB2C52AF39786003D768A /* SaveSuccessViewController.xib */,
+			);
+			path = SaveSuccessView;
+			sourceTree = "<group>";
+		};
 		A7D78E1B2AEA6C62006577AE /* Bottom Sheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +325,7 @@
 		A7E23C522AE922B00065F24F /* Edit Device */ = {
 			isa = PBXGroup;
 			children = (
+				A71FC0C72AF232BC00875CBF /* Components */,
 				A7E23C552AE922E80065F24F /* EditDeviceViewController.swift */,
 				A7E23C562AE922E80065F24F /* EditDeviceViewController.xib */,
 			);
@@ -750,9 +800,11 @@
 				D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */,
 				D630F50C2AD8112A00A355D0 /* DMSans-Light.ttf in Resources */,
 				D60950412AEF890000DD5FDD /* HistoryGraphTableViewCell.xib in Resources */,
+				A79DB2C32AF39230003D768A /* SuccessDeleteDeviceViewController.xib in Resources */,
 				D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */,
 				D630F5062AD8112A00A355D0 /* DMSans-Italic.ttf in Resources */,
 				D630F50F2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf in Resources */,
+				A79DB2C72AF39786003D768A /* SaveSuccessViewController.xib in Resources */,
 				D6D0102E2AC6C60900EC51FB /* Assets.xcassets in Resources */,
 				D630F50D2AD8112A00A355D0 /* DMSans-LightItalic.ttf in Resources */,
 				D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */,
@@ -770,6 +822,7 @@
 				D630F5082AD8112A00A355D0 /* DMSans-Black.ttf in Resources */,
 				D6917A332AEAB4F800CD7F5C /* SignUpViewController.xib in Resources */,
 				D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */,
+				A71FC0DA2AF2519300875CBF /* DeleteDeviceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +854,7 @@
 				A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */,
 				D6917A2E2AEA9E6B00CD7F5C /* UITextField+Extensions.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
+				A79DB2C22AF39230003D768A /* SuccessDeleteDeviceViewController.swift in Sources */,
 				A71FC0A72AEBA3F000875CBF /* ChooseFormulationViewController.swift in Sources */,
 				D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */,
 				D6BD3B732AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift in Sources */,
@@ -820,6 +874,7 @@
 				D60225A12AEFB0D700F3800F /* CustomMyChoiceView.swift in Sources */,
 				D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */,
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,
+				A71FC0D92AF2519300875CBF /* DeleteDeviceViewController.swift in Sources */,
 				D60225A42AEFB0D700F3800F /* CustomSearchItemCell.swift in Sources */,
 				A7D78E1F2AEA6CA6006577AE /* GrowthStepViewController.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
@@ -833,6 +888,7 @@
 				D69D17252AEED5A100A5347C /* DetailDeviceViewController.swift in Sources */,
 				D608922A2AEA760200A1C530 /* OnboardingViewController.swift in Sources */,
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
+				A79DB2C62AF39786003D768A /* SaveSuccessViewController.swift in Sources */,
 				D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */,
 				D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */,
 				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
