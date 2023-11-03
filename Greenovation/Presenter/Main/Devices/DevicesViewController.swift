@@ -63,7 +63,10 @@ extension DevicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = mainTableView.dequeueReusableCell(withIdentifier: "DeviceItemCell", for: indexPath) as! DevicesItemTableViewCell
+        let cell = mainTableView.dequeueReusableCell(
+            withIdentifier: "DeviceItemCell",
+            for: indexPath
+        ) as! DevicesItemTableViewCell
         
         let device = viewModel.devices[indexPath.row]
         cell.setup(device: device)
@@ -73,9 +76,17 @@ extension DevicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DetailDeviceViewController()
+        let vc = DetailDeviceViewController(deviceId: viewModel.devices[indexPath.row].id)
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
     }
 }
 

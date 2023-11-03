@@ -6,6 +6,7 @@
 //
 
 import Combine
+import FirebaseMessaging
 
 final class DevicesViewModel {
     
@@ -13,7 +14,7 @@ final class DevicesViewModel {
     var devices: [DeviceModel] = []
     
     private var cancellables: Set<AnyCancellable> = []
-    private let repository = HydrospaceRepository.shared
+    private let repository: HydrospaceRepositoryProtocol = HydrospaceRepository.shared
     
     func getDevices() {
         repository
@@ -22,6 +23,15 @@ final class DevicesViewModel {
                 guard let self = self else { return }
                 self.devices = model
                 self.successGetDevices.value = true
+                model.forEach { device in
+                    Messaging.messaging().subscribe(toTopic: device.id) { error in
+                        if let error = error {
+                            print("Error subscribing topic: \(error.localizedDescription)")
+                        } else {
+                            print("Success subscribing topic \(device.name)")
+                        }
+                    }
+                }
             }
             .store(in: &cancellables)
     }
