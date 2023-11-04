@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>680026761797-0kj3922v4p5uf27pnguvg3qpgoeph7e0.apps.googleusercontent.com</string>
+	<string>680026761797-gbuvv7113s4kg05idrkn6vd6u9il8eca.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.680026761797-0kj3922v4p5uf27pnguvg3qpgoeph7e0</string>
+	<string>com.googleusercontent.apps.680026761797-gbuvv7113s4kg05idrkn6vd6u9il8eca</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAJZRfowP3MZC4P2Nm4CGlv3J_wHxger98</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.pak-eco.hydrospace</string>
+	<string>id.pak-eco.greenovation</string>
 	<key>PROJECT_ID</key>
 	<string>pak-eco</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:680026761797:ios:d0768fb1aa7db4f51b112c</string>
+	<string>1:680026761797:ios:89de0e9e0260d8701b112c</string>
 	<key>DATABASE_URL</key>
 	<string>https://pak-eco-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
