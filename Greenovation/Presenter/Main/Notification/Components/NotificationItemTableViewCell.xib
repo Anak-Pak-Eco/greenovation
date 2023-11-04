@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+        <array key="DMSans-SemiBold.ttf">
+            <string>DMSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="NotificationItemTableViewCell" customModule="Greenovation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="391" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LtJ-4z-92w">
+                        <rect key="frame" x="16" y="10" width="359" height="71"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1Ad-hh-qJP">
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="22.333333333333332"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Nilai PPM Rendah sqopskpqk" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiQ-Ck-RmX">
+                                        <rect key="frame" x="0.0" y="0.0" width="317" height="22.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
+                                        <color key="textColor" name="on primary-container"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Hari ini" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHe-tX-Hth">
+                                        <rect key="frame" x="321" y="0.0" width="38" height="22.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="12"/>
+                                        <color key="textColor" name="on surface-low"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pHe-tX-Hth" firstAttribute="centerY" secondItem="1Ad-hh-qJP" secondAttribute="centerY" id="EPs-WZ-B38"/>
+                                    <constraint firstItem="yiQ-Ck-RmX" firstAttribute="centerY" secondItem="1Ad-hh-qJP" secondAttribute="centerY" id="Ymp-0m-ycX"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tambahkan larutan nutrisi B sebanyak 100ml untuk menjaga keseimbangan nutrisi." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF5-0n-Cf4">
+                                <rect key="frame" x="0.0" y="27.333333333333339" width="359" height="43.666666666666657"/>
+                                <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="13"/>
+                                <color key="textColor" name="on primary-container"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1Ad-hh-qJP" secondAttribute="trailing" id="5LD-Wj-cFp"/>
+                            <constraint firstItem="1Ad-hh-qJP" firstAttribute="leading" secondItem="LtJ-4z-92w" secondAttribute="leading" id="JDu-1q-mwL"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" name="surface"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LtJ-4z-92w" secondAttribute="trailing" constant="16" id="2pH-eK-2v9"/>
+                    <constraint firstAttribute="bottom" secondItem="LtJ-4z-92w" secondAttribute="bottom" constant="5" id="A4E-2W-MYy"/>
+                    <constraint firstItem="LtJ-4z-92w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="CLN-aM-sbX"/>
+                    <constraint firstItem="LtJ-4z-92w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="rSM-Rx-vqs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="DF5-0n-Cf4" id="FBV-C3-Ims"/>
+                <outlet property="timeLabel" destination="pHe-tX-Hth" id="7rx-xQ-lh0"/>
+                <outlet property="titleLabel" destination="yiQ-Ck-RmX" id="U9N-PV-UTL"/>
+            </connections>
+            <point key="canvasLocation" x="428.24427480916029" y="34.507042253521128"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="on primary-container">
+            <color red="0.0" green="0.13300000131130219" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="on surface-low">
+            <color red="0.36899998784065247" green="0.37299999594688416" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface">
+            <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -21,6 +21,11 @@ class MainViewController: UITabBarController {
         return viewController
     }()
     
+    lazy var profileViewController: UIViewController = {
+        let viewController = ProfileViewController()
+        return viewController
+    }()
+    
     lazy var formulaSettingViewController: UIViewController = {
         let viewController = UINavigationController(
             rootViewController: UIHostingController(rootView: FormulaSettingView())
@@ -50,10 +55,17 @@ class MainViewController: UITabBarController {
             tag: 2
         )
         
+        profileViewController.tabBarItem = UITabBarItem(
+            title: String(localized: "profile"),
+            image: UIImage(systemName: "person.crop.circle.fill"),
+            tag: 3
+        )
+        
         viewControllers = [
             deviceViewController,
             notificationViewController,
-            formulaSettingViewController
+            formulaSettingViewController,
+            profileViewController
         ]
     }
 }

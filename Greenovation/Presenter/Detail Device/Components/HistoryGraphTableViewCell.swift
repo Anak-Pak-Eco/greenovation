@@ -57,14 +57,6 @@ class HistoryGraphTableViewCell: UITableViewCell {
     }
     
     func setDataCount(_ count: Int, range: UInt32) {
-//        let values = (0..<count).map { (i) -> ChartDataEntry in
-//            let val = Double(arc4random_uniform(range) + 3)
-//            return ChartDataEntry(
-//                x: Double(i),
-//                y: Double(val)
-//            )
-//        }
-        
         let values = [
             ChartDataEntry(x: 2, y: 2),
             ChartDataEntry(x: 3, y: 3),
@@ -89,8 +81,6 @@ class HistoryGraphTableViewCell: UITableViewCell {
         dataSet.formSize = 15
         dataSet.mode = LineChartDataSet.Mode.horizontalBezier
 
-//        let value = ChartDataEntry(x: Double(3), y: 3)
-//        dataSet.addEntryOrdered(value)
         let gradientColors = [
             UIColor.surfaceContainerHigh.cgColor,
             UIColor.primaryAccent.cgColor,

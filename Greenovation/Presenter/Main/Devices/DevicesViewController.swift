@@ -14,12 +14,12 @@ class DevicesViewController: UIViewController {
     private let viewModel = DevicesViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
+        setupToolbar()
         navigationController?.forceUpdateNavbar()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupToolbar()
         setupUI()
         viewModel.successGetDevices.bind { [weak self] _ in
             guard let self = self else { return }
@@ -29,6 +29,7 @@ class DevicesViewController: UIViewController {
     }
     
     private func setupToolbar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
         tabBarController?.title = "Perangkat"
         tabBarController?.navigationItem.setRightBarButton(
             UIBarButtonItem(

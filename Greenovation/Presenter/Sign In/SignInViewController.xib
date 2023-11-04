@@ -96,6 +96,9 @@
                         <color key="baseForegroundColor" systemColor="labelColor"/>
                         <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="onSignInWithAppleButtonClicked:" destination="-1" eventType="touchUpInside" id="cz4-Rf-8kd"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyH-jL-TXb">
                     <rect key="frame" x="16" y="383" width="361" height="50"/>
@@ -111,6 +114,9 @@
                         <color key="baseForegroundColor" systemColor="labelColor"/>
                         <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="onSignInGoogleClicked:" destination="-1" eventType="touchUpInside" id="EMZ-s5-QD2"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NBY-vk-0Fm">
                     <rect key="frame" x="90.666666666666671" y="473" width="211.66666666666663" height="21"/>
