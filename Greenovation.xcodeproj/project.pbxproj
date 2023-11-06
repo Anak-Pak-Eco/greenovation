@@ -332,6 +332,9 @@
 		A71FC0B12AEBCF7A00875CBF /* Add Device */ = {
 			isa = PBXGroup;
 			children = (
+				D60225AC2AEFB5E000F3800F /* Add Device - Connect Wifi */,
+				D614AA442AF4013C00B5BED7 /* Add Devices */,
+				A7D78E1B2AEA6C62006577AE /* Bottom Sheet */,
 				A71FC0B22AEBCF8A00875CBF /* AddDeviceViewController.swift */,
 				A71FC0B32AEBCF8A00875CBF /* AddDeviceViewController.xib */,
 			);
@@ -781,10 +784,7 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				D60225AC2AEFB5E000F3800F /* Add Device - Connect Wifi */,
-				D614AA442AF4013C00B5BED7 /* Add Devices */,
 				A71FC0B12AEBCF7A00875CBF /* Add Device */,
-				A7D78E1B2AEA6C62006577AE /* Bottom Sheet */,
 				A7E23C522AE922B00065F24F /* Edit Device */,
 				D6917A2F2AEAB4E400CD7F5C /* Sign Up */,
 				D6BB280D2AEA81250084FD00 /* Sign In */,
