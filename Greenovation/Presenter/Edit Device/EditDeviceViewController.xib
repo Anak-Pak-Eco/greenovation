@@ -2,14 +2,18 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditDeviceViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
+                <outlet property="BackgroundView" destination="sJc-pK-cUF" id="RmF-Yd-LU0"/>
+                <outlet property="MyChoiceView" destination="js9-fj-jMz" id="toY-aX-d2m"/>
+                <outlet property="SensorView" destination="dnL-FP-8TC" id="Iep-oS-x2S"/>
                 <outlet property="deleteButton" destination="hOA-4F-ovg" id="H1w-At-cUQ"/>
                 <outlet property="saveButton" destination="eED-ae-vlC" id="NEp-bJ-cQN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,14 +24,22 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJc-pK-cUF">
+                    <rect key="frame" x="1.6666666666666572" y="188" width="390" height="506"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="390" id="bvG-H9-8LQ"/>
+                        <constraint firstAttribute="height" constant="506" id="wht-mO-g8s"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnL-FP-8TC">
-                    <rect key="frame" x="0.0" y="74" width="393" height="60"/>
+                    <rect key="frame" x="0.0" y="113" width="393" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWC-4o-CpX" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
                             <rect key="frame" x="16" y="19" width="334" height="22"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="22" id="YqO-zF-Eji"/>
-                                <constraint firstAttribute="width" constant="334" id="bZ9-Rx-8vs"/>
+                                <constraint firstAttribute="height" constant="22" id="pi6-UO-ggW"/>
+                                <constraint firstAttribute="width" constant="334" id="yu8-JA-r7q"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                             <nil key="textColor"/>
@@ -40,85 +52,76 @@
                             <rect key="frame" x="328" y="15" width="51" height="31"/>
                         </switch>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="cWC-4o-CpX" firstAttribute="leading" secondItem="dnL-FP-8TC" secondAttribute="leading" constant="16" id="2lp-eh-3B6"/>
-                        <constraint firstAttribute="width" constant="390" id="359-Pp-Q6s"/>
-                        <constraint firstAttribute="bottom" secondItem="cWC-4o-CpX" secondAttribute="bottom" constant="19" id="4Sv-Kp-592"/>
-                        <constraint firstAttribute="bottom" secondItem="07P-x4-Qra" secondAttribute="bottom" constant="14" id="7Ez-X8-WfB"/>
-                        <constraint firstAttribute="height" constant="60" id="U10-M5-rr3"/>
-                        <constraint firstItem="07P-x4-Qra" firstAttribute="top" secondItem="dnL-FP-8TC" secondAttribute="top" constant="15" id="VLN-oK-N7I"/>
-                        <constraint firstAttribute="trailing" secondItem="07P-x4-Qra" secondAttribute="trailing" constant="16" id="cca-uW-NUW"/>
-                        <constraint firstItem="cWC-4o-CpX" firstAttribute="top" secondItem="dnL-FP-8TC" secondAttribute="top" constant="19" id="fQb-Cn-Q7Y"/>
+                        <constraint firstItem="cWC-4o-CpX" firstAttribute="leading" secondItem="dnL-FP-8TC" secondAttribute="leading" constant="16" id="1pE-yU-06m"/>
+                        <constraint firstItem="cWC-4o-CpX" firstAttribute="top" secondItem="dnL-FP-8TC" secondAttribute="top" constant="19" id="9rV-6A-GEH"/>
+                        <constraint firstAttribute="height" constant="60" id="Z3s-5J-rvy"/>
+                        <constraint firstItem="07P-x4-Qra" firstAttribute="top" secondItem="dnL-FP-8TC" secondAttribute="top" constant="15" id="Z9F-ny-ntt"/>
+                        <constraint firstAttribute="width" constant="393" id="moV-ne-7Iv"/>
+                        <constraint firstAttribute="trailing" secondItem="07P-x4-Qra" secondAttribute="trailing" constant="16" id="zC4-5h-hQy"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPM-ag-Hgx" customClass="CustomFieldView" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="149" width="390" height="258"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwB-Xn-3w2" customClass="CustomFieldView" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="188" width="393" height="661"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="eED-ae-vlC" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="17" y="537" width="358" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="**simpan-perubahan**"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="js9-fj-jMz" customClass="CustomMyChoiceView" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="16" y="278" width="358" height="213"/>
+                            <color key="backgroundColor" name="surface"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="213" id="VJY-jZ-0fv"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="hOA-4F-ovg" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="17" y="592" width="358" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Button">
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="**hapus-perangkat**"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <keyboardLayoutGuide key="keyboard" id="DHR-BX-gbV"/>
+                    <color key="backgroundColor" name="surface"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="258" id="GYl-x7-nqd"/>
-                        <constraint firstAttribute="width" constant="390" id="paF-5P-GGG"/>
+                        <constraint firstItem="js9-fj-jMz" firstAttribute="leading" secondItem="bwB-Xn-3w2" secondAttribute="leading" constant="16" id="LsH-Z1-exo"/>
+                        <constraint firstAttribute="trailing" secondItem="js9-fj-jMz" secondAttribute="trailing" constant="19" id="UPl-N0-lFN"/>
+                        <constraint firstAttribute="height" constant="661" id="eSI-QA-U6z"/>
+                        <constraint firstItem="js9-fj-jMz" firstAttribute="top" secondItem="bwB-Xn-3w2" secondAttribute="top" constant="278" id="nWM-Pr-XCE"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6Q-UV-zGx" customClass="CustomMyChoiceView" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="407" width="393" height="248"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="248" id="Un9-Hv-gYt"/>
-                        <constraint firstAttribute="width" constant="390" id="WKi-wq-34J"/>
-                    </constraints>
-                </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eED-ae-vlC" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="670" width="361" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="358" id="M7U-1O-vUj"/>
-                        <constraint firstAttribute="height" constant="40" id="y5E-dj-WgF"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="**simpan-perubahan**"/>
-                    </userDefinedRuntimeAttributes>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOA-4F-ovg" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="726" width="361" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="358" id="6ae-FN-Mpf"/>
-                        <constraint firstAttribute="height" constant="40" id="91Y-mH-7ax"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button">
-                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </buttonConfiguration>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="**hapus-perangkat**"/>
-                    </userDefinedRuntimeAttributes>
-                </button>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="surface"/>
             <constraints>
-                <constraint firstItem="eED-ae-vlC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="0Qd-ke-QS7"/>
-                <constraint firstItem="R6Q-UV-zGx" firstAttribute="top" secondItem="LPM-ag-Hgx" secondAttribute="bottom" id="14H-4b-wjf"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dnL-FP-8TC" secondAttribute="trailing" id="BhH-QH-IC8"/>
-                <constraint firstItem="LPM-ag-Hgx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="E2d-gh-0Xk"/>
-                <constraint firstItem="eED-ae-vlC" firstAttribute="top" secondItem="R6Q-UV-zGx" secondAttribute="bottom" constant="15" id="FnL-HV-RfP"/>
-                <constraint firstItem="hOA-4F-ovg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JRC-OC-cOi"/>
-                <constraint firstItem="R6Q-UV-zGx" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="OAy-eH-PQe"/>
-                <constraint firstAttribute="trailing" secondItem="LPM-ag-Hgx" secondAttribute="trailing" id="OfL-J1-OiF"/>
-                <constraint firstItem="dnL-FP-8TC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="Rna-Zj-XDQ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hOA-4F-ovg" secondAttribute="trailing" constant="16" id="Thy-Ij-d63"/>
-                <constraint firstItem="dnL-FP-8TC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vag-qu-Lxk"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eED-ae-vlC" secondAttribute="trailing" constant="16" id="cOf-Bd-bIT"/>
-                <constraint firstItem="hOA-4F-ovg" firstAttribute="top" secondItem="eED-ae-vlC" secondAttribute="bottom" constant="16" id="evB-uT-0TT"/>
-                <constraint firstItem="R6Q-UV-zGx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vfJ-Oh-Xyp"/>
-                <constraint firstItem="LPM-ag-Hgx" firstAttribute="top" secondItem="dnL-FP-8TC" secondAttribute="bottom" constant="15" id="yCr-En-Jf7"/>
+                <constraint firstItem="bwB-Xn-3w2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ehd-50-t2T"/>
+                <constraint firstItem="dnL-FP-8TC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Kms-Nl-gHZ"/>
+                <constraint firstItem="bwB-Xn-3w2" firstAttribute="top" secondItem="dnL-FP-8TC" secondAttribute="bottom" constant="15" id="RYX-nC-Emw"/>
+                <constraint firstItem="bwB-Xn-3w2" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="TOi-zD-lmo"/>
+                <constraint firstItem="sJc-pK-cUF" firstAttribute="centerX" secondItem="dnL-FP-8TC" secondAttribute="centerX" id="dep-EF-mN8"/>
+                <constraint firstItem="sJc-pK-cUF" firstAttribute="top" secondItem="bwB-Xn-3w2" secondAttribute="top" id="orN-TZ-uLI"/>
+                <constraint firstItem="dnL-FP-8TC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="113" id="pXt-Ez-IQF"/>
+                <constraint firstItem="dnL-FP-8TC" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="sdk-DS-tQy"/>
             </constraints>
-            <point key="canvasLocation" x="53" y="20"/>
+            <point key="canvasLocation" x="52.671755725190835" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="surface">
+            <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

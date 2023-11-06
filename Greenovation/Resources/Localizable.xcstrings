@@ -288,6 +288,23 @@
         }
       }
     },
+    "batal" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batal"
+          }
+        }
+      }
+    },
     "caisim" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -317,6 +334,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cari Tanaman"
+          }
+        }
+      }
+    },
+    "Data perangkat yang telah dihapus tidak dapat dikembalikan." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Device data that has been deleted cannot be restored."
           }
         }
       }
@@ -423,6 +451,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pengaturan Formula"
+          }
+        }
+      }
+    },
+    "hapus" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus"
+          }
+        }
+      }
+    },
+    "hapus-perangkat-ini?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete This Device?"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Perangkat Ini?"
           }
         }
       }
@@ -609,6 +671,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pengaturan Perangkat"
+          }
+        }
+      }
+    },
+    "Perubahan berhasil disimpan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changes saved successfully"
           }
         }
       }
