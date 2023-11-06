@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import Base_Project
+@testable import Greenovation
 
-final class Base_ProjectTests: XCTestCase {
+final class GreenovationTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

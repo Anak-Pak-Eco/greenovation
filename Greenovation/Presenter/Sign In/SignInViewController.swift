@@ -16,16 +16,64 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInGoogleButton: UIButton!
     @IBOutlet weak var registerButton: UILabel!
     
+    private let viewModel = SignInViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.signInSuccess.bind { [weak self] isSuccess in
+            guard let self = self else { return }
+            if isSuccess {
+                self.navigationController?.setViewControllers([MainViewController()], animated: true)
+            }
+        }
+        
+        viewModel.signInError.bind { [weak self] message in
+            guard let self = self else { return }
+            if !message.isEmpty {
+                let alertController = UIAlertController(
+                    title: "Login Gagal",
+                    message: message,
+                    preferredStyle: .alert
+                )
+                alertController.addAction(
+                    .init(
+                        title: "OK",
+                        style: .destructive,
+                        handler: { action in
+                            alertController.dismiss(animated: true)
+                        }
+                    )
+                )
+                self.present(alertController, animated: true)
+            }
+        }
+        
+        viewModel.isSignInLoading.bind { [weak self] isLoading in
+            guard let self = self else { return }
+            signInButton.isEnabled = !isLoading
+            signInAppleButton.isEnabled = !isLoading
+            signInGoogleButton.isEnabled = !isLoading
+        }
+        
         setupToolbar()
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
     private func setupUI() {
-        // Mark: Input Configuration
         emailTextField.setUnderLine()
         passwordTextField.setUnderLine()
+        registerButton.isUserInteractionEnabled = true
+        registerButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onRegisterClicked(_:))))
+    }
+    
+    @objc private func onRegisterClicked(_ sender: UILabel) {
+        let vc = SignUpViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func setupToolbar() {
@@ -47,7 +95,16 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func onSignInButtonClicked(_ sender: UIButton) {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.setViewControllers([MainViewController()], animated: true)
+        viewModel.signIn(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+    }
+    
+    @IBAction func onSignInGoogleClicked(_ sender: UIButton) {
+        viewModel.signInWithGoogle(viewController: self)
+    }
+    
+    
+    @IBAction func onSignInWithAppleButtonClicked(_ sender: UIButton) {
+        
+        viewModel.signInWithApple(viewController: self)
     }
 }

@@ -17,15 +17,37 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var appleSignInButton: UIButton!
     @IBOutlet weak var googleSignInButton: UIButton!
     @IBOutlet weak var signInButton: UILabel!
+    
+    private let viewModel = SignUpViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        observeUI()
         setupToolbar()
         setupUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    private func observeUI() {
+        viewModel.isSignUpLoading.bind { [weak self] isLoading in
+            guard let self = self else { return }
+            signInButton.isEnabled = !isLoading
+            appleSignInButton.isEnabled = !isLoading
+            googleSignInButton.isEnabled = !isLoading
+        }
+        
+        viewModel.signUpSuccess.bind { [weak self] success in
+            guard let self = self else { return }
+            if success {
+                self.navigationController?.setViewControllers([MainViewController()], animated: true)
+            }
+        }
+    }
 
     private func setupUI() {
-        // Mark: Input Configuration
         nameTextField.setUnderLine()
         emailTextField.setUnderLine()
         passwordTextField.setUnderLine()
@@ -48,5 +70,22 @@ class SignUpViewController: UIViewController {
     
     @objc func onBackButtonClicked(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func onSignInButtonClicked(_ sender: UIButton) {
+        viewModel.signUp(
+            name: nameTextField.text ?? "",
+            email: emailTextField.text ?? "",
+            password: passwordTextField.text ?? "",
+            passwordConfirmation: passwordConfirmationTextField.text ?? ""
+        )
+    }
+    
+    @IBAction func onSignInWithAppleButtonClicked(_ sender: UIButton) {
+        viewModel.signInWithApple(viewController: self)
+    }
+    
+    @IBAction func onSignInWithGoogleButtonClicked(_ sender: UIButton) {
+        viewModel.signInWithGoogle(viewController: self)
     }
 }

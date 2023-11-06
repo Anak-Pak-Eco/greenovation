@@ -17,10 +17,12 @@ class MainViewController: UITabBarController {
     }()
     
     lazy var notificationViewController: UIViewController = {
-        let viewController = UINavigationController(
-            rootViewController: UIHostingController(rootView: NotificationView())
-        )
-        viewController.navigationBar.prefersLargeTitles = true
+        let viewController = NotificationViewController()
+        return viewController
+    }()
+    
+    lazy var profileViewController: UIViewController = {
+        let viewController = ProfileViewController()
         return viewController
     }()
     
@@ -53,10 +55,17 @@ class MainViewController: UITabBarController {
             tag: 2
         )
         
+        profileViewController.tabBarItem = UITabBarItem(
+            title: String(localized: "profile"),
+            image: UIImage(systemName: "person.crop.circle.fill"),
+            tag: 3
+        )
+        
         viewControllers = [
             deviceViewController,
             notificationViewController,
-            formulaSettingViewController
+            formulaSettingViewController,
+            profileViewController
         ]
     }
 }

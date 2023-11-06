@@ -78,7 +78,7 @@
                                                 <color key="textColor" name="primary-accent"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ppm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOe-4g-VAK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOe-4g-VAK">
                                                 <rect key="frame" x="0.0" y="36.666666666666657" width="56.666666666666664" height="26.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="20"/>
                                                 <color key="textColor" name="on primary-container"/>
@@ -111,6 +111,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="phLabel" destination="M99-Pi-VmT" id="LWS-8J-RPb"/>
+                <outlet property="phaseLabel" destination="5S9-ms-RJj" id="eAD-o3-zYa"/>
+                <outlet property="plantNameLabel" destination="mWH-7L-Z55" id="8xd-db-3eH"/>
+                <outlet property="ppmLabel" destination="phb-ME-UYa" id="pFh-3l-oGL"/>
+            </connections>
             <point key="canvasLocation" x="-74.045801526717554" y="73.239436619718319"/>
         </tableViewCell>
     </objects>
