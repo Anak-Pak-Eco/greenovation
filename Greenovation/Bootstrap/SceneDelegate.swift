@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,12 +17,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let navigationController = UINavigationController(rootViewController: MainViewController())
-        window = UIWindow(windowScene: windowScene)
-        window?.overrideUserInterfaceStyle = .light
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        let user = Auth.auth().currentUser
+        
+        if user != nil {
+            guard let windowScene = (scene as? UIWindowScene) else { return }
+            let navigationController = UINavigationController(rootViewController: MainViewController())
+            window = UIWindow(windowScene: windowScene)
+            window?.overrideUserInterfaceStyle = .light
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+        } else {
+            guard let windowScene = (scene as? UIWindowScene) else { return }
+            let navigationController = UINavigationController(rootViewController: OnboardingViewController())
+            window = UIWindow(windowScene: windowScene)
+            window?.overrideUserInterfaceStyle = .light
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -110,7 +110,6 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
     
     private func found(code: String) {
-        print("Code is: \(code)")
         captureSession.stopRunning()
     }
     
