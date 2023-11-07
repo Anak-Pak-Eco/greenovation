@@ -19,21 +19,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         let user = Auth.auth().currentUser
         
-//        if user != nil {
+        if user != nil {
             guard let windowScene = (scene as? UIWindowScene) else { return }
-            let navigationController = UINavigationController(rootViewController: RegisterFormulaViewController())
+            let navigationController = UINavigationController(rootViewController: MainViewController())
             window = UIWindow(windowScene: windowScene)
             window?.overrideUserInterfaceStyle = .light
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
-//        } else {
-//            guard let windowScene = (scene as? UIWindowScene) else { return }
-//            let navigationController = UINavigationController(rootViewController: OnboardingViewController())
-//            window = UIWindow(windowScene: windowScene)
-//            window?.overrideUserInterfaceStyle = .light
-//            window?.rootViewController = navigationController
-//            window?.makeKeyAndVisible()
-//        }
+        } else {
+            guard let windowScene = (scene as? UIWindowScene) else { return }
+            let navigationController = UINavigationController(rootViewController: OnboardingViewController())
+            window = UIWindow(windowScene: windowScene)
+            window?.overrideUserInterfaceStyle = .light
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
