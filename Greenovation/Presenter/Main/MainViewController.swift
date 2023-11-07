@@ -27,10 +27,7 @@ class MainViewController: UITabBarController {
     }()
     
     lazy var formulaSettingViewController: UIViewController = {
-        let viewController = UINavigationController(
-            rootViewController: UIHostingController(rootView: FormulaSettingView())
-        )
-        viewController.navigationBar.prefersLargeTitles = true
+        let viewController = FormulaSettingViewController()
         return viewController
     }()
     

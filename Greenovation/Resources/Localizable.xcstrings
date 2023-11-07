@@ -455,6 +455,23 @@
         }
       }
     },
+    "formula-tanaman" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plant Formula"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formula Tanaman"
+          }
+        }
+      }
+    },
     "hapus" : {
       "extractionState" : "manual",
       "localizations" : {
