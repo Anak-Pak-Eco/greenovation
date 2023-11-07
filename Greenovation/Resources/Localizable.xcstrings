@@ -511,8 +511,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Kind of Plants"
+            "state" : "translated",
+            "value" : "Type of Plants"
           }
         },
         "id" : {
@@ -914,6 +914,23 @@
         }
       }
     },
+    "tambah-formula" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Formula"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah Formula"
+          }
+        }
+      }
+    },
     "tambah-pengaturan-baru" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -927,6 +944,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tambah Pengaturan Baru"
+          }
+        }
+      }
+    },
+    "tambah-tanaman" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Plants"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah Tanaman"
           }
         }
       }
