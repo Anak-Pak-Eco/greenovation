@@ -534,6 +534,23 @@
         }
       }
     },
+    "kepekatan-nutrisi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutrient Concentration (ppm)"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kepekatan Nutrisi (ppm)"
+          }
+        }
+      }
+    },
     "Key" : {
       "extractionState" : "manual"
     },
@@ -1022,6 +1039,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tanaman Tidak Ditemukan!"
+          }
+        }
+      }
+    },
+    "tingkat-ph" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pH Level"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tingkat pH"
           }
         }
       }
