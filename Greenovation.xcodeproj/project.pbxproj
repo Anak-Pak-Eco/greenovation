@@ -28,6 +28,8 @@
 		A72C07192AFA2D0B005395DB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A72C07182AFA2D0B005395DB /* FirebaseMessaging */; };
 		A72C071B2AFA2D3A005395DB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A72C071A2AFA2D3A005395DB /* Alamofire */; };
 		A72C071D2AFA2D5F005395DB /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = A72C071C2AFA2D5F005395DB /* DGCharts */; };
+		A72C07292AFA4915005395DB /* AddDeviceV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C07272AFA4915005395DB /* AddDeviceV2ViewController.swift */; };
+		A72C072A2AFA4915005395DB /* AddDeviceV2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72C07282AFA4915005395DB /* AddDeviceV2ViewController.xib */; };
 		A756C1C92AF8DFDE004E58A0 /* FormulaSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1C72AF8DFDE004E58A0 /* FormulaSettingViewController.swift */; };
 		A756C1CA2AF8DFDE004E58A0 /* FormulaSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1C82AF8DFDE004E58A0 /* FormulaSettingViewController.xib */; };
 		A756C1CE2AF8F29F004E58A0 /* FormulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1CC2AF8F29F004E58A0 /* FormulaTableViewCell.swift */; };
@@ -40,6 +42,8 @@
 		A756C1E12AFA1864004E58A0 /* PlantSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1DF2AFA1864004E58A0 /* PlantSearchViewController.xib */; };
 		A756C1E52AFA2028004E58A0 /* PlantSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1E32AFA2028004E58A0 /* PlantSearchTableViewCell.swift */; };
 		A756C1E62AFA2028004E58A0 /* PlantSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1E42AFA2028004E58A0 /* PlantSearchTableViewCell.xib */; };
+		A77F03162AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F03142AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift */; };
+		A77F03172AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A77F03152AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib */; };
 		A79DB2C22AF39230003D768A /* SuccessDeleteDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DB2C02AF39230003D768A /* SuccessDeleteDeviceViewController.swift */; };
 		A79DB2C32AF39230003D768A /* SuccessDeleteDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79DB2C12AF39230003D768A /* SuccessDeleteDeviceViewController.xib */; };
 		A79DB2C62AF39786003D768A /* SaveSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DB2C42AF39786003D768A /* SaveSuccessViewController.swift */; };
@@ -184,6 +188,8 @@
 		A71FC0D82AF2519300875CBF /* DeleteDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteDeviceViewController.xib; sourceTree = "<group>"; };
 		A72C07002AFA266F005395DB /* RegisterFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormulaViewController.swift; sourceTree = "<group>"; };
 		A72C07012AFA266F005395DB /* RegisterFormulaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFormulaViewController.xib; sourceTree = "<group>"; };
+		A72C07272AFA4915005395DB /* AddDeviceV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceV2ViewController.swift; sourceTree = "<group>"; };
+		A72C07282AFA4915005395DB /* AddDeviceV2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceV2ViewController.xib; sourceTree = "<group>"; };
 		A756C1C72AF8DFDE004E58A0 /* FormulaSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaSettingViewController.swift; sourceTree = "<group>"; };
 		A756C1C82AF8DFDE004E58A0 /* FormulaSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormulaSettingViewController.xib; sourceTree = "<group>"; };
 		A756C1CC2AF8F29F004E58A0 /* FormulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTableViewCell.swift; sourceTree = "<group>"; };
@@ -196,6 +202,8 @@
 		A756C1DF2AFA1864004E58A0 /* PlantSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantSearchViewController.xib; sourceTree = "<group>"; };
 		A756C1E32AFA2028004E58A0 /* PlantSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSearchTableViewCell.swift; sourceTree = "<group>"; };
 		A756C1E42AFA2028004E58A0 /* PlantSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantSearchTableViewCell.xib; sourceTree = "<group>"; };
+		A77F03142AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthStepBottomSheetViewController.swift; sourceTree = "<group>"; };
+		A77F03152AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowthStepBottomSheetViewController.xib; sourceTree = "<group>"; };
 		A79DB2C02AF39230003D768A /* SuccessDeleteDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessDeleteDeviceViewController.swift; sourceTree = "<group>"; };
 		A79DB2C12AF39230003D768A /* SuccessDeleteDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessDeleteDeviceViewController.xib; sourceTree = "<group>"; };
 		A79DB2C42AF39786003D768A /* SaveSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSuccessViewController.swift; sourceTree = "<group>"; };
@@ -411,6 +419,24 @@
 			path = "Register Formula";
 			sourceTree = "<group>";
 		};
+		A72C071E2AFA448C005395DB /* Add Device V2 */ = {
+			isa = PBXGroup;
+			children = (
+				A72C07272AFA4915005395DB /* AddDeviceV2ViewController.swift */,
+				A72C07282AFA4915005395DB /* AddDeviceV2ViewController.xib */,
+			);
+			path = "Add Device V2";
+			sourceTree = "<group>";
+		};
+		A72C072B2AFB6E92005395DB /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				A77F03142AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift */,
+				A77F03152AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
 		A756C1CB2AF8F270004E58A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +524,7 @@
 		D60225922AEFB0D700F3800F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A72C072B2AFB6E92005395DB /* BottomSheet */,
 				D614AA4D2AF4043100B5BED7 /* CustomMyChoiceView.swift */,
 				D60225932AEFB0D700F3800F /* Custom Field View */,
 				D60225962AEFB0D700F3800F /* CustomGrowthStepView.swift */,
@@ -875,6 +902,7 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A72C071E2AFA448C005395DB /* Add Device V2 */,
 				A72C06FF2AFA2660005395DB /* Register Formula */,
 				A756C1D02AFA10F7004E58A0 /* Add Formula */,
 				A71FC0B12AEBCF7A00875CBF /* Add Device */,
@@ -1083,9 +1111,11 @@
 				A756C1CA2AF8DFDE004E58A0 /* FormulaSettingViewController.xib in Resources */,
 				D630F5082AD8112A00A355D0 /* DMSans-Black.ttf in Resources */,
 				A756C1D42AFA110E004E58A0 /* AddNewFormulaViewController.xib in Resources */,
+				A72C072A2AFA4915005395DB /* AddDeviceV2ViewController.xib in Resources */,
 				D6917A332AEAB4F800CD7F5C /* SignUpViewController.xib in Resources */,
 				D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */,
 				A71FC0DA2AF2519300875CBF /* DeleteDeviceViewController.xib in Resources */,
+				A77F03172AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib in Resources */,
 				D68D4E8E2AF6BFD500F61B1E /* GoogleService-Info.plist in Resources */,
 				D69D17202AEEC80100A5347C /* NotificationViewController.xib in Resources */,
 			);
@@ -1143,6 +1173,7 @@
 				D6DFD64E2AE7DEE200215428 /* View+Extension.swift in Sources */,
 				D6CF2CC62AF4CB7700BC6225 /* SignUpViewModel.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
+				A77F03162AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift in Sources */,
 				D614AA4C2AF403F700B5BED7 /* ScanQRViewController.swift in Sources */,
 				D602259E2AEFB0D700F3800F /* CustomFieldView.swift in Sources */,
 				D60225A22AEFB0D700F3800F /* CustomChooseFormulationView.swift in Sources */,
@@ -1182,6 +1213,7 @@
 				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
 				A756C1E02AFA1864004E58A0 /* PlantSearchViewController.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
+				A72C07292AFA4915005395DB /* AddDeviceV2ViewController.swift in Sources */,
 				D6239CD42AF22C940097E8D1 /* AlertView.swift in Sources */,
 				A72C07022AFA266F005395DB /* RegisterFormulaViewController.swift in Sources */,
 				A756C1CE2AF8F29F004E58A0 /* FormulaTableViewCell.swift in Sources */,

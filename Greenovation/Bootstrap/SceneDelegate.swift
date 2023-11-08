@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 //        if user != nil {
             guard let windowScene = (scene as? UIWindowScene) else { return }
-            let navigationController = UINavigationController(rootViewController: RegisterFormulaViewController())
+            let navigationController = UINavigationController(rootViewController: AddDeviceV2ViewController())
             window = UIWindow(windowScene: windowScene)
             window?.overrideUserInterfaceStyle = .light
             window?.rootViewController = navigationController
