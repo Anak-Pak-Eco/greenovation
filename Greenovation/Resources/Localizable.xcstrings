@@ -454,6 +454,17 @@
         }
       }
     },
+    "Formula Tanaman Fase Anakan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seeding Phase Plant Formula"
+          }
+        }
+      }
+    },
     "formula-setting" : {
       "extractionState" : "manual",
       "localizations" : {

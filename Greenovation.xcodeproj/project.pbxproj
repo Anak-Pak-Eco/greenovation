@@ -30,6 +30,10 @@
 		A72C071D2AFA2D5F005395DB /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = A72C071C2AFA2D5F005395DB /* DGCharts */; };
 		A72C07292AFA4915005395DB /* AddDeviceV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C07272AFA4915005395DB /* AddDeviceV2ViewController.swift */; };
 		A72C072A2AFA4915005395DB /* AddDeviceV2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72C07282AFA4915005395DB /* AddDeviceV2ViewController.xib */; };
+		A73E1E982AFCD931008053A9 /* MyChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E1E962AFCD931008053A9 /* MyChoiceViewController.swift */; };
+		A73E1E992AFCD931008053A9 /* MyChoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1E972AFCD931008053A9 /* MyChoiceViewController.xib */; };
+		A73E1EA12AFCEF0F008053A9 /* EditDeviceV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E1E9F2AFCEF0F008053A9 /* EditDeviceV2ViewController.swift */; };
+		A73E1EA22AFCEF0F008053A9 /* EditDeviceV2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1EA02AFCEF0F008053A9 /* EditDeviceV2ViewController.xib */; };
 		A756C1C92AF8DFDE004E58A0 /* FormulaSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1C72AF8DFDE004E58A0 /* FormulaSettingViewController.swift */; };
 		A756C1CA2AF8DFDE004E58A0 /* FormulaSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1C82AF8DFDE004E58A0 /* FormulaSettingViewController.xib */; };
 		A756C1CE2AF8F29F004E58A0 /* FormulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1CC2AF8F29F004E58A0 /* FormulaTableViewCell.swift */; };
@@ -194,6 +198,10 @@
 		A72C07012AFA266F005395DB /* RegisterFormulaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFormulaViewController.xib; sourceTree = "<group>"; };
 		A72C07272AFA4915005395DB /* AddDeviceV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceV2ViewController.swift; sourceTree = "<group>"; };
 		A72C07282AFA4915005395DB /* AddDeviceV2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceV2ViewController.xib; sourceTree = "<group>"; };
+		A73E1E962AFCD931008053A9 /* MyChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChoiceViewController.swift; sourceTree = "<group>"; };
+		A73E1E972AFCD931008053A9 /* MyChoiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChoiceViewController.xib; sourceTree = "<group>"; };
+		A73E1E9F2AFCEF0F008053A9 /* EditDeviceV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeviceV2ViewController.swift; sourceTree = "<group>"; };
+		A73E1EA02AFCEF0F008053A9 /* EditDeviceV2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDeviceV2ViewController.xib; sourceTree = "<group>"; };
 		A756C1C72AF8DFDE004E58A0 /* FormulaSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaSettingViewController.swift; sourceTree = "<group>"; };
 		A756C1C82AF8DFDE004E58A0 /* FormulaSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormulaSettingViewController.xib; sourceTree = "<group>"; };
 		A756C1CC2AF8F29F004E58A0 /* FormulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTableViewCell.swift; sourceTree = "<group>"; };
@@ -436,13 +444,32 @@
 			path = "Add Device V2";
 			sourceTree = "<group>";
 		};
-		A72C072B2AFB6E92005395DB /* BottomSheet */ = {
+		A72C072B2AFB6E92005395DB /* Bottom Sheet v2 */ = {
 			isa = PBXGroup;
 			children = (
 				A77F03192AFB8FB000C5021D /* Plant Formula */,
 				A77F03182AFB8F8F00C5021D /* Growth Step Bottom Sheet */,
 			);
-			path = BottomSheet;
+			path = "Bottom Sheet v2";
+			sourceTree = "<group>";
+		};
+		A73E1E952AFCD912008053A9 /* My Choice v2 */ = {
+			isa = PBXGroup;
+			children = (
+				A73E1E962AFCD931008053A9 /* MyChoiceViewController.swift */,
+				A73E1E972AFCD931008053A9 /* MyChoiceViewController.xib */,
+			);
+			path = "My Choice v2";
+			sourceTree = "<group>";
+		};
+		A73E1E9A2AFCEEBF008053A9 /* Edit Device V2 */ = {
+			isa = PBXGroup;
+			children = (
+				A71FC0C72AF232BC00875CBF /* Components */,
+				A73E1E9F2AFCEF0F008053A9 /* EditDeviceV2ViewController.swift */,
+				A73E1EA02AFCEF0F008053A9 /* EditDeviceV2ViewController.xib */,
+			);
+			path = "Edit Device V2";
 			sourceTree = "<group>";
 		};
 		A756C1CB2AF8F270004E58A0 /* Components */ = {
@@ -558,7 +585,6 @@
 		A7E23C522AE922B00065F24F /* Edit Device */ = {
 			isa = PBXGroup;
 			children = (
-				A71FC0C72AF232BC00875CBF /* Components */,
 				A7E23C552AE922E80065F24F /* EditDeviceViewController.swift */,
 				A7E23C562AE922E80065F24F /* EditDeviceViewController.xib */,
 			);
@@ -568,7 +594,8 @@
 		D60225922AEFB0D700F3800F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A72C072B2AFB6E92005395DB /* BottomSheet */,
+				A73E1E952AFCD912008053A9 /* My Choice v2 */,
+				A72C072B2AFB6E92005395DB /* Bottom Sheet v2 */,
 				D614AA4D2AF4043100B5BED7 /* CustomMyChoiceView.swift */,
 				D60225932AEFB0D700F3800F /* Custom Field View */,
 				D60225962AEFB0D700F3800F /* CustomGrowthStepView.swift */,
@@ -946,6 +973,7 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A73E1E9A2AFCEEBF008053A9 /* Edit Device V2 */,
 				A72C071E2AFA448C005395DB /* Add Device V2 */,
 				A72C06FF2AFA2660005395DB /* Register Formula */,
 				A756C1D02AFA10F7004E58A0 /* Add Formula */,
@@ -1133,6 +1161,7 @@
 				A79DB2C32AF39230003D768A /* SuccessDeleteDeviceViewController.xib in Resources */,
 				D68D4E792AF5F7F400F61B1E /* CustomLoadingCell.xib in Resources */,
 				D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */,
+				A73E1EA22AFCEF0F008053A9 /* EditDeviceV2ViewController.xib in Resources */,
 				D630F5062AD8112A00A355D0 /* DMSans-Italic.ttf in Resources */,
 				D630F50F2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf in Resources */,
 				A79DB2C72AF39786003D768A /* SaveSuccessViewController.xib in Resources */,
@@ -1160,6 +1189,7 @@
 				A72C072A2AFA4915005395DB /* AddDeviceV2ViewController.xib in Resources */,
 				D6917A332AEAB4F800CD7F5C /* SignUpViewController.xib in Resources */,
 				D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */,
+				A73E1E992AFCD931008053A9 /* MyChoiceViewController.xib in Resources */,
 				A71FC0DA2AF2519300875CBF /* DeleteDeviceViewController.xib in Resources */,
 				A77F03172AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib in Resources */,
 				D68D4E8E2AF6BFD500F61B1E /* GoogleService-Info.plist in Resources */,
@@ -1211,6 +1241,7 @@
 				D681D5772AE68D0E005A0BAC /* DevicesItemTableViewCell.swift in Sources */,
 				D60225AF2AEFB62900F3800F /* ConnectWifiViewController.swift in Sources */,
 				D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */,
+				A73E1E982AFCD931008053A9 /* MyChoiceViewController.swift in Sources */,
 				A7E23C572AE922E80065F24F /* EditDeviceViewController.swift in Sources */,
 				D64547092AEA96FE0077DA04 /* SignInViewController.swift in Sources */,
 				D6F463942AF38CE600814C7D /* AlertLargeView.swift in Sources */,
@@ -1255,6 +1286,7 @@
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
 				A79DB2C62AF39786003D768A /* SaveSuccessViewController.swift in Sources */,
 				D6A8ABC22AEEC0B900D6466B /* NotificationRepository.swift in Sources */,
+				A73E1EA12AFCEF0F008053A9 /* EditDeviceV2ViewController.swift in Sources */,
 				D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */,
 				D69D171F2AEEC80100A5347C /* NotificationViewController.swift in Sources */,
 				D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */,
