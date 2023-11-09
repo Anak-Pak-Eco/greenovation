@@ -30,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Perangkat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNT-DM-Kn7" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="74" width="361" height="20"/>
+                    <rect key="frame" x="16" y="74" width="361" height="19.666666666666671"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama Perangkat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awz-uY-odR">
-                    <rect key="frame" x="16" y="99" width="361" height="45"/>
+                    <rect key="frame" x="16" y="98.666666666666671" width="361" height="45.000000000000014"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="rkJ-cG-cp8"/>
                     </constraints>
@@ -47,7 +47,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis Tanaman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7Z-d4-mPK" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="159.66666666666666" width="361" height="20"/>
+                    <rect key="frame" x="16" y="159.33333333333334" width="361" height="19.666666666666657"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Jenis Tanaman" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-Bo-CCs">
-                    <rect key="frame" x="16" y="184.66666666666666" width="361" height="45"/>
+                    <rect key="frame" x="16" y="184" width="361" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="RrC-hE-THO"/>
                     </constraints>
@@ -64,7 +64,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tahap Pertumbuhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trh-93-jyx" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="245" width="361" height="20"/>
+                    <rect key="frame" x="16" y="244.33333333333334" width="361" height="19.666666666666657"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EmH-m6-G64">
-                    <rect key="frame" x="348" y="196.66666666666666" width="19" height="21.333333333333343"/>
+                    <rect key="frame" x="348" y="196" width="19" height="21.333333333333314"/>
                     <color key="tintColor" name="secondary-accent"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="19" id="92l-3V-N1Z"/>
@@ -81,7 +81,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We5-g7-R7z">
-                    <rect key="frame" x="16" y="270" width="361" height="45"/>
+                    <rect key="frame" x="16" y="269" width="361" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="sXd-lN-ghb"/>
                     </constraints>
@@ -93,7 +93,7 @@
                     </buttonConfiguration>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sVK-pv-zsx">
-                    <rect key="frame" x="348" y="282" width="19" height="21"/>
+                    <rect key="frame" x="348" y="281" width="19" height="21"/>
                     <color key="tintColor" name="secondary-accent"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="31" id="2an-aK-Oxj"/>
@@ -101,7 +101,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-gp-os3" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="33" y="281" width="215" height="23"/>
+                    <rect key="frame" x="33" y="280" width="215" height="22.333333333333314"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                     <color key="textColor" name="surface-container-highest"/>
                     <nil key="highlightedColor"/>
@@ -110,7 +110,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNH-B7-4nu" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="710" width="361" height="40"/>
+                    <rect key="frame" x="16" y="709" width="361" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="FMe-Wu-0i7"/>
                     </constraints>

@@ -8,7 +8,13 @@
 import UIKit
 
 class HavePlantFormulaViewController: UIViewController {
-
+    
+    let plantName = String(localized: "caisim")
+    let growthStep = String(localized: "fase-anakan")
+    
+    @IBOutlet var ppmLabel: LocalizableLabel!
+    @IBOutlet var pHLabel: LocalizableLabel!
+    
     @IBOutlet var dismissButton: UIImageView!
     @IBOutlet var descLabel: UILabel!
     @IBOutlet var ppmMin: UILabel!
@@ -39,6 +45,17 @@ class HavePlantFormulaViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissButtonTapped))
         dismissButton.isUserInteractionEnabled = true
         dismissButton.addGestureRecognizer(tapGesture)
+        
+        // Label Bold
+        descLabel.attributedText = String.getStringAttributed(from: String(localized: "Formula di bawah ini merupakan formula yang kamu buat untuk \(plantName) pada \(growthStep)"), boldStrings: ["\(plantName)", "\(growthStep)"], regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!, boldTextStyle: UIFont(name: "DMSans-Bold", size: 12)!)
+        descLabel.adjustsFontSizeToFitWidth = true
+        
+        // ppm Label
+        ppmLabel.attributedText = String.getStringAttributed(from: String(localized: "kepekatan-nutrisi"), boldStrings: ["Nutrient Concentration", "Kepekatan Nutrisi"], regularTextStyle: UIFont(name: "DMSans-Regular", size: 15)!, boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 15)!)
+        ppmLabel.adjustsFontSizeToFitWidth = true
+        
+        // pH Label
+//        pHLabel.attributedText = String.getStringAttributed(from: String(localized: "tingkat-ph"), boldStrings: ["Tingkat pH", "pH Level"], boldTextStyle: UIFont(name: "DMSans-Bold", size: 15)!)
     }
     
 }

@@ -44,7 +44,7 @@ class AddDeviceV2ViewController: UIViewController {
     
     @objc func growtStepTapped() {
         // Bottom Sheet
-        let vc = HavePlantFormulaViewController()
+        let vc = DontHavePlantFormulaViewController()
         vc.modalPresentationStyle = .pageSheet
         if
             #available(iOS 15.0, *),
