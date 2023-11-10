@@ -435,9 +435,8 @@
 		A756C1D02AFA10F7004E58A0 /* Add Formula */ = {
 			isa = PBXGroup;
 			children = (
+				D6EBCE8F2AFDBC2E00EF5C51 /* Subpages */,
 				A756C1D52AFA1111004E58A0 /* Components */,
-				A756C1D12AFA110E004E58A0 /* AddNewFormulaViewController.swift */,
-				A756C1D22AFA110E004E58A0 /* AddNewFormulaViewController.xib */,
 			);
 			path = "Add Formula";
 			sourceTree = "<group>";
@@ -949,7 +948,6 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				A72C06FF2AFA2660005395DB /* Register Formula */,
 				A756C1D02AFA10F7004E58A0 /* Add Formula */,
 				A71FC0B12AEBCF7A00875CBF /* Add Device */,
 				A7E23C522AE922B00065F24F /* Edit Device */,
@@ -982,6 +980,24 @@
 				D68003EA2ADB838D00AAED95 /* Localizable.xcstrings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D6EBCE8F2AFDBC2E00EF5C51 /* Subpages */ = {
+			isa = PBXGroup;
+			children = (
+				D6EBCE902AFDBC3800EF5C51 /* Search Formula */,
+				A72C06FF2AFA2660005395DB /* Register Formula */,
+			);
+			path = Subpages;
+			sourceTree = "<group>";
+		};
+		D6EBCE902AFDBC3800EF5C51 /* Search Formula */ = {
+			isa = PBXGroup;
+			children = (
+				A756C1D12AFA110E004E58A0 /* AddNewFormulaViewController.swift */,
+				A756C1D22AFA110E004E58A0 /* AddNewFormulaViewController.xib */,
+			);
+			path = "Search Formula";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
