@@ -7,11 +7,9 @@
 
 import UIKit
 
-class EditDeviceV2ViewController: UIViewController {
+class EditDeviceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
 }

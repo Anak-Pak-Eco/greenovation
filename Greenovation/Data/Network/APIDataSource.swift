@@ -12,8 +12,8 @@ import Combine
 final class APIDataSource {
     
     static let shared = APIDataSource()
-    private let baseURL = "https://pak-eco.pat-pet.my.id"
-//    private let baseURL = "http://192.168.100.19:8000"
+//    private let baseURL = "https://pak-eco.pat-pet.my.id"
+    private let baseURL = "http://10.60.32.15:8000"
     
     func getNotifications() -> AnyPublisher<[NotificationResponse], AFError> {
         return AF.request(baseURL + APIEndpoint.notifications.rawValue, method: .get)
@@ -26,8 +26,21 @@ final class APIDataSource {
             .eraseToAnyPublisher()
     }
     
-    func getPlants() -> AnyPublisher<[PlantResponse], AFError> {
-        return AF.request(baseURL + APIEndpoint.plants.rawValue, method: .get)
+    func getPlants(
+        usersId: String?,
+        userOnly: String?
+    ) -> AnyPublisher<[PlantResponse], AFError> {
+        
+        var parameters: [String: Any] = [:]
+        if let usersId = usersId {
+            parameters.updateValue(usersId, forKey: "users_id")
+        }
+        
+        if let userOnly = userOnly {
+            parameters.updateValue(userOnly, forKey: "user_only")
+        }
+        
+        return AF.request(baseURL + APIEndpoint.plants.rawValue, method: .get, parameters: parameters)
             .validate()
             .publishDecodable(type: BaseResponse<[PlantResponse]>.self)
             .value()

@@ -44,7 +44,7 @@ class RegisterFormulaViewController: UIViewController {
     }
     
     @objc func backButtonTapped() {
-        
+        navigationController?.popViewController(animated: true)
     }
     
     private func style() {
@@ -127,4 +127,7 @@ class RegisterFormulaViewController: UIViewController {
         saveButton.clipsToBounds = true
     }
     
+    @IBAction func saveButtonClicked(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }

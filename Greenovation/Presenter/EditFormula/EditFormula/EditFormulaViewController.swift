@@ -29,13 +29,12 @@ class EditFormulaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        style()
         setupToolbar()
+        setupUI()
     }
     
     @objc func backButtonTapped() {
-        
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func saveButtonTapped() {
@@ -47,7 +46,8 @@ class EditFormulaViewController: UIViewController {
     }
     
     private func setupToolbar() {
-        self.title = String(localized: "pendaftaran-perangkat")
+        title = String(localized: "pendaftaran-perangkat")
+        navigationController?.navigationBar.prefersLargeTitles = false
         
         let backButton = UIBarButtonItem(
             image: UIImage(systemName: "chevron.left"),
@@ -66,8 +66,8 @@ class EditFormulaViewController: UIViewController {
         navigationItem.setRightBarButton(editButton, animated: true)
     }
     
-    private func style() {
-        // ppm Label
+    private func setupUI() {
+        // PPM Label
         ppmLabelFaseAnakan.adjustsFontSizeToFitWidth = true
         ppmLabelFaseAwal.adjustsFontSizeToFitWidth = true
         ppmLabelFaseMenengah.adjustsFontSizeToFitWidth = true
@@ -144,5 +144,4 @@ class EditFormulaViewController: UIViewController {
         phMaxFaseMenengah.layer.borderColor = UIColor.primaryAccent.cgColor
         phMaxFaseMenengah.clipsToBounds = true
     }
-    
 }

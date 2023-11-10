@@ -11,8 +11,8 @@ final class PlantRepository: PlantRepositoryProtocol {
     
     private let dataSource = APIDataSource.shared
     
-    func getPlants() -> AnyPublisher<[PlantModel], Error> {
-        return dataSource.getPlants()
+    func getPlants(usersId: String? = nil, userOnly: String? = nil) -> AnyPublisher<[PlantModel], Error> {
+        return dataSource.getPlants(usersId: usersId, userOnly: userOnly)
             .map {
                 let plants = PlantModel.from($0)
                 return plants

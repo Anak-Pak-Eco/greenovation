@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,9 +18,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteDeviceViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
-                <outlet property="CancelButton" destination="Qco-9f-WSU" id="5hf-RS-7Xq"/>
-                <outlet property="DeleteButton" destination="PqZ-y4-ICd" id="bgc-Ah-b83"/>
-                <outlet property="UIDialogView" destination="X3H-aO-Sys" id="BXt-m1-VRe"/>
+                <outlet property="cancelButton" destination="Qco-9f-WSU" id="5hf-RS-7Xq"/>
+                <outlet property="deleteButton" destination="PqZ-y4-ICd" id="bgc-Ah-b83"/>
+                <outlet property="dialogView" destination="X3H-aO-Sys" id="BXt-m1-VRe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,7 +33,7 @@
                     <rect key="frame" x="33" y="344" width="327" height="164"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hapus Perangkat Ini?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKg-QA-AD4" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="45" y="19" width="236" height="20"/>
+                            <rect key="frame" x="45" y="19" width="236" height="17.666666666666671"/>
                             <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -43,7 +42,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data perangkat yang telah dihapus tidak dapat dikembalikan." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xes-Ak-oLY" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="2" y="54" width="323" height="34"/>
+                            <rect key="frame" x="2" y="51.666666666666686" width="323" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="d2s-bd-lzE"/>
                             </constraints>
@@ -55,7 +54,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqZ-y4-ICd" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="171" y="103" width="140" height="40"/>
+                            <rect key="frame" x="171" y="100.66666666666669" width="140" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Hja-Lj-hAM"/>
                                 <constraint firstAttribute="width" constant="140" id="xTY-bX-UrB"/>
@@ -69,7 +68,7 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qco-9f-WSU" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="16" y="103" width="140" height="40"/>
+                            <rect key="frame" x="16" y="100.66666666666669" width="140" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="140" id="oc2-ru-IMV"/>
                                 <constraint firstAttribute="height" constant="40" id="wfV-KH-9Th"/>

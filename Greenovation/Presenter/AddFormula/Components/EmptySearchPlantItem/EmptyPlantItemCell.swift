@@ -10,6 +10,9 @@ import UIKit
 class EmptyPlantItemCell: UITableViewCell {
 
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var buttonAddPlant: UIButton!
+    
+    var didClickAddButton: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +23,8 @@ class EmptyPlantItemCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    @IBAction func onAddButtonClicked(_ sender: UIButton) {
+        didClickAddButton?()
     }
 }

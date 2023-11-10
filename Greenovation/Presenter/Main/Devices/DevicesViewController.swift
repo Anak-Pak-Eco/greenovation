@@ -43,8 +43,8 @@ class DevicesViewController: UIViewController {
     }
     
     @objc private func onAddDeviceClicked(_ sender: UIBarButtonItem) {
-        let viewController = ScanQRViewController()
-        navigationController?.pushViewController(viewController, animated: true)
+//        let viewController = ScanQRViewController()
+//        navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func setupUI() {

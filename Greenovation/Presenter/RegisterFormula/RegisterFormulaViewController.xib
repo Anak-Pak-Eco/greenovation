@@ -420,6 +420,9 @@ Kepekatan Nutrisi: 1050-1400 &amp; Tingkat pH: 5,5-6,5</string>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="simpan"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="saveButtonClicked:" destination="-1" eventType="touchUpInside" id="gKx-Bl-I7D"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -113,8 +113,8 @@ class FormulaSettingViewController: UIViewController {
     }
     
     private func setupToolbar() {
+        tabBarController?.title = String(localized: "plant-formula")  
         navigationController?.navigationBar.prefersLargeTitles = true
-        tabBarController?.title = String(localized: "plant-formula")
         tabBarController?.navigationItem.setRightBarButton(
             UIBarButtonItem(
                 image: UIImage(systemName: "plus"),
@@ -127,7 +127,7 @@ class FormulaSettingViewController: UIViewController {
     }
     
     @objc func addButtonTapped() {
-        let vc = AddNewFormulaViewController()
+        let vc = AddFormulaViewController()
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -158,5 +158,11 @@ extension FormulaSettingViewController: UITableViewDataSource, UITableViewDelega
         cell.setupData(plant, isLast: isLast)
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = EditFormulaViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -49,6 +49,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="add-plants"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="onAddButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="56Q-jy-ILW"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -63,6 +66,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="buttonAddPlant" destination="C8x-rF-gSy" id="UTR-14-bbx"/>
                 <outlet property="cardView" destination="H2p-sc-9uM" id="2rp-6L-9Wh"/>
             </connections>
             <point key="canvasLocation" x="122.90076335877862" y="12.67605633802817"/>

@@ -8,5 +8,5 @@
 import Combine
 
 protocol PlantRepositoryProtocol {
-    func getPlants() -> AnyPublisher<[PlantModel], Error>
+    func getPlants(usersId: String?, userOnly: String?) -> AnyPublisher<[PlantModel], Error>
 }

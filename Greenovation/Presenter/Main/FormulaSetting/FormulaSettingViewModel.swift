@@ -6,10 +6,11 @@
 //
 
 import Combine
+import FirebaseAuth
 
 final class FormulaSettingViewModel {
     
-    private let repository: PlantRepositoryProtocol = PlantRepository()
+    private let repository = PlantRepository()
     var plants: [PlantModel] = []
     var searchedPlants: [PlantModel] = []
     let successGetPlants = Box(false)
@@ -20,7 +21,8 @@ final class FormulaSettingViewModel {
     
     func getData() {
         loadingGetPlants.value = true
-        repository.getPlants()
+        let usersId = Auth.auth().currentUser?.uid ?? ""
+        repository.getPlants(usersId: usersId, userOnly: "true")
             .sink { [unowned self] completion in
                 switch completion {
                 case .finished:
