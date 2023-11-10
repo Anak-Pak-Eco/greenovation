@@ -34,6 +34,10 @@
 		A73E1E992AFCD931008053A9 /* MyChoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1E972AFCD931008053A9 /* MyChoiceViewController.xib */; };
 		A73E1EA12AFCEF0F008053A9 /* EditDeviceV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E1E9F2AFCEF0F008053A9 /* EditDeviceV2ViewController.swift */; };
 		A73E1EA22AFCEF0F008053A9 /* EditDeviceV2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1EA02AFCEF0F008053A9 /* EditDeviceV2ViewController.xib */; };
+		A73E1EA82AFDF6CE008053A9 /* EditFormulaV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E1EA62AFDF6CE008053A9 /* EditFormulaV2ViewController.swift */; };
+		A73E1EA92AFDF6CE008053A9 /* EditFormulaV2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1EA72AFDF6CE008053A9 /* EditFormulaV2ViewController.xib */; };
+		A73E1EAC2AFDF705008053A9 /* DetailFormulaV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E1EAA2AFDF705008053A9 /* DetailFormulaV2ViewController.swift */; };
+		A73E1EAD2AFDF705008053A9 /* DetailFormulaV2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1EAB2AFDF705008053A9 /* DetailFormulaV2ViewController.xib */; };
 		A756C1C92AF8DFDE004E58A0 /* FormulaSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1C72AF8DFDE004E58A0 /* FormulaSettingViewController.swift */; };
 		A756C1CA2AF8DFDE004E58A0 /* FormulaSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1C82AF8DFDE004E58A0 /* FormulaSettingViewController.xib */; };
 		A756C1CE2AF8F29F004E58A0 /* FormulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1CC2AF8F29F004E58A0 /* FormulaTableViewCell.swift */; };
@@ -202,6 +206,10 @@
 		A73E1E972AFCD931008053A9 /* MyChoiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChoiceViewController.xib; sourceTree = "<group>"; };
 		A73E1E9F2AFCEF0F008053A9 /* EditDeviceV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeviceV2ViewController.swift; sourceTree = "<group>"; };
 		A73E1EA02AFCEF0F008053A9 /* EditDeviceV2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDeviceV2ViewController.xib; sourceTree = "<group>"; };
+		A73E1EA62AFDF6CE008053A9 /* EditFormulaV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFormulaV2ViewController.swift; sourceTree = "<group>"; };
+		A73E1EA72AFDF6CE008053A9 /* EditFormulaV2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditFormulaV2ViewController.xib; sourceTree = "<group>"; };
+		A73E1EAA2AFDF705008053A9 /* DetailFormulaV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFormulaV2ViewController.swift; sourceTree = "<group>"; };
+		A73E1EAB2AFDF705008053A9 /* DetailFormulaV2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailFormulaV2ViewController.xib; sourceTree = "<group>"; };
 		A756C1C72AF8DFDE004E58A0 /* FormulaSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaSettingViewController.swift; sourceTree = "<group>"; };
 		A756C1C82AF8DFDE004E58A0 /* FormulaSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormulaSettingViewController.xib; sourceTree = "<group>"; };
 		A756C1CC2AF8F29F004E58A0 /* FormulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTableViewCell.swift; sourceTree = "<group>"; };
@@ -426,13 +434,13 @@
 			path = SaveSuccessView;
 			sourceTree = "<group>";
 		};
-		A72C06FF2AFA2660005395DB /* Register Formula */ = {
+		A72C06FF2AFA2660005395DB /* Register Formula V2 */ = {
 			isa = PBXGroup;
 			children = (
 				A72C07002AFA266F005395DB /* RegisterFormulaViewController.swift */,
 				A72C07012AFA266F005395DB /* RegisterFormulaViewController.xib */,
 			);
-			path = "Register Formula";
+			path = "Register Formula V2";
 			sourceTree = "<group>";
 		};
 		A72C071E2AFA448C005395DB /* Add Device V2 */ = {
@@ -472,6 +480,33 @@
 			path = "Edit Device V2";
 			sourceTree = "<group>";
 		};
+		A73E1EA32AFDF678008053A9 /* Edit Formula V2 */ = {
+			isa = PBXGroup;
+			children = (
+				A73E1EA52AFDF69C008053A9 /* Detail Formula */,
+				A73E1EA42AFDF685008053A9 /* Edit Formula */,
+			);
+			path = "Edit Formula V2";
+			sourceTree = "<group>";
+		};
+		A73E1EA42AFDF685008053A9 /* Edit Formula */ = {
+			isa = PBXGroup;
+			children = (
+				A73E1EA62AFDF6CE008053A9 /* EditFormulaV2ViewController.swift */,
+				A73E1EA72AFDF6CE008053A9 /* EditFormulaV2ViewController.xib */,
+			);
+			path = "Edit Formula";
+			sourceTree = "<group>";
+		};
+		A73E1EA52AFDF69C008053A9 /* Detail Formula */ = {
+			isa = PBXGroup;
+			children = (
+				A73E1EAA2AFDF705008053A9 /* DetailFormulaV2ViewController.swift */,
+				A73E1EAB2AFDF705008053A9 /* DetailFormulaV2ViewController.xib */,
+			);
+			path = "Detail Formula";
+			sourceTree = "<group>";
+		};
 		A756C1CB2AF8F270004E58A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,14 +516,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		A756C1D02AFA10F7004E58A0 /* Add Formula */ = {
+		A756C1D02AFA10F7004E58A0 /* Add Formula V2 */ = {
 			isa = PBXGroup;
 			children = (
 				A756C1D52AFA1111004E58A0 /* Components */,
 				A756C1D12AFA110E004E58A0 /* AddNewFormulaViewController.swift */,
 				A756C1D22AFA110E004E58A0 /* AddNewFormulaViewController.xib */,
 			);
-			path = "Add Formula";
+			path = "Add Formula V2";
 			sourceTree = "<group>";
 		};
 		A756C1D52AFA1111004E58A0 /* Components */ = {
@@ -973,10 +1008,11 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A73E1EA32AFDF678008053A9 /* Edit Formula V2 */,
 				A73E1E9A2AFCEEBF008053A9 /* Edit Device V2 */,
 				A72C071E2AFA448C005395DB /* Add Device V2 */,
-				A72C06FF2AFA2660005395DB /* Register Formula */,
-				A756C1D02AFA10F7004E58A0 /* Add Formula */,
+				A72C06FF2AFA2660005395DB /* Register Formula V2 */,
+				A756C1D02AFA10F7004E58A0 /* Add Formula V2 */,
 				A71FC0B12AEBCF7A00875CBF /* Add Device */,
 				A7E23C522AE922B00065F24F /* Edit Device */,
 				D6917A2F2AEAB4E400CD7F5C /* Sign Up */,
@@ -1137,6 +1173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73E1EAD2AFDF705008053A9 /* DetailFormulaV2ViewController.xib in Resources */,
 				D69D172F2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib in Resources */,
 				D630F5092AD8112A00A355D0 /* DMSans-Regular.ttf in Resources */,
 				D6D010312AC6C60900EC51FB /* LaunchScreen.storyboard in Resources */,
@@ -1182,6 +1219,7 @@
 				D60225A32AEFB0D700F3800F /* CustomSearchItemCell.xib in Resources */,
 				D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */,
 				D68D4E7E2AF5FA4200F61B1E /* ProfileViewController.xib in Resources */,
+				A73E1EA92AFDF6CE008053A9 /* EditFormulaV2ViewController.xib in Resources */,
 				D6F463962AF38CFF00814C7D /* AlertLargeView.xib in Resources */,
 				A756C1CA2AF8DFDE004E58A0 /* FormulaSettingViewController.xib in Resources */,
 				D630F5082AD8112A00A355D0 /* DMSans-Black.ttf in Resources */,
@@ -1245,6 +1283,7 @@
 				A7E23C572AE922E80065F24F /* EditDeviceViewController.swift in Sources */,
 				D64547092AEA96FE0077DA04 /* SignInViewController.swift in Sources */,
 				D6F463942AF38CE600814C7D /* AlertLargeView.swift in Sources */,
+				A73E1EA82AFDF6CE008053A9 /* EditFormulaV2ViewController.swift in Sources */,
 				D60225AB2AEFB42200F3800F /* CustomFieldViewModel.swift in Sources */,
 				D60225A02AEFB0D700F3800F /* BottomSheetView.swift in Sources */,
 				D6BD3B792AD123C4005B85C3 /* DeviceModel.swift in Sources */,
@@ -1265,6 +1304,7 @@
 				D68D4E8C2AF6B88100F61B1E /* AuthenticationRepository.swift in Sources */,
 				D68D4E782AF5F7F400F61B1E /* CustomLoadingCell.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
+				A73E1EAC2AFDF705008053A9 /* DetailFormulaV2ViewController.swift in Sources */,
 				A71FC0B42AEBCF8A00875CBF /* AddDeviceViewController.swift in Sources */,
 				D6CF2CCA2AF4E01800BC6225 /* SignInViewModel.swift in Sources */,
 				D6BD3B792AD123C4005B85C3 /* DeviceModel.swift in Sources */,

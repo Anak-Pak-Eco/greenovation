@@ -366,6 +366,22 @@
         }
       }
     },
+    "edit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Edit"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ubah"
+          }
+        }
+      }
+    },
     "Fase dimulai dari benih dan berlanjut dengan tanaman mulai mengembangkan daun sejati." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -512,6 +528,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hapus"
+          }
+        }
+      }
+    },
+    "hapus-pengaturan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Formula"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Pengaturan"
           }
         }
       }
