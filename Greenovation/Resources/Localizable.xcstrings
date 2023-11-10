@@ -438,6 +438,33 @@
         }
       }
     },
+    "Formula di bawah ini merupakan formula yang kamu buat untuk %@ pada %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The formula below is the formula you created for %@ in %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Formula di bawah ini merupakan formula yang kamu buat untuk %1$@ pada %2$@"
+          }
+        }
+      }
+    },
+    "Formula Tanaman Fase Anakan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seeding Phase Plant Formula"
+          }
+        }
+      }
+    },
     "formula-setting" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -596,8 +623,26 @@
         }
       }
     },
+    "Max" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max"
+          }
+        }
+      }
+    },
     "Min" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min"
+          }
+        }
+      }
     },
     "nama-perangkat" : {
       "localizations" : {
@@ -804,8 +849,30 @@
         }
       }
     },
+    "Rekomendasi yang diberikan Greenovation untuk %@ pada %@ adalah Kepekatan Nutrisi: %@ppm dan Tingkat pH: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The recommendations given by Greenovation for %@ on %@ are Nutrient Concentration: %@ppm and pH Level: %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Rekomendasi yang diberikan Greenovation untuk %1$@ pada %2$@ adalah Kepekatan Nutrisi: %3$@ppm dan Tingkat pH: %4$@"
+          }
+        }
+      }
+    },
     "Rekomendasi yang kami berikan didapatkan dari blabla untuk **%@** pada **%@**" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The recommendations we provide are obtained from blabla for **%@** on **%@**"
+          }
+        },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
@@ -825,9 +892,32 @@
         }
       }
     },
+    "rekomendasi-formula" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formula Recommendation"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rekomendasi Formula"
+          }
+        }
+      }
+    },
     "seeding" : {
       "extractionState" : "manual",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seeding"
+          }
+        },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
