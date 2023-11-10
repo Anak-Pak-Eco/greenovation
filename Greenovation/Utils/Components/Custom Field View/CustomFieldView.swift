@@ -365,7 +365,10 @@ extension CustomFieldView: UITableViewDataSource, UITableViewDelegate {
         
         if indexPath.row < filteredItems.count {
             let filteredItem = filteredItems[indexPath.row]
-            cell.configure(with: filteredItem.image, and: filteredItem.name)
+            cell.configure(
+                with: UIImage(named: filteredItem.image_url)!,
+                and: filteredItem.name
+            )
         }
         
         print("id: \(indexPath.row), filter: \(filteredItems) \(filteredItems.count)")

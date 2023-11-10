@@ -98,13 +98,44 @@ final class SignInViewModel: NSObject {
 extension SignInViewModel: ASAuthorizationControllerDelegate , ASAuthorizationControllerPresentationContextProviding {
     
     func signInWithApple(viewController: UIViewController) {
+        // TODO: Move it to utils class
+        func randomNonceString(length: Int = 32) -> String {
+            precondition(length > 0)
+            var randomBytes = [UInt8](repeating: 0, count: length)
+            let errorCode = SecRandomCopyBytes(kSecRandomDefault, randomBytes.count, &randomBytes)
+            if errorCode != errSecSuccess {
+                isSignInLoading.value = false
+                signInError.value = "Unable to generate nonce. SecRandomCopyBytes with OSStatus \(errorCode)"
+                fatalError("Unable to generate nonce. SecRandomCopyBytes with OSStatus \(errorCode)")
+            }
+            
+            let charset: [Character] = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+            
+            let nonce = randomBytes.map { byte in
+                charset[Int(byte) % charset.count]
+            }
+            
+            return String(nonce)
+        }
+        
+        // TODO: Move it to utils class
+        func sha256(_ input: String) -> String {
+            let inputData = Data(input.utf8)
+            let hashData = SHA256.hash(data: inputData)
+            let hashString = hashData.compactMap {
+                String(format: "%02x", $0)
+            }.joined()
+            
+            return hashString
+        }
+        
         isSignInLoading.value = true
-        let nonce = randomNonceString()
-        currentNonce = nonce
+        
+        currentNonce = randomNonceString()
         let appleIdProvider = ASAuthorizationAppleIDProvider()
         let request = appleIdProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
-        request.nonce = sha256(nonce)
+        request.nonce = sha256(currentNonce ?? "")
         
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = self
@@ -112,36 +143,10 @@ extension SignInViewModel: ASAuthorizationControllerDelegate , ASAuthorizationCo
         authorizationController.performRequests()
     }
     
-    private func randomNonceString(length: Int = 32) -> String {
-        precondition(length > 0)
-        var randomBytes = [UInt8](repeating: 0, count: length)
-        let errorCode = SecRandomCopyBytes(kSecRandomDefault, randomBytes.count, &randomBytes)
-        if errorCode != errSecSuccess {
-            isSignInLoading.value = false
-            signInError.value = "Unable to generate nonce. SecRandomCopyBytes with OSStatus \(errorCode)"
-            fatalError("Unable to generate nonce. SecRandomCopyBytes with OSStatus \(errorCode)")
-        }
-        
-        let charset: [Character] = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
-        
-        let nonce = randomBytes.map { byte in
-            charset[Int(byte) % charset.count]
-        }
-        
-        return String(nonce)
-    }
-    
-    private func sha256(_ input: String) -> String {
-        let inputData = Data(input.utf8)
-        let hashData = SHA256.hash(data: inputData)
-        let hashString = hashData.compactMap {
-            String(format: "%02x", $0)
-        }.joined()
-        
-        return hashString
-    }
-    
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+    func authorizationController(
+        controller: ASAuthorizationController,
+        didCompleteWithAuthorization authorization: ASAuthorization
+    ) {
         if let appleIdCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let nonce = currentNonce else {
                 isSignInLoading.value = false

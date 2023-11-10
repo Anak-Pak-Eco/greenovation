@@ -90,6 +90,12 @@
 		D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64547082AEA96FE0077DA04 /* SignInViewController.xib */; };
 		D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646B4552AE902CA00BE78EC /* DevicesViewModel.swift */; };
 		D65C58832AE26D2F00FE8D1E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C58822AE26D2F00FE8D1E /* String+Extension.swift */; };
+		D67771212AFCCE2700EC8956 /* PlantPhaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771202AFCCE2700EC8956 /* PlantPhaseResponse.swift */; };
+		D67771232AFCCFB800EC8956 /* PlantResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771222AFCCFB800EC8956 /* PlantResponse.swift */; };
+		D67771262AFCD09700EC8956 /* PlantPhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771252AFCD09700EC8956 /* PlantPhaseModel.swift */; };
+		D67771282AFCD0E300EC8956 /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771272AFCD0E300EC8956 /* PlantModel.swift */; };
+		D677712B2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677712A2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift */; };
+		D677712D2AFCD8D700EC8956 /* PlantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677712C2AFCD8D700EC8956 /* PlantRepository.swift */; };
 		D68003EB2ADB838D00AAED95 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D68003EA2ADB838D00AAED95 /* Localizable.xcstrings */; };
 		D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681D5702AE68CD3005A0BAC /* DevicesViewController.swift */; };
 		D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D681D5712AE68CD3005A0BAC /* DevicesViewController.xib */; };
@@ -101,7 +107,7 @@
 		D68D4E792AF5F7F400F61B1E /* CustomLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68D4E772AF5F7F400F61B1E /* CustomLoadingCell.xib */; };
 		D68D4E7D2AF5FA4200F61B1E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D4E7B2AF5FA4200F61B1E /* ProfileViewController.swift */; };
 		D68D4E7E2AF5FA4200F61B1E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68D4E7C2AF5FA4200F61B1E /* ProfileViewController.xib */; };
-		D68D4E872AF6B66900F61B1E /* AuthenticationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D4E862AF6B66900F61B1E /* AuthenticationDataSource.swift */; };
+		D68D4E872AF6B66900F61B1E /* AuthDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D4E862AF6B66900F61B1E /* AuthDataSource.swift */; };
 		D68D4E8A2AF6B83900F61B1E /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D4E892AF6B83900F61B1E /* AuthenticationProtocol.swift */; };
 		D68D4E8C2AF6B88100F61B1E /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D4E8B2AF6B88100F61B1E /* AuthenticationRepository.swift */; };
 		D68D4E8E2AF6BFD500F61B1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D68D4E8D2AF6BFD500F61B1E /* GoogleService-Info.plist */; };
@@ -116,7 +122,7 @@
 		D69D172B2AEF600900A5347C /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69D17292AEF600900A5347C /* HeaderTableViewCell.xib */; };
 		D69D172E2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D172C2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift */; };
 		D69D172F2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69D172D2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib */; };
-		D6A8ABBD2AEEADD800D6466B /* HydrospaceAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABBC2AEEADD800D6466B /* HydrospaceAPIDataSource.swift */; };
+		D6A8ABBD2AEEADD800D6466B /* APIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABBC2AEEADD800D6466B /* APIDataSource.swift */; };
 		D6A8ABBF2AEEBE6500D6466B /* NotificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABBE2AEEBE6500D6466B /* NotificationResponse.swift */; };
 		D6A8ABC22AEEC0B900D6466B /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABC12AEEC0B900D6466B /* NotificationRepository.swift */; };
 		D6A8ABC42AEEC0C100D6466B /* NotificationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8ABC32AEEC0C100D6466B /* NotificationRepositoryProtocol.swift */; };
@@ -127,7 +133,7 @@
 		D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC85822ACFFD7E0033B665 /* FormulaSettingViewModel.swift */; };
 		D6B607662AEFEEFC007D45C1 /* DetailDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B607652AEFEEFC007D45C1 /* DetailDeviceViewModel.swift */; };
 		D6BD3B712AD0CAB6005B85C3 /* DeviceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD3B702AD0CAB6005B85C3 /* DeviceResponse.swift */; };
-		D6BD3B732AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD3B722AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift */; };
+		D6BD3B732AD0CB39005B85C3 /* RTDBDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD3B722AD0CB39005B85C3 /* RTDBDataSource.swift */; };
 		D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD3B742AD1223C005B85C3 /* HydrospaceRepository.swift */; };
 		D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD3B762AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift */; };
 		D6BD3B792AD123C4005B85C3 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD3B782AD123C3005B85C3 /* DeviceModel.swift */; };
@@ -246,6 +252,12 @@
 		D64547082AEA96FE0077DA04 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		D646B4552AE902CA00BE78EC /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
 		D65C58822AE26D2F00FE8D1E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D67771202AFCCE2700EC8956 /* PlantPhaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantPhaseResponse.swift; sourceTree = "<group>"; };
+		D67771222AFCCFB800EC8956 /* PlantResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantResponse.swift; sourceTree = "<group>"; };
+		D67771252AFCD09700EC8956 /* PlantPhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantPhaseModel.swift; sourceTree = "<group>"; };
+		D67771272AFCD0E300EC8956 /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
+		D677712A2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRepositoryProtocol.swift; sourceTree = "<group>"; };
+		D677712C2AFCD8D700EC8956 /* PlantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRepository.swift; sourceTree = "<group>"; };
 		D68003EA2ADB838D00AAED95 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		D681D5702AE68CD3005A0BAC /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
 		D681D5712AE68CD3005A0BAC /* DevicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevicesViewController.xib; sourceTree = "<group>"; };
@@ -257,7 +269,7 @@
 		D68D4E772AF5F7F400F61B1E /* CustomLoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomLoadingCell.xib; sourceTree = "<group>"; };
 		D68D4E7B2AF5FA4200F61B1E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D68D4E7C2AF5FA4200F61B1E /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		D68D4E862AF6B66900F61B1E /* AuthenticationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDataSource.swift; sourceTree = "<group>"; };
+		D68D4E862AF6B66900F61B1E /* AuthDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataSource.swift; sourceTree = "<group>"; };
 		D68D4E892AF6B83900F61B1E /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
 		D68D4E8B2AF6B88100F61B1E /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		D68D4E8D2AF6BFD500F61B1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -272,7 +284,7 @@
 		D69D17292AEF600900A5347C /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		D69D172C2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeviceAlertTableViewCell.swift; sourceTree = "<group>"; };
 		D69D172D2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailDeviceAlertTableViewCell.xib; sourceTree = "<group>"; };
-		D6A8ABBC2AEEADD800D6466B /* HydrospaceAPIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrospaceAPIDataSource.swift; sourceTree = "<group>"; };
+		D6A8ABBC2AEEADD800D6466B /* APIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataSource.swift; sourceTree = "<group>"; };
 		D6A8ABBE2AEEBE6500D6466B /* NotificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationResponse.swift; sourceTree = "<group>"; };
 		D6A8ABC12AEEC0B900D6466B /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
 		D6A8ABC32AEEC0C100D6466B /* NotificationRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -283,7 +295,7 @@
 		D6AC85822ACFFD7E0033B665 /* FormulaSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaSettingViewModel.swift; sourceTree = "<group>"; };
 		D6B607652AEFEEFC007D45C1 /* DetailDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeviceViewModel.swift; sourceTree = "<group>"; };
 		D6BD3B702AD0CAB6005B85C3 /* DeviceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceResponse.swift; sourceTree = "<group>"; };
-		D6BD3B722AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrospaceRTDBDataSource.swift; sourceTree = "<group>"; };
+		D6BD3B722AD0CB39005B85C3 /* RTDBDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTDBDataSource.swift; sourceTree = "<group>"; };
 		D6BD3B742AD1223C005B85C3 /* HydrospaceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrospaceRepository.swift; sourceTree = "<group>"; };
 		D6BD3B762AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrospaceRepositoryProtocol.swift; sourceTree = "<group>"; };
 		D6BD3B782AD123C3005B85C3 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
@@ -617,9 +629,9 @@
 			isa = PBXGroup;
 			children = (
 				D640E1F52AC7387A007E993F /* Responses */,
-				D68D4E862AF6B66900F61B1E /* AuthenticationDataSource.swift */,
-				D6BD3B722AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift */,
-				D6A8ABBC2AEEADD800D6466B /* HydrospaceAPIDataSource.swift */,
+				D68D4E862AF6B66900F61B1E /* AuthDataSource.swift */,
+				D6BD3B722AD0CB39005B85C3 /* RTDBDataSource.swift */,
+				D6A8ABBC2AEEADD800D6466B /* APIDataSource.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -634,8 +646,9 @@
 		D640E1EE2AC732F3007E993F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D6BD3B782AD123C3005B85C3 /* DeviceModel.swift */,
-				D6A8ABC52AEEC0D400D6466B /* NotificationModel.swift */,
+				D664FCF62AFCEDD600D91150 /* Notification */,
+				D664FCF52AFCEDD000D91150 /* Devices */,
+				D67771242AFCD08C00EC8956 /* Plant */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -643,6 +656,7 @@
 		D640E1EF2AC732F7007E993F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				D67771292AFCD88D00EC8956 /* Plant */,
 				D68D4E882AF6B82800F61B1E /* Authentication */,
 				D6A8ABC02AEEC0AD00D6466B /* Notifications */,
 				D6BD3B762AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift */,
@@ -654,8 +668,9 @@
 		D640E1F52AC7387A007E993F /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				D6BD3B702AD0CAB6005B85C3 /* DeviceResponse.swift */,
-				D6A8ABBE2AEEBE6500D6466B /* NotificationResponse.swift */,
+				D664FCF42AFCED5C00D91150 /* Devices */,
+				D664FCF32AFCE14F00D91150 /* Notifications */,
+				D677711F2AFCCD0100EC8956 /* Plants */,
 				D69D17212AEECA9800A5347C /* BaseResponse.swift */,
 			);
 			path = Responses;
@@ -675,6 +690,65 @@
 				D602258F2AEFA84700F3800F /* Date+Extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D664FCF32AFCE14F00D91150 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				D6A8ABBE2AEEBE6500D6466B /* NotificationResponse.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		D664FCF42AFCED5C00D91150 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				D6BD3B702AD0CAB6005B85C3 /* DeviceResponse.swift */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		D664FCF52AFCEDD000D91150 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				D6BD3B782AD123C3005B85C3 /* DeviceModel.swift */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		D664FCF62AFCEDD600D91150 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				D6A8ABC52AEEC0D400D6466B /* NotificationModel.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		D677711F2AFCCD0100EC8956 /* Plants */ = {
+			isa = PBXGroup;
+			children = (
+				D67771202AFCCE2700EC8956 /* PlantPhaseResponse.swift */,
+				D67771222AFCCFB800EC8956 /* PlantResponse.swift */,
+			);
+			path = Plants;
+			sourceTree = "<group>";
+		};
+		D67771242AFCD08C00EC8956 /* Plant */ = {
+			isa = PBXGroup;
+			children = (
+				D67771252AFCD09700EC8956 /* PlantPhaseModel.swift */,
+				D67771272AFCD0E300EC8956 /* PlantModel.swift */,
+			);
+			path = Plant;
+			sourceTree = "<group>";
+		};
+		D67771292AFCD88D00EC8956 /* Plant */ = {
+			isa = PBXGroup;
+			children = (
+				D677712A2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift */,
+				D677712C2AFCD8D700EC8956 /* PlantRepository.swift */,
+			);
+			path = Plant;
 			sourceTree = "<group>";
 		};
 		D681D56F2AE68CB3005A0BAC /* Devices */ = {
@@ -793,9 +867,9 @@
 			isa = PBXGroup;
 			children = (
 				A756C1CB2AF8F270004E58A0 /* Components */,
-				D6AC85822ACFFD7E0033B665 /* FormulaSettingViewModel.swift */,
 				A756C1C72AF8DFDE004E58A0 /* FormulaSettingViewController.swift */,
 				A756C1C82AF8DFDE004E58A0 /* FormulaSettingViewController.xib */,
+				D6AC85822ACFFD7E0033B665 /* FormulaSettingViewModel.swift */,
 			);
 			path = FormulaSetting;
 			sourceTree = "<group>";
@@ -1121,16 +1195,17 @@
 				A756C1DA2AFA183E004E58A0 /* PlantEmptyViewController.swift in Sources */,
 				D68D4E7D2AF5FA4200F61B1E /* ProfileViewController.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
+				D677712B2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift in Sources */,
 				A756C1D32AFA110E004E58A0 /* AddNewFormulaViewController.swift in Sources */,
 				A79DB2C22AF39230003D768A /* SuccessDeleteDeviceViewController.swift in Sources */,
 				A71FC0A72AEBA3F000875CBF /* ChooseFormulationViewController.swift in Sources */,
 				D6A8ABBF2AEEBE6500D6466B /* NotificationResponse.swift in Sources */,
 				D68D4E732AF5E99600F61B1E /* NotificationItemTableViewCell.swift in Sources */,
 				D6AC857F2ACFFD2F0033B665 /* NotificationViewModel.swift in Sources */,
-				D6BD3B732AD0CB39005B85C3 /* HydrospaceRTDBDataSource.swift in Sources */,
+				D6BD3B732AD0CB39005B85C3 /* RTDBDataSource.swift in Sources */,
 				D68D4E8A2AF6B83900F61B1E /* AuthenticationProtocol.swift in Sources */,
 				D6BD3B712AD0CAB6005B85C3 /* DeviceResponse.swift in Sources */,
-				D68D4E872AF6B66900F61B1E /* AuthenticationDataSource.swift in Sources */,
+				D68D4E872AF6B66900F61B1E /* AuthDataSource.swift in Sources */,
 				D681D5772AE68D0E005A0BAC /* DevicesItemTableViewCell.swift in Sources */,
 				D60225AF2AEFB62900F3800F /* ConnectWifiViewController.swift in Sources */,
 				D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */,
@@ -1143,13 +1218,16 @@
 				D6DFD64E2AE7DEE200215428 /* View+Extension.swift in Sources */,
 				D6CF2CC62AF4CB7700BC6225 /* SignUpViewModel.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
+				D67771262AFCD09700EC8956 /* PlantPhaseModel.swift in Sources */,
 				D614AA4C2AF403F700B5BED7 /* ScanQRViewController.swift in Sources */,
 				D602259E2AEFB0D700F3800F /* CustomFieldView.swift in Sources */,
 				D60225A22AEFB0D700F3800F /* CustomChooseFormulationView.swift in Sources */,
+				D67771212AFCCE2700EC8956 /* PlantPhaseResponse.swift in Sources */,
 				D60225A12AEFB0D700F3800F /* CustomMyChoiceView.swift in Sources */,
 				D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */,
 				A756C1C92AF8DFDE004E58A0 /* FormulaSettingViewController.swift in Sources */,
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,
+				D677712D2AFCD8D700EC8956 /* PlantRepository.swift in Sources */,
 				A71FC0D92AF2519300875CBF /* DeleteDeviceViewController.swift in Sources */,
 				D60225A42AEFB0D700F3800F /* CustomSearchItemCell.swift in Sources */,
 				A7D78E1F2AEA6CA6006577AE /* GrowthStepViewController.swift in Sources */,
@@ -1167,7 +1245,7 @@
 				D69D17222AEECA9800A5347C /* BaseResponse.swift in Sources */,
 				D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */,
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,
-				D6A8ABBD2AEEADD800D6466B /* HydrospaceAPIDataSource.swift in Sources */,
+				D6A8ABBD2AEEADD800D6466B /* APIDataSource.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
 				D6917A322AEAB4F800CD7F5C /* SignUpViewController.swift in Sources */,
 				D69D172E2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift in Sources */,
@@ -1176,12 +1254,14 @@
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
 				A79DB2C62AF39786003D768A /* SaveSuccessViewController.swift in Sources */,
 				D6A8ABC22AEEC0B900D6466B /* NotificationRepository.swift in Sources */,
+				D67771232AFCCFB800EC8956 /* PlantResponse.swift in Sources */,
 				D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */,
 				D69D171F2AEEC80100A5347C /* NotificationViewController.swift in Sources */,
 				D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */,
 				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
 				A756C1E02AFA1864004E58A0 /* PlantSearchViewController.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
+				D67771282AFCD0E300EC8956 /* PlantModel.swift in Sources */,
 				D6239CD42AF22C940097E8D1 /* AlertView.swift in Sources */,
 				A72C07022AFA266F005395DB /* RegisterFormulaViewController.swift in Sources */,
 				A756C1CE2AF8F29F004E58A0 /* FormulaTableViewCell.swift in Sources */,

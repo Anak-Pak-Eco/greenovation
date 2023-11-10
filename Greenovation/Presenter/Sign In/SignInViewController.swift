@@ -104,7 +104,6 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func onSignInWithAppleButtonClicked(_ sender: UIButton) {
-        
         viewModel.signInWithApple(viewController: self)
     }
 }

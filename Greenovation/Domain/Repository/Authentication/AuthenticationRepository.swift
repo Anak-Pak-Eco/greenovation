@@ -10,7 +10,7 @@ import FirebaseAuth
 
 final class AuthenticationRepository: AuthenticationProtocol {
     
-    private let dataSource = AuthenticationDataSource.shared
+    private let dataSource = AuthDataSource.shared
     
     func signIn(email: String, password: String) -> AnyPublisher<AuthDataResult, Error> {
         return dataSource.signIn(email: email, password: password)

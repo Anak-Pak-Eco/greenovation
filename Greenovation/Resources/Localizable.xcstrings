@@ -21,75 +21,50 @@
         }
       }
     },
-    "**hapus-perangkat**" : {
-      "extractionState" : "manual",
+    "**Kepekatan Nutrisi** (ppm)" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "**Delete Device**"
+            "value" : "**Nutrition Density** (ppm)"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "**Hapus Perangkat**"
-          }
-        }
-      }
-    },
-    "**Kepekatan Nutrisi** (ppm)" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Nutritional Density** (ppm)"
+            "value" : "**Kepekatan Nutrisi** (ppm)"
           }
         }
       }
     },
     "**pilihan-saya**" : {
-      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "**My Choice**"
+            "value" : "**My Options**"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "**Pilihan Saya**"
-          }
-        }
-      }
-    },
-    "**simpan-perubahan**" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Save Changes**"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Simpan Perubahan**"
+            "value" : "**pilihan-saya**"
           }
         }
       }
     },
     "**Tingkat pH**" : {
-      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "**pH Level**"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Tingkat pH**"
           }
         }
       }
@@ -111,165 +86,54 @@
         }
       }
     },
-    "%@ Nilai PH **rendah**. Tambahkan air" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ **Low**PH value. Add air"
-          }
-        }
-      }
-    },
-    "%@ Nilai pH **rendah**. Tambahkan larutan pH UP" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ **Low** pH value. Add pH UP solution."
-          }
-        }
-      }
-    },
-    "%@ Nilai PH **terlalu tinggi**. Kurangi air" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ **Too high** PH value. Reduce air"
-          }
-        }
-      }
-    },
-    "%@ Nilai pH **tinggi**. Tambahkan larutan pH Down" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ **High** pH value. Add pH Down solution."
-          }
-        }
-      }
-    },
-    "%@ Nilai pH rendah" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ Low pH value"
-          }
-        }
-      }
-    },
-    "%@ Nilai PH rendah" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ Low PH value"
-          }
-        }
-      }
-    },
-    "%@ Nilai PH terlalu tinggi" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ Too high PH value"
-          }
-        }
-      }
-    },
-    "%@ Nilai pH tinggi" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ High pH value"
-          }
-        }
-      }
-    },
-    "%@ Nilai PPM **rendah**. Tambahkan larutan nutrisi" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ **Low** PPM value. Add nutrient solution"
-          }
-        }
-      }
-    },
-    "%@ Nilai PPM **terlalu tinggi**. Kurangi larutan nutrisi" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ **Too High** PPM value. Reduce nutrient solution"
-          }
-        }
-      }
-    },
-    "%@ Nilai PPM **tinggi**. Kurangi larutan nutrisi" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ **High** PPM value. Reduce nutrient solution"
-          }
-        }
-      }
-    },
-    "%@ Nilai PPM rendah" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ Low PPM value"
-          }
-        }
-      }
-    },
-    "%@ Nilai PPM terlalu tinggi" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ Too high PPM value"
-          }
-        }
-      }
-    },
-    "%@ Nilai PPM tinggi" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ High PPM value"
-          }
-        }
-      }
-    },
     "750" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "750"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "750"
+          }
+        }
+      }
     },
     "900" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "900"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "900"
+          }
+        }
+      }
+    },
+    "add-plants" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Plants"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah Tanaman"
+          }
+        }
+      }
     },
     "anakan" : {
       "extractionState" : "manual",
@@ -326,7 +190,7 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Plant Search"
           }
         },
@@ -455,23 +319,6 @@
         }
       }
     },
-    "formula-tanaman" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plant Formula"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Formula Tanaman"
-          }
-        }
-      }
-    },
     "hapus" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -502,23 +349,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hapus Perangkat Ini?"
-          }
-        }
-      }
-    },
-    "jenis-tanaman" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Type of Plants"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jenis Tanaman"
           }
         }
       }
@@ -557,28 +387,6 @@
     "Key 1" : {
       "extractionState" : "manual"
     },
-    "Kurangi air." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reduce water."
-          }
-        }
-      }
-    },
-    "Kurangi larutan nutrisi." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reduce nutrient solution."
-          }
-        }
-      }
-    },
     "last-updated %@" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -597,7 +405,14 @@
       }
     },
     "Min" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min"
+          }
+        }
+      }
     },
     "nama-perangkat" : {
       "localizations" : {
@@ -645,17 +460,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Halaman Notifikasi"
-          }
-        }
-      }
-    },
-    "Notifikasi" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notification"
           }
         }
       }
@@ -717,22 +521,28 @@
             "state" : "translated",
             "value" : "Changes saved successfully"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perubahan berhasil disimpan"
+          }
         }
       }
     },
-    "ph" : {
-      "extractionState" : "stale",
+    "ph-level" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "pH"
+            "value" : "pH Level"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "pH"
+            "value" : "Tingkat pH"
           }
         }
       }
@@ -754,29 +564,62 @@
         }
       }
     },
-    "ppm" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ppm"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ppm"
-          }
-        }
-      }
-    },
-    "profile" : {
+    "plant-formula" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "Formula Settings"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formula Tanaman"
+          }
+        }
+      }
+    },
+    "plant-not-found" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plant Not Found!"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanaman Tidak Ditemukan!"
+          }
+        }
+      }
+    },
+    "plant-type" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type of Plants"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jenis Tanaman"
+          }
+        }
+      }
+    },
+    "profile" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "Profile"
           }
         },
@@ -965,97 +808,24 @@
         }
       }
     },
-    "tambah-tanaman" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add Plants"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tambah Tanaman"
-          }
-        }
-      }
-    },
-    "Tambahkan air" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add water"
-          }
-        }
-      }
-    },
-    "Tambahkan larutan nutrisi B sebanyak 100ml untuk menjaga keseimbangan nutrisi." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add 100ml of nutrient solution B to maintain nutritional balance."
-          }
-        }
-      }
-    },
     "Tanaman mengalami pertumbuhan daun, batang, dan akar yang berlangsung dengan cepat hingga masa panen sayuran daun tiba." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plants experience rapid growth of leaves, stems and roots until the harvest time for leaf vegetables arrives."
-          }
-        }
-      }
+
     },
     "Tanaman mulai mempunyai akar yang kuat dan mengembangkan daun dan cabang." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plants begin to have strong roots and develop leaves and branches."
-          }
-        }
-      }
+
     },
     "tanaman-tidak-ditemukan" : {
-      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Plant Not Found!"
+            "value" : "Plant Not Found"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tanaman Tidak Ditemukan!"
-          }
-        }
-      }
-    },
-    "tingkat-ph" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "pH Level"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tingkat pH"
+            "value" : "Tanaman Tidak Ditemukan"
           }
         }
       }

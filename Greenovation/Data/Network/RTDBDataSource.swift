@@ -9,9 +9,9 @@ import Foundation
 import FirebaseDatabase
 import Combine
 
-class HydrospaceRTDBDataSource {
+class RTDBDataSource {
     
-    static let shared = HydrospaceRTDBDataSource()
+    static let shared = RTDBDataSource()
     private let db = Database.database().reference()
     
     func getDevicesStatus() -> AnyPublisher<[DeviceResponse], Never> {

@@ -17,7 +17,6 @@ class NotificationViewController: UIViewController {
         super.viewDidLoad()
         initObserver()
         initUI()
-        viewModel.getNotifications()
     }
     
     private func initUI() {
@@ -85,6 +84,7 @@ class NotificationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setupToolbar()
+        viewModel.getNotifications()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

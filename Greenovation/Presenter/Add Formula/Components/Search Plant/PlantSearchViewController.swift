@@ -13,10 +13,12 @@ class PlantSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         plantSearchTableView.dataSource = self
         plantSearchTableView.delegate = self
-        self.plantSearchTableView.register(UINib(nibName: "PlantSearchTableViewCell", bundle: nil), forCellReuseIdentifier: "PlantSearchTableViewCell")
+        plantSearchTableView.register(
+            UINib(nibName: "PlantSearchTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "PlantSearchTableViewCell"
+        )
     }
     
 }

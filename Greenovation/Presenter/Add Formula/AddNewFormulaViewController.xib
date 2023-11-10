@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewFormulaViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
-                <outlet property="SearchField" destination="TvD-at-3yi" id="WCa-7v-xTh"/>
+                <outlet property="searchTextField" destination="mHZ-ce-2fC" id="CBQ-EQ-ajW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,13 +25,14 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cari Tanaman" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TvD-at-3yi">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Plant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mHZ-ce-2fC">
                     <rect key="frame" x="16" y="98.666666666666671" width="361" height="45.000000000000014"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="LVg-wI-drv"/>
+                        <constraint firstAttribute="height" constant="45" id="cHa-1p-ZEn"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis Tanaman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckz-gh-2cO" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
                     <rect key="frame" x="16" y="74" width="361" height="19.666666666666671"/>
@@ -39,37 +40,26 @@
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="jenis-tanaman"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="plant-type"/>
                     </userDefinedRuntimeAttributes>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="D59-PD-XY9">
-                    <rect key="frame" x="345" y="111.66666666666667" width="22" height="18.666666666666643"/>
-                    <color key="tintColor" name="secondary-accent"/>
-                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>
             <constraints>
-                <constraint firstItem="D59-PD-XY9" firstAttribute="top" secondItem="ckz-gh-2cO" secondAttribute="bottom" constant="17" id="1iU-Gp-TEo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mHZ-ce-2fC" secondAttribute="trailing" constant="16" id="Amj-Fh-otc"/>
                 <constraint firstItem="ckz-gh-2cO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Aya-er-9JM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TvD-at-3yi" secondAttribute="trailing" constant="16" id="FlE-jL-0aO"/>
-                <constraint firstItem="TvD-at-3yi" firstAttribute="top" secondItem="ckz-gh-2cO" secondAttribute="bottom" constant="5" id="KrG-jU-WPR"/>
+                <constraint firstItem="mHZ-ce-2fC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="K1X-94-ULb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ckz-gh-2cO" secondAttribute="trailing" constant="16" id="VHa-e9-cHp"/>
-                <constraint firstItem="D59-PD-XY9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="345" id="gNi-Vp-tzU"/>
-                <constraint firstItem="TvD-at-3yi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="vHL-j3-lEC"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="D59-PD-XY9" secondAttribute="trailing" constant="26" id="y5k-CB-WCr"/>
+                <constraint firstItem="mHZ-ce-2fC" firstAttribute="top" secondItem="ckz-gh-2cO" secondAttribute="bottom" constant="5" id="j5D-sI-jlg"/>
                 <constraint firstItem="ckz-gh-2cO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="yPw-tZ-4Ro"/>
             </constraints>
             <point key="canvasLocation" x="49.618320610687022" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="primary-accent">
             <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="secondary-accent">
-            <color red="0.56499999761581421" green="0.45500001311302185" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="surface">
             <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

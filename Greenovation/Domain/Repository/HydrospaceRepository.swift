@@ -10,7 +10,7 @@ import Combine
 
 class HydrospaceRepository: HydrospaceRepositoryProtocol {
     
-    private let hydrospaceDataSource = HydrospaceRTDBDataSource.shared
+    private let hydrospaceDataSource = RTDBDataSource.shared
     static let shared: HydrospaceRepositoryProtocol = HydrospaceRepository()
     
     func observeDevicesValue() -> AnyPublisher<[DeviceModel], Never> {

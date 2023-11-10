@@ -13,9 +13,9 @@ import GoogleSignInSwift
 import AuthenticationServices
 import Combine
 
-final class AuthenticationDataSource {
+final class AuthDataSource {
     
-    static let shared = AuthenticationDataSource()
+    static let shared = AuthDataSource()
     
     func signIn(email: String, password: String) -> AnyPublisher<AuthDataResult, Error> {
         return Auth.auth()

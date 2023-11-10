@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormulaSettingViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
-                <outlet property="SearchField" destination="gfR-Xc-Ezi" id="8xY-pp-GbI"/>
                 <outlet property="formulaTableView" destination="DqP-bs-qOF" id="6qZ-05-1jK"/>
+                <outlet property="loadingProgressBar" destination="ckq-bj-cgo" id="rTI-3b-Cs3"/>
+                <outlet property="searchField" destination="gfR-Xc-Ezi" id="8xY-pp-GbI"/>
+                <outlet property="separator" destination="Poi-Mm-KPt" id="S74-ts-SmY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,44 +28,54 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Plant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfR-Xc-Ezi">
-                    <rect key="frame" x="16" y="69" width="361" height="45"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Plant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfR-Xc-Ezi">
+                    <rect key="frame" x="16" y="59" width="361" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="69T-h1-aaY"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
                 </textField>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tnd-DO-UZN">
-                    <rect key="frame" x="345" y="82" width="22" height="18.666666666666671"/>
-                    <color key="tintColor" name="secondary-accent"/>
-                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Poi-Mm-KPt" userLabel="separator">
+                    <rect key="frame" x="0.0" y="112" width="393" height="0.0"/>
+                    <color key="backgroundColor" name="outline"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="k13-G9-Xbf"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DqP-bs-qOF">
-                    <rect key="frame" x="0.0" y="137" width="393" height="681"/>
+                    <rect key="frame" x="0.0" y="127" width="393" height="691"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ckq-bj-cgo">
+                    <rect key="frame" x="0.0" y="104" width="393" height="714"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>
             <constraints>
-                <constraint firstItem="DqP-bs-qOF" firstAttribute="top" secondItem="gfR-Xc-Ezi" secondAttribute="bottom" constant="23" id="6Lg-7O-N0x"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tnd-DO-UZN" secondAttribute="trailing" constant="26" id="6Qd-qs-GQU"/>
-                <constraint firstItem="tnd-DO-UZN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="22" id="7l4-yJ-Y4g"/>
-                <constraint firstItem="tnd-DO-UZN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="345" id="HfU-Ir-HtS"/>
+                <constraint firstItem="DqP-bs-qOF" firstAttribute="top" secondItem="Poi-Mm-KPt" secondAttribute="bottom" constant="15" id="6Lg-7O-N0x"/>
+                <constraint firstItem="Poi-Mm-KPt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JmQ-dh-c3S"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DqP-bs-qOF" secondAttribute="bottom" id="Jzf-zL-eQh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DqP-bs-qOF" secondAttribute="trailing" id="SA8-PJ-qsv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gfR-Xc-Ezi" secondAttribute="trailing" constant="16" id="SPU-KY-PlI"/>
                 <constraint firstItem="gfR-Xc-Ezi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ToP-hj-RSL"/>
-                <constraint firstItem="gfR-Xc-Ezi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="XPS-Bf-adx"/>
+                <constraint firstItem="ckq-bj-cgo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XFd-0H-ERL"/>
+                <constraint firstItem="gfR-Xc-Ezi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="XPS-Bf-adx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ckq-bj-cgo" secondAttribute="bottom" id="XmE-yi-x05"/>
                 <constraint firstItem="DqP-bs-qOF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bs5-bV-E5k"/>
+                <constraint firstItem="ckq-bj-cgo" firstAttribute="top" secondItem="gfR-Xc-Ezi" secondAttribute="bottom" id="c8v-O9-J1f"/>
+                <constraint firstItem="Poi-Mm-KPt" firstAttribute="top" secondItem="gfR-Xc-Ezi" secondAttribute="bottom" constant="8" id="e0b-2O-vXF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ckq-bj-cgo" secondAttribute="trailing" id="pUO-n6-lbQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Poi-Mm-KPt" secondAttribute="trailing" id="skh-Wb-gxc"/>
             </constraints>
             <point key="canvasLocation" x="51" y="20"/>
         </view>
     </objects>
     <resources>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <namedColor name="secondary-accent">
-            <color red="0.56499999761581421" green="0.45500001311302185" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="outline">
+            <color red="0.46700000762939453" green="0.46700000762939453" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="surface">
             <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

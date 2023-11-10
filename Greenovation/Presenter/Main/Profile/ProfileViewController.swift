@@ -16,6 +16,16 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         userLabel.text = "Sign in as: \(Auth.auth().currentUser?.displayName ?? "")"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupToolbar()
+    }
+    
+    private func setupToolbar() {
+        tabBarController?.title = String(localized: "profile")
+        tabBarController?.navigationItem.setRightBarButton(nil, animated: true)
+    }
 
     @IBAction func onLogoutClicked(_ sender: UIButton) {
         
