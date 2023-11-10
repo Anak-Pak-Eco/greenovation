@@ -230,6 +230,39 @@
         }
       }
     },
+    "early-vegetative-phase" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Early Vegetative Phase"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fase Vegetatif Awal"
+          }
+        }
+      }
+    },
+    "edit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ubah"
+          }
+        }
+      }
+    },
     "Fase dimulai dari benih dan berlanjut dengan tanaman mulai mengembangkan daun sejati." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -258,38 +291,10 @@
       }
     },
     "fase-vegetatif-awal" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Early Vegetative Phase"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fase Vegetatif Awal"
-          }
-        }
-      }
+
     },
     "fase-vegetatif-menengah" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Intermediate Vegetative Phase"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fase Vegetatif Menengah"
-          }
-        }
-      }
+
     },
     "Formula di bawah ini merupakan formula yang kamu buat untuk **%@** pada **%@**" : {
       "extractionState" : "manual",
@@ -298,6 +303,33 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The formula below is the formula you created for **%@** on **%@**"
+          }
+        }
+      }
+    },
+    "Formula di bawah ini merupakan formula yang kamu buat untuk %@ pada %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The formula below is the formula you created for %@ in %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Formula di bawah ini merupakan formula yang kamu buat untuk %1$@ pada %2$@"
+          }
+        }
+      }
+    },
+    "Formula Tanaman Fase Anakan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seeding Phase Plant Formula"
           }
         }
       }
@@ -336,6 +368,23 @@
         }
       }
     },
+    "hapus-pengaturan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Formula"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Pengaturan"
+          }
+        }
+      }
+    },
     "hapus-perangkat-ini?" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -353,6 +402,23 @@
         }
       }
     },
+    "intermediate-vegetative-phase" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intermediate Vegetative Phase"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fase Vegetatif Menengah"
+          }
+        }
+      }
+    },
     "Kamu belum pernah membuat formula untuk Jenis Tanaman dan Tahap Pertumbuhan ini. Silahkan buat." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -365,27 +431,21 @@
       }
     },
     "kepekatan-nutrisi" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nutrient Concentration (ppm)"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kepekatan Nutrisi (ppm)"
-          }
-        }
-      }
+
     },
     "Key" : {
       "extractionState" : "manual"
     },
     "Key 1" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fa"
+          }
+        }
+      }
     },
     "last-updated %@" : {
       "extractionState" : "manual",
@@ -404,9 +464,20 @@
         }
       }
     },
+    "Max" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max"
+          }
+        }
+      }
+    },
     "Min" : {
       "localizations" : {
-        "id" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Min"
@@ -498,6 +569,7 @@
       }
     },
     "pengaturan-perangkat" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -615,11 +687,28 @@
         }
       }
     },
+    "ppm-level" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutrient Concentration (ppm)"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kepekatan Nutrisi (ppm)"
+          }
+        }
+      }
+    },
     "profile" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Profile"
           }
         },
@@ -635,7 +724,7 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Recommendation"
           }
         },
@@ -647,8 +736,30 @@
         }
       }
     },
+    "Rekomendasi yang diberikan Greenovation untuk %@ pada %@ adalah Kepekatan Nutrisi: %@ppm dan Tingkat pH: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The recommendations given by Greenovation for %@ on %@ are Nutrient Concentration: %@ppm and pH Level: %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Rekomendasi yang diberikan Greenovation untuk %1$@ pada %2$@ adalah Kepekatan Nutrisi: %3$@ppm dan Tingkat pH: %4$@"
+          }
+        }
+      }
+    },
     "Rekomendasi yang kami berikan didapatkan dari blabla untuk **%@** pada **%@**" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The recommendations we provide are obtained from blabla for **%@** on **%@**"
+          }
+        },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
@@ -668,9 +779,32 @@
         }
       }
     },
+    "rekomendasi-formula" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formula Recommendation"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rekomendasi Formula"
+          }
+        }
+      }
+    },
     "seeding" : {
       "extractionState" : "manual",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seeding"
+          }
+        },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
@@ -762,7 +896,7 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Growth Step"
           }
         },
@@ -826,6 +960,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tanaman Tidak Ditemukan"
+          }
+        }
+      }
+    },
+    "tillering-phase" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillering Phase"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fase Anakan"
           }
         }
       }

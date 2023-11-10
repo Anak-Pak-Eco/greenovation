@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+        <array key="DMSans-SemiBold.ttf">
+            <string>DMSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyChoiceViewController" customModule="Greenovation" customModuleProvider="target">
+            <connections>
+                <outlet property="phMax" destination="Pjr-bx-5hA" id="1Ns-Ic-elh"/>
+                <outlet property="phMin" destination="Zax-Vu-Tce" id="LsP-Z5-AdM"/>
+                <outlet property="ppmLabel" destination="mIa-u6-sAb" id="baf-sG-nVo"/>
+                <outlet property="ppmMax" destination="mdy-T4-tOi" id="wlW-Ih-zI2"/>
+                <outlet property="ppmMin" destination="5Wq-r3-QsM" id="3VK-oX-VSk"/>
+                <outlet property="secondaryBackground" destination="Jkp-my-YPO" id="kD0-mG-SCR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="whiteBackground" destination="KhJ-bR-AAl" id="kJB-Lb-UXh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="148"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhJ-bR-AAl" userLabel="White Background">
+                    <rect key="frame" x="0.0" y="0.0" width="358" height="148"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkp-my-YPO" userLabel="Secondary Background">
+                            <rect key="frame" x="0.0" y="0.0" width="358" height="43"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formula Tanaman Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYu-AN-Gnn" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                    <rect key="frame" x="14" y="11.666666666666664" width="260" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="260" id="bBS-yt-Dw6"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="Formula Tanaman Fase Anakan"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="secondary-container"/>
+                            <constraints>
+                                <constraint firstItem="mYu-AN-Gnn" firstAttribute="leading" secondItem="Jkp-my-YPO" secondAttribute="leading" constant="14" id="KvF-PF-u9E"/>
+                                <constraint firstItem="mYu-AN-Gnn" firstAttribute="top" secondItem="Jkp-my-YPO" secondAttribute="top" constant="11.5" id="QsV-xy-gWp"/>
+                                <constraint firstAttribute="height" constant="43" id="Yji-nZ-EJw"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-u6-sAb" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="16" y="61" width="220" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="220" id="uPf-DD-wHs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="kepekatan-nutrisi"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkf-1e-bdq" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="16" y="105" width="200" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="qHq-a4-Ixw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="tingkat-ph"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdy-T4-tOi">
+                            <rect key="frame" x="294" y="54" width="48" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="kiZ-oC-18O"/>
+                                <constraint firstAttribute="height" constant="34" id="zs9-P5-fkF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wq-r3-QsM">
+                            <rect key="frame" x="237" y="54" width="48" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="giO-Uk-05b"/>
+                                <constraint firstAttribute="width" constant="48" id="vre-jI-J72"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zax-Vu-Tce">
+                            <rect key="frame" x="255" y="98" width="39" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="Bnq-QF-1Ft"/>
+                                <constraint firstAttribute="width" constant="39" id="n6P-7S-yny"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6,5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjr-bx-5hA">
+                            <rect key="frame" x="303" y="98" width="39" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="XIH-7v-kON"/>
+                                <constraint firstAttribute="width" constant="39" id="o5o-LF-8S9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rc-Xm-WN5">
+                            <rect key="frame" x="285" y="54" width="9" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="9" id="e7E-A2-Wim"/>
+                                <constraint firstAttribute="height" constant="34" id="lP6-Pz-weD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzQ-yX-1lq">
+                            <rect key="frame" x="294" y="98" width="9" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="9" id="MEX-G2-vuQ"/>
+                                <constraint firstAttribute="height" constant="34" id="uKc-yG-h31"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mdy-T4-tOi" secondAttribute="trailing" constant="16" id="5Do-HY-mdd"/>
+                        <constraint firstItem="5rc-Xm-WN5" firstAttribute="leading" secondItem="5Wq-r3-QsM" secondAttribute="trailing" id="5Ri-dX-Kbo"/>
+                        <constraint firstItem="5Wq-r3-QsM" firstAttribute="top" secondItem="Jkp-my-YPO" secondAttribute="bottom" constant="11" id="65c-Va-j9I"/>
+                        <constraint firstItem="Jkp-my-YPO" firstAttribute="leading" secondItem="KhJ-bR-AAl" secondAttribute="leading" id="6XT-RG-Y0u"/>
+                        <constraint firstItem="Jkp-my-YPO" firstAttribute="top" secondItem="KhJ-bR-AAl" secondAttribute="top" id="9Qp-Y1-M1Z"/>
+                        <constraint firstItem="mdy-T4-tOi" firstAttribute="top" secondItem="Jkp-my-YPO" secondAttribute="bottom" constant="11" id="9Wz-5r-7ie"/>
+                        <constraint firstItem="Pjr-bx-5hA" firstAttribute="top" secondItem="mdy-T4-tOi" secondAttribute="bottom" constant="10" id="E7n-6z-sy7"/>
+                        <constraint firstItem="mIa-u6-sAb" firstAttribute="top" secondItem="Jkp-my-YPO" secondAttribute="bottom" constant="18" id="HQO-AN-h6F"/>
+                        <constraint firstItem="mdy-T4-tOi" firstAttribute="leading" secondItem="5rc-Xm-WN5" secondAttribute="trailing" id="Hti-3S-09b"/>
+                        <constraint firstItem="Gkf-1e-bdq" firstAttribute="top" secondItem="mIa-u6-sAb" secondAttribute="bottom" constant="24" id="LRo-R0-hYQ"/>
+                        <constraint firstAttribute="trailing" secondItem="Pjr-bx-5hA" secondAttribute="trailing" constant="16" id="MGw-eV-oI6"/>
+                        <constraint firstAttribute="trailing" secondItem="Jkp-my-YPO" secondAttribute="trailing" id="SPG-Br-9dc"/>
+                        <constraint firstItem="Pjr-bx-5hA" firstAttribute="leading" secondItem="zzQ-yX-1lq" secondAttribute="trailing" id="WMX-3k-so5"/>
+                        <constraint firstItem="Gkf-1e-bdq" firstAttribute="leading" secondItem="KhJ-bR-AAl" secondAttribute="leading" constant="16" id="YVE-bD-rK7"/>
+                        <constraint firstItem="Zax-Vu-Tce" firstAttribute="top" secondItem="5Wq-r3-QsM" secondAttribute="bottom" constant="10" id="g4l-rU-Xu5"/>
+                        <constraint firstItem="5rc-Xm-WN5" firstAttribute="top" secondItem="Jkp-my-YPO" secondAttribute="bottom" constant="11" id="j3Q-p4-nzY"/>
+                        <constraint firstItem="zzQ-yX-1lq" firstAttribute="leading" secondItem="Zax-Vu-Tce" secondAttribute="trailing" id="oDF-Kj-ki9"/>
+                        <constraint firstItem="zzQ-yX-1lq" firstAttribute="top" secondItem="mdy-T4-tOi" secondAttribute="bottom" constant="10" id="r9s-af-Cmd"/>
+                        <constraint firstItem="mIa-u6-sAb" firstAttribute="leading" secondItem="KhJ-bR-AAl" secondAttribute="leading" constant="16" id="vJC-I8-oN1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KhJ-bR-AAl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2E0-zc-Ym8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KhJ-bR-AAl" secondAttribute="trailing" id="7fr-FL-QUW"/>
+                <constraint firstAttribute="bottom" secondItem="KhJ-bR-AAl" secondAttribute="bottom" id="L5j-uA-IxB"/>
+                <constraint firstItem="KhJ-bR-AAl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pEI-xj-1fR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="50.381679389312978" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="secondary-container">
+            <color red="1" green="0.94099998474121094" blue="0.79199999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
