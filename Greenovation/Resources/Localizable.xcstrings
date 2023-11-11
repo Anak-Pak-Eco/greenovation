@@ -248,6 +248,7 @@
       }
     },
     "edit" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -693,7 +694,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nutrient Concentration (ppm)"
+            "value" : "Nutrient Solution (ppm)"
           }
         },
         "id" : {

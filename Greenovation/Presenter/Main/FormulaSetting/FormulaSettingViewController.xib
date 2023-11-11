@@ -12,10 +12,14 @@
         <array key="DMSans-Regular.ttf">
             <string>DMSans-Regular</string>
         </array>
+        <array key="DMSans-SemiBold.ttf">
+            <string>DMSans-SemiBold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormulaSettingViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
+                <outlet property="emptyView" destination="p6U-MC-Oml" id="EBr-ul-OLO"/>
                 <outlet property="formulaTableView" destination="DqP-bs-qOF" id="6qZ-05-1jK"/>
                 <outlet property="loadingProgressBar" destination="ckq-bj-cgo" id="rTI-3b-Cs3"/>
                 <outlet property="searchField" destination="gfR-Xc-Ezi" id="8xY-pp-GbI"/>
@@ -35,7 +39,7 @@
                         <constraint firstAttribute="height" constant="45" id="69T-h1-aaY"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Poi-Mm-KPt" userLabel="separator">
                     <rect key="frame" x="0.0" y="112" width="393" height="0.0"/>
@@ -51,10 +55,64 @@
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ckq-bj-cgo">
                     <rect key="frame" x="0.0" y="104" width="393" height="714"/>
                 </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6U-MC-Oml">
+                    <rect key="frame" x="0.0" y="118" width="393" height="700"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WFv-a5-L4B">
+                            <rect key="frame" x="78.333333333333329" y="260" width="236.33333333333337" height="180.33333333333337"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kjj-fS-UPH">
+                                    <rect key="frame" x="80.666666666666671" y="1.6666666666666643" width="75.000000000000014" height="72.333333333333343"/>
+                                    <color key="tintColor" name="primary-accent"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="75" id="6NE-hK-RqO"/>
+                                        <constraint firstAttribute="width" constant="75" id="EMh-Cm-X0e"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7TZ-pK-ypP">
+                                    <rect key="frame" x="0.0" y="90" width="236.33333333333334" height="44.333333333333343"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tidak Ada Tanaman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXi-FG-JU1">
+                                            <rect key="frame" x="38.666666666666671" y="0.0" width="159.33333333333331" height="22.333333333333332"/>
+                                            <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
+                                            <color key="textColor" name="on primary-container"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftarkan tanaman untuk perangkat ini." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtB-I2-i8a">
+                                            <rect key="frame" x="0.0" y="27.333333333333314" width="236.33333333333334" height="17"/>
+                                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="13"/>
+                                            <color key="textColor" name="on surface-low"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi8-eN-A5z">
+                                    <rect key="frame" x="45.333333333333343" y="149.33333333333337" width="145.66666666666666" height="31"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Daftarkan Tanaman">
+                                        <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="13"/>
+                                        <color key="baseForegroundColor" name="on primary-accent"/>
+                                        <color key="baseBackgroundColor" name="primary-accent"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="onAddButtonTapped:" destination="-1" eventType="touchUpInside" id="XGq-rE-tIE"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="surface"/>
+                    <constraints>
+                        <constraint firstItem="WFv-a5-L4B" firstAttribute="centerY" secondItem="p6U-MC-Oml" secondAttribute="centerY" id="np3-ep-fcA"/>
+                        <constraint firstItem="WFv-a5-L4B" firstAttribute="centerX" secondItem="p6U-MC-Oml" secondAttribute="centerX" id="x2o-ds-L09"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="p6U-MC-Oml" secondAttribute="bottom" id="1wV-gY-s7e"/>
+                <constraint firstItem="p6U-MC-Oml" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="33B-bO-Hgq"/>
                 <constraint firstItem="DqP-bs-qOF" firstAttribute="top" secondItem="Poi-Mm-KPt" secondAttribute="bottom" constant="15" id="6Lg-7O-N0x"/>
                 <constraint firstItem="Poi-Mm-KPt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JmQ-dh-c3S"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DqP-bs-qOF" secondAttribute="bottom" id="Jzf-zL-eQh"/>
@@ -66,16 +124,31 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ckq-bj-cgo" secondAttribute="bottom" id="XmE-yi-x05"/>
                 <constraint firstItem="DqP-bs-qOF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bs5-bV-E5k"/>
                 <constraint firstItem="ckq-bj-cgo" firstAttribute="top" secondItem="gfR-Xc-Ezi" secondAttribute="bottom" id="c8v-O9-J1f"/>
+                <constraint firstItem="p6U-MC-Oml" firstAttribute="top" secondItem="gfR-Xc-Ezi" secondAttribute="bottom" constant="14" id="cAg-ed-ac4"/>
                 <constraint firstItem="Poi-Mm-KPt" firstAttribute="top" secondItem="gfR-Xc-Ezi" secondAttribute="bottom" constant="8" id="e0b-2O-vXF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ckq-bj-cgo" secondAttribute="trailing" id="pUO-n6-lbQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p6U-MC-Oml" secondAttribute="trailing" id="rPq-r3-4tc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Poi-Mm-KPt" secondAttribute="trailing" id="skh-Wb-gxc"/>
             </constraints>
             <point key="canvasLocation" x="51" y="20"/>
         </view>
     </objects>
     <resources>
+        <image name="leaf.fill" catalog="system" width="128" height="109"/>
+        <namedColor name="on primary-accent">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="on primary-container">
+            <color red="0.0" green="0.13300000131130219" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="on surface-low">
+            <color red="0.36899998784065247" green="0.37299999594688416" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="outline">
             <color red="0.46700000762939453" green="0.46700000762939453" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="surface">
             <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

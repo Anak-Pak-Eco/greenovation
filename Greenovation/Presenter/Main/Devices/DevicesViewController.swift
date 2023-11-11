@@ -31,15 +31,28 @@ class DevicesViewController: UIViewController {
     private func setupToolbar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         tabBarController?.title = "Perangkat"
-        tabBarController?.navigationItem.setRightBarButton(
-            UIBarButtonItem(
-                image: UIImage(systemName: "plus"),
-                style: .plain,
-                target: self,
-                action: #selector(onAddDeviceClicked(_:))
-            ),
+        tabBarController?.navigationItem.setRightBarButtonItems(
+            [
+                UIBarButtonItem(
+                    image: UIImage(systemName: "person.crop.circle.fill"),
+                    style: .plain,
+                    target: self,
+                    action: #selector(onProfileClicked(_:))
+                ),
+                UIBarButtonItem(
+                    image: UIImage(systemName: "plus"),
+                    style: .plain,
+                    target: self,
+                    action: #selector(onAddDeviceClicked(_:))
+                )
+            ],
             animated: true
         )
+    }
+    
+    @objc private func onProfileClicked(_ sender: UIBarButtonItem) {
+        let viewController = ProfileViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func onAddDeviceClicked(_ sender: UIBarButtonItem) {

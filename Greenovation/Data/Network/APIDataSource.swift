@@ -13,7 +13,7 @@ final class APIDataSource {
     
     static let shared = APIDataSource()
 //    private let baseURL = "https://pak-eco.pat-pet.my.id"
-    private let baseURL = "http://10.60.32.15:8000"
+    private let baseURL = "http://192.168.100.19:8000"
     
     func getNotifications() -> AnyPublisher<[NotificationResponse], AFError> {
         return AF.request(baseURL + APIEndpoint.notifications.rawValue, method: .get)
@@ -50,8 +50,57 @@ final class APIDataSource {
             .eraseToAnyPublisher()
     }
     
+    func savePlant(_ body: PlantBody) -> AnyPublisher<String, AFError> {
+        return AF.request(baseURL + APIEndpoint.plants.rawValue, method: .post, parameters: body, encoder: JSONParameterEncoder.default)
+            .publishString()
+            .value()
+            .map { response in
+                print("Response: \(response)")
+                return response
+            }
+            .mapError { error in
+                return error
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    func updatePlant(id: String, _ body: PlantBody) -> AnyPublisher<String, AFError> {
+        return AF.request(baseURL + APIEndpoint.plants.rawValue + "/\(id)", method: .put, parameters: body, encoder: JSONParameterEncoder.default)
+            .publishString()
+            .value()
+            .map { response in
+                print("Response: \(response)")
+                return response
+            }
+            .mapError { error in
+                return error
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    func deletePlant(id: String) -> AnyPublisher<String, AFError> {
+        return AF.request(baseURL + APIEndpoint.plants.rawValue + "/\(id)", method: .delete)
+            .publishString()
+            .value()
+            .map { response in
+                print("Response: \(response)")
+                return response
+            }
+            .mapError { error in
+                return error
+            }
+            .eraseToAnyPublisher()
+    }
+    
     private enum APIEndpoint: String {
         case notifications = "/notifications"
         case plants = "/plants"
+    }
+}
+
+extension Encodable {
+    func toDict() -> Data {
+        let jsonEncoder = JSONEncoder()
+        return try! jsonEncoder.encode(self)
     }
 }

@@ -12,6 +12,8 @@ class PlantSearchItemCell: UITableViewCell {
     @IBOutlet var cardView: UIView!
     @IBOutlet var plantImage: UIImageView!
     @IBOutlet var plantLabel: UILabel!
+    
+    var didSelectPlant: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,8 +22,17 @@ class PlantSearchItemCell: UITableViewCell {
         cardView.layer.borderWidth = 0.3
         cardView.layer.borderColor = UIColor.secondaryAccent.cgColor
         cardView.clipsToBounds = true
+        cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onSelectedPlant(_:))))
         
         plantImage.layer.cornerRadius = 10
+    }
+    
+    @objc private func onSelectedPlant(_ sender: Any) {
+        didSelectPlant?()
+    }
+    
+    func setup(plant: PlantModel) {
+        plantLabel.text = plant.name
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

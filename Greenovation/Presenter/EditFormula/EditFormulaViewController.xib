@@ -43,7 +43,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis Tanaman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6P-LC-l4F" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="74" width="361" height="20"/>
+                    <rect key="frame" x="16" y="74" width="361" height="19.666666666666671"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atg-S9-qxB">
-                    <rect key="frame" x="0.0" y="99" width="393" height="44"/>
+                    <rect key="frame" x="0.0" y="98.666666666666671" width="393" height="44.000000000000014"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kangkung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggs-qO-SYr">
                             <rect key="frame" x="16" y="11" width="361" height="22"/>
@@ -74,7 +74,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VM-Ms-i84" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="168" width="361" height="20"/>
+                    <rect key="frame" x="16" y="167.66666666666666" width="361" height="19.666666666666657"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
@@ -83,10 +83,10 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMM-gL-LYi">
-                    <rect key="frame" x="0.0" y="193" width="393" height="88"/>
+                    <rect key="frame" x="0.0" y="192.33333333333334" width="393" height="88.000000000000028"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjE-qu-Po5" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="16" y="11" width="200" height="23"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjE-qu-Po5" userLabel="ppm_anakan_label" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="16" y="10.999999999999998" width="200" height="22.333333333333329"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="200" id="kJu-qL-Av6"/>
                             </constraints>
@@ -94,11 +94,11 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="kepekatan-nutrisi"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ppm-level"/>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oon-ip-cKJ" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="16" y="54" width="220" height="23"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oon-ip-cKJ" userLabel="ph_anakan_label" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="16" y="54.666666666666664" width="220" height="22.333333333333336"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="220" id="Hjy-r5-1ee"/>
                             </constraints>
@@ -106,10 +106,10 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="tingkat-ph"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ph-level"/>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eba-87-Olv">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eba-87-Olv" userLabel="form_separator">
                             <rect key="frame" x="301" y="49" width="9" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="9" id="CBs-iS-0J8"/>
@@ -119,17 +119,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="400" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVD-gD-rIn">
-                            <rect key="frame" x="312" y="5" width="65" height="34"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="65" id="18G-1K-tsv"/>
-                                <constraint firstAttribute="height" constant="34" id="YNf-rz-A9T"/>
-                            </constraints>
-                            <color key="textColor" name="primary-accent"/>
-                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="200" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbQ-Ea-0iT">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="200" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbQ-Ea-0iT" userLabel="min_ppm_anakan">
                             <rect key="frame" x="234" y="5" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="65" id="CZp-zd-ZYx"/>
@@ -137,9 +127,19 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1B-sO-JyD">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="400" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVD-gD-rIn" userLabel="max_ppm_anakan">
+                            <rect key="frame" x="312" y="5" width="65" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="65" id="18G-1K-tsv"/>
+                                <constraint firstAttribute="height" constant="34" id="YNf-rz-A9T"/>
+                            </constraints>
+                            <color key="textColor" name="primary-accent"/>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1B-sO-JyD" userLabel="min_ph_anakan">
                             <rect key="frame" x="234" y="49" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="af8-TU-NLv"/>
@@ -147,9 +147,9 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="join"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFd-An-boT">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFd-An-boT" userLabel="max_ph_anakan">
                             <rect key="frame" x="312" y="49" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="Nhf-4D-VQy"/>
@@ -157,9 +157,9 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="join"/>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9Y-Vu-b61">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9Y-Vu-b61" userLabel="form_separator">
                             <rect key="frame" x="301" y="5" width="9" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="6fs-oM-GCu"/>
@@ -192,7 +192,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Vegetatif Awal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDp-TO-MMR" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="306" width="361" height="20"/>
+                    <rect key="frame" x="16" y="305.33333333333331" width="361" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="WQd-xf-bnK"/>
                     </constraints>
@@ -204,24 +204,24 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yuh-1n-q5w">
-                    <rect key="frame" x="0.0" y="331" width="393" height="88"/>
+                    <rect key="frame" x="0.0" y="330.33333333333331" width="393" height="88"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqr-Wz-XHI" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="16" y="11" width="192" height="23"/>
+                            <rect key="frame" x="16" y="10.999999999999998" width="192" height="22.333333333333329"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="kepekatan-nutrisi"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ppm-level"/>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbc-gT-EWJ" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="16" y="54" width="84" height="23"/>
+                            <rect key="frame" x="16" y="54.666666666666693" width="84" height="22.333333333333336"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="tingkat-ph"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ph-level"/>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyT-GX-MtO">
@@ -242,7 +242,7 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="750" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-iO-AYU">
                             <rect key="frame" x="234" y="5" width="65" height="34"/>
@@ -252,7 +252,7 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="850" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-W2-wRN">
                             <rect key="frame" x="312" y="5" width="65" height="34"/>
@@ -262,7 +262,7 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDG-Z0-FkQ">
                             <rect key="frame" x="312" y="49" width="65" height="34"/>
@@ -272,7 +272,7 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyn-47-tJj">
                             <rect key="frame" x="301" y="49" width="9" height="34"/>
@@ -307,7 +307,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Vegetatif Menengah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rh-9W-8wm" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="444" width="361" height="20"/>
+                    <rect key="frame" x="16" y="443.33333333333331" width="361" height="19.666666666666686"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
@@ -316,10 +316,10 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvu-0V-E0P">
-                    <rect key="frame" x="0.0" y="469" width="393" height="88"/>
+                    <rect key="frame" x="0.0" y="468" width="393" height="88"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8j-J5-1Ib" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="16" y="11" width="192" height="23"/>
+                            <rect key="frame" x="16" y="10.999999999999998" width="192" height="22.333333333333329"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -328,7 +328,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbh-ER-wte" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="16" y="54" width="84" height="23"/>
+                            <rect key="frame" x="16" y="54.666666666666636" width="84" height="22.333333333333336"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -344,7 +344,7 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1050" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePd-t3-wAz">
                             <rect key="frame" x="234" y="5" width="65" height="34"/>
@@ -354,7 +354,7 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcV-hg-85T">
                             <rect key="frame" x="301" y="5" width="9" height="34"/>
@@ -384,7 +384,7 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gD2-8q-oty">
                             <rect key="frame" x="234" y="49" width="65" height="34"/>
@@ -394,7 +394,7 @@
                             </constraints>
                             <color key="textColor" name="primary-accent"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -437,6 +437,9 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="hapus-pengaturan"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="deleteButtonTapped" destination="-1" eventType="touchUpInside" id="DHM-xo-PCW"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

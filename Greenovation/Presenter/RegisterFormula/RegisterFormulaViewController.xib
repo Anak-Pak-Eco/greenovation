@@ -45,7 +45,7 @@
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="jenis-tanaman"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="plant-type"/>
                     </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGu-bm-h4z" userLabel="Jenis Tanaman">
@@ -109,7 +109,7 @@
                                 <constraint firstAttribute="width" constant="65" id="WRN-i5-iPg"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-Vh-nMn">
                             <rect key="frame" x="312" y="49" width="65" height="34"/>
@@ -117,7 +117,15 @@
                                 <constraint firstAttribute="width" constant="65" id="gvM-7U-ilL"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acf-Le-1Uq">
+                            <rect key="frame" x="234" y="49" width="65" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="65" id="RKK-IW-iZT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ftX-fr-trn">
                             <rect key="frame" x="312" y="5" width="65" height="34"/>
@@ -125,7 +133,7 @@
                                 <constraint firstAttribute="width" constant="65" id="AzW-zZ-wxM"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysP-V9-0YH">
                             <rect key="frame" x="301" y="11" width="9" height="21"/>
@@ -145,14 +153,6 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acf-Le-1Uq">
-                            <rect key="frame" x="234" y="49" width="65" height="34"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="65" id="RKK-IW-iZT"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -184,7 +184,7 @@ Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Vegetatif Awal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYc-lD-RS3" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="344.66666666666669" width="361" height="20"/>
+                    <rect key="frame" x="16" y="344.66666666666669" width="361" height="19.666666666666686"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
@@ -193,7 +193,7 @@ Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
                     </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpg-3j-A3j" userLabel="Fase Vegetatif Awal">
-                    <rect key="frame" x="0.0" y="369.66666666666669" width="393" height="88"/>
+                    <rect key="frame" x="0.0" y="369.33333333333331" width="393" height="88"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhT-MW-yvo" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
                             <rect key="frame" x="16" y="10.999999999999998" width="200" height="22.333333333333329"/>
@@ -208,7 +208,7 @@ Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSf-MZ-7rV" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                            <rect key="frame" x="16" y="52.666666666666629" width="84" height="22.333333333333329"/>
+                            <rect key="frame" x="16" y="52.666666666666686" width="84" height="22.333333333333329"/>
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -222,7 +222,7 @@ Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
                                 <constraint firstAttribute="width" constant="65" id="ZPI-HU-u5F"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yEE-GA-1vn">
                             <rect key="frame" x="312" y="5" width="65" height="34"/>
@@ -230,7 +230,23 @@ Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
                                 <constraint firstAttribute="width" constant="65" id="atp-lU-f0i"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQi-V5-b6G">
+                            <rect key="frame" x="235.33333333333337" y="49" width="65" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="65" id="1vy-47-OrC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxe-Ul-r9e">
+                            <rect key="frame" x="312" y="49" width="65" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="65" id="hax-3Q-CSM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJ8-aJ-qTE">
                             <rect key="frame" x="301" y="11" width="9" height="21"/>
@@ -247,22 +263,6 @@ Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQi-V5-b6G">
-                            <rect key="frame" x="235.33333333333337" y="49" width="65" height="34"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="65" id="1vy-47-OrC"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxe-Ul-r9e">
-                            <rect key="frame" x="312" y="49" width="65" height="34"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="65" id="hax-3Q-CSM"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -286,7 +286,7 @@ Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-gv-zmK">
-                    <rect key="frame" x="16" y="462.66666666666669" width="357" height="31.333333333333314"/>
+                    <rect key="frame" x="16" y="462.33333333333331" width="357" height="31.333333333333314"/>
                     <string key="text">Rekomendari dari Greenovation:
 Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="12"/>
@@ -294,7 +294,7 @@ Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Vegetatif Menengah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW7-tS-dIV" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="519" width="361" height="20"/>
+                    <rect key="frame" x="16" y="518.66666666666663" width="361" height="19.666666666666629"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
@@ -303,7 +303,7 @@ Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                     </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-dY-3n1" userLabel="Fase Vegetatif Menengah">
-                    <rect key="frame" x="0.0" y="544" width="393" height="88"/>
+                    <rect key="frame" x="0.0" y="543.33333333333337" width="393" height="88"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ui-zj-yAa" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
                             <rect key="frame" x="16" y="10.999999999999998" width="200" height="22.333333333333329"/>
@@ -335,7 +335,7 @@ Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                                 <constraint firstAttribute="width" constant="65" id="Ac9-Zp-jo8"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aiX-RU-I9x">
                             <rect key="frame" x="312" y="5" width="65" height="34"/>
@@ -343,7 +343,7 @@ Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                                 <constraint firstAttribute="width" constant="65" id="oJx-O4-aW1"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZe-7n-lAn">
                             <rect key="frame" x="301" y="11" width="9" height="21"/>
@@ -369,7 +369,7 @@ Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                                 <constraint firstAttribute="width" constant="65" id="LCj-vY-ZUW"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WmK-lw-0Hj">
                             <rect key="frame" x="312" y="49" width="65" height="34"/>
@@ -377,7 +377,7 @@ Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                                 <constraint firstAttribute="width" constant="65" id="PJ0-Bu-tun"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -402,7 +402,7 @@ Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSh-nu-TcH">
-                    <rect key="frame" x="16" y="637" width="357" height="31.333333333333371"/>
+                    <rect key="frame" x="16" y="636.33333333333337" width="357" height="31.333333333333371"/>
                     <string key="text">Rekomendari dari Greenovation:
 Kepekatan Nutrisi: 1050-1400 &amp; Tingkat pH: 5,5-6,5</string>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="12"/>
@@ -410,13 +410,16 @@ Kepekatan Nutrisi: 1050-1400 &amp; Tingkat pH: 5,5-6,5</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN8-Ta-qf8" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="711.33333333333337" width="361" height="40"/>
+                    <rect key="frame" x="16" y="710.66666666666663" width="361" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="GXo-G3-coX"/>
                     </constraints>
                     <color key="tintColor" name="primary-accent"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Simpan"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Simpan">
+                        <backgroundConfiguration key="background" cornerRadius="10"/>
+                        <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
+                    </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="simpan"/>
                     </userDefinedRuntimeAttributes>

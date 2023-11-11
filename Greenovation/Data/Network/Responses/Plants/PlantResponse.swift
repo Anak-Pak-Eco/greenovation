@@ -13,4 +13,12 @@ struct PlantResponse: Codable {
     let users_id: String?
     let phases: [PlantPhaseResponse]?
     let name: String?
+    
+    struct PlantPhaseResponse: Codable {
+        let max_ppm: Double?
+        let min_ppm: Double?
+        let max_ph: Double?
+        let min_ph: Double?
+        let step: String?
+    }
 }

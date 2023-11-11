@@ -21,10 +21,10 @@ class MainViewController: UITabBarController {
         return viewController
     }()
     
-    lazy var profileViewController: UIViewController = {
-        let viewController = ProfileViewController()
-        return viewController
-    }()
+//    lazy var profileViewController: UIViewController = {
+//        let viewController = ProfileViewController()
+//        return viewController
+//    }()
     
     lazy var formulaSettingViewController: UIViewController = {
         let viewController = FormulaSettingViewController()
@@ -52,17 +52,16 @@ class MainViewController: UITabBarController {
             tag: 2
         )
         
-        profileViewController.tabBarItem = UITabBarItem(
-            title: String(localized: "profile"),
-            image: UIImage(systemName: "person.crop.circle.fill"),
-            tag: 3
-        )
+//        profileViewController.tabBarItem = UITabBarItem(
+//            title: String(localized: "profile"),
+//            image: UIImage(systemName: "person.crop.circle.fill"),
+//            tag: 3
+//        )
         
         viewControllers = [
             deviceViewController,
             notificationViewController,
-            formulaSettingViewController,
-            profileViewController
+            formulaSettingViewController
         ]
     }
 }

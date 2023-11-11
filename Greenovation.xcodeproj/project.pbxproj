@@ -32,8 +32,6 @@
 		A73E1EA22AFCEF0F008053A9 /* EditDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1EA02AFCEF0F008053A9 /* EditDeviceViewController.xib */; };
 		A73E1EA82AFDF6CE008053A9 /* EditFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E1EA62AFDF6CE008053A9 /* EditFormulaViewController.swift */; };
 		A73E1EA92AFDF6CE008053A9 /* EditFormulaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1EA72AFDF6CE008053A9 /* EditFormulaViewController.xib */; };
-		A73E1EAC2AFDF705008053A9 /* DetailFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E1EAA2AFDF705008053A9 /* DetailFormulaViewController.swift */; };
-		A73E1EAD2AFDF705008053A9 /* DetailFormulaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1EAB2AFDF705008053A9 /* DetailFormulaViewController.xib */; };
 		A756C1C92AF8DFDE004E58A0 /* FormulaSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1C72AF8DFDE004E58A0 /* FormulaSettingViewController.swift */; };
 		A756C1CA2AF8DFDE004E58A0 /* FormulaSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1C82AF8DFDE004E58A0 /* FormulaSettingViewController.xib */; };
 		A756C1CE2AF8F29F004E58A0 /* FormulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1CC2AF8F29F004E58A0 /* FormulaTableViewCell.swift */; };
@@ -88,9 +86,7 @@
 		D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64547082AEA96FE0077DA04 /* SignInViewController.xib */; };
 		D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646B4552AE902CA00BE78EC /* DevicesViewModel.swift */; };
 		D65C58832AE26D2F00FE8D1E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C58822AE26D2F00FE8D1E /* String+Extension.swift */; };
-		D67771212AFCCE2700EC8956 /* PlantPhaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771202AFCCE2700EC8956 /* PlantPhaseResponse.swift */; };
 		D67771232AFCCFB800EC8956 /* PlantResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771222AFCCFB800EC8956 /* PlantResponse.swift */; };
-		D67771262AFCD09700EC8956 /* PlantPhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771252AFCD09700EC8956 /* PlantPhaseModel.swift */; };
 		D67771282AFCD0E300EC8956 /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771272AFCD0E300EC8956 /* PlantModel.swift */; };
 		D677712B2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677712A2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift */; };
 		D677712D2AFCD8D700EC8956 /* PlantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677712C2AFCD8D700EC8956 /* PlantRepository.swift */; };
@@ -150,6 +146,9 @@
 		D6EBCEAF2AFE2D6800EF5C51 /* AddFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBCEAD2AFE2D6800EF5C51 /* AddFormulaViewController.swift */; };
 		D6EBCEB02AFE2D6800EF5C51 /* AddFormulaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6EBCEAE2AFE2D6800EF5C51 /* AddFormulaViewController.xib */; };
 		D6EBCEB22AFE318000EF5C51 /* AddFormulaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBCEB12AFE318000EF5C51 /* AddFormulaViewModel.swift */; };
+		D6EBCEB92AFF083800EF5C51 /* PlantBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBCEB82AFF083800EF5C51 /* PlantBody.swift */; };
+		D6EBCEBB2AFF0B9100EF5C51 /* RegisterFormulaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBCEBA2AFF0B9100EF5C51 /* RegisterFormulaViewModel.swift */; };
+		D6EBCEBE2AFF541300EF5C51 /* EditFormulaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBCEBD2AFF541300EF5C51 /* EditFormulaViewModel.swift */; };
 		D6F463942AF38CE600814C7D /* AlertLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F463932AF38CE600814C7D /* AlertLargeView.swift */; };
 		D6F463962AF38CFF00814C7D /* AlertLargeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F463952AF38CFF00814C7D /* AlertLargeView.xib */; };
 /* End PBXBuildFile section */
@@ -197,8 +196,6 @@
 		A73E1EA02AFCEF0F008053A9 /* EditDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDeviceViewController.xib; sourceTree = "<group>"; };
 		A73E1EA62AFDF6CE008053A9 /* EditFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFormulaViewController.swift; sourceTree = "<group>"; };
 		A73E1EA72AFDF6CE008053A9 /* EditFormulaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditFormulaViewController.xib; sourceTree = "<group>"; };
-		A73E1EAA2AFDF705008053A9 /* DetailFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFormulaViewController.swift; sourceTree = "<group>"; };
-		A73E1EAB2AFDF705008053A9 /* DetailFormulaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailFormulaViewController.xib; sourceTree = "<group>"; };
 		A756C1C72AF8DFDE004E58A0 /* FormulaSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaSettingViewController.swift; sourceTree = "<group>"; };
 		A756C1C82AF8DFDE004E58A0 /* FormulaSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormulaSettingViewController.xib; sourceTree = "<group>"; };
 		A756C1CC2AF8F29F004E58A0 /* FormulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTableViewCell.swift; sourceTree = "<group>"; };
@@ -253,9 +250,7 @@
 		D64547082AEA96FE0077DA04 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		D646B4552AE902CA00BE78EC /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
 		D65C58822AE26D2F00FE8D1E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		D67771202AFCCE2700EC8956 /* PlantPhaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantPhaseResponse.swift; sourceTree = "<group>"; };
 		D67771222AFCCFB800EC8956 /* PlantResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantResponse.swift; sourceTree = "<group>"; };
-		D67771252AFCD09700EC8956 /* PlantPhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantPhaseModel.swift; sourceTree = "<group>"; };
 		D67771272AFCD0E300EC8956 /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
 		D677712A2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRepositoryProtocol.swift; sourceTree = "<group>"; };
 		D677712C2AFCD8D700EC8956 /* PlantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRepository.swift; sourceTree = "<group>"; };
@@ -320,6 +315,9 @@
 		D6EBCEAD2AFE2D6800EF5C51 /* AddFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormulaViewController.swift; sourceTree = "<group>"; };
 		D6EBCEAE2AFE2D6800EF5C51 /* AddFormulaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFormulaViewController.xib; sourceTree = "<group>"; };
 		D6EBCEB12AFE318000EF5C51 /* AddFormulaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormulaViewModel.swift; sourceTree = "<group>"; };
+		D6EBCEB82AFF083800EF5C51 /* PlantBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantBody.swift; sourceTree = "<group>"; };
+		D6EBCEBA2AFF0B9100EF5C51 /* RegisterFormulaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormulaViewModel.swift; sourceTree = "<group>"; };
+		D6EBCEBD2AFF541300EF5C51 /* EditFormulaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFormulaViewModel.swift; sourceTree = "<group>"; };
 		D6F463932AF38CE600814C7D /* AlertLargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLargeView.swift; sourceTree = "<group>"; };
 		D6F463952AF38CFF00814C7D /* AlertLargeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertLargeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -404,6 +402,7 @@
 			children = (
 				A72C07002AFA266F005395DB /* RegisterFormulaViewController.swift */,
 				A72C07012AFA266F005395DB /* RegisterFormulaViewController.xib */,
+				D6EBCEBA2AFF0B9100EF5C51 /* RegisterFormulaViewModel.swift */,
 			);
 			path = RegisterFormula;
 			sourceTree = "<group>";
@@ -448,28 +447,11 @@
 		A73E1EA32AFDF678008053A9 /* EditFormula */ = {
 			isa = PBXGroup;
 			children = (
-				A73E1EA52AFDF69C008053A9 /* DetailFormula */,
-				A73E1EA42AFDF685008053A9 /* EditFormula */,
-			);
-			path = EditFormula;
-			sourceTree = "<group>";
-		};
-		A73E1EA42AFDF685008053A9 /* EditFormula */ = {
-			isa = PBXGroup;
-			children = (
 				A73E1EA62AFDF6CE008053A9 /* EditFormulaViewController.swift */,
 				A73E1EA72AFDF6CE008053A9 /* EditFormulaViewController.xib */,
+				D6EBCEBD2AFF541300EF5C51 /* EditFormulaViewModel.swift */,
 			);
 			path = EditFormula;
-			sourceTree = "<group>";
-		};
-		A73E1EA52AFDF69C008053A9 /* DetailFormula */ = {
-			isa = PBXGroup;
-			children = (
-				A73E1EAA2AFDF705008053A9 /* DetailFormulaViewController.swift */,
-				A73E1EAB2AFDF705008053A9 /* DetailFormulaViewController.xib */,
-			);
-			path = DetailFormula;
 			sourceTree = "<group>";
 		};
 		A756C1CB2AF8F270004E58A0 /* Components */ = {
@@ -759,8 +741,8 @@
 		D677711F2AFCCD0100EC8956 /* Plants */ = {
 			isa = PBXGroup;
 			children = (
-				D67771202AFCCE2700EC8956 /* PlantPhaseResponse.swift */,
 				D67771222AFCCFB800EC8956 /* PlantResponse.swift */,
+				D6EBCEB82AFF083800EF5C51 /* PlantBody.swift */,
 			);
 			path = Plants;
 			sourceTree = "<group>";
@@ -768,7 +750,6 @@
 		D67771242AFCD08C00EC8956 /* Plant */ = {
 			isa = PBXGroup;
 			children = (
-				D67771252AFCD09700EC8956 /* PlantPhaseModel.swift */,
 				D67771272AFCD0E300EC8956 /* PlantModel.swift */,
 			);
 			path = Plant;
@@ -874,7 +855,6 @@
 		D6AC85702ACFF4860033B665 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D68D4E7A2AF5FA3300F61B1E /* Profile */,
 				D681D56F2AE68CB3005A0BAC /* Devices */,
 				D6AC857B2ACFFD0C0033B665 /* FormulaSetting */,
 				D6AC857A2ACFFD060033B665 /* Notification */,
@@ -981,15 +961,16 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A72C071E2AFA448C005395DB /* AddDevice */,
+				A73E1E9A2AFCEEBF008053A9 /* EditDevice */,
 				A756C1D02AFA10F7004E58A0 /* AddFormula */,
 				A73E1EA32AFDF678008053A9 /* EditFormula */,
-				A73E1E9A2AFCEEBF008053A9 /* EditDevice */,
-				A72C071E2AFA448C005395DB /* AddDevice */,
 				A72C06FF2AFA2660005395DB /* RegisterFormula */,
 				D6917A2F2AEAB4E400CD7F5C /* SignUp */,
 				D6BB280D2AEA81250084FD00 /* SignIn */,
 				D60892272AEA75EE00A1C530 /* Onboarding */,
 				D6AC85862AD013B80033B665 /* DetailDevice */,
+				D68D4E7A2AF5FA3300F61B1E /* Profile */,
 				D6AC85702ACFF4860033B665 /* Main */,
 			);
 			path = Presenter;
@@ -1144,7 +1125,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A73E1EAD2AFDF705008053A9 /* DetailFormulaViewController.xib in Resources */,
 				D69D172F2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib in Resources */,
 				D630F5092AD8112A00A355D0 /* DMSans-Regular.ttf in Resources */,
 				D6D010312AC6C60900EC51FB /* LaunchScreen.storyboard in Resources */,
@@ -1251,12 +1231,11 @@
 				D6DFD64E2AE7DEE200215428 /* View+Extension.swift in Sources */,
 				D6CF2CC62AF4CB7700BC6225 /* SignUpViewModel.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
-				D67771262AFCD09700EC8956 /* PlantPhaseModel.swift in Sources */,
 				A77F03162AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift in Sources */,
 				D602259E2AEFB0D700F3800F /* CustomFieldView.swift in Sources */,
 				D60225A22AEFB0D700F3800F /* CustomChooseFormulationView.swift in Sources */,
-				D67771212AFCCE2700EC8956 /* PlantPhaseResponse.swift in Sources */,
 				D60225A12AEFB0D700F3800F /* CustomMyChoiceView.swift in Sources */,
+				D6EBCEB92AFF083800EF5C51 /* PlantBody.swift in Sources */,
 				D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */,
 				A756C1C92AF8DFDE004E58A0 /* FormulaSettingViewController.swift in Sources */,
 				D6EBCEAF2AFE2D6800EF5C51 /* AddFormulaViewController.swift in Sources */,
@@ -1268,7 +1247,6 @@
 				D68D4E8C2AF6B88100F61B1E /* AuthenticationRepository.swift in Sources */,
 				D68D4E782AF5F7F400F61B1E /* CustomLoadingCell.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
-				A73E1EAC2AFDF705008053A9 /* DetailFormulaViewController.swift in Sources */,
 				D6CF2CCA2AF4E01800BC6225 /* SignInViewModel.swift in Sources */,
 				D6BD3B792AD123C4005B85C3 /* DeviceModel.swift in Sources */,
 				D614AA4E2AF4043100B5BED7 /* CustomMyChoiceView.swift in Sources */,
@@ -1281,6 +1259,7 @@
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,
 				D6A8ABBD2AEEADD800D6466B /* APIDataSource.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
+				D6EBCEBB2AFF0B9100EF5C51 /* RegisterFormulaViewModel.swift in Sources */,
 				D6917A322AEAB4F800CD7F5C /* SignUpViewController.swift in Sources */,
 				D69D172E2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift in Sources */,
 				D69D17252AEED5A100A5347C /* DetailDeviceViewController.swift in Sources */,
@@ -1298,6 +1277,7 @@
 				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
 				D67771282AFCD0E300EC8956 /* PlantModel.swift in Sources */,
+				D6EBCEBE2AFF541300EF5C51 /* EditFormulaViewModel.swift in Sources */,
 				A72C07292AFA4915005395DB /* AddDeviceV2ViewController.swift in Sources */,
 				D6239CD42AF22C940097E8D1 /* AlertView.swift in Sources */,
 				A72C07022AFA266F005395DB /* RegisterFormulaViewController.swift in Sources */,

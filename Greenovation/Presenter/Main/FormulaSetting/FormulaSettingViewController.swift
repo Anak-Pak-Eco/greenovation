@@ -13,13 +13,27 @@ class FormulaSettingViewController: UIViewController {
     @IBOutlet weak var loadingProgressBar: UIActivityIndicatorView!
     @IBOutlet var formulaTableView: UITableView!
     @IBOutlet var searchField: UITextField!
-    private let viewModel: FormulaSettingViewModel = FormulaSettingViewModel()
+    @IBOutlet weak var emptyView: UIView!
+    
+    private let viewModel = FormulaSettingViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+        setupObserver()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupToolbar()
+        viewModel.getData()
+    }
+    
+    private func setupObserver() {
         viewModel.successGetPlants.bind { [unowned self] isSuccess in
             if isSuccess {
                 formulaTableView.reloadData()
+                emptyView.isHidden = !viewModel.searchedPlants.isEmpty
             }
         }
         
@@ -47,17 +61,12 @@ class FormulaSettingViewController: UIViewController {
                 self.present(alertController, animated: true)
             }
         }
-        
-        setupUI()
-        viewModel.getData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupToolbar()
     }
     
     private func setupUI() {
+        // MARK: Empty View
+        emptyView.isHidden = true
+        
         // MARK: Separator
         separator.heightAnchor.constraint(equalToConstant: 0.3).isActive = true
         
@@ -107,11 +116,6 @@ class FormulaSettingViewController: UIViewController {
         )
     }
     
-    @objc private func onSearchButtonClicked(_ sender: Any) {
-        viewModel.searchData(query: searchField.text ?? "")
-        searchField.endEditing(true)
-    }
-    
     private func setupToolbar() {
         tabBarController?.title = String(localized: "plant-formula")  
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -120,13 +124,18 @@ class FormulaSettingViewController: UIViewController {
                 image: UIImage(systemName: "plus"),
                 style: .plain,
                 target: self,
-                action: #selector(addButtonTapped)
+                action: #selector(onAddButtonTapped(_:))
             ),
             animated: true
         )
     }
     
-    @objc func addButtonTapped() {
+    @objc private func onSearchButtonClicked(_ sender: Any) {
+        viewModel.searchData(query: searchField.text ?? "")
+        searchField.endEditing(true)
+    }
+    
+    @IBAction func onAddButtonTapped(_ sender: Any) {
         let vc = AddFormulaViewController()
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
@@ -152,8 +161,9 @@ extension FormulaSettingViewController: UITableViewDataSource, UITableViewDelega
             for: indexPath
         ) as! FormulaTableViewCell
         
-        let isLast = indexPath.row == (viewModel.plants.count - 1)
-        let plant = viewModel.searchedPlants[indexPath.row]
+        let plants = viewModel.searchedPlants
+        let isLast = indexPath.row == (plants.count - 1)
+        let plant = plants[indexPath.row]
         
         cell.setupData(plant, isLast: isLast)
 
@@ -161,7 +171,8 @@ extension FormulaSettingViewController: UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = EditFormulaViewController()
+        let plant = viewModel.searchedPlants[indexPath.row]
+        let vc = EditFormulaViewController(plant: plant)
         navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }

@@ -20,4 +20,22 @@ final class PlantRepository: PlantRepositoryProtocol {
             .mapError { $0 }
             .eraseToAnyPublisher()
     }
+    
+    func savePlant(body: PlantBody) -> AnyPublisher<String, Error> {
+        return dataSource.savePlant(body)
+            .mapError { $0 }
+            .eraseToAnyPublisher()
+    }
+    
+    func updatePlant(id: String, body: PlantBody) -> AnyPublisher<String, Error> {
+        return dataSource.updatePlant(id: id, body)
+            .mapError { $0 }
+            .eraseToAnyPublisher()
+    }
+    
+    func deletePlant(id: String) -> AnyPublisher<String, Error> {
+        return dataSource.deletePlant(id: id)
+            .mapError { $0 }
+            .eraseToAnyPublisher()
+    }
 }

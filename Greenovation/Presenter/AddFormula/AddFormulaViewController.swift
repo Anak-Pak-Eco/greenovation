@@ -157,7 +157,15 @@ extension AddFormulaViewController: UITableViewDelegate, UITableViewDataSource {
             ) as! EmptyPlantItemCell
             
             cell.didClickAddButton = { [unowned self] in
-                let viewController = RegisterFormulaViewController()
+                let viewController = RegisterFormulaViewController(
+                    plant: PlantModel(
+                        id: "",
+                        image_url: "",
+                        users_id: "",
+                        phases: [],
+                        name: searchTextField.text ?? ""
+                    )
+                )
                 navigationController?.pushViewController(viewController, animated: true)
             }
             
@@ -167,6 +175,16 @@ extension AddFormulaViewController: UITableViewDelegate, UITableViewDataSource {
                 withIdentifier: "PlantSearchItemCell",
                 for: indexPath
             ) as! PlantSearchItemCell
+            
+            let plant = viewModel.searchedPlants[indexPath.row]
+            
+            cell.setup(plant: plant)
+            cell.didSelectPlant = { [unowned self] in
+                let viewController = RegisterFormulaViewController(
+                    plant: plant
+                )
+                navigationController?.pushViewController(viewController, animated: true)
+            }
             
             return cell
         }

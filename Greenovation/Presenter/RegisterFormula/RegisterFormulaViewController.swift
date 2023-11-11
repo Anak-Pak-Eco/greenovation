@@ -9,6 +9,8 @@ import UIKit
 
 class RegisterFormulaViewController: UIViewController {
     
+    private let viewModel: RegisterFormulaViewModel
+    
     @IBOutlet var plantName: UILabel!
     @IBOutlet var faseAnakan_ppmMin: UITextField!
     @IBOutlet var faseAnakan_ppmMax: UITextField!
@@ -24,15 +26,53 @@ class RegisterFormulaViewController: UIViewController {
     @IBOutlet var faseVegetatifMenengah_phMax: UITextField!
     @IBOutlet var saveButton: LocalizableButton!
     
+    let plant: PlantModel
+    
+    init(plant: PlantModel) {
+        self.plant = plant
+        self.viewModel = RegisterFormulaViewModel(plant: plant)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required convenience init?(coder: NSCoder) {
+        self.init(plant: PlantModel(id: "", image_url: "", users_id: "", phases: [], name: ""))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewModel.successSaveFormula.bind { [unowned self] success in
+            if success {
+                navigationController?.popToRootViewController(animated: true)
+            }
+        }
+        viewModel.loadingSaveFormula.bind { [unowned self] isLoading in
+            saveButton.isEnabled = !isLoading
+        }
+        viewModel.errorSaveFormula.bind { [unowned self] error in
+            if !error.isEmpty {
+                let alertController = UIAlertController(
+                    title: "Login Gagal",
+                    message: error,
+                    preferredStyle: .alert
+                )
+                alertController.addAction(
+                    .init(
+                        title: "OK",
+                        style: .destructive,
+                        handler: { action in
+                            alertController.dismiss(animated: true)
+                        }
+                    )
+                )
+                self.present(alertController, animated: true)
+            }
+        }
         setupToolbar()
-        style()
+        setupUI()
     }
     
     private func setupToolbar() {
-        self.title = String(localized: "tambah-formula")
+        title = String(localized: "tambah-formula")
         
         let backButton = UIBarButtonItem(
             image: UIImage(systemName: "chevron.left"),
@@ -47,7 +87,9 @@ class RegisterFormulaViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    private func style() {
+    private func setupUI() {
+        plantName.text = viewModel.plant.name
+        
         // Fase Anakan ppm Min
         faseAnakan_ppmMin.layer.cornerRadius = 6
         faseAnakan_ppmMin.layer.borderWidth = 1.0
@@ -123,11 +165,56 @@ class RegisterFormulaViewController: UIViewController {
         // Save Button
         saveButton.layer.borderWidth = 1.0
         saveButton.layer.borderColor = UIColor.primaryAccent.cgColor
-        saveButton.layer.cornerRadius = 10.0
+        saveButton.layer.cornerRadius = 10
         saveButton.clipsToBounds = true
     }
     
     @IBAction func saveButtonClicked(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        let anakanMinPpm = faseAnakan_ppmMin.text ?? ""
+        let anakanMaxPpm = faseAnakan_ppmMax.text ?? ""
+        let anakanMinPh = faseAnakan_phMin.text ?? ""
+        let anakanMaxPh = faseAnakan_phMax.text ?? ""
+        let vegetatifAwalMaxPpm = faseVegetatifAwal_ppmMax.text ?? ""
+        let vegetatifAwalMinPpm = faseVegetatifAwal_ppmMin.text ?? ""
+        let vegetatifAwalMaxPh = faseVegetatifAwal_phMax.text ?? ""
+        let vegetatifAwalMinPh = faseVegetatifAwal_phMin.text ?? ""
+        let vegetatifMenengahMaxPpm = faseVegetatifMenengah_ppmMax.text ?? ""
+        let vegetatifMenengahMinPpm = faseVegetatifMenengah_ppmMin.text ?? ""
+        let vegetatifMenengahMaxPh = faseVegetatifMenengah_phMax.text ?? ""
+        let vegetatifMenengahMinPh = faseVegetatifMenengah_phMin.text ?? ""
+        
+        if anakanMinPh.isEmpty || anakanMaxPh.isEmpty || anakanMinPpm.isEmpty || anakanMaxPpm.isEmpty || vegetatifAwalMinPpm.isEmpty || vegetatifAwalMaxPpm.isEmpty || vegetatifAwalMinPh.isEmpty || vegetatifAwalMaxPh.isEmpty || vegetatifMenengahMinPh.isEmpty || vegetatifMenengahMaxPh.isEmpty || vegetatifMenengahMinPpm.isEmpty || vegetatifMenengahMaxPpm.isEmpty {
+            
+            let alertController = UIAlertController(
+                title: "Gagal Menambah Tanaman",
+                message: "Isi semua data dengan benar",
+                preferredStyle: .alert
+            )
+            alertController.addAction(
+                .init(
+                    title: "OK",
+                    style: .destructive,
+                    handler: { action in
+                        alertController.dismiss(animated: true)
+                    }
+                )
+            )
+            self.present(alertController, animated: true)
+        } else {
+            viewModel.saveFormula(
+                anakanMinPh: anakanMinPh,
+                anakanMaxPh: anakanMaxPh,
+                anakanMinPpm: anakanMinPpm,
+                anakanMaxPpm: anakanMaxPpm,
+                vegetatifAwalMinPh: vegetatifAwalMinPh,
+                vegetatifAwalMaxPh: vegetatifAwalMaxPh,
+                vegetatifAwalMinPpm: vegetatifAwalMinPpm,
+                vegetatifAwalMaxPpm: vegetatifAwalMaxPpm,
+                vegetatifMenengahMinPh: vegetatifMenengahMinPh,
+                vegetatifMenengahMaxPh: vegetatifMenengahMaxPh,
+                vegetatifMenengahMinPpm: vegetatifMenengahMinPpm,
+                vegetatifMenengahMaxPpm: vegetatifMenengahMaxPpm
+            )
+        }
     }
 }
