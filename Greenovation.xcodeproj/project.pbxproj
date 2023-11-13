@@ -95,6 +95,14 @@
 		D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D681D5712AE68CD3005A0BAC /* DevicesViewController.xib */; };
 		D681D5772AE68D0E005A0BAC /* DevicesItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681D5752AE68D0E005A0BAC /* DevicesItemTableViewCell.swift */; };
 		D681D5782AE68D0E005A0BAC /* DevicesItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D681D5762AE68D0E005A0BAC /* DevicesItemTableViewCell.xib */; };
+		D68A034B2B00657F00CB4666 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A034A2B00657F00CB4666 /* ProfileViewModel.swift */; };
+		D68A034F2B00736700CB4666 /* PairingInstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A034D2B00736700CB4666 /* PairingInstructionViewController.swift */; };
+		D68A03502B00736700CB4666 /* PairingInstructionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68A034E2B00736700CB4666 /* PairingInstructionViewController.xib */; };
+		D68A03562B00790700CB4666 /* BluetoothPairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A03542B00790700CB4666 /* BluetoothPairingViewController.swift */; };
+		D68A03572B00790700CB4666 /* BluetoothPairingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68A03552B00790700CB4666 /* BluetoothPairingViewController.xib */; };
+		D68A03592B007D4400CB4666 /* BluetoothPairingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A03582B007D4400CB4666 /* BluetoothPairingViewModel.swift */; };
+		D68A035D2B00823900CB4666 /* PeripheralItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A035B2B00823900CB4666 /* PeripheralItemCell.swift */; };
+		D68A035E2B00823900CB4666 /* PeripheralItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68A035C2B00823900CB4666 /* PeripheralItemCell.xib */; };
 		D68D4E732AF5E99600F61B1E /* NotificationItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D4E712AF5E99600F61B1E /* NotificationItemTableViewCell.swift */; };
 		D68D4E742AF5E99600F61B1E /* NotificationItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68D4E722AF5E99600F61B1E /* NotificationItemTableViewCell.xib */; };
 		D68D4E782AF5F7F400F61B1E /* CustomLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D4E762AF5F7F400F61B1E /* CustomLoadingCell.swift */; };
@@ -259,6 +267,14 @@
 		D681D5712AE68CD3005A0BAC /* DevicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevicesViewController.xib; sourceTree = "<group>"; };
 		D681D5752AE68D0E005A0BAC /* DevicesItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesItemTableViewCell.swift; sourceTree = "<group>"; };
 		D681D5762AE68D0E005A0BAC /* DevicesItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevicesItemTableViewCell.xib; sourceTree = "<group>"; };
+		D68A034A2B00657F00CB4666 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D68A034D2B00736700CB4666 /* PairingInstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingInstructionViewController.swift; sourceTree = "<group>"; };
+		D68A034E2B00736700CB4666 /* PairingInstructionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairingInstructionViewController.xib; sourceTree = "<group>"; };
+		D68A03542B00790700CB4666 /* BluetoothPairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPairingViewController.swift; sourceTree = "<group>"; };
+		D68A03552B00790700CB4666 /* BluetoothPairingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BluetoothPairingViewController.xib; sourceTree = "<group>"; };
+		D68A03582B007D4400CB4666 /* BluetoothPairingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPairingViewModel.swift; sourceTree = "<group>"; };
+		D68A035B2B00823900CB4666 /* PeripheralItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralItemCell.swift; sourceTree = "<group>"; };
+		D68A035C2B00823900CB4666 /* PeripheralItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeripheralItemCell.xib; sourceTree = "<group>"; };
 		D68D4E712AF5E99600F61B1E /* NotificationItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItemTableViewCell.swift; sourceTree = "<group>"; };
 		D68D4E722AF5E99600F61B1E /* NotificationItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationItemTableViewCell.xib; sourceTree = "<group>"; };
 		D68D4E762AF5F7F400F61B1E /* CustomLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingCell.swift; sourceTree = "<group>"; };
@@ -784,6 +800,44 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		D68A034C2B00734C00CB4666 /* PairingDevice */ = {
+			isa = PBXGroup;
+			children = (
+				D68A03532B0078F600CB4666 /* BluetoothPairing */,
+				D68A03512B00785A00CB4666 /* Instruction */,
+			);
+			path = PairingDevice;
+			sourceTree = "<group>";
+		};
+		D68A03512B00785A00CB4666 /* Instruction */ = {
+			isa = PBXGroup;
+			children = (
+				D68A034D2B00736700CB4666 /* PairingInstructionViewController.swift */,
+				D68A034E2B00736700CB4666 /* PairingInstructionViewController.xib */,
+			);
+			path = Instruction;
+			sourceTree = "<group>";
+		};
+		D68A03532B0078F600CB4666 /* BluetoothPairing */ = {
+			isa = PBXGroup;
+			children = (
+				D68A035A2B00820B00CB4666 /* Components */,
+				D68A03542B00790700CB4666 /* BluetoothPairingViewController.swift */,
+				D68A03552B00790700CB4666 /* BluetoothPairingViewController.xib */,
+				D68A03582B007D4400CB4666 /* BluetoothPairingViewModel.swift */,
+			);
+			path = BluetoothPairing;
+			sourceTree = "<group>";
+		};
+		D68A035A2B00820B00CB4666 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D68A035B2B00823900CB4666 /* PeripheralItemCell.swift */,
+				D68A035C2B00823900CB4666 /* PeripheralItemCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D68D4E702AF5E91800F61B1E /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,6 +861,7 @@
 			children = (
 				D68D4E7B2AF5FA4200F61B1E /* ProfileViewController.swift */,
 				D68D4E7C2AF5FA4200F61B1E /* ProfileViewController.xib */,
+				D68A034A2B00657F00CB4666 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -961,6 +1016,7 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D68A034C2B00734C00CB4666 /* PairingDevice */,
 				A72C071E2AFA448C005395DB /* AddDevice */,
 				A73E1E9A2AFCEEBF008053A9 /* EditDevice */,
 				A756C1D02AFA10F7004E58A0 /* AddFormula */,
@@ -1144,6 +1200,7 @@
 				D68D4E792AF5F7F400F61B1E /* CustomLoadingCell.xib in Resources */,
 				D630F5022AD8112A00A355D0 /* DMSans-BoldItalic.ttf in Resources */,
 				A73E1EA22AFCEF0F008053A9 /* EditDeviceViewController.xib in Resources */,
+				D68A03502B00736700CB4666 /* PairingInstructionViewController.xib in Resources */,
 				D630F5062AD8112A00A355D0 /* DMSans-Italic.ttf in Resources */,
 				D630F50F2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf in Resources */,
 				A79DB2C72AF39786003D768A /* SaveSuccessViewController.xib in Resources */,
@@ -1153,6 +1210,7 @@
 				D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */,
 				D630F5112AD8112A00A355D0 /* DMSans-Medium.ttf in Resources */,
 				D68003EB2ADB838D00AAED95 /* Localizable.xcstrings in Resources */,
+				D68A03572B00790700CB4666 /* BluetoothPairingViewController.xib in Resources */,
 				D681D5782AE68D0E005A0BAC /* DevicesItemTableViewCell.xib in Resources */,
 				D630F50B2AD8112A00A355D0 /* DMSans-ThinItalic.ttf in Resources */,
 				D6EBCEAB2AFE263900EF5C51 /* EmptyPlantItemCell.xib in Resources */,
@@ -1173,6 +1231,7 @@
 				D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */,
 				A73E1E992AFCD931008053A9 /* MyChoiceViewController.xib in Resources */,
 				A71FC0DA2AF2519300875CBF /* DeleteDeviceViewController.xib in Resources */,
+				D68A035E2B00823900CB4666 /* PeripheralItemCell.xib in Resources */,
 				A77F03172AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib in Resources */,
 				D68D4E8E2AF6BFD500F61B1E /* GoogleService-Info.plist in Resources */,
 				D69D17202AEEC80100A5347C /* NotificationViewController.xib in Resources */,
@@ -1236,6 +1295,7 @@
 				D60225A22AEFB0D700F3800F /* CustomChooseFormulationView.swift in Sources */,
 				D60225A12AEFB0D700F3800F /* CustomMyChoiceView.swift in Sources */,
 				D6EBCEB92AFF083800EF5C51 /* PlantBody.swift in Sources */,
+				D68A035D2B00823900CB4666 /* PeripheralItemCell.swift in Sources */,
 				D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */,
 				A756C1C92AF8DFDE004E58A0 /* FormulaSettingViewController.swift in Sources */,
 				D6EBCEAF2AFE2D6800EF5C51 /* AddFormulaViewController.swift in Sources */,
@@ -1264,7 +1324,9 @@
 				D69D172E2AEF805600A5347C /* DetailDeviceAlertTableViewCell.swift in Sources */,
 				D69D17252AEED5A100A5347C /* DetailDeviceViewController.swift in Sources */,
 				D608922A2AEA760200A1C530 /* OnboardingViewController.swift in Sources */,
+				D68A034B2B00657F00CB4666 /* ProfileViewModel.swift in Sources */,
 				A77F03242AFB900500C5021D /* DontHavePlantFormulaViewController.swift in Sources */,
+				D68A03562B00790700CB4666 /* BluetoothPairingViewController.swift in Sources */,
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
 				A79DB2C62AF39786003D768A /* SaveSuccessViewController.swift in Sources */,
 				D6A8ABC22AEEC0B900D6466B /* NotificationRepository.swift in Sources */,
@@ -1276,6 +1338,7 @@
 				D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */,
 				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
+				D68A03592B007D4400CB4666 /* BluetoothPairingViewModel.swift in Sources */,
 				D67771282AFCD0E300EC8956 /* PlantModel.swift in Sources */,
 				D6EBCEBE2AFF541300EF5C51 /* EditFormulaViewModel.swift in Sources */,
 				A72C07292AFA4915005395DB /* AddDeviceV2ViewController.swift in Sources */,
@@ -1284,6 +1347,7 @@
 				A756C1CE2AF8F29F004E58A0 /* FormulaTableViewCell.swift in Sources */,
 				D6AC85722ACFF7700033B665 /* MainViewController.swift in Sources */,
 				A756C1E52AFA2028004E58A0 /* PlantSearchItemCell.swift in Sources */,
+				D68A034F2B00736700CB4666 /* PairingInstructionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1464,6 +1528,7 @@
 				INFOPLIST_FILE = Greenovation/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Greenovation;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use bluetooth to get your nearby IOT devices";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We use this camera for scan QR";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1498,6 +1563,7 @@
 				INFOPLIST_FILE = Greenovation/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Greenovation;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use bluetooth to get your nearby IOT devices";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We use this camera for scan QR";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

@@ -95,7 +95,7 @@ class NotificationViewController: UIViewController {
     
     private func setupToolbar() {
         tabBarController?.title = "Notifikasi"
-        tabBarController?.navigationItem.setRightBarButton(nil, animated: true)
+        tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
     }
 }
 

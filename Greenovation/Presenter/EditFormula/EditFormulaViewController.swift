@@ -327,5 +327,15 @@ class EditFormulaViewController: UIViewController {
         ppmMaxFaseMenengah.isEnabled = false
         phMinFaseMenengah.isEnabled = false
         phMaxFaseMenengah.isEnabled = false
+        
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIInputViewController.dismissKeyboard)
+        )
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

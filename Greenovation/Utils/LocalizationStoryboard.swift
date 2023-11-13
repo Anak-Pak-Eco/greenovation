@@ -11,7 +11,7 @@ final class LocalizableLabel: UILabel {
     @IBInspectable var localizedKey: String? {
         didSet {
             guard let key = localizedKey else { return }
-            text = NSLocalizedString(key, comment: "")
+            text = NSLocalizedString(key, comment: "Test Localization")
         }
     }
 }
@@ -20,7 +20,7 @@ final class LocalizableButton: UIButton {
     @IBInspectable var localizedKey: String? {
         didSet {
             guard let key = localizedKey else { return }
-            setTitle(NSLocalizedString(key, comment: ""), for: .normal)
+            setTitle(NSLocalizedString(key, comment: "Test Localization"), for: .normal)
         }
     }
 }

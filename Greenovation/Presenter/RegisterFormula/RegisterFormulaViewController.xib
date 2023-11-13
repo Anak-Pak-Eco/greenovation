@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterFormulaViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
+                <outlet property="anakanRecommendationLabel" destination="8i6-4C-6dG" id="TgP-JV-R6q"/>
                 <outlet property="faseAnakan_phMax" destination="Ht0-Vh-nMn" id="ltS-dS-zaa"/>
                 <outlet property="faseAnakan_phMin" destination="acf-Le-1Uq" id="kK7-Ou-dSO"/>
                 <outlet property="faseAnakan_ppmMax" destination="ftX-fr-trn" id="xfv-qq-3Nw"/>
@@ -31,6 +32,8 @@
                 <outlet property="faseVegetatifMenengah_ppmMin" destination="4pM-Sx-syf" id="fXP-iB-snb"/>
                 <outlet property="plantName" destination="HzP-6F-DYX" id="f9S-1b-CIq"/>
                 <outlet property="saveButton" destination="RN8-Ta-qf8" id="dhZ-ac-XwH"/>
+                <outlet property="vegetatifAwalRecommendationLabel" destination="WwQ-gv-zmK" id="W0p-6P-TJE"/>
+                <outlet property="vegetatifMenengahRecommendationLabel" destination="OSh-nu-TcH" id="hQD-Cd-zC6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -88,7 +91,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="kepekatan-nutrisi"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ppm-level"/>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-Qv-Ckr" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
@@ -189,7 +192,7 @@ Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="fase-vegetatif-awal"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="early-vegetative-phase"/>
                     </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpg-3j-A3j" userLabel="Fase Vegetatif Awal">
@@ -204,7 +207,7 @@ Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="kepekatan-nutrisi"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ppm-level"/>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSf-MZ-7rV" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
@@ -299,7 +302,7 @@ Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="fase-vegetatif-menengah"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="intermediate-vegetative-phase"/>
                     </userDefinedRuntimeAttributes>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-dY-3n1" userLabel="Fase Vegetatif Menengah">
@@ -314,7 +317,7 @@ Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="kepekatan-nutrisi"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ppm-level"/>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaX-nk-Il0" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">

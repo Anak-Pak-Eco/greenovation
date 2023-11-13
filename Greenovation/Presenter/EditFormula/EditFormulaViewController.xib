@@ -119,7 +119,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="200" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbQ-Ea-0iT" userLabel="min_ppm_anakan">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbQ-Ea-0iT" userLabel="min_ppm_anakan">
                             <rect key="frame" x="234" y="5" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="65" id="CZp-zd-ZYx"/>
@@ -129,7 +129,7 @@
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="400" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVD-gD-rIn" userLabel="max_ppm_anakan">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVD-gD-rIn" userLabel="max_ppm_anakan">
                             <rect key="frame" x="312" y="5" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="65" id="18G-1K-tsv"/>
@@ -139,7 +139,7 @@
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1B-sO-JyD" userLabel="min_ph_anakan">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1B-sO-JyD" userLabel="min_ph_anakan">
                             <rect key="frame" x="234" y="49" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="af8-TU-NLv"/>
@@ -149,7 +149,7 @@
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="join"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFd-An-boT" userLabel="max_ph_anakan">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFd-An-boT" userLabel="max_ph_anakan">
                             <rect key="frame" x="312" y="49" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="Nhf-4D-VQy"/>
@@ -234,7 +234,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNt-wD-iKg">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNt-wD-iKg">
                             <rect key="frame" x="234" y="49" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="65" id="jsr-TB-ilv"/>
@@ -244,7 +244,7 @@
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="750" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-iO-AYU">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-iO-AYU">
                             <rect key="frame" x="234" y="5" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="Pdc-ks-Ncz"/>
@@ -254,7 +254,7 @@
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="850" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-W2-wRN">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-W2-wRN">
                             <rect key="frame" x="312" y="5" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="65" id="UHf-ad-fHy"/>
@@ -264,7 +264,7 @@
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDG-Z0-FkQ">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDG-Z0-FkQ">
                             <rect key="frame" x="312" y="49" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="ZYC-ee-opC"/>
@@ -336,7 +336,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ph-level"/>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1400" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYz-GU-td0">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYz-GU-td0">
                             <rect key="frame" x="312" y="5" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="2CS-qI-9By"/>
@@ -346,7 +346,7 @@
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1050" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePd-t3-wAz">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePd-t3-wAz">
                             <rect key="frame" x="234" y="5" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="65" id="8vw-mZ-x9q"/>
@@ -376,7 +376,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pek-3K-Sn5">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pek-3K-Sn5">
                             <rect key="frame" x="312" y="49" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="65" id="O6J-Ae-Htk"/>
@@ -386,7 +386,7 @@
                             <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5,5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gD2-8q-oty">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gD2-8q-oty">
                             <rect key="frame" x="234" y="49" width="65" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="KOW-mR-SeT"/>

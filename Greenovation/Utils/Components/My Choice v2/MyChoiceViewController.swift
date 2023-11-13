@@ -25,7 +25,7 @@ class MyChoiceViewController: UIViewController {
     
     private func style() {
         // ppm Label
-        ppmLabel.attributedText = String.getStringAttributed(from: String(localized: "kepekatan-nutrisi"), boldStrings: ["Nutrient Concentration", "Kepekatan Nutrisi"], regularTextStyle: UIFont(name: "DMSans-Regular", size: 15)!, boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 15)!)
+        ppmLabel.attributedText = String.getStringAttributed(from: String(localized: "ppm-level"), boldStrings: ["Nutrient Concentration", "Kepekatan Nutrisi"], regularTextStyle: UIFont(name: "DMSans-Regular", size: 15)!, boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 15)!)
         ppmLabel.adjustsFontSizeToFitWidth = true
         
         // White Background

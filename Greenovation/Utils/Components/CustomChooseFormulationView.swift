@@ -89,7 +89,7 @@ final class CustomChooseFormulationView: UIView {
         component.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         component.backgroundColor = UIColor.primaryAccent
         component.layer.cornerRadius = 10.0
-        component.setTitle(String(localized: "simpan-pilihan"), for: .normal)
+        component.setTitle(String(localized: "save-selection"), for: .normal)
         component.isEnabled = true
         component.translatesAutoresizingMaskIntoConstraints = false
         return component
@@ -100,7 +100,7 @@ final class CustomChooseFormulationView: UIView {
         component.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         component.backgroundColor = UIColor.surfaceContainerHighest
         component.layer.cornerRadius = 10.0
-        component.setTitle(String(localized: "simpan-pilihan"), for: .normal)
+        component.setTitle(String(localized: "save-selection"), for: .normal)
         component.isEnabled = false
         component.translatesAutoresizingMaskIntoConstraints = false
         return component
@@ -108,7 +108,7 @@ final class CustomChooseFormulationView: UIView {
     
     let title: UILabel = {
         let component = UILabel()
-        component.text = String(localized: "pilih-satu-formula")
+        component.text = String(localized: "choose-formula")
         component.font = UIFont.boldSystemFont(ofSize: 25)
         component.adjustsFontSizeToFitWidth = true
         component.textAlignment = .left
@@ -157,7 +157,7 @@ final class CustomChooseFormulationView: UIView {
             
             if isHave {
                 label = makeDesc(text: String(localized: "Formula di bawah ini merupakan formula yang kamu buat untuk **\(kailan)** pada **\(phaseName)**"), size: 12)
-                ppmMinField = makeTextField(text: String(localized: "750"), color: .black)
+                ppmMinField = makeTextField(text: "750", color: .black)
                 ppmMaxField = makeTextField(text: "1200", color: .black)
                 phMinField = makeTextField(text: "5.5", color: .black)
                 phMaxField = makeTextField(text: "7.5", color: .black)
@@ -211,7 +211,7 @@ final class CustomChooseFormulationView: UIView {
             
             label = makeDesc(text: String(localized: "Formula di bawah ini merupakan formula yang kamu buat untuk **\(kailan)** pada **\(phaseName)**"), size: 12)
             ppmLabel = makeLabel(text: String(localized: "**Kepekatan Nutrisi** (ppm)"), size: 15)
-            ppmMinField = makeTextField(text: String(localized: "900"), color: .black)
+            ppmMinField = makeTextField(text: "900", color: .black)
             strip1 = makeLabel(text: "-", size: 17)
             ppmMaxField = makeTextField(text: "1200", color: .black)
             phLabel = makeLabel(text: String(localized: "**Tingkat pH**"), size: 15)

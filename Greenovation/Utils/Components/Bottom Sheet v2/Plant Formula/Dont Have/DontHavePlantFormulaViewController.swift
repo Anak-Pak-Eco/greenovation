@@ -71,7 +71,7 @@ class DontHavePlantFormulaViewController: UIViewController {
         phMax.layer.borderColor = UIColor.primaryAccent.cgColor
         
         // Label Bold
-        ppmLabel.attributedText = String.getStringAttributed(from: String(localized: "kepekatan-nutrisi"), boldStrings: ["Nutrient Concentration", "Kepekatan Nutrisi"], regularTextStyle: UIFont(name: "DMSans-Regular", size: 15)!, boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 15)!)
+        ppmLabel.attributedText = String.getStringAttributed(from: String(localized: "ppm-level"), boldStrings: ["Nutrient Concentration", "Kepekatan Nutrisi"], regularTextStyle: UIFont(name: "DMSans-Regular", size: 15)!, boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 15)!)
         ppmLabel.adjustsFontSizeToFitWidth = true
         formulaDesc.attributedText = String.getStringAttributed(from: String(localized: "Rekomendasi yang diberikan Greenovation untuk \(plantName) pada \(growthStep) adalah Kepekatan Nutrisi: \(ppm)ppm dan Tingkat pH: \(ph)"), boldStrings: ["Greenovation", plantName, growthStep, "Kepekatan Nutrisi: \(ppm)ppm", "Nutrient Concentration: \(ppm)ppm", "Tingkat pH: \(ph)", "pH Level: \(ph)"], regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!, boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 12)!)
         

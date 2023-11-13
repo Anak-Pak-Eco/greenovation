@@ -42,7 +42,7 @@ final class AddFormulaViewModel {
             searchedPlants = plants
         } else {
             searchedPlants = plants.filter { plant in
-                plant.name.contains(query)
+                plant.name.lowercased().contains(query.lowercased())
             }
         }
         successGetPlants.value = true

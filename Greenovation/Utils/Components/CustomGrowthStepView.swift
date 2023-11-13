@@ -209,17 +209,17 @@ final class CustomGrowthStepView: UIView {
         // MARK: Container 1
         imageViewContainer = makePicture(imageName: "image-anakan-growthstep", width: 61, height: 61)
         titleLabelContainer = makeTitleLabel(text: String(localized: "fase-anakan"), width: 100, height: 21, size: 16)
-        descriptionContainer = makeDescriptionLabel(text: String(localized: "Fase dimulai dari benih dan berlanjut dengan tanaman mulai mengembangkan daun sejati."), width: 259, height: 36, nol: 2)
+        descriptionContainer = makeDescriptionLabel(text: "Fase dimulai dari benih dan berlanjut dengan tanaman mulai mengembangkan daun sejati.", width: 259, height: 36, nol: 2)
         circleImage = makePicture(imageName: "image-circle-growth", width: 25, height: 25)
         // MARK: Container 2
         imageViewContainer2 = makePicture(imageName: "image-awal-growthstep", width: 61, height: 61)
-        titleLabelContainer2 = makeTitleLabel(text: String(localized: "fase-vegetatif-awal"), width: 154, height: 21, size: 16)
-        descriptionContainer2 = makeDescriptionLabel(text: String(localized: "Tanaman mulai mempunyai akar yang kuat dan mengembangkan daun dan cabang."), width: 259, height: 36, nol: 2)
+        titleLabelContainer2 = makeTitleLabel(text: String(localized: "early-vegetative-phase"), width: 154, height: 21, size: 16)
+        descriptionContainer2 = makeDescriptionLabel(text: "Tanaman mulai mempunyai akar yang kuat dan mengembangkan daun dan cabang.", width: 259, height: 36, nol: 2)
         circleImage2 = makePicture(imageName: "image-circle-growth", width: 25, height: 25)
         // MARK: Container 2
         imageViewContainer3 = makePicture(imageName: "image-menengah-growthstep", width: 61, height: 61)
-        titleLabelContainer3 = makeTitleLabel(text: String(localized: "fase-vegetatif-menengah"), width: 198, height: 21, size: 16)
-        descriptionContainer3 = makeDescriptionLabel(text: String(localized: "Tanaman mengalami pertumbuhan daun, batang, dan akar yang berlangsung dengan cepat hingga masa panen sayuran daun tiba."), width: 259, height: 54, nol: 3)
+        titleLabelContainer3 = makeTitleLabel(text: String(localized: "intermediate-vegetative-phase"), width: 198, height: 21, size: 16)
+        descriptionContainer3 = makeDescriptionLabel(text: "Tanaman mengalami pertumbuhan daun, batang, dan akar yang berlangsung dengan cepat hingga masa panen sayuran daun tiba.", width: 259, height: 54, nol: 3)
         circleImage3 = makePicture(imageName: "image-circle-growth", width: 25, height: 25)
         
         stackView.addArrangedSubview(stackViewContainer!)

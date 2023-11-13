@@ -119,13 +119,16 @@ class FormulaSettingViewController: UIViewController {
     private func setupToolbar() {
         tabBarController?.title = String(localized: "plant-formula")  
         navigationController?.navigationBar.prefersLargeTitles = true
+        tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
+        
+        let addButton = UIButton(type: .custom)
+        addButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        addButton.addTarget(self, action: #selector(onAddButtonTapped(_:)), for: .touchUpInside)
+        addButton.frame = CGRectMake(0, 0, 36, 36)
+        let addBarButton = UIBarButtonItem(customView: addButton)
+        
         tabBarController?.navigationItem.setRightBarButton(
-            UIBarButtonItem(
-                image: UIImage(systemName: "plus"),
-                style: .plain,
-                target: self,
-                action: #selector(onAddButtonTapped(_:))
-            ),
+            addBarButton,
             animated: true
         )
     }

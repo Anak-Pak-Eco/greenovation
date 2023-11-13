@@ -11,6 +11,9 @@ class RegisterFormulaViewController: UIViewController {
     
     private let viewModel: RegisterFormulaViewModel
     
+    @IBOutlet weak var anakanRecommendationLabel: UILabel!
+    @IBOutlet weak var vegetatifMenengahRecommendationLabel: UILabel!
+    @IBOutlet weak var vegetatifAwalRecommendationLabel: UILabel!
     @IBOutlet var plantName: UILabel!
     @IBOutlet var faseAnakan_ppmMin: UITextField!
     @IBOutlet var faseAnakan_ppmMax: UITextField!
@@ -90,6 +93,27 @@ class RegisterFormulaViewController: UIViewController {
     private func setupUI() {
         plantName.text = viewModel.plant.name
         
+        let anakan = plant.phases.first { phase in
+            phase.step == "anakan"
+        }
+        
+        let vegetatifAwal = plant.phases.first { phase in
+            phase.step == "vegetatif_awal"
+        }
+        
+        let vegetatifMenengah = plant.phases.first { phase in
+            phase.step == "vegetatif_menengah"
+        }
+        
+        anakanRecommendationLabel.text = "Rekomendari dari Greenovation:\nKepekatan Nutrisi: \(anakan?.min_ppm ?? 0)-\(anakan?.max_ppm ?? 0) & Tingkat pH: \(anakan?.min_ph ?? 0)-\(anakan?.max_ph ?? 0)"
+        anakanRecommendationLabel.isHidden = plant.phases.isEmpty
+        
+        vegetatifAwalRecommendationLabel.text = "Rekomendari dari Greenovation:\nKepekatan Nutrisi: \(vegetatifAwal?.min_ppm ?? 0)-\(vegetatifAwal?.max_ppm ?? 0) & Tingkat pH: \(vegetatifAwal?.min_ph ?? 0)-\(vegetatifAwal?.max_ph ?? 0)"
+        vegetatifAwalRecommendationLabel.isHidden = plant.phases.isEmpty
+        
+        vegetatifMenengahRecommendationLabel.text = "Rekomendari dari Greenovation:\nKepekatan Nutrisi: \(vegetatifMenengah?.min_ppm ?? 0)-\(vegetatifMenengah?.max_ppm ?? 0) & Tingkat pH: \(vegetatifMenengah?.min_ph ?? 0)-\(vegetatifMenengah?.max_ph ?? 0)"
+        vegetatifMenengahRecommendationLabel.isHidden = plant.phases.isEmpty
+        
         // Fase Anakan ppm Min
         faseAnakan_ppmMin.layer.cornerRadius = 6
         faseAnakan_ppmMin.layer.borderWidth = 1.0
@@ -167,6 +191,16 @@ class RegisterFormulaViewController: UIViewController {
         saveButton.layer.borderColor = UIColor.primaryAccent.cgColor
         saveButton.layer.cornerRadius = 10
         saveButton.clipsToBounds = true
+        
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIInputViewController.dismissKeyboard)
+        )
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func saveButtonClicked(_ sender: Any) {

@@ -8,13 +8,81 @@
 import UIKit
 import FirebaseAuth
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var logoutButton: UIButton!
-    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var deleteAccountButton: UIStackView!
+    @IBOutlet weak var privacyPolicyButton: UIStackView!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var contactUsButton: UIStackView!
+    @IBOutlet weak var nameTextField: UITextField!
+    private var editButton: UIBarButtonItem?
+    private let viewModel = ProfileViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        userLabel.text = "Sign in as: \(Auth.auth().currentUser?.displayName ?? "")"
+        viewModel.getUser()
+        setupObserver()
+        setupUI()
+    }
+    
+    private func setupObserver() {
+        viewModel.errorUpdateProfile.bind { [unowned self] error in
+            if !error.isEmpty {
+                editButton?.title = "Edit"
+                nameTextField.textColor = UIColor.onPrimaryContainer
+                nameTextField.isEnabled = false
+                
+                let alertController = UIAlertController(
+                    title: "Login Gagal",
+                    message: error,
+                    preferredStyle: .alert
+                )
+                alertController.addAction(
+                    .init(
+                        title: "OK",
+                        style: .destructive,
+                        handler: { action in
+                            alertController.dismiss(animated: true)
+                        }
+                    )
+                )
+                self.present(alertController, animated: true)
+            }
+        }
+        
+        viewModel.successUpdateProfile.bind { [unowned self] success in
+            if success {
+                let alertController = UIAlertController(
+                    title: "Ubah Profil",
+                    message: "Berhasil mengubah profile",
+                    preferredStyle: .alert
+                )
+                alertController.addAction(
+                    .init(
+                        title: "OK",
+                        style: .destructive,
+                        handler: { action in
+                            alertController.dismiss(animated: true)
+                        }
+                    )
+                )
+                self.present(alertController, animated: true)
+                
+                editButton?.title = "Edit"
+                nameTextField.textColor = UIColor.onPrimaryContainer
+                nameTextField.isEnabled = false
+            }
+        }
+        
+        viewModel.loadingProfile.bind { [unowned self] isLoading in
+            editButton?.isEnabled = !isLoading
+        }
+    }
+    
+    private func setupUI() {
+        nameTextField.isEnabled = false
+        emailLabel.text = viewModel.user?.email ?? "-"
+        nameTextField.text = viewModel.user?.displayName ?? ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,8 +91,44 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupToolbar() {
-        tabBarController?.title = String(localized: "profile")
-        tabBarController?.navigationItem.setRightBarButton(nil, animated: true)
+        title = String(localized: "profile")
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.titleTextAttributes = [
+            .font: UIFont(name: "DMSans-SemiBold", size: 17)!,
+            .foregroundColor: UIColor.onPrimaryFixed
+        ]
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "chevron.left"),
+            style: .plain,
+            target: self,
+            action: #selector(onBackButtonClicked(_:))
+        )
+        
+        editButton = UIBarButtonItem(
+            title: "Edit",
+            style: .plain,
+            target: self,
+            action: #selector(onEditButtonClicked(_:))
+        )
+        navigationItem.setRightBarButton(editButton, animated: true)
+    }
+    
+    @objc private func onBackButtonClicked(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func onEditButtonClicked(_ sender: Any) {
+        if (viewModel.editMode) {
+            editButton?.isEnabled = false
+            nameTextField.isEnabled = false
+            viewModel.updateUser(name: nameTextField.text ?? "")
+        } else {
+            editButton?.title = "Simpan"
+            nameTextField.isEnabled = true
+            nameTextField.textColor = UIColor.primaryAccent
+        }
+        
+        viewModel.editMode.toggle()
     }
 
     @IBAction func onLogoutClicked(_ sender: UIButton) {

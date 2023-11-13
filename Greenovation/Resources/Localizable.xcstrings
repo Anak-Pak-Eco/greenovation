@@ -2,21 +2,17 @@
   "sourceLanguage" : "id",
   "strings" : {
     "" : {
-
-    },
-    "(%@)" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%@)"
+            "value" : "%@"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%@)"
+            "value" : "%@"
           }
         }
       }
@@ -65,55 +61,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "**Tingkat pH**"
-          }
-        }
-      }
-    },
-    "%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        }
-      }
-    },
-    "750" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "750"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "750"
-          }
-        }
-      }
-    },
-    "900" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "900"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "900"
           }
         }
       }
@@ -202,6 +149,23 @@
         }
       }
     },
+    "choose-formula" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose One Formula"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih Satu Formula"
+          }
+        }
+      }
+    },
     "Data perangkat yang telah dihapus tidak dapat dikembalikan." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -247,23 +211,6 @@
         }
       }
     },
-    "edit" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Edit"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ubah"
-          }
-        }
-      }
-    },
     "Fase dimulai dari benih dan berlanjut dengan tanaman mulai mengembangkan daun sejati." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -290,12 +237,6 @@
           }
         }
       }
-    },
-    "fase-vegetatif-awal" : {
-
-    },
-    "fase-vegetatif-menengah" : {
-
     },
     "Formula di bawah ini merupakan formula yang kamu buat untuk **%@** pada **%@**" : {
       "extractionState" : "manual",
@@ -431,23 +372,6 @@
         }
       }
     },
-    "kepekatan-nutrisi" : {
-
-    },
-    "Key" : {
-      "extractionState" : "manual"
-    },
-    "Key 1" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fa"
-          }
-        }
-      }
-    },
     "last-updated %@" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -569,23 +493,6 @@
         }
       }
     },
-    "pengaturan-perangkat" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Device Setting"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pengaturan Perangkat"
-          }
-        }
-      }
-    },
     "Perubahan berhasil disimpan" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -616,23 +523,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tingkat pH"
-          }
-        }
-      }
-    },
-    "pilih-satu-formula" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose One Formula"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pilih Satu Formula"
           }
         }
       }
@@ -721,7 +611,7 @@
         }
       }
     },
-    "rekomendasi" : {
+    "recommendation" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -797,6 +687,23 @@
         }
       }
     },
+    "save-selection" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Selection"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan Pilihan"
+          }
+        }
+      }
+    },
     "seeding" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -855,23 +762,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Simpan"
-          }
-        }
-      }
-    },
-    "simpan-pilihan" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Save Selection"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Simpan Pilihan"
           }
         }
       }
@@ -942,12 +832,6 @@
           }
         }
       }
-    },
-    "Tanaman mengalami pertumbuhan daun, batang, dan akar yang berlangsung dengan cepat hingga masa panen sayuran daun tiba." : {
-
-    },
-    "Tanaman mulai mempunyai akar yang kuat dan mengembangkan daun dan cabang." : {
-
     },
     "tanaman-tidak-ditemukan" : {
       "localizations" : {

@@ -31,33 +31,39 @@ class DevicesViewController: UIViewController {
     private func setupToolbar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         tabBarController?.title = "Perangkat"
-        tabBarController?.navigationItem.setRightBarButtonItems(
-            [
-                UIBarButtonItem(
-                    image: UIImage(systemName: "person.crop.circle.fill"),
-                    style: .plain,
-                    target: self,
-                    action: #selector(onProfileClicked(_:))
-                ),
-                UIBarButtonItem(
-                    image: UIImage(systemName: "plus"),
-                    style: .plain,
-                    target: self,
-                    action: #selector(onAddDeviceClicked(_:))
-                )
-            ],
-            animated: true
+        tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
+        
+//        let profileButton = UIButton(type: .custom)
+//        profileButton.frame = CGRectMake(0, 0, 25, 25)
+//        profileButton.setImage(UIImage(systemName: "person.crop.circle.fill"), for: .normal)
+//        profileButton.addTarget(self, action: #selector(onProfileClicked(_:)), for: .touchUpInside)
+        let profileBarButton = UIBarButtonItem(
+            image: UIImage(systemName: "person.crop.circle.fill"),
+            style: .plain, target: self,
+            action: #selector(onProfileClicked(_:))
         )
+        
+//        let addButton = UIButton(type: .custom)
+//        addButton.frame = CGRectMake(0, 0, 25, 25)
+//        addButton.setImage(UIImage(systemName: "plus"), for: .normal)
+//        addButton.addTarget(self, action: #selector(onAddDeviceClicked(_:)), for: .touchUpInside)
+        let addBarButton = UIBarButtonItem(
+            image: UIImage(systemName: "plus"),
+            style: .plain, target: self,
+            action: #selector(onAddDeviceClicked(_:))
+        )
+        
+        tabBarController?.navigationItem.setRightBarButtonItems([profileBarButton, addBarButton], animated: true)
     }
     
-    @objc private func onProfileClicked(_ sender: UIBarButtonItem) {
+    @objc private func onProfileClicked(_ sender: Any) {
         let viewController = ProfileViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    @objc private func onAddDeviceClicked(_ sender: UIBarButtonItem) {
-//        let viewController = ScanQRViewController()
-//        navigationController?.pushViewController(viewController, animated: true)
+    @objc private func onAddDeviceClicked(_ sender: Any) {
+        let viewController = PairingInstructionViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func setupUI() {
