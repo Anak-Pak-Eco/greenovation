@@ -12,6 +12,7 @@ final class BluetoothPairingViewModel: NSObject {
     var centralManager: CBCentralManager?
     var peripherals: [CBPeripheral] = []
     let updatePeripheral = Box(false)
+    let setConnectedPeripheral: Box<CBPeripheral?> = Box(nil)
     
     func checkBluetoothStatus() {
         centralManager = CBCentralManager(delegate: self, queue: nil)
@@ -65,6 +66,7 @@ extension BluetoothPairingViewModel: CBCentralManagerDelegate, CBPeripheralDeleg
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("Connected to peripheral: \(String(describing: peripheral.name)) \n \(peripheral.ancsAuthorized)")
+        setConnectedPeripheral.value = peripheral
     }
     
     func centralManager(
@@ -73,9 +75,9 @@ extension BluetoothPairingViewModel: CBCentralManagerDelegate, CBPeripheralDeleg
         advertisementData: [String : Any],
         rssi RSSI: NSNumber
     ) {
-        print("didDiscover: \(String(describing: peripheral.name))")
         if let name = peripheral.name {
             if !peripherals.contains(peripheral) {
+                print("didDiscover: \(String(describing: name))")
                 peripherals.append(peripheral)
                 updatePeripheral.value = true
             }

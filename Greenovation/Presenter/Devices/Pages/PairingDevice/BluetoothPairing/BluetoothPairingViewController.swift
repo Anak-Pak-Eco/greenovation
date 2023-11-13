@@ -21,6 +21,13 @@ class BluetoothPairingViewController: UIViewController {
                 bluetoothListTableView.reloadData()
             }
         }
+        viewModel.setConnectedPeripheral.bind { [unowned self] peripheral in
+            if peripheral != nil {
+                let vc = InputWifiViewController()
+                vc.peripheral = peripheral
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        }
         setupUI()
         setupToolbar()
         viewModel.checkBluetoothStatus()

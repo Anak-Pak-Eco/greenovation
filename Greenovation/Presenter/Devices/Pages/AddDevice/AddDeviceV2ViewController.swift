@@ -17,9 +17,8 @@ class AddDeviceV2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupToolbar()
-        style()
+        setupUI()
     }
     
     private func setupToolbar() {
@@ -35,7 +34,7 @@ class AddDeviceV2ViewController: UIViewController {
     }
     
     @objc func backButtonTapped() {
-        
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func saveButtonTapped() {
@@ -46,16 +45,13 @@ class AddDeviceV2ViewController: UIViewController {
         // Bottom Sheet
         let vc = DontHavePlantFormulaViewController()
         vc.modalPresentationStyle = .pageSheet
-        if
-            #available(iOS 15.0, *),
-            let sheet = vc.sheetPresentationController
-        {
+        if #available(iOS 15.0, *), let sheet = vc.sheetPresentationController {
             sheet.detents = [.medium()]
         }
         present(vc, animated: true, completion: nil)
     }
     
-    private func style() {
+    private func setupUI() {
         // Device Name Text Field
         deviceName.placeholder = NSLocalizedString(String(localized: "nama-perangkat"), comment: "TextField placeholder")
         deviceName.layer.borderWidth = 0.3
@@ -88,5 +84,4 @@ class AddDeviceV2ViewController: UIViewController {
         saveButton.clipsToBounds = true
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
     }
-    
 }

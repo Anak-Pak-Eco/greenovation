@@ -165,18 +165,8 @@ extension SignInViewModel: ASAuthorizationControllerDelegate , ASAuthorizationCo
                     return
                 }
                 
-                let request = Auth.auth().currentUser?.createProfileChangeRequest()
-                request?.displayName = "\(String(describing: appleIdCredential.fullName?.givenName ?? "-")) \(String(describing: appleIdCredential.fullName?.middleName ?? "-")) \(appleIdCredential.fullName?.familyName ?? "-")"
-                request?.commitChanges { [unowned self] error in
-                    if let error = error {
-                        signInError.value = error.localizedDescription
-                        isSignInLoading.value = false
-                        return
-                    }
-                    
-                    isSignInLoading.value = false
-                    signInSuccess.value = true
-                }
+                isSignInLoading.value = false
+                signInSuccess.value = true
             }
         }
     }

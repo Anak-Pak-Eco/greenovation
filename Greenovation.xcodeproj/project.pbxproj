@@ -86,6 +86,8 @@
 		D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64547082AEA96FE0077DA04 /* SignInViewController.xib */; };
 		D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646B4552AE902CA00BE78EC /* DevicesViewModel.swift */; };
 		D65C58832AE26D2F00FE8D1E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C58822AE26D2F00FE8D1E /* String+Extension.swift */; };
+		D663B03D2B01E222004E7BCF /* InputWifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663B03B2B01E222004E7BCF /* InputWifiViewController.swift */; };
+		D663B03E2B01E222004E7BCF /* InputWifiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D663B03C2B01E222004E7BCF /* InputWifiViewController.xib */; };
 		D67771232AFCCFB800EC8956 /* PlantResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771222AFCCFB800EC8956 /* PlantResponse.swift */; };
 		D67771282AFCD0E300EC8956 /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771272AFCD0E300EC8956 /* PlantModel.swift */; };
 		D677712B2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677712A2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift */; };
@@ -258,6 +260,8 @@
 		D64547082AEA96FE0077DA04 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		D646B4552AE902CA00BE78EC /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
 		D65C58822AE26D2F00FE8D1E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D663B03B2B01E222004E7BCF /* InputWifiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputWifiViewController.swift; sourceTree = "<group>"; };
+		D663B03C2B01E222004E7BCF /* InputWifiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputWifiViewController.xib; sourceTree = "<group>"; };
 		D67771222AFCCFB800EC8956 /* PlantResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantResponse.swift; sourceTree = "<group>"; };
 		D67771272AFCD0E300EC8956 /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
 		D677712A2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -529,7 +533,7 @@
 		A77F03192AFB8FB000C5021D /* Plant Formula */ = {
 			isa = PBXGroup;
 			children = (
-				A77F031B2AFB8FBC00C5021D /* Dont Have */,
+				A77F031B2AFB8FBC00C5021D /* DontHave */,
 				A77F031A2AFB8FB800C5021D /* Have */,
 			);
 			path = "Plant Formula";
@@ -544,13 +548,13 @@
 			path = Have;
 			sourceTree = "<group>";
 		};
-		A77F031B2AFB8FBC00C5021D /* Dont Have */ = {
+		A77F031B2AFB8FBC00C5021D /* DontHave */ = {
 			isa = PBXGroup;
 			children = (
 				A77F03222AFB900500C5021D /* DontHavePlantFormulaViewController.swift */,
 				A77F03232AFB900500C5021D /* DontHavePlantFormulaViewController.xib */,
 			);
-			path = "Dont Have";
+			path = DontHave;
 			sourceTree = "<group>";
 		};
 		D60225922AEFB0D700F3800F /* Components */ = {
@@ -710,7 +714,6 @@
 			isa = PBXGroup;
 			children = (
 				D6239CD52AF234330097E8D1 /* Custom Views */,
-				D60225922AEFB0D700F3800F /* Components */,
 				D608922C2AEA7A8300A1C530 /* GradientView.swift */,
 				D640E2012AC7A32D007E993F /* Box.swift */,
 				D65C58822AE26D2F00FE8D1E /* String+Extension.swift */,
@@ -725,10 +728,8 @@
 		D663B0372B01D765004E7BCF /* Devices */ = {
 			isa = PBXGroup;
 			children = (
-				D6AC85862AD013B80033B665 /* DetailDevice */,
-				A73E1E9A2AFCEEBF008053A9 /* EditDevice */,
-				A72C071E2AFA448C005395DB /* AddDevice */,
-				D68A034C2B00734C00CB4666 /* PairingDevice */,
+				D60225922AEFB0D700F3800F /* Components */,
+				D6DFA58E2B02535900350C5A /* Pages */,
 			);
 			path = Devices;
 			sourceTree = "<group>";
@@ -751,6 +752,15 @@
 				D60892272AEA75EE00A1C530 /* Onboarding */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D663B03A2B01E1F4004E7BCF /* InputWifi */ = {
+			isa = PBXGroup;
+			children = (
+				D663B03B2B01E222004E7BCF /* InputWifiViewController.swift */,
+				D663B03C2B01E222004E7BCF /* InputWifiViewController.xib */,
+			);
+			path = InputWifi;
 			sourceTree = "<group>";
 		};
 		D664FCF32AFCE14F00D91150 /* Notifications */ = {
@@ -834,6 +844,7 @@
 		D68A034C2B00734C00CB4666 /* PairingDevice */ = {
 			isa = PBXGroup;
 			children = (
+				D663B03A2B01E1F4004E7BCF /* InputWifi */,
 				D68A03532B0078F600CB4666 /* BluetoothPairing */,
 				D68A03512B00785A00CB4666 /* Instruction */,
 			);
@@ -1078,6 +1089,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D6DFA58E2B02535900350C5A /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				D68A034C2B00734C00CB4666 /* PairingDevice */,
+				D6AC85862AD013B80033B665 /* DetailDevice */,
+				A73E1E9A2AFCEEBF008053A9 /* EditDevice */,
+				A72C071E2AFA448C005395DB /* AddDevice */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1233,6 +1255,7 @@
 				D630F50D2AD8112A00A355D0 /* DMSans-LightItalic.ttf in Resources */,
 				D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */,
 				D630F5112AD8112A00A355D0 /* DMSans-Medium.ttf in Resources */,
+				D663B03E2B01E222004E7BCF /* InputWifiViewController.xib in Resources */,
 				D68003EB2ADB838D00AAED95 /* Localizable.xcstrings in Resources */,
 				D68A03572B00790700CB4666 /* BluetoothPairingViewController.xib in Resources */,
 				D681D5782AE68D0E005A0BAC /* DevicesItemTableViewCell.xib in Resources */,
@@ -1315,6 +1338,7 @@
 				D6CF2CC62AF4CB7700BC6225 /* SignUpViewModel.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
 				A77F03162AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift in Sources */,
+				D663B03D2B01E222004E7BCF /* InputWifiViewController.swift in Sources */,
 				D602259E2AEFB0D700F3800F /* CustomFieldView.swift in Sources */,
 				D60225A22AEFB0D700F3800F /* CustomChooseFormulationView.swift in Sources */,
 				D60225A12AEFB0D700F3800F /* CustomMyChoiceView.swift in Sources */,

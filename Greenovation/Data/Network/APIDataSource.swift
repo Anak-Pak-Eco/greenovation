@@ -12,8 +12,8 @@ import Combine
 final class APIDataSource {
     
     static let shared = APIDataSource()
-//    private let baseURL = "https://pak-eco.pat-pet.my.id"
-    private let baseURL = "http://10.60.61.244:8000"
+    private let baseURL = "https://pak-eco.pat-pet.my.id"
+//    private let baseURL = "http://10.60.61.244:8000"
     
     func getNotifications() -> AnyPublisher<[NotificationResponse], AFError> {
         return AF.request(baseURL + APIEndpoint.notifications.rawValue, method: .get)

@@ -54,7 +54,8 @@ class DevicesViewController: UIViewController {
     }
     
     @objc private func onAddDeviceClicked(_ sender: Any) {
-        let viewController = PairingInstructionViewController()
+        // let viewController = PairingInstructionViewController()
+        let viewController = AddDeviceV2ViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
