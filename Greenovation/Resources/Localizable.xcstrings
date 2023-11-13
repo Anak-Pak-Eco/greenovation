@@ -1,70 +1,6 @@
 {
   "sourceLanguage" : "id",
   "strings" : {
-    "" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        }
-      }
-    },
-    "**Kepekatan Nutrisi** (ppm)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Nutrition Density** (ppm)"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Kepekatan Nutrisi** (ppm)"
-          }
-        }
-      }
-    },
-    "**pilihan-saya**" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**My Options**"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**pilihan-saya**"
-          }
-        }
-      }
-    },
-    "**Tingkat pH**" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**pH Level**"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Tingkat pH**"
-          }
-        }
-      }
-    },
     "add-plants" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -173,6 +109,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Device data that has been deleted cannot be restored."
+          }
+        }
+      }
+    },
+    "device-name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Device Name"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nama Perangkat"
           }
         }
       }
@@ -293,6 +246,23 @@
         }
       }
     },
+    "growth-step" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Growth Step"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "That Pertumbuhan"
+          }
+        }
+      }
+    },
     "hapus" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -406,22 +376,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Min"
-          }
-        }
-      }
-    },
-    "nama-perangkat" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Device Name"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nama Perangkat"
           }
         }
       }
@@ -611,22 +565,6 @@
         }
       }
     },
-    "recommendation" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recommendation"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rekomendasi"
-          }
-        }
-      }
-    },
     "Rekomendasi yang diberikan Greenovation untuk %@ pada %@ adalah Kepekatan Nutrisi: %@ppm dan Tingkat pH: %@" : {
       "localizations" : {
         "en" : {
@@ -639,22 +577,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Rekomendasi yang diberikan Greenovation untuk %1$@ pada %2$@ adalah Kepekatan Nutrisi: %3$@ppm dan Tingkat pH: %4$@"
-          }
-        }
-      }
-    },
-    "Rekomendasi yang kami berikan didapatkan dari blabla untuk **%@** pada **%@**" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The recommendations we provide are obtained from blabla for **%@** on **%@**"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rekomendasi yang kami berikan didapatkan dari blabla untuk **%1$@** pada **%2$@**"
           }
         }
       }
@@ -683,6 +605,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rekomendasi Formula"
+          }
+        }
+      }
+    },
+    "save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
           }
         }
       }
@@ -750,21 +689,7 @@
       }
     },
     "simpan" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Save"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Simpan"
-          }
-        }
-      }
+
     },
     "sollution-corrected" : {
       "extractionState" : "manual",
@@ -779,22 +704,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sudah Perbaiki Larutan"
-          }
-        }
-      }
-    },
-    "tahap-pertumbuhan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Growth Step"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "That Pertumbuhan"
           }
         }
       }
@@ -829,22 +738,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tambah Pengaturan Baru"
-          }
-        }
-      }
-    },
-    "tanaman-tidak-ditemukan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plant Not Found"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tanaman Tidak Ditemukan"
           }
         }
       }

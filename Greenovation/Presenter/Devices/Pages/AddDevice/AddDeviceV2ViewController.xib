@@ -16,10 +16,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDeviceV2ViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
-                <outlet property="deviceName" destination="awz-uY-odR" id="lQ8-g7-F8g"/>
+                <outlet property="deviceNameTextField" destination="awz-uY-odR" id="lQ8-g7-F8g"/>
                 <outlet property="growthStep" destination="ROe-gp-os3" id="qdx-HO-h9w"/>
                 <outlet property="growthStepButton" destination="We5-g7-R7z" id="WDv-NY-N8a"/>
-                <outlet property="plantName" destination="yfb-Bo-CCs" id="0Mx-Gv-Fvw"/>
+                <outlet property="plantTableView" destination="d0O-aF-bMC" id="Qpq-I5-TMc"/>
+                <outlet property="plantTextField" destination="yfb-Bo-CCs" id="0Mx-Gv-Fvw"/>
                 <outlet property="saveButton" destination="LNH-B7-4nu" id="nws-1w-RUe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -35,7 +36,7 @@
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="nama-perangkat"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="device-name"/>
                     </userDefinedRuntimeAttributes>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama Perangkat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awz-uY-odR">
@@ -69,17 +70,9 @@
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="tahap-pertumbuhan"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="growth-step"/>
                     </userDefinedRuntimeAttributes>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EmH-m6-G64">
-                    <rect key="frame" x="348" y="196" width="19" height="21.333333333333314"/>
-                    <color key="tintColor" name="secondary-accent"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="19" id="92l-3V-N1Z"/>
-                        <constraint firstAttribute="height" constant="22.670000000000002" id="hoT-Qm-rfT"/>
-                    </constraints>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We5-g7-R7z">
                     <rect key="frame" x="16" y="269" width="361" height="45"/>
                     <constraints>
@@ -110,37 +103,47 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNH-B7-4nu" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="709" width="361" height="40"/>
+                    <rect key="frame" x="16" y="762" width="361" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="FMe-Wu-0i7"/>
                     </constraints>
                     <color key="tintColor" name="primary-accent"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button">
+                        <backgroundConfiguration key="background" cornerRadius="10"/>
+                        <color key="baseBackgroundColor" name="primary-accent"/>
+                    </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="save"/>
                     </userDefinedRuntimeAttributes>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d0O-aF-bMC" userLabel="PlantTableView">
+                    <rect key="frame" x="16" y="237" width="361" height="509"/>
+                    <color key="backgroundColor" name="surface"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EmH-m6-G64" secondAttribute="trailing" constant="26" id="2kA-rm-jnz"/>
                 <constraint firstItem="M7Z-d4-mPK" firstAttribute="top" secondItem="awz-uY-odR" secondAttribute="bottom" constant="15.5" id="4FA-FH-mcs"/>
                 <constraint firstItem="XNT-DM-Kn7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="4cj-tY-mCl"/>
                 <constraint firstItem="yfb-Bo-CCs" firstAttribute="top" secondItem="M7Z-d4-mPK" secondAttribute="bottom" constant="5" id="7Gb-DH-eKX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="We5-g7-R7z" secondAttribute="trailing" constant="16" id="BBa-Nk-ruD"/>
                 <constraint firstItem="LNH-B7-4nu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Bbx-Qm-2yx"/>
-                <constraint firstItem="LNH-B7-4nu" firstAttribute="top" secondItem="We5-g7-R7z" secondAttribute="bottom" constant="395" id="CFB-ev-OIP"/>
+                <constraint firstItem="LNH-B7-4nu" firstAttribute="top" secondItem="d0O-aF-bMC" secondAttribute="bottom" constant="16" id="DLM-QV-QI9"/>
                 <constraint firstItem="trh-93-jyx" firstAttribute="top" secondItem="yfb-Bo-CCs" secondAttribute="bottom" constant="15.5" id="G5x-cl-KLV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sVK-pv-zsx" secondAttribute="trailing" constant="26" id="JOs-qW-tOe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XNT-DM-Kn7" secondAttribute="trailing" constant="16" id="Jfy-2i-GLh"/>
+                <constraint firstItem="d0O-aF-bMC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ley-ZB-gqA"/>
                 <constraint firstItem="XNT-DM-Kn7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="M6J-OP-ffx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LNH-B7-4nu" secondAttribute="bottom" constant="16" id="Orb-CO-YZu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M7Z-d4-mPK" secondAttribute="trailing" constant="16" id="R3R-zv-AVy"/>
                 <constraint firstItem="sVK-pv-zsx" firstAttribute="top" secondItem="trh-93-jyx" secondAttribute="bottom" constant="11.67" id="Tgj-PT-Ls3"/>
                 <constraint firstItem="sVK-pv-zsx" firstAttribute="leading" secondItem="ROe-gp-os3" secondAttribute="trailing" constant="100" id="WYz-xS-v6N"/>
                 <constraint firstItem="awz-uY-odR" firstAttribute="top" secondItem="XNT-DM-Kn7" secondAttribute="bottom" constant="5" id="YMC-77-wRu"/>
-                <constraint firstItem="EmH-m6-G64" firstAttribute="top" secondItem="M7Z-d4-mPK" secondAttribute="bottom" constant="16.329999999999998" id="aCz-HW-JBE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d0O-aF-bMC" secondAttribute="trailing" constant="16" id="Zbz-qC-Xx7"/>
                 <constraint firstItem="trh-93-jyx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aU9-Su-kzz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="awz-uY-odR" secondAttribute="trailing" constant="16" id="ckU-rX-AKZ"/>
                 <constraint firstItem="M7Z-d4-mPK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dUA-2T-cCH"/>
@@ -150,6 +153,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yfb-Bo-CCs" secondAttribute="trailing" constant="16" id="mUr-P6-c3t"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="trh-93-jyx" secondAttribute="trailing" constant="16" id="nyK-wR-k6h"/>
                 <constraint firstItem="ROe-gp-os3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="o1X-4s-nVe"/>
+                <constraint firstItem="d0O-aF-bMC" firstAttribute="top" secondItem="yfb-Bo-CCs" secondAttribute="bottom" constant="8" id="o3K-VY-9M7"/>
                 <constraint firstItem="We5-g7-R7z" firstAttribute="top" secondItem="trh-93-jyx" secondAttribute="bottom" constant="5" id="pPC-Nd-H6X"/>
                 <constraint firstItem="ROe-gp-os3" firstAttribute="top" secondItem="trh-93-jyx" secondAttribute="bottom" constant="16" id="ysj-c1-Vax"/>
                 <constraint firstItem="We5-g7-R7z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zvi-tb-QkL"/>
@@ -159,7 +163,6 @@
     </objects>
     <resources>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="primary-accent">
             <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

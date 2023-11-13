@@ -21,6 +21,7 @@ class PlantSearchItemCell: UITableViewCell {
         cardView.layer.cornerRadius = 10
         cardView.layer.borderWidth = 0.3
         cardView.layer.borderColor = UIColor.secondaryAccent.cgColor
+        cardView.layer.backgroundColor = UIColor.white.cgColor
         cardView.clipsToBounds = true
         cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onSelectedPlant(_:))))
         
