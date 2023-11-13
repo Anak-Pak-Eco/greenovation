@@ -42,19 +42,6 @@ final class SignInViewModel: NSObject {
                 print("Result: \(result.user)")
             }
             .store(in: &cancellables)
-        
-//        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
-//            guard let self = self else { return }
-//            
-//            if let error = error {
-//                self.isSignInLoading.value = false
-//                self.signInError.value = error.localizedDescription
-//                return
-//            }
-//            
-//            self.isSignInLoading.value = false
-//            self.signInSuccess.value = true
-//        }
     }
     
     func signInWithGoogle(viewController: UIViewController) {
@@ -96,7 +83,6 @@ final class SignInViewModel: NSObject {
 }
 
 extension SignInViewModel: ASAuthorizationControllerDelegate , ASAuthorizationControllerPresentationContextProviding {
-    
     func signInWithApple(viewController: UIViewController) {
         // TODO: Move it to utils class
         func randomNonceString(length: Int = 32) -> String {
@@ -179,8 +165,18 @@ extension SignInViewModel: ASAuthorizationControllerDelegate , ASAuthorizationCo
                     return
                 }
                 
-                isSignInLoading.value = false
-                signInSuccess.value = true
+                let request = Auth.auth().currentUser?.createProfileChangeRequest()
+                request?.displayName = "\(String(describing: appleIdCredential.fullName?.givenName ?? "-")) \(String(describing: appleIdCredential.fullName?.middleName ?? "-")) \(appleIdCredential.fullName?.familyName ?? "-")"
+                request?.commitChanges { [unowned self] error in
+                    if let error = error {
+                        signInError.value = error.localizedDescription
+                        isSignInLoading.value = false
+                        return
+                    }
+                    
+                    isSignInLoading.value = false
+                    signInSuccess.value = true
+                }
             }
         }
     }

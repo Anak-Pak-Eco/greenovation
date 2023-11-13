@@ -24,8 +24,8 @@ class FormulaSettingViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         setupToolbar()
+        navigationController?.forceUpdateNavbar()
         viewModel.getData()
     }
     

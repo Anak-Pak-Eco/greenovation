@@ -84,6 +84,7 @@ class NotificationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setupToolbar()
+        navigationController?.forceUpdateNavbar()
         viewModel.getNotifications()
     }
     

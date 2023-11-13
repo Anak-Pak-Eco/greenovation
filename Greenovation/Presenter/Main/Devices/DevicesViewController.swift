@@ -33,20 +33,12 @@ class DevicesViewController: UIViewController {
         tabBarController?.title = "Perangkat"
         tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
         
-//        let profileButton = UIButton(type: .custom)
-//        profileButton.frame = CGRectMake(0, 0, 25, 25)
-//        profileButton.setImage(UIImage(systemName: "person.crop.circle.fill"), for: .normal)
-//        profileButton.addTarget(self, action: #selector(onProfileClicked(_:)), for: .touchUpInside)
         let profileBarButton = UIBarButtonItem(
             image: UIImage(systemName: "person.crop.circle.fill"),
             style: .plain, target: self,
             action: #selector(onProfileClicked(_:))
         )
         
-//        let addButton = UIButton(type: .custom)
-//        addButton.frame = CGRectMake(0, 0, 25, 25)
-//        addButton.setImage(UIImage(systemName: "plus"), for: .normal)
-//        addButton.addTarget(self, action: #selector(onAddDeviceClicked(_:)), for: .touchUpInside)
         let addBarButton = UIBarButtonItem(
             image: UIImage(systemName: "plus"),
             style: .plain, target: self,

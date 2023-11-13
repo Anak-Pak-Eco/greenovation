@@ -722,6 +722,37 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		D663B0372B01D765004E7BCF /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				D6AC85862AD013B80033B665 /* DetailDevice */,
+				A73E1E9A2AFCEEBF008053A9 /* EditDevice */,
+				A72C071E2AFA448C005395DB /* AddDevice */,
+				D68A034C2B00734C00CB4666 /* PairingDevice */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		D663B0382B01D77F004E7BCF /* FormulaSettings */ = {
+			isa = PBXGroup;
+			children = (
+				A756C1D02AFA10F7004E58A0 /* AddFormula */,
+				A73E1EA32AFDF678008053A9 /* EditFormula */,
+				A72C06FF2AFA2660005395DB /* RegisterFormula */,
+			);
+			path = FormulaSettings;
+			sourceTree = "<group>";
+		};
+		D663B0392B01D78D004E7BCF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D6917A2F2AEAB4E400CD7F5C /* SignUp */,
+				D6BB280D2AEA81250084FD00 /* SignIn */,
+				D60892272AEA75EE00A1C530 /* Onboarding */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		D664FCF32AFCE14F00D91150 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -1016,16 +1047,9 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				D68A034C2B00734C00CB4666 /* PairingDevice */,
-				A72C071E2AFA448C005395DB /* AddDevice */,
-				A73E1E9A2AFCEEBF008053A9 /* EditDevice */,
-				A756C1D02AFA10F7004E58A0 /* AddFormula */,
-				A73E1EA32AFDF678008053A9 /* EditFormula */,
-				A72C06FF2AFA2660005395DB /* RegisterFormula */,
-				D6917A2F2AEAB4E400CD7F5C /* SignUp */,
-				D6BB280D2AEA81250084FD00 /* SignIn */,
-				D60892272AEA75EE00A1C530 /* Onboarding */,
-				D6AC85862AD013B80033B665 /* DetailDevice */,
+				D663B0392B01D78D004E7BCF /* Authentication */,
+				D663B0382B01D77F004E7BCF /* FormulaSettings */,
+				D663B0372B01D765004E7BCF /* Devices */,
 				D68D4E7A2AF5FA3300F61B1E /* Profile */,
 				D6AC85702ACFF4860033B665 /* Main */,
 			);
