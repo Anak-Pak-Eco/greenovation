@@ -17,7 +17,6 @@ class NotificationViewController: UIViewController {
         super.viewDidLoad()
         initObserver()
         initUI()
-        viewModel.getNotifications()
     }
     
     private func initUI() {
@@ -85,6 +84,8 @@ class NotificationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setupToolbar()
+        navigationController?.forceUpdateNavbar()
+        viewModel.getNotifications()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -95,7 +96,7 @@ class NotificationViewController: UIViewController {
     
     private func setupToolbar() {
         tabBarController?.title = "Notifikasi"
-        tabBarController?.navigationItem.setRightBarButton(nil, animated: true)
+        tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
     }
 }
 

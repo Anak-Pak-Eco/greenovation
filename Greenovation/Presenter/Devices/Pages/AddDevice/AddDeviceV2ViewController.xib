@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDeviceV2ViewController" customModule="Greenovation" customModuleProvider="target">
+            <connections>
+                <outlet property="deviceNameTextField" destination="awz-uY-odR" id="lQ8-g7-F8g"/>
+                <outlet property="growthStep" destination="ROe-gp-os3" id="qdx-HO-h9w"/>
+                <outlet property="growthStepButton" destination="We5-g7-R7z" id="WDv-NY-N8a"/>
+                <outlet property="plantTableView" destination="d0O-aF-bMC" id="Qpq-I5-TMc"/>
+                <outlet property="plantTextField" destination="yfb-Bo-CCs" id="0Mx-Gv-Fvw"/>
+                <outlet property="saveButton" destination="LNH-B7-4nu" id="nws-1w-RUe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Perangkat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNT-DM-Kn7" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="16" y="74" width="361" height="19.666666666666671"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
+                    <color key="textColor" name="primary-accent"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="device-name"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama Perangkat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awz-uY-odR">
+                    <rect key="frame" x="16" y="98.666666666666671" width="361" height="45.000000000000014"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="rkJ-cG-cp8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis Tanaman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7Z-d4-mPK" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="16" y="159.33333333333334" width="361" height="19.666666666666657"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
+                    <color key="textColor" name="primary-accent"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="plant-type"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Jenis Tanaman" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-Bo-CCs">
+                    <rect key="frame" x="16" y="184" width="361" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="RrC-hE-THO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tahap Pertumbuhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trh-93-jyx" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="16" y="244.33333333333334" width="361" height="19.666666666666657"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
+                    <color key="textColor" name="primary-accent"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="growth-step"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We5-g7-R7z" userLabel="GrowthStepButton">
+                    <rect key="frame" x="16" y="269" width="361" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="sXd-lN-ghb"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="">
+                        <color key="baseForegroundColor" name="surface-container-highest"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onGrowthStepButtonClicked:" destination="-1" eventType="touchUpInside" id="hD4-3K-oO1"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sVK-pv-zsx">
+                    <rect key="frame" x="344" y="287.33333333333331" width="19" height="9"/>
+                    <color key="tintColor" name="secondary-accent"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="2an-aK-Oxj"/>
+                        <constraint firstAttribute="width" constant="19" id="cw5-TL-nUH"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-gp-os3" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="29.999999999999993" y="280.33333333333331" width="98.333333333333314" height="22.333333333333314"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                    <color key="textColor" name="surface-container-highest"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="fase-anakan"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNH-B7-4nu" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="16" y="762" width="361" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="FMe-Wu-0i7"/>
+                    </constraints>
+                    <color key="tintColor" name="primary-accent"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button">
+                        <backgroundConfiguration key="background" cornerRadius="10"/>
+                        <color key="baseBackgroundColor" name="primary-accent"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="save"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d0O-aF-bMC" userLabel="PlantTableView">
+                    <rect key="frame" x="16" y="237" width="361" height="509"/>
+                    <color key="backgroundColor" name="surface"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="surface"/>
+            <constraints>
+                <constraint firstItem="M7Z-d4-mPK" firstAttribute="top" secondItem="awz-uY-odR" secondAttribute="bottom" constant="15.5" id="4FA-FH-mcs"/>
+                <constraint firstItem="XNT-DM-Kn7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="4cj-tY-mCl"/>
+                <constraint firstItem="yfb-Bo-CCs" firstAttribute="top" secondItem="M7Z-d4-mPK" secondAttribute="bottom" constant="5" id="7Gb-DH-eKX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="We5-g7-R7z" secondAttribute="trailing" constant="16" id="BBa-Nk-ruD"/>
+                <constraint firstItem="LNH-B7-4nu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Bbx-Qm-2yx"/>
+                <constraint firstItem="LNH-B7-4nu" firstAttribute="top" secondItem="d0O-aF-bMC" secondAttribute="bottom" constant="16" id="DLM-QV-QI9"/>
+                <constraint firstItem="trh-93-jyx" firstAttribute="top" secondItem="yfb-Bo-CCs" secondAttribute="bottom" constant="15.5" id="G5x-cl-KLV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XNT-DM-Kn7" secondAttribute="trailing" constant="16" id="Jfy-2i-GLh"/>
+                <constraint firstItem="d0O-aF-bMC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ley-ZB-gqA"/>
+                <constraint firstItem="ROe-gp-os3" firstAttribute="leading" secondItem="We5-g7-R7z" secondAttribute="leading" constant="14" id="Lt9-bh-dnV"/>
+                <constraint firstItem="XNT-DM-Kn7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="M6J-OP-ffx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LNH-B7-4nu" secondAttribute="bottom" constant="16" id="Orb-CO-YZu"/>
+                <constraint firstItem="sVK-pv-zsx" firstAttribute="centerY" secondItem="We5-g7-R7z" secondAttribute="centerY" id="QNp-vp-nvW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M7Z-d4-mPK" secondAttribute="trailing" constant="16" id="R3R-zv-AVy"/>
+                <constraint firstItem="awz-uY-odR" firstAttribute="top" secondItem="XNT-DM-Kn7" secondAttribute="bottom" constant="5" id="YMC-77-wRu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d0O-aF-bMC" secondAttribute="trailing" constant="16" id="Zbz-qC-Xx7"/>
+                <constraint firstItem="trh-93-jyx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aU9-Su-kzz"/>
+                <constraint firstItem="ROe-gp-os3" firstAttribute="centerY" secondItem="We5-g7-R7z" secondAttribute="centerY" id="b1f-a0-btf"/>
+                <constraint firstItem="We5-g7-R7z" firstAttribute="trailing" secondItem="sVK-pv-zsx" secondAttribute="trailing" constant="14" id="cd2-kp-ItW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="awz-uY-odR" secondAttribute="trailing" constant="16" id="ckU-rX-AKZ"/>
+                <constraint firstItem="M7Z-d4-mPK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dUA-2T-cCH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LNH-B7-4nu" secondAttribute="trailing" constant="16" id="jbN-KF-zq5"/>
+                <constraint firstItem="yfb-Bo-CCs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jsk-2e-nbr"/>
+                <constraint firstItem="awz-uY-odR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="m5z-Br-bEo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yfb-Bo-CCs" secondAttribute="trailing" constant="16" id="mUr-P6-c3t"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="trh-93-jyx" secondAttribute="trailing" constant="16" id="nyK-wR-k6h"/>
+                <constraint firstItem="d0O-aF-bMC" firstAttribute="top" secondItem="yfb-Bo-CCs" secondAttribute="bottom" constant="8" id="o3K-VY-9M7"/>
+                <constraint firstItem="We5-g7-R7z" firstAttribute="top" secondItem="trh-93-jyx" secondAttribute="bottom" constant="5" id="pPC-Nd-H6X"/>
+                <constraint firstItem="We5-g7-R7z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zvi-tb-QkL"/>
+            </constraints>
+            <point key="canvasLocation" x="793" y="311"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary-accent">
+            <color red="0.56499999761581421" green="0.45500001311302185" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface">
+            <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface-container-highest">
+            <color red="0.77999997138977051" green="0.77999997138977051" blue="0.74900001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

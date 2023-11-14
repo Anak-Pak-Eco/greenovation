@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddFormulaViewController" customModule="Greenovation" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingBar" destination="phE-bR-ed2" id="JL4-b8-jo8"/>
+                <outlet property="plantsTableView" destination="4gD-PA-uUt" id="A5a-nO-EbQ"/>
+                <outlet property="searchTextField" destination="4RN-vQ-UV5" id="Kwv-fa-meB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Plant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RN-vQ-UV5">
+                    <rect key="frame" x="16" y="98.666666666666671" width="361" height="45.000000000000014"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="ROB-vq-Lgq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cari Tanaman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-mT-HmS">
+                    <rect key="frame" x="16" y="74" width="361" height="19.666666666666671"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
+                    <color key="textColor" name="primary-accent"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4gD-PA-uUt">
+                    <rect key="frame" x="16" y="150.66666666666669" width="361" height="652.33333333333326"/>
+                    <color key="backgroundColor" name="surface"/>
+                    <inset key="scrollIndicatorInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="phE-bR-ed2">
+                    <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="surface"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wFb-mT-HmS" secondAttribute="trailing" constant="16" id="0PJ-jV-eiV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4RN-vQ-UV5" secondAttribute="trailing" constant="16" id="Fib-JP-uGc"/>
+                <constraint firstItem="wFb-mT-HmS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="IvD-7A-dfc"/>
+                <constraint firstItem="4gD-PA-uUt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JdL-3U-4ve"/>
+                <constraint firstItem="phE-bR-ed2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ME8-SV-Rqo"/>
+                <constraint firstItem="4RN-vQ-UV5" firstAttribute="top" secondItem="wFb-mT-HmS" secondAttribute="bottom" constant="5" id="Ocf-oV-Tb2"/>
+                <constraint firstItem="4gD-PA-uUt" firstAttribute="top" secondItem="4RN-vQ-UV5" secondAttribute="bottom" constant="7" id="SWW-yr-dUN"/>
+                <constraint firstItem="wFb-mT-HmS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VFT-4x-YaX"/>
+                <constraint firstItem="phE-bR-ed2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Yza-3z-oKi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4gD-PA-uUt" secondAttribute="trailing" constant="16" id="pwW-ZR-Zrd"/>
+                <constraint firstItem="4RN-vQ-UV5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="syx-XC-NbV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4gD-PA-uUt" secondAttribute="bottom" constant="15" id="vPq-WC-JI0"/>
+            </constraints>
+            <point key="canvasLocation" x="101" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface">
+            <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

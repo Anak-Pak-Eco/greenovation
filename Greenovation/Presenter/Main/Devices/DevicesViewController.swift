@@ -31,19 +31,31 @@ class DevicesViewController: UIViewController {
     private func setupToolbar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         tabBarController?.title = "Perangkat"
-        tabBarController?.navigationItem.setRightBarButton(
-            UIBarButtonItem(
-                image: UIImage(systemName: "plus"),
-                style: .plain,
-                target: self,
-                action: #selector(onAddDeviceClicked(_:))
-            ),
-            animated: true
+        tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
+        
+        let profileBarButton = UIBarButtonItem(
+            image: UIImage(systemName: "person.crop.circle.fill"),
+            style: .plain, target: self,
+            action: #selector(onProfileClicked(_:))
         )
+        
+        let addBarButton = UIBarButtonItem(
+            image: UIImage(systemName: "plus"),
+            style: .plain, target: self,
+            action: #selector(onAddDeviceClicked(_:))
+        )
+        
+        tabBarController?.navigationItem.setRightBarButtonItems([profileBarButton, addBarButton], animated: true)
     }
     
-    @objc private func onAddDeviceClicked(_ sender: UIBarButtonItem) {
-        let viewController = ScanQRViewController()
+    @objc private func onProfileClicked(_ sender: Any) {
+        let viewController = ProfileViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc private func onAddDeviceClicked(_ sender: Any) {
+        // let viewController = PairingInstructionViewController()
+        let viewController = AddDeviceV2ViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -86,7 +98,10 @@ extension DevicesViewController: UITableViewDelegate, UITableViewDataSource {
         UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(
+        _ tableView: UITableView,
+        estimatedHeightForRowAt indexPath: IndexPath
+    ) -> CGFloat {
         UITableView.automaticDimension
     }
 }

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Bold.ttf">
+            <string>DMSans-Bold</string>
+        </array>
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteDeviceViewController" customModule="Greenovation" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="Qco-9f-WSU" id="5hf-RS-7Xq"/>
+                <outlet property="deleteButton" destination="PqZ-y4-ICd" id="bgc-Ah-b83"/>
+                <outlet property="dialogView" destination="X3H-aO-Sys" id="BXt-m1-VRe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3H-aO-Sys">
+                    <rect key="frame" x="33" y="344" width="327" height="164"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hapus Perangkat Ini?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKg-QA-AD4" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="45" y="19" width="236" height="17.666666666666671"/>
+                            <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="hapus-perangkat-ini?"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data perangkat yang telah dihapus tidak dapat dikembalikan." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xes-Ak-oLY" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="2" y="51.666666666666686" width="323" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="d2s-bd-lzE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="Data perangkat yang telah dihapus tidak dapat dikembalikan."/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqZ-y4-ICd" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="171" y="100.66666666666669" width="140" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Hja-Lj-hAM"/>
+                                <constraint firstAttribute="width" constant="140" id="xTY-bX-UrB"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Hapus">
+                                <color key="baseBackgroundColor" name="primary-accent"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="hapus"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qco-9f-WSU" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="16" y="100.66666666666669" width="140" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="oc2-ru-IMV"/>
+                                <constraint firstAttribute="height" constant="40" id="wfV-KH-9Th"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Batal">
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="batal"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="surface"/>
+                    <constraints>
+                        <constraint firstItem="ZKg-QA-AD4" firstAttribute="leading" secondItem="X3H-aO-Sys" secondAttribute="leading" constant="45" id="6Mh-NJ-KCf"/>
+                        <constraint firstItem="Xes-Ak-oLY" firstAttribute="top" secondItem="ZKg-QA-AD4" secondAttribute="bottom" constant="15" id="Aj5-rE-5Af"/>
+                        <constraint firstAttribute="trailing" secondItem="ZKg-QA-AD4" secondAttribute="trailing" constant="46" id="Fl1-PO-wgG"/>
+                        <constraint firstAttribute="trailing" secondItem="PqZ-y4-ICd" secondAttribute="trailing" constant="16" id="GPe-zN-PPP"/>
+                        <constraint firstItem="Xes-Ak-oLY" firstAttribute="leading" secondItem="X3H-aO-Sys" secondAttribute="leading" constant="2" id="PoT-G8-OBJ"/>
+                        <constraint firstItem="Qco-9f-WSU" firstAttribute="top" secondItem="Xes-Ak-oLY" secondAttribute="bottom" constant="15" id="Rhu-IE-peN"/>
+                        <constraint firstItem="PqZ-y4-ICd" firstAttribute="top" secondItem="Xes-Ak-oLY" secondAttribute="bottom" constant="15" id="TvM-s8-OMd"/>
+                        <constraint firstAttribute="height" constant="164" id="Y9V-FW-Psw"/>
+                        <constraint firstAttribute="trailing" secondItem="Xes-Ak-oLY" secondAttribute="trailing" constant="2" id="aNc-wa-U2O"/>
+                        <constraint firstItem="ZKg-QA-AD4" firstAttribute="top" secondItem="X3H-aO-Sys" secondAttribute="top" constant="19" id="cBz-CC-FIN"/>
+                        <constraint firstItem="Qco-9f-WSU" firstAttribute="leading" secondItem="X3H-aO-Sys" secondAttribute="leading" constant="16" id="fVl-Xw-gSS"/>
+                        <constraint firstAttribute="width" constant="327" id="lPf-fg-we6"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="29"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="UCI-yr-sA9"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="X3H-aO-Sys" firstAttribute="top" secondItem="UCI-yr-sA9" secondAttribute="top" constant="285" id="Hk5-8a-LOr"/>
+                <constraint firstItem="UCI-yr-sA9" firstAttribute="bottom" secondItem="X3H-aO-Sys" secondAttribute="bottom" constant="310" id="dvt-a6-gNC"/>
+                <constraint firstItem="X3H-aO-Sys" firstAttribute="leading" secondItem="UCI-yr-sA9" secondAttribute="leading" constant="33" id="gDd-2C-EcS"/>
+                <constraint firstItem="UCI-yr-sA9" firstAttribute="trailing" secondItem="X3H-aO-Sys" secondAttribute="trailing" constant="33" id="spO-CM-goz"/>
+            </constraints>
+            <point key="canvasLocation" x="49.618320610687022" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface">
+            <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

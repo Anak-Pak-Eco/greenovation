@@ -10,7 +10,7 @@ import Foundation
 
 final class NotificationRepository: NotificationRepositoryProtocol {
     
-    private let dataSource = HydrospaceAPIDataSource.shared
+    private let dataSource = APIDataSource.shared
     
     func getNotifications() -> AnyPublisher<[NotificationModel], Error> {
         return dataSource.getNotifications()
