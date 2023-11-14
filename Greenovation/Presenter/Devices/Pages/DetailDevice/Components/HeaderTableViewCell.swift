@@ -13,9 +13,12 @@ class HeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var phLabel: UILabel!
     @IBOutlet weak var ppmLabel: UILabel!
     @IBOutlet weak var phaseLabel: UILabel!
+    @IBOutlet var editButton: LocalizableButton!
+    @IBOutlet var labelUIView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        style()
     }
     
     func setupData(device: DeviceModel) {
@@ -27,5 +30,19 @@ class HeaderTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    @objc func editButtonTapped() {
+        
+    }
+    
+    private func style() {
+        // Edit Button
+        editButton.titleLabel?.font = UIFont(name: "DMSans-SemiBold", size: 12)
+        editButton.addTarget(self, action: #selector(editButtonTapped), for: .touchUpInside)
+        
+        // Label UI View
+        labelUIView.layer.borderWidth = 1.0
+        labelUIView.layer.borderColor = UIColor.surfaceDim.cgColor
     }
 }
