@@ -30,6 +30,7 @@ class RegisterFormulaViewController: UIViewController {
     @IBOutlet var saveButton: LocalizableButton!
     
     let plant: PlantModel
+    var isAddDevice = false
     
     init(plant: PlantModel) {
         self.plant = plant
@@ -45,7 +46,11 @@ class RegisterFormulaViewController: UIViewController {
         super.viewDidLoad()
         viewModel.successSaveFormula.bind { [unowned self] success in
             if success {
-                navigationController?.popToRootViewController(animated: true)
+                if isAddDevice {
+                    navigationController?.popViewController(animated: true)
+                } else {
+                    navigationController?.popToRootViewController(animated: true)
+                }
             }
         }
         viewModel.loadingSaveFormula.bind { [unowned self] isLoading in
@@ -94,15 +99,15 @@ class RegisterFormulaViewController: UIViewController {
         plantName.text = viewModel.plant.name
         
         let anakan = plant.phases.first { phase in
-            phase.step == "anakan"
+            phase.step == .anakan
         }
         
         let vegetatifAwal = plant.phases.first { phase in
-            phase.step == "vegetatif_awal"
+            phase.step == .vegetatif_awal
         }
         
         let vegetatifMenengah = plant.phases.first { phase in
-            phase.step == "vegetatif_menengah"
+            phase.step == .vegetatif_menengah
         }
         
         anakanRecommendationLabel.text = "Rekomendari dari Greenovation:\nKepekatan Nutrisi: \(anakan?.min_ppm ?? 0)-\(anakan?.max_ppm ?? 0) & Tingkat pH: \(anakan?.min_ph ?? 0)-\(anakan?.max_ph ?? 0)"

@@ -130,6 +130,23 @@
         }
       }
     },
+    "device-register" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Register Device"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pendaftaran Perangkat"
+          }
+        }
+      }
+    },
     "devices" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -431,22 +448,6 @@
         }
       }
     },
-    "pendaftaran-perangkat" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Device Register"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pendaftaran Perangkat"
-          }
-        }
-      }
-    },
     "Perubahan berhasil disimpan" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -687,9 +688,6 @@
           }
         }
       }
-    },
-    "simpan" : {
-
     },
     "sollution-corrected" : {
       "extractionState" : "manual",

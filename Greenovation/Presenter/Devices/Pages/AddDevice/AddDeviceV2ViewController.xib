@@ -73,7 +73,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="growth-step"/>
                     </userDefinedRuntimeAttributes>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We5-g7-R7z">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We5-g7-R7z" userLabel="GrowthStepButton">
                     <rect key="frame" x="16" y="269" width="361" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="sXd-lN-ghb"/>
@@ -84,17 +84,20 @@
                         <color key="baseForegroundColor" name="surface-container-highest"/>
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="onGrowthStepButtonClicked:" destination="-1" eventType="touchUpInside" id="hD4-3K-oO1"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sVK-pv-zsx">
-                    <rect key="frame" x="348" y="281" width="19" height="21"/>
+                    <rect key="frame" x="344" y="287.33333333333331" width="19" height="9"/>
                     <color key="tintColor" name="secondary-accent"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="31" id="2an-aK-Oxj"/>
+                        <constraint firstAttribute="height" constant="19" id="2an-aK-Oxj"/>
                         <constraint firstAttribute="width" constant="19" id="cw5-TL-nUH"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-gp-os3" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="33" y="280" width="215" height="22.333333333333314"/>
+                    <rect key="frame" x="29.999999999999993" y="280.33333333333331" width="98.333333333333314" height="22.333333333333314"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                     <color key="textColor" name="surface-container-highest"/>
                     <nil key="highlightedColor"/>
@@ -134,17 +137,18 @@
                 <constraint firstItem="LNH-B7-4nu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Bbx-Qm-2yx"/>
                 <constraint firstItem="LNH-B7-4nu" firstAttribute="top" secondItem="d0O-aF-bMC" secondAttribute="bottom" constant="16" id="DLM-QV-QI9"/>
                 <constraint firstItem="trh-93-jyx" firstAttribute="top" secondItem="yfb-Bo-CCs" secondAttribute="bottom" constant="15.5" id="G5x-cl-KLV"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sVK-pv-zsx" secondAttribute="trailing" constant="26" id="JOs-qW-tOe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XNT-DM-Kn7" secondAttribute="trailing" constant="16" id="Jfy-2i-GLh"/>
                 <constraint firstItem="d0O-aF-bMC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ley-ZB-gqA"/>
+                <constraint firstItem="ROe-gp-os3" firstAttribute="leading" secondItem="We5-g7-R7z" secondAttribute="leading" constant="14" id="Lt9-bh-dnV"/>
                 <constraint firstItem="XNT-DM-Kn7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="M6J-OP-ffx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LNH-B7-4nu" secondAttribute="bottom" constant="16" id="Orb-CO-YZu"/>
+                <constraint firstItem="sVK-pv-zsx" firstAttribute="centerY" secondItem="We5-g7-R7z" secondAttribute="centerY" id="QNp-vp-nvW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M7Z-d4-mPK" secondAttribute="trailing" constant="16" id="R3R-zv-AVy"/>
-                <constraint firstItem="sVK-pv-zsx" firstAttribute="top" secondItem="trh-93-jyx" secondAttribute="bottom" constant="11.67" id="Tgj-PT-Ls3"/>
-                <constraint firstItem="sVK-pv-zsx" firstAttribute="leading" secondItem="ROe-gp-os3" secondAttribute="trailing" constant="100" id="WYz-xS-v6N"/>
                 <constraint firstItem="awz-uY-odR" firstAttribute="top" secondItem="XNT-DM-Kn7" secondAttribute="bottom" constant="5" id="YMC-77-wRu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d0O-aF-bMC" secondAttribute="trailing" constant="16" id="Zbz-qC-Xx7"/>
                 <constraint firstItem="trh-93-jyx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aU9-Su-kzz"/>
+                <constraint firstItem="ROe-gp-os3" firstAttribute="centerY" secondItem="We5-g7-R7z" secondAttribute="centerY" id="b1f-a0-btf"/>
+                <constraint firstItem="We5-g7-R7z" firstAttribute="trailing" secondItem="sVK-pv-zsx" secondAttribute="trailing" constant="14" id="cd2-kp-ItW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="awz-uY-odR" secondAttribute="trailing" constant="16" id="ckU-rX-AKZ"/>
                 <constraint firstItem="M7Z-d4-mPK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dUA-2T-cCH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LNH-B7-4nu" secondAttribute="trailing" constant="16" id="jbN-KF-zq5"/>
@@ -152,10 +156,8 @@
                 <constraint firstItem="awz-uY-odR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="m5z-Br-bEo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yfb-Bo-CCs" secondAttribute="trailing" constant="16" id="mUr-P6-c3t"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="trh-93-jyx" secondAttribute="trailing" constant="16" id="nyK-wR-k6h"/>
-                <constraint firstItem="ROe-gp-os3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="o1X-4s-nVe"/>
                 <constraint firstItem="d0O-aF-bMC" firstAttribute="top" secondItem="yfb-Bo-CCs" secondAttribute="bottom" constant="8" id="o3K-VY-9M7"/>
                 <constraint firstItem="We5-g7-R7z" firstAttribute="top" secondItem="trh-93-jyx" secondAttribute="bottom" constant="5" id="pPC-Nd-H6X"/>
-                <constraint firstItem="ROe-gp-os3" firstAttribute="top" secondItem="trh-93-jyx" secondAttribute="bottom" constant="16" id="ysj-c1-Vax"/>
                 <constraint firstItem="We5-g7-R7z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zvi-tb-QkL"/>
             </constraints>
             <point key="canvasLocation" x="793" y="311"/>

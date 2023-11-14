@@ -162,7 +162,7 @@ class EditFormulaViewController: UIViewController {
             ppmMaxFaseMenengah.isEnabled = true
             phMinFaseMenengah.isEnabled = true
             phMaxFaseMenengah.isEnabled = true
-            editButton?.title = String(localized: "simpan")
+            editButton?.title = String(localized: "save")
         }
         
         viewModel.editMode.toggle()
@@ -196,7 +196,7 @@ class EditFormulaViewController: UIViewController {
     }
     
     private func setupToolbar() {
-        title = String(localized: "pendaftaran-perangkat")
+        title = String(localized: "device-register")
         navigationController?.navigationBar.prefersLargeTitles = false
         
         let backButton = UIBarButtonItem(
@@ -296,19 +296,19 @@ class EditFormulaViewController: UIViewController {
         
         plantName.text = plant.name
         
-        let anakan = plant.phases.first(where: {$0.step == "anakan"})
+        let anakan = plant.phases.first(where: {$0.step == .anakan})
         ppmMinFaseAnakan.text = String(describing: anakan?.min_ppm ?? 0)
         ppmMaxFaseAnakan.text = String(describing: anakan?.max_ppm ?? 0)
         phMinFaseAnakan.text = String(describing: anakan?.min_ph ?? 0)
         phMaxFaseAnakan.text = String(describing: anakan?.max_ph ?? 0)
         
-        let awal = plant.phases.first(where: {$0.step == "vegetatif_awal"})
+        let awal = plant.phases.first(where: {$0.step == .vegetatif_awal})
         ppmMinFaseAwal.text = String(describing: awal?.min_ppm ?? 0)
         ppmMaxFaseAwal.text = String(describing: awal?.max_ppm ?? 0)
         phMinFaseAwal.text = String(describing: awal?.min_ph ?? 0)
         phMaxFaseAwal.text = String(describing: awal?.max_ph ?? 0)
         
-        let menengah = plant.phases.first(where: {$0.step == "vegetatif_awal"})
+        let menengah = plant.phases.first(where: {$0.step == .vegetatif_menengah})
         ppmMinFaseMenengah.text = String(describing: menengah?.min_ppm ?? 0)
         ppmMaxFaseMenengah.text = String(describing: menengah?.max_ppm ?? 0)
         phMinFaseMenengah.text = String(describing: menengah?.min_ph ?? 0)

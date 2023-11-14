@@ -38,8 +38,6 @@
 		A756C1CF2AF8F29F004E58A0 /* FormulaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1CD2AF8F29F004E58A0 /* FormulaTableViewCell.xib */; };
 		A756C1E52AFA2028004E58A0 /* PlantSearchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1E32AFA2028004E58A0 /* PlantSearchItemCell.swift */; };
 		A756C1E62AFA2028004E58A0 /* PlantSearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1E42AFA2028004E58A0 /* PlantSearchItemCell.xib */; };
-		A77F03162AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F03142AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift */; };
-		A77F03172AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A77F03152AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib */; };
 		A77F03242AFB900500C5021D /* DontHavePlantFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F03222AFB900500C5021D /* DontHavePlantFormulaViewController.swift */; };
 		A77F03252AFB900500C5021D /* DontHavePlantFormulaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A77F03232AFB900500C5021D /* DontHavePlantFormulaViewController.xib */; };
 		A77F03282AFB999B00C5021D /* HavePlantFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F03262AFB999B00C5021D /* HavePlantFormulaViewController.swift */; };
@@ -79,6 +77,8 @@
 		D65C58832AE26D2F00FE8D1E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65C58822AE26D2F00FE8D1E /* String+Extension.swift */; };
 		D663B03D2B01E222004E7BCF /* InputWifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663B03B2B01E222004E7BCF /* InputWifiViewController.swift */; };
 		D663B03E2B01E222004E7BCF /* InputWifiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D663B03C2B01E222004E7BCF /* InputWifiViewController.xib */; };
+		D671519E2B03009500C34585 /* GrowthStepBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D671519C2B03009500C34585 /* GrowthStepBottomSheetViewController.xib */; };
+		D67151A02B0301F200C34585 /* GrowthStepBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671519F2B0301F200C34585 /* GrowthStepBottomSheetViewController.swift */; };
 		D67771232AFCCFB800EC8956 /* PlantResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771222AFCCFB800EC8956 /* PlantResponse.swift */; };
 		D67771282AFCD0E300EC8956 /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67771272AFCD0E300EC8956 /* PlantModel.swift */; };
 		D677712B2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677712A2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift */; };
@@ -204,8 +204,6 @@
 		A756C1CD2AF8F29F004E58A0 /* FormulaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormulaTableViewCell.xib; sourceTree = "<group>"; };
 		A756C1E32AFA2028004E58A0 /* PlantSearchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSearchItemCell.swift; sourceTree = "<group>"; };
 		A756C1E42AFA2028004E58A0 /* PlantSearchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantSearchItemCell.xib; sourceTree = "<group>"; };
-		A77F03142AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthStepBottomSheetViewController.swift; sourceTree = "<group>"; };
-		A77F03152AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowthStepBottomSheetViewController.xib; sourceTree = "<group>"; };
 		A77F03222AFB900500C5021D /* DontHavePlantFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontHavePlantFormulaViewController.swift; sourceTree = "<group>"; };
 		A77F03232AFB900500C5021D /* DontHavePlantFormulaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DontHavePlantFormulaViewController.xib; sourceTree = "<group>"; };
 		A77F03262AFB999B00C5021D /* HavePlantFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HavePlantFormulaViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +243,8 @@
 		D65C58822AE26D2F00FE8D1E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D663B03B2B01E222004E7BCF /* InputWifiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputWifiViewController.swift; sourceTree = "<group>"; };
 		D663B03C2B01E222004E7BCF /* InputWifiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputWifiViewController.xib; sourceTree = "<group>"; };
+		D671519C2B03009500C34585 /* GrowthStepBottomSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrowthStepBottomSheetViewController.xib; sourceTree = "<group>"; };
+		D671519F2B0301F200C34585 /* GrowthStepBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthStepBottomSheetViewController.swift; sourceTree = "<group>"; };
 		D67771222AFCCFB800EC8956 /* PlantResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantResponse.swift; sourceTree = "<group>"; };
 		D67771272AFCD0E300EC8956 /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
 		D677712A2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -425,7 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				A77F03192AFB8FB000C5021D /* Plant Formula */,
-				A77F03182AFB8F8F00C5021D /* Growth Step Bottom Sheet */,
+				A77F03182AFB8F8F00C5021D /* GrowthStep */,
 			);
 			path = BottomSheet;
 			sourceTree = "<group>";
@@ -506,13 +506,13 @@
 			path = SearchPlantItem;
 			sourceTree = "<group>";
 		};
-		A77F03182AFB8F8F00C5021D /* Growth Step Bottom Sheet */ = {
+		A77F03182AFB8F8F00C5021D /* GrowthStep */ = {
 			isa = PBXGroup;
 			children = (
-				A77F03142AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift */,
-				A77F03152AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib */,
+				D671519F2B0301F200C34585 /* GrowthStepBottomSheetViewController.swift */,
+				D671519C2B03009500C34585 /* GrowthStepBottomSheetViewController.xib */,
 			);
-			path = "Growth Step Bottom Sheet";
+			path = GrowthStep;
 			sourceTree = "<group>";
 		};
 		A77F03192AFB8FB000C5021D /* Plant Formula */ = {
@@ -1200,6 +1200,7 @@
 				A77F03252AFB900500C5021D /* DontHavePlantFormulaViewController.xib in Resources */,
 				D630F5042AD8112A00A355D0 /* DMSans-Bold.ttf in Resources */,
 				D630F5032AD8112A00A355D0 /* DMSans-Thin.ttf in Resources */,
+				D671519E2B03009500C34585 /* GrowthStepBottomSheetViewController.xib in Resources */,
 				D630F50C2AD8112A00A355D0 /* DMSans-Light.ttf in Resources */,
 				D60950412AEF890000DD5FDD /* HistoryGraphTableViewCell.xib in Resources */,
 				A79DB2C32AF39230003D768A /* SuccessDeleteDeviceViewController.xib in Resources */,
@@ -1238,7 +1239,6 @@
 				A73E1E992AFCD931008053A9 /* MyChoiceViewController.xib in Resources */,
 				A71FC0DA2AF2519300875CBF /* DeleteDeviceViewController.xib in Resources */,
 				D68A035E2B00823900CB4666 /* PeripheralItemCell.xib in Resources */,
-				A77F03172AFB86E900C5021D /* GrowthStepBottomSheetViewController.xib in Resources */,
 				D68D4E8E2AF6BFD500F61B1E /* GoogleService-Info.plist in Resources */,
 				D69D17202AEEC80100A5347C /* NotificationViewController.xib in Resources */,
 			);
@@ -1293,7 +1293,6 @@
 				D6DFD64E2AE7DEE200215428 /* View+Extension.swift in Sources */,
 				D6CF2CC62AF4CB7700BC6225 /* SignUpViewModel.swift in Sources */,
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
-				A77F03162AFB86E900C5021D /* GrowthStepBottomSheetViewController.swift in Sources */,
 				D663B03D2B01E222004E7BCF /* InputWifiViewController.swift in Sources */,
 				D6EBCEB92AFF083800EF5C51 /* PlantBody.swift in Sources */,
 				D68A035D2B00823900CB4666 /* PeripheralItemCell.swift in Sources */,
@@ -1313,6 +1312,7 @@
 				D640E2022AC7A32D007E993F /* Box.swift in Sources */,
 				D6A8ABC42AEEC0C100D6466B /* NotificationRepositoryProtocol.swift in Sources */,
 				D6A8ABC62AEEC0D400D6466B /* NotificationModel.swift in Sources */,
+				D67151A02B0301F200C34585 /* GrowthStepBottomSheetViewController.swift in Sources */,
 				D69D17222AEECA9800A5347C /* BaseResponse.swift in Sources */,
 				D681D5722AE68CD3005A0BAC /* DevicesViewController.swift in Sources */,
 				D6BD3B752AD1223C005B85C3 /* HydrospaceRepository.swift in Sources */,

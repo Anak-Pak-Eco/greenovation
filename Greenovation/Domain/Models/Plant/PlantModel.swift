@@ -19,7 +19,7 @@ struct PlantModel: Identifiable {
         let min_ppm: Double
         let max_ph: Double
         let min_ph: Double
-        let step: String
+        let step: Step
         
         static func from(_ response: [PlantResponse.PlantPhaseResponse]?) -> [PlantPhaseModel] {
             guard let response = response else {
@@ -32,8 +32,23 @@ struct PlantModel: Identifiable {
                     min_ppm: phase.min_ppm ?? 0,
                     max_ph: phase.max_ph ?? 0,
                     min_ph: phase.min_ph ?? 0,
-                    step: phase.step ?? ""
+                    step: Step(rawValue: phase.step ?? "anakan") ?? .anakan
                 )
+            }
+        }
+        
+        enum Step: String {
+            case anakan, vegetatif_awal, vegetatif_menengah
+            
+            func getText() -> String {
+                switch self {
+                case .anakan:
+                    return "Anakan"
+                case .vegetatif_awal:
+                    return "Vegetatif Awal"
+                case .vegetatif_menengah:
+                    return "Vegetatif Menengah"
+                }
             }
         }
     }

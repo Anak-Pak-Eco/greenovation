@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Bold.ttf">
+            <string>DMSans-Bold</string>
+        </array>
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+        <array key="DMSans-SemiBold.ttf">
+            <string>DMSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GrowthStepBottomSheetViewController">
+            <connections>
+                <outlet property="anakanImageView" destination="c1Q-kH-HTy" id="1Xh-LK-dBU"/>
+                <outlet property="anakanPhaseStackView" destination="FbE-ha-xan" id="zrG-S3-5dS"/>
+                <outlet property="awalImageView" destination="ZQS-Lb-btM" id="7G3-iV-Z5j"/>
+                <outlet property="awalPhaseStackView" destination="nUb-8i-SYJ" id="uSz-H7-9iZ"/>
+                <outlet property="menengahImageView" destination="efA-gn-Kyi" id="qHw-A7-vFu"/>
+                <outlet property="menengahPhaseStackView" destination="B7U-Ml-xSU" id="6AD-4t-AGi"/>
+                <outlet property="separatorOne" destination="cRl-XF-Aat" id="yo6-GR-Tjm"/>
+                <outlet property="separatorTwo" destination="AOq-W7-ezb" id="Qlh-wy-VKi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="574" height="407"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Li-Py-Dl4">
+                    <rect key="frame" x="16" y="16" width="542" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Tahap Pertumbuhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vl-vf-emI" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="6.9999999999999982" width="494" height="26.333333333333329"/>
+                            <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="growth-step"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c4-3g-FYg">
+                            <rect key="frame" x="502" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="8Ok-uT-ecT"/>
+                                <constraint firstAttribute="height" constant="40" id="AG6-dv-Hdp"/>
+                                <constraint firstAttribute="width" constant="40" id="ZSK-bZ-9ph"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                                <color key="baseForegroundColor" name="primary-accent"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="onDismissButtonClicked:" destination="-1" eventType="touchUpInside" id="sFb-Co-VbE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FbE-ha-xan">
+                    <rect key="frame" x="16" y="64" width="542" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-anakan-growthstep" translatesAutoresizingMaskIntoConstraints="NO" id="coB-Ea-Zpd">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="Owl-j9-CpU"/>
+                                <constraint firstAttribute="height" constant="60" id="eUp-VY-zI6"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DEc-30-AFT">
+                            <rect key="frame" x="68" y="0.6666666666666714" width="441" height="59"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" text="Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQs-4d-d3c">
+                                    <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="21"/>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="16"/>
+                                    <color key="textColor" name="on primary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Fase dimulai dari benih dan berlanjut dengan tanaman mulai mengembangkan daun sejati." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugk-Kt-8Q6">
+                                    <rect key="frame" x="0.0" y="25" width="364.66666666666669" height="34"/>
+                                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="13"/>
+                                    <color key="textColor" name="on primary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-radio" translatesAutoresizingMaskIntoConstraints="NO" id="c1Q-kH-HTy">
+                            <rect key="frame" x="517" y="17.666666666666671" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="9uP-VW-Ykg"/>
+                                <constraint firstAttribute="width" constant="25" id="Sht-PC-zmN"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRl-XF-Aat" userLabel="separator">
+                    <rect key="frame" x="0.0" y="132" width="574" height="0.0"/>
+                    <color key="backgroundColor" name="outline"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="K8g-kG-ZC4"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUb-8i-SYJ">
+                    <rect key="frame" x="16" y="140" width="542" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-menengah-growthstep" translatesAutoresizingMaskIntoConstraints="NO" id="vAd-8a-9f7">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="JtX-Dp-17a"/>
+                                <constraint firstAttribute="width" constant="60" id="uuM-QF-bID"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Kan-ac-hLm">
+                            <rect key="frame" x="68" y="0.66666666666665719" width="441" height="59"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" text="Fase Vegetatif Awal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4c-Bz-M2d">
+                                    <rect key="frame" x="0.0" y="0.0" width="149.66666666666666" height="21"/>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="16"/>
+                                    <color key="textColor" name="on primary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tanaman mulai mempunyai akar yang kuat dan mengembangkan daun dan cabang." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsw-wE-hx4">
+                                    <rect key="frame" x="0.0" y="25" width="424" height="34"/>
+                                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="13"/>
+                                    <color key="textColor" name="on primary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-radio" translatesAutoresizingMaskIntoConstraints="NO" id="ZQS-Lb-btM">
+                            <rect key="frame" x="517" y="17.666666666666657" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="7wE-yh-lbo"/>
+                                <constraint firstAttribute="height" constant="25" id="xvM-dG-8ow"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOq-W7-ezb" userLabel="separator">
+                    <rect key="frame" x="0.0" y="208" width="574" height="0.0"/>
+                    <color key="backgroundColor" name="outline"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="i1Q-Id-A2Q"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B7U-Ml-xSU">
+                    <rect key="frame" x="16" y="216" width="542" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-menengah-growthstep" translatesAutoresizingMaskIntoConstraints="NO" id="5GS-MP-QML">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="UdK-oQ-hU6"/>
+                                <constraint firstAttribute="width" constant="60" id="gDu-KQ-Lh2"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Qe5-xn-azT">
+                            <rect key="frame" x="68" y="0.66666666666665719" width="441" height="59"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" text="Fase Vegetatif Awal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-85-YSM">
+                                    <rect key="frame" x="0.0" y="0.0" width="149.66666666666666" height="21"/>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="16"/>
+                                    <color key="textColor" name="on primary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tanaman mulai mempunyai akar yang kuat dan mengembangkan daun dan cabang." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rT-5d-JK3">
+                                    <rect key="frame" x="0.0" y="25" width="424" height="34"/>
+                                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="13"/>
+                                    <color key="textColor" name="on primary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-radio" translatesAutoresizingMaskIntoConstraints="NO" id="efA-gn-Kyi">
+                            <rect key="frame" x="517" y="17.666666666666657" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="1m3-in-omb"/>
+                                <constraint firstAttribute="width" constant="25" id="9No-FM-WfV"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="surface"/>
+            <constraints>
+                <constraint firstItem="B7U-Ml-xSU" firstAttribute="top" secondItem="AOq-W7-ezb" secondAttribute="bottom" constant="8" id="2S9-aO-WnJ"/>
+                <constraint firstItem="FbE-ha-xan" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="4sS-xL-Z9e"/>
+                <constraint firstAttribute="trailing" secondItem="AOq-W7-ezb" secondAttribute="trailing" id="DFh-vG-ely"/>
+                <constraint firstAttribute="trailing" secondItem="3Li-Py-Dl4" secondAttribute="trailing" constant="16" id="Eep-Q4-Quv"/>
+                <constraint firstAttribute="trailing" secondItem="cRl-XF-Aat" secondAttribute="trailing" id="H33-J1-EtX"/>
+                <constraint firstItem="FbE-ha-xan" firstAttribute="top" secondItem="3Li-Py-Dl4" secondAttribute="bottom" constant="8" id="H56-Bk-Qw2"/>
+                <constraint firstItem="3Li-Py-Dl4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="OKa-Qp-jYo"/>
+                <constraint firstItem="3Li-Py-Dl4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="Uky-id-LUN"/>
+                <constraint firstItem="AOq-W7-ezb" firstAttribute="top" secondItem="nUb-8i-SYJ" secondAttribute="bottom" constant="8" id="Vqp-3O-3fe"/>
+                <constraint firstAttribute="trailing" secondItem="nUb-8i-SYJ" secondAttribute="trailing" constant="16" id="Wdk-Vq-ygX"/>
+                <constraint firstAttribute="trailing" secondItem="FbE-ha-xan" secondAttribute="trailing" constant="16" id="Zok-GM-1kE"/>
+                <constraint firstItem="AOq-W7-ezb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ajo-uz-2jz"/>
+                <constraint firstItem="B7U-Ml-xSU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="bzY-Gc-NEV"/>
+                <constraint firstItem="nUb-8i-SYJ" firstAttribute="top" secondItem="cRl-XF-Aat" secondAttribute="bottom" constant="8" id="c1j-dS-7Xu"/>
+                <constraint firstAttribute="trailing" secondItem="B7U-Ml-xSU" secondAttribute="trailing" constant="16" id="feA-4g-ene"/>
+                <constraint firstItem="nUb-8i-SYJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="gl3-vQ-EwA"/>
+                <constraint firstItem="cRl-XF-Aat" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gvf-tQ-PGD"/>
+                <constraint firstItem="cRl-XF-Aat" firstAttribute="top" secondItem="FbE-ha-xan" secondAttribute="bottom" constant="8" id="sad-wH-dl8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="100.76335877862596" y="26.408450704225352"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="image-anakan-growthstep" width="61" height="61"/>
+        <image name="image-menengah-growthstep" width="61" height="61"/>
+        <image name="image-radio" width="27" height="27"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="on primary-container">
+            <color red="0.0" green="0.13300000131130219" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="outline">
+            <color red="0.46700000762939453" green="0.46700000762939453" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface">
+            <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

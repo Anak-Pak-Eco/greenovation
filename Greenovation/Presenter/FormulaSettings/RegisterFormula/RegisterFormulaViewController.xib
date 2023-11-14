@@ -413,7 +413,7 @@ Kepekatan Nutrisi: 1050-1400 &amp; Tingkat pH: 5,5-6,5</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN8-Ta-qf8" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="710.66666666666663" width="361" height="40"/>
+                    <rect key="frame" x="16" y="762" width="361" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="GXo-G3-coX"/>
                     </constraints>
@@ -424,7 +424,7 @@ Kepekatan Nutrisi: 1050-1400 &amp; Tingkat pH: 5,5-6,5</string>
                         <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
                     </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="simpan"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="save"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="saveButtonClicked:" destination="-1" eventType="touchUpInside" id="gKx-Bl-I7D"/>
@@ -440,6 +440,7 @@ Kepekatan Nutrisi: 1050-1400 &amp; Tingkat pH: 5,5-6,5</string>
                 <constraint firstItem="hW7-tS-dIV" firstAttribute="top" secondItem="WwQ-gv-zmK" secondAttribute="bottom" constant="25" id="79f-ut-76n"/>
                 <constraint firstItem="8i6-4C-6dG" firstAttribute="top" secondItem="E91-r3-DyD" secondAttribute="bottom" constant="5" id="7eF-xj-za8"/>
                 <constraint firstItem="KqU-XT-30F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ADg-xZ-hP1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RN8-Ta-qf8" secondAttribute="bottom" constant="16" id="B2G-Aa-Nw7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OSh-nu-TcH" secondAttribute="trailing" constant="20" id="C5c-dF-q4O"/>
                 <constraint firstItem="OSh-nu-TcH" firstAttribute="top" secondItem="zp8-dY-3n1" secondAttribute="bottom" constant="5" id="Crt-yK-QGt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KqU-XT-30F" secondAttribute="trailing" constant="16" id="FgP-U5-pkb"/>
@@ -465,7 +466,6 @@ Kepekatan Nutrisi: 1050-1400 &amp; Tingkat pH: 5,5-6,5</string>
                 <constraint firstItem="zp8-dY-3n1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="i1T-WS-Oa0"/>
                 <constraint firstItem="eXz-km-RSl" firstAttribute="top" secondItem="rGu-bm-h4z" secondAttribute="bottom" constant="25" id="jMA-Uj-xQ2"/>
                 <constraint firstItem="KqU-XT-30F" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="qS4-hg-iT2"/>
-                <constraint firstItem="RN8-Ta-qf8" firstAttribute="top" secondItem="OSh-nu-TcH" secondAttribute="bottom" constant="43" id="r0v-F8-Yc8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8i6-4C-6dG" secondAttribute="trailing" constant="20" id="sen-c2-DMA"/>
                 <constraint firstItem="Wpg-3j-A3j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="t6e-5R-xqR"/>
                 <constraint firstItem="pYc-lD-RS3" firstAttribute="top" secondItem="8i6-4C-6dG" secondAttribute="bottom" constant="25" id="ube-i7-jtl"/>

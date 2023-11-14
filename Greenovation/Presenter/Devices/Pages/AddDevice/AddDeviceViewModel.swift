@@ -14,8 +14,13 @@ final class AddDeviceViewModel {
     let loadingAddDevice = Box(false)
     let successFetchPlants = Box(false)
     let errorFetchPlants = Box("")
+    let updateSelectedPlant: Box<PlantModel?> = Box(nil)
+    let updateSelectedPhase: Box<PlantModel.PlantPhaseModel?> = Box(nil)
+    
     var plants: [PlantModel] = []
     var searchedPlants: [PlantModel] = []
+    var selectedPlant: PlantModel? = nil
+    var selectedPhase: PlantModel.PlantPhaseModel? = nil
     
     private var cancellables: Set<AnyCancellable> = []
     
@@ -50,5 +55,15 @@ final class AddDeviceViewModel {
             }
         }
         successFetchPlants.value = true
+    }
+    
+    func updateSelectedPlant(_ plant: PlantModel) {
+        selectedPlant = plant
+        updateSelectedPlant.value = plant
+    }
+    
+    func updateSelectedPhase(_ phase: PlantModel.PlantPhaseModel) {
+        selectedPhase = phase
+        updateSelectedPhase.value = phase
     }
 }

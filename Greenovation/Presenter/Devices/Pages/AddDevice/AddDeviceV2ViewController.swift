@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AddDeviceGrowthStepDelegate {
+    func onPhaseSelected(_ phase: PlantModel.PlantPhaseModel)
+}
+
 class AddDeviceV2ViewController: UIViewController {
     
     @IBOutlet var deviceNameTextField: UITextField!
@@ -28,7 +32,6 @@ class AddDeviceV2ViewController: UIViewController {
         viewModel.loadingAddDevice.bind { [unowned self] isLoading in
             deviceNameTextField.isEnabled = !isLoading
             plantTextField.isEnabled = !isLoading
-            growthStepButton.isEnabled = !isLoading
             saveButton.isEnabled = !isLoading
         }
         viewModel.errorFetchPlants.bind { [unowned self] errorMessage in
@@ -36,13 +39,33 @@ class AddDeviceV2ViewController: UIViewController {
                 navigationController?.popToRootViewController(animated: true)
             }
         }
+        viewModel.updateSelectedPlant.bind { [unowned self] plant in
+            if let plant = plant {
+                view.endEditing(true)
+                plantTableView.isHidden = true
+                plantTextField.text = plant.name
+                plantTextField.isEnabled = false
+                growthStepButton.isEnabled = true
+            }
+        }
+        viewModel.updateSelectedPhase.bind { [unowned self] phase in
+            if let phase = phase {
+                growthStep.text = phase.step.getText()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [unowned self] in
+                    openGrowthStepBottomSheet(plant: viewModel.selectedPlant, selectedPhase: phase)
+                }
+            }
+        }
         setupToolbar()
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         viewModel.getPlants()
     }
     
     private func setupToolbar() {
-        title = String(localized: "pendaftaran-perangkat")
+        title = String(localized: "device-register")
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.forceUpdateNavbar()
         let backButton = UIBarButtonItem(
@@ -62,8 +85,21 @@ class AddDeviceV2ViewController: UIViewController {
         
     }
     
-    @objc func growthStepTapped() {
-        let vc = DontHavePlantFormulaViewController()
+    @IBAction func onGrowthStepButtonClicked(_ sender: UIButton) {
+        if let chosenPlants = viewModel.selectedPlant {
+            let vc = GrowthStepBottomSheetViewController(plant: chosenPlants, chosenPhase: viewModel.selectedPhase)
+            vc.delegate = self
+            vc.modalPresentationStyle = .pageSheet
+            if #available(iOS 15.0, *), let sheet = vc.sheetPresentationController {
+                sheet.detents = [.medium()]
+            }
+            present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    private func openGrowthStepBottomSheet(plant: PlantModel?, selectedPhase: PlantModel.PlantPhaseModel?) {
+        guard let plant = plant, let selectedPhase = selectedPhase else { return }
+        let vc = HavePlantFormulaViewController(plant: plant, phase: selectedPhase)
         vc.modalPresentationStyle = .pageSheet
         if #available(iOS 15.0, *), let sheet = vc.sheetPresentationController {
             sheet.detents = [.medium()]
@@ -99,26 +135,12 @@ class AddDeviceV2ViewController: UIViewController {
         deviceNameTextField.leftView = deviceNamePaddingView
         deviceNameTextField.leftViewMode = .always
         
-        // MARK: Plant Name Text Field
-//        plantTextField.placeholder = String(localized: "device-name")
-//        plantTextField.layer.borderWidth = 0.3
-//        plantTextField.layer.borderColor = UIColor.secondaryAccent.cgColor
-//        plantTextField.layer.cornerRadius = 10
-//        let plantTextFieldPaddingView = UIView(
-//            frame: CGRect(
-//                x: 0, y: 0, 
-//                width: 10, height: plantTextField.frame.size.height
-//            )
-//        )
-//        plantTextField.leftView = plantTextFieldPaddingView
-//        plantTextField.leftViewMode = .always
-        
         // MARK: Growth Step Button
         growthStepButton.layer.borderWidth = 0.3
         growthStepButton.layer.borderColor = UIColor.secondaryAccent.cgColor
         growthStepButton.layer.cornerRadius = 10
         growthStepButton.clipsToBounds = true
-        growthStepButton.addTarget(self, action: #selector(growthStepTapped), for: .touchUpInside)
+        growthStepButton.isEnabled = false
         
         // MARK: Save Button
         saveButton.layer.borderWidth = 1.0
@@ -175,6 +197,12 @@ class AddDeviceV2ViewController: UIViewController {
     }
 }
 
+extension AddDeviceV2ViewController: AddDeviceGrowthStepDelegate {
+    func onPhaseSelected(_ phase: PlantModel.PlantPhaseModel) {
+        viewModel.updateSelectedPhase(phase)
+    }
+}
+
 extension AddDeviceV2ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         viewModel.searchData(query: textField.text ?? "")
@@ -206,6 +234,7 @@ extension AddDeviceV2ViewController: UITableViewDelegate, UITableViewDataSource 
                         name: plantTextField.text ?? ""
                     )
                 )
+                viewController.isAddDevice = true
                 navigationController?.pushViewController(viewController, animated: true)
             }
             
@@ -220,8 +249,7 @@ extension AddDeviceV2ViewController: UITableViewDelegate, UITableViewDataSource 
             
             cell.setup(plant: plant)
             cell.didSelectPlant = { [unowned self] in
-                let viewController = RegisterFormulaViewController(plant: plant)
-                navigationController?.pushViewController(viewController, animated: true)
+                viewModel.updateSelectedPlant(plant)
             }
             
             return cell
