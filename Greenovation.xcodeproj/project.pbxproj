@@ -38,6 +38,9 @@
 		A756C1CF2AF8F29F004E58A0 /* FormulaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1CD2AF8F29F004E58A0 /* FormulaTableViewCell.xib */; };
 		A756C1E52AFA2028004E58A0 /* PlantSearchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1E32AFA2028004E58A0 /* PlantSearchItemCell.swift */; };
 		A756C1E62AFA2028004E58A0 /* PlantSearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1E42AFA2028004E58A0 /* PlantSearchItemCell.xib */; };
+		A76083B02B04ABC3005FF08A /* HistoryGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76083AF2B04ABC3005FF08A /* HistoryGraphView.swift */; };
+		A76083CE2B04D9A3005FF08A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76083CC2B04D9A3005FF08A /* TestViewController.swift */; };
+		A76083CF2B04D9A3005FF08A /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76083CD2B04D9A3005FF08A /* TestViewController.xib */; };
 		A77F03242AFB900500C5021D /* DontHavePlantFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F03222AFB900500C5021D /* DontHavePlantFormulaViewController.swift */; };
 		A77F03252AFB900500C5021D /* DontHavePlantFormulaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A77F03232AFB900500C5021D /* DontHavePlantFormulaViewController.xib */; };
 		A77F03282AFB999B00C5021D /* HavePlantFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F03262AFB999B00C5021D /* HavePlantFormulaViewController.swift */; };
@@ -204,6 +207,9 @@
 		A756C1CD2AF8F29F004E58A0 /* FormulaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormulaTableViewCell.xib; sourceTree = "<group>"; };
 		A756C1E32AFA2028004E58A0 /* PlantSearchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSearchItemCell.swift; sourceTree = "<group>"; };
 		A756C1E42AFA2028004E58A0 /* PlantSearchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantSearchItemCell.xib; sourceTree = "<group>"; };
+		A76083AF2B04ABC3005FF08A /* HistoryGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGraphView.swift; sourceTree = "<group>"; };
+		A76083CC2B04D9A3005FF08A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		A76083CD2B04D9A3005FF08A /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		A77F03222AFB900500C5021D /* DontHavePlantFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontHavePlantFormulaViewController.swift; sourceTree = "<group>"; };
 		A77F03232AFB900500C5021D /* DontHavePlantFormulaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DontHavePlantFormulaViewController.xib; sourceTree = "<group>"; };
 		A77F03262AFB999B00C5021D /* HavePlantFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HavePlantFormulaViewController.swift; sourceTree = "<group>"; };
@@ -504,6 +510,15 @@
 				A756C1E42AFA2028004E58A0 /* PlantSearchItemCell.xib */,
 			);
 			path = SearchPlantItem;
+			sourceTree = "<group>";
+		};
+		A76083CB2B04D98A005FF08A /* Tesr */ = {
+			isa = PBXGroup;
+			children = (
+				A76083CC2B04D9A3005FF08A /* TestViewController.swift */,
+				A76083CD2B04D9A3005FF08A /* TestViewController.xib */,
+			);
+			path = Tesr;
 			sourceTree = "<group>";
 		};
 		A77F03182AFB8F8F00C5021D /* GrowthStep */ = {
@@ -896,6 +911,7 @@
 				D69D172D2AEF805600A5347C /* DetailDeviceAlertTableViewCell.xib */,
 				D609503E2AEF890000DD5FDD /* HistoryGraphTableViewCell.swift */,
 				D609503F2AEF890000DD5FDD /* HistoryGraphTableViewCell.xib */,
+				A76083AF2B04ABC3005FF08A /* HistoryGraphView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1018,6 +1034,7 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A76083CB2B04D98A005FF08A /* Tesr */,
 				D663B0392B01D78D004E7BCF /* Authentication */,
 				D663B0382B01D77F004E7BCF /* FormulaSettings */,
 				D663B0372B01D765004E7BCF /* Devices */,
@@ -1223,6 +1240,7 @@
 				D630F50B2AD8112A00A355D0 /* DMSans-ThinItalic.ttf in Resources */,
 				D6EBCEAB2AFE263900EF5C51 /* EmptyPlantItemCell.xib in Resources */,
 				D6239CD22AF22BEF0097E8D1 /* AlertView.xib in Resources */,
+				A76083CF2B04D9A3005FF08A /* TestViewController.xib in Resources */,
 				D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */,
 				D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */,
 				D6EBCEB02AFE2D6800EF5C51 /* AddFormulaViewController.xib in Resources */,
@@ -1269,6 +1287,7 @@
 				D6B607662AEFEEFC007D45C1 /* DetailDeviceViewModel.swift in Sources */,
 				D60225AA2AEFB3DD00F3800F /* HeaderTableViewCell.swift in Sources */,
 				A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */,
+				A76083B02B04ABC3005FF08A /* HistoryGraphView.swift in Sources */,
 				D6917A2E2AEA9E6B00CD7F5C /* UITextField+Extensions.swift in Sources */,
 				D68D4E7D2AF5FA4200F61B1E /* ProfileViewController.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
@@ -1334,6 +1353,7 @@
 				A73E1EA12AFCEF0F008053A9 /* EditDeviceViewController.swift in Sources */,
 				D608922D2AEA7A8300A1C530 /* GradientView.swift in Sources */,
 				D69D171F2AEEC80100A5347C /* NotificationViewController.swift in Sources */,
+				A76083CE2B04D9A3005FF08A /* TestViewController.swift in Sources */,
 				D6EBCEAA2AFE263900EF5C51 /* EmptyPlantItemCell.swift in Sources */,
 				D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */,
 				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
