@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -60,6 +60,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-seedling-big" translatesAutoresizingMaskIntoConstraints="NO" id="uCE-OY-f3H">
+                                <rect key="frame" x="173" y="107" width="46" height="100"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhh-jj-Ntc" userLabel="LabelView">
                                 <rect key="frame" x="36" y="170" width="321" height="74"/>
                                 <subviews>
@@ -92,7 +95,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOe-4g-VAK">
-                                        <rect key="frame" x="201" y="40" width="80" height="20"/>
+                                        <rect key="frame" x="201" y="40" width="80" height="19.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="nTV-Rc-8YF"/>
                                         </constraints>
@@ -126,15 +129,6 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-seedling-big" translatesAutoresizingMaskIntoConstraints="NO" id="uCE-OY-f3H">
-                                <rect key="frame" x="173" y="107" width="46" height="74"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="5yz-LV-47w"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="BQD-BG-Se9"/>
-                                    <constraint firstAttribute="height" constant="74" id="BvV-aG-LDy"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74" id="lT1-Ht-dPW"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="surface"/>
                         <constraints>

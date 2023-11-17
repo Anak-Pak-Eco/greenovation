@@ -68,11 +68,14 @@ class SignInViewController: UIViewController {
         emailTextField.setUnderLine()
         passwordTextField.setUnderLine()
         registerButton.isUserInteractionEnabled = true
-        registerButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onRegisterClicked(_:))))
+        registerButton.addGestureRecognizer(
+            UITapGestureRecognizer(target: self, action: #selector(onRegisterClicked(_:)))
+        )
     }
     
     @objc private func onRegisterClicked(_ sender: UILabel) {
         let vc = SignUpViewController()
+        navigationController?.popViewController(animated: true)
         navigationController?.pushViewController(vc, animated: true)
     }
     

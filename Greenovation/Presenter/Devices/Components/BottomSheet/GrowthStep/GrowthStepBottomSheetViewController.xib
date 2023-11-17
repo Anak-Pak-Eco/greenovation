@@ -114,7 +114,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUb-8i-SYJ">
                     <rect key="frame" x="16" y="140" width="542" height="60"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-menengah-growthstep" translatesAutoresizingMaskIntoConstraints="NO" id="vAd-8a-9f7">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-awal-growthstep" translatesAutoresizingMaskIntoConstraints="NO" id="vAd-8a-9f7">
                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="JtX-Dp-17a"/>
@@ -167,8 +167,8 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Qe5-xn-azT">
                             <rect key="frame" x="68" y="0.66666666666665719" width="441" height="59"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" text="Fase Vegetatif Awal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-85-YSM">
-                                    <rect key="frame" x="0.0" y="0.0" width="149.66666666666666" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" text="Fase Vegetatif Menengah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-85-YSM">
+                                    <rect key="frame" x="0.0" y="0.0" width="194" height="21"/>
                                     <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="16"/>
                                     <color key="textColor" name="on primary-container"/>
                                     <nil key="highlightedColor"/>
@@ -218,6 +218,7 @@
     </objects>
     <resources>
         <image name="image-anakan-growthstep" width="61" height="61"/>
+        <image name="image-awal-growthstep" width="61" height="61"/>
         <image name="image-menengah-growthstep" width="61" height="61"/>
         <image name="image-radio" width="27" height="27"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>

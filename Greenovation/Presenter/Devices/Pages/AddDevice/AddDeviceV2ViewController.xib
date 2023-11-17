@@ -6,17 +6,25 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="DMSans-Regular.ttf">
             <string>DMSans-Regular</string>
         </array>
+        <array key="DMSans-SemiBold.ttf">
+            <string>DMSans-SemiBold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDeviceV2ViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
                 <outlet property="deviceNameTextField" destination="awz-uY-odR" id="lQ8-g7-F8g"/>
+                <outlet property="formulaPhLabel" destination="jeO-GL-Bok" id="IWs-AN-Lz3"/>
+                <outlet property="formulaPpmLabel" destination="7EF-95-kWf" id="C8b-Xh-jfq"/>
+                <outlet property="formulaTitleLabel" destination="4yk-15-Yb7" id="tuk-8T-XTc"/>
+                <outlet property="formulaView" destination="0Yq-9g-2aO" id="DLq-Ap-SUe"/>
                 <outlet property="growthStep" destination="ROe-gp-os3" id="qdx-HO-h9w"/>
                 <outlet property="growthStepButton" destination="We5-g7-R7z" id="WDv-NY-N8a"/>
                 <outlet property="plantTableView" destination="d0O-aF-bMC" id="Qpq-I5-TMc"/>
@@ -88,6 +96,84 @@
                         <action selector="onGrowthStepButtonClicked:" destination="-1" eventType="touchUpInside" id="hD4-3K-oO1"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Yq-9g-2aO" userLabel="White Background">
+                    <rect key="frame" x="16" y="330" width="361" height="123.66666666666669"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="im9-la-gAh" userLabel="Secondary Background">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="43"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formula Tanaman Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yk-15-Yb7" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                    <rect key="frame" x="14" y="14.000000000000002" width="221.66666666666666" height="19.666666666666671"/>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="Formula Tanaman Fase Anakan"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="secondary-container"/>
+                            <constraints>
+                                <constraint firstItem="4yk-15-Yb7" firstAttribute="leading" secondItem="im9-la-gAh" secondAttribute="leading" constant="14" id="HE9-NF-fWJ"/>
+                                <constraint firstAttribute="height" constant="43" id="ivj-yC-ohc"/>
+                                <constraint firstItem="4yk-15-Yb7" firstAttribute="top" secondItem="im9-la-gAh" secondAttribute="top" constant="14" id="tDv-UO-BsP"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZh-Az-cTF">
+                            <rect key="frame" x="16" y="53.000000000000007" width="329" height="22.333333333333336"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLX-RO-JRR" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="244" height="22.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ppm-level"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 - 400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EF-95-kWf">
+                                    <rect key="frame" x="244" y="0.0" width="85" height="22.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                                    <color key="textColor" name="on primary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOl-6e-69X">
+                            <rect key="frame" x="16" y="85.333333333333314" width="329" height="22.333333333333329"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S25-gK-e1r" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="244" height="22.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ph-level"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 - 400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeO-GL-Bok">
+                                    <rect key="frame" x="244" y="0.0" width="85" height="22.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                                    <color key="textColor" name="on primary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="qOl-6e-69X" firstAttribute="leading" secondItem="0Yq-9g-2aO" secondAttribute="leading" constant="16" id="3i4-on-hbe"/>
+                        <constraint firstItem="im9-la-gAh" firstAttribute="leading" secondItem="0Yq-9g-2aO" secondAttribute="leading" id="CMh-2e-C9Z"/>
+                        <constraint firstAttribute="trailing" secondItem="im9-la-gAh" secondAttribute="trailing" id="KzR-rf-eOM"/>
+                        <constraint firstItem="im9-la-gAh" firstAttribute="top" secondItem="0Yq-9g-2aO" secondAttribute="top" id="ZBo-JJ-05d"/>
+                        <constraint firstAttribute="trailing" secondItem="qOl-6e-69X" secondAttribute="trailing" constant="16" id="bDe-aO-SA1"/>
+                        <constraint firstAttribute="trailing" secondItem="UZh-Az-cTF" secondAttribute="trailing" constant="16" id="iFm-xt-MAL"/>
+                        <constraint firstAttribute="bottom" secondItem="qOl-6e-69X" secondAttribute="bottom" constant="16" id="ksC-uP-bRw"/>
+                        <constraint firstItem="qOl-6e-69X" firstAttribute="top" secondItem="UZh-Az-cTF" secondAttribute="bottom" constant="10" id="l3Y-UP-rFm"/>
+                        <constraint firstItem="UZh-Az-cTF" firstAttribute="leading" secondItem="0Yq-9g-2aO" secondAttribute="leading" constant="16" id="ldN-sB-zBp"/>
+                        <constraint firstItem="UZh-Az-cTF" firstAttribute="top" secondItem="im9-la-gAh" secondAttribute="bottom" constant="10" id="zgF-2F-ffj"/>
+                    </constraints>
+                </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sVK-pv-zsx">
                     <rect key="frame" x="344" y="287.33333333333331" width="19" height="9"/>
                     <color key="tintColor" name="secondary-accent"/>
@@ -105,15 +191,17 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="fase-anakan"/>
                     </userDefinedRuntimeAttributes>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNH-B7-4nu" customClass="LocalizableButton" customModule="Greenovation" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNH-B7-4nu">
                     <rect key="frame" x="16" y="762" width="361" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="FMe-Wu-0i7"/>
                     </constraints>
                     <color key="tintColor" name="primary-accent"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button">
+                    <buttonConfiguration key="configuration" style="filled" title="Simpan">
                         <backgroundConfiguration key="background" cornerRadius="10"/>
+                        <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
+                        <color key="baseForegroundColor" name="on primary-accent"/>
                         <color key="baseBackgroundColor" name="primary-accent"/>
                     </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
@@ -130,6 +218,8 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>
             <constraints>
+                <constraint firstItem="0Yq-9g-2aO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="2i7-cX-QTY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Yq-9g-2aO" secondAttribute="trailing" constant="16" id="3Cs-Di-DUx"/>
                 <constraint firstItem="M7Z-d4-mPK" firstAttribute="top" secondItem="awz-uY-odR" secondAttribute="bottom" constant="15.5" id="4FA-FH-mcs"/>
                 <constraint firstItem="XNT-DM-Kn7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="4cj-tY-mCl"/>
                 <constraint firstItem="yfb-Bo-CCs" firstAttribute="top" secondItem="M7Z-d4-mPK" secondAttribute="bottom" constant="5" id="7Gb-DH-eKX"/>
@@ -141,6 +231,7 @@
                 <constraint firstItem="d0O-aF-bMC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ley-ZB-gqA"/>
                 <constraint firstItem="ROe-gp-os3" firstAttribute="leading" secondItem="We5-g7-R7z" secondAttribute="leading" constant="14" id="Lt9-bh-dnV"/>
                 <constraint firstItem="XNT-DM-Kn7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="M6J-OP-ffx"/>
+                <constraint firstItem="0Yq-9g-2aO" firstAttribute="top" secondItem="We5-g7-R7z" secondAttribute="bottom" constant="16" id="OOT-nj-aI9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LNH-B7-4nu" secondAttribute="bottom" constant="16" id="Orb-CO-YZu"/>
                 <constraint firstItem="sVK-pv-zsx" firstAttribute="centerY" secondItem="We5-g7-R7z" secondAttribute="centerY" id="QNp-vp-nvW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M7Z-d4-mPK" secondAttribute="trailing" constant="16" id="R3R-zv-AVy"/>
@@ -160,16 +251,25 @@
                 <constraint firstItem="We5-g7-R7z" firstAttribute="top" secondItem="trh-93-jyx" secondAttribute="bottom" constant="5" id="pPC-Nd-H6X"/>
                 <constraint firstItem="We5-g7-R7z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zvi-tb-QkL"/>
             </constraints>
-            <point key="canvasLocation" x="793" y="311"/>
+            <point key="canvasLocation" x="791.60305343511448" y="310.56338028169017"/>
         </view>
     </objects>
     <resources>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <namedColor name="on primary-accent">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="on primary-container">
+            <color red="0.0" green="0.13300000131130219" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="primary-accent">
             <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary-accent">
             <color red="0.56499999761581421" green="0.45500001311302185" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary-container">
+            <color red="1" green="0.94099998474121094" blue="0.79199999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="surface">
             <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,5 +277,8 @@
         <namedColor name="surface-container-highest">
             <color red="0.77999997138977051" green="0.77999997138977051" blue="0.74900001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

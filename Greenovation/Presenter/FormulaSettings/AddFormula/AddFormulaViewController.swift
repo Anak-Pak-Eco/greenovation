@@ -82,6 +82,7 @@ class AddFormulaViewController: UIViewController {
             UINib(nibName: "PlantSearchItemCell", bundle: nil),
             forCellReuseIdentifier: "PlantSearchItemCell"
         )
+        plantsTableView.allowsSelection = false
         plantsTableView.separatorStyle = .none
         plantsTableView.isHidden = true
         plantsTableView.delegate = self
@@ -156,6 +157,8 @@ extension AddFormulaViewController: UITableViewDelegate, UITableViewDataSource {
                 for: indexPath
             ) as! EmptyPlantItemCell
             
+            cell.selectionStyle = .none
+            
             cell.didClickAddButton = { [unowned self] in
                 let viewController = RegisterFormulaViewController(
                     plant: PlantModel(
@@ -175,6 +178,8 @@ extension AddFormulaViewController: UITableViewDelegate, UITableViewDataSource {
                 withIdentifier: "PlantSearchItemCell",
                 for: indexPath
             ) as! PlantSearchItemCell
+            
+            cell.selectionStyle = .none
             
             let plant = viewModel.searchedPlants[indexPath.row]
             

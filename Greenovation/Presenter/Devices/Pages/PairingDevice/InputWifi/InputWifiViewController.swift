@@ -101,8 +101,8 @@ class InputWifiViewController: UIViewController, CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
         if let value = characteristic.value {
             let data = String(decoding: value, as: UTF8.self)
-            if data == "true" {
-                let vc = AddDeviceV2ViewController()
+            if data.contains("true") {
+                let vc = AddDeviceV2ViewController(serialNumber: String(data.split(separator: ",").last ?? ""))
                 navigationController?.pushViewController(vc, animated: true)
             } else if data == "false" {
                 let alertController = UIAlertController(
@@ -128,8 +128,8 @@ class InputWifiViewController: UIViewController, CBPeripheralDelegate {
         if let value = characteristic.value {
             print("updatedValue: \(String(decoding: value, as: UTF8.self))")
             let data = String(decoding: value, as: UTF8.self)
-            if data == "true" {
-                let vc = AddDeviceV2ViewController()
+            if data.contains("true") {
+                let vc = AddDeviceV2ViewController(serialNumber: String(data.split(separator: ",").last ?? ""))
                 navigationController?.pushViewController(vc, animated: true)
             } else if data == "false" {
                 let alertController = UIAlertController(

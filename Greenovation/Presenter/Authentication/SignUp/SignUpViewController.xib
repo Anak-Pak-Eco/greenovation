@@ -110,7 +110,7 @@
                         <color key="baseBackgroundColor" name="primary-accent"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="onSignInButtonClicked:" destination="-1" eventType="touchUpInside" id="NoV-EJ-ooV"/>
+                        <action selector="onSignUpButtonClicked:" destination="-1" eventType="touchUpInside" id="NoV-EJ-ooV"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIx-U0-15S">

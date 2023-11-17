@@ -92,9 +92,24 @@ final class APIDataSource {
             .eraseToAnyPublisher()
     }
     
+    func addDevice(_ body: DeviceBody) -> AnyPublisher<String, AFError> {
+        return AF.request(baseURL + APIEndpoint.devices.rawValue + "/update", method: .post, parameters: body, encoder: JSONParameterEncoder.default)
+            .publishString()
+            .value()
+            .map { response in
+                print("Response: \(response)")
+                return response
+            }
+            .mapError { error in
+                return error
+            }
+            .eraseToAnyPublisher()
+    }
+    
     private enum APIEndpoint: String {
         case notifications = "/notifications"
         case plants = "/plants"
+        case devices = "/devices"
     }
 }
 

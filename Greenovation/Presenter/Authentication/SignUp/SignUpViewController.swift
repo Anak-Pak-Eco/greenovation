@@ -52,6 +52,16 @@ class SignUpViewController: UIViewController {
         emailTextField.setUnderLine()
         passwordTextField.setUnderLine()
         passwordConfirmationTextField.setUnderLine()
+        signInButton.isUserInteractionEnabled = true
+        signInButton.addGestureRecognizer(
+            UITapGestureRecognizer(target: self, action: #selector(onSignInTextClicked(_:)))
+        )
+    }
+    
+    @objc private func onSignInTextClicked(_ sender: Any) {
+        let vc = SignInViewController()
+        navigationController?.popViewController(animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func setupToolbar() {
@@ -72,7 +82,7 @@ class SignUpViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func onSignInButtonClicked(_ sender: UIButton) {
+    @IBAction func onSignUpButtonClicked(_ sender: UIButton) {
         viewModel.signUp(
             name: nameTextField.text ?? "",
             email: emailTextField.text ?? "",

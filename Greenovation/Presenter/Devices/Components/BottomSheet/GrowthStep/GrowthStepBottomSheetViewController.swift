@@ -41,9 +41,6 @@ final class GrowthStepBottomSheetViewController: UIViewController {
         separatorOne.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         separatorTwo.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         
-        print("Phases: \(plant.phases)")
-        print("Selected Phase: \(chosenPhase)")
-        
         if let selectedPhase = chosenPhase {
             switch selectedPhase.step {
             case .anakan:

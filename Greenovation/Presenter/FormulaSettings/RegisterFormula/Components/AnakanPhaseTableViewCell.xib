@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="229" id="KGk-i7-Jjw" customClass="AnakanPhaseTableViewCell" customModule="Greenovation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="575" height="229"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="575" height="229"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv9-wJ-aNv" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                        <rect key="frame" x="16" y="15" width="543" height="19.666666666666671"/>
+                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
+                        <color key="textColor" name="primary-accent"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="fase-anakan"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JgJ-Mk-l4i" userLabel="Fase Anakan">
+                        <rect key="frame" x="0.0" y="39.666666666666657" width="575" height="101"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="NTL-s4-8UR">
+                                <rect key="frame" x="16" y="11" width="543" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="248" text="Kepekatan Nutrisi (ppm)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acl-1r-D8l" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ppm-level"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uF7-AB-2NV">
+                                        <rect key="frame" x="400" y="0.0" width="65" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="YHX-h4-Mrv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAV-bJ-YqI">
+                                        <rect key="frame" x="467" y="0.0" width="9" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="9" id="njd-ff-YS6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHA-GR-mnF">
+                                        <rect key="frame" x="478" y="0.0" width="65" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="p3g-3Y-u9o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="B0O-I9-kIc">
+                                <rect key="frame" x="16" y="55.999999999999986" width="543" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="248" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8Y-7t-JH0" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="34"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ph-level"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PtQ-dh-6CU">
+                                        <rect key="frame" x="399" y="0.0" width="65" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="rd1-vb-Az2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF5-hB-Lfq">
+                                        <rect key="frame" x="466" y="0.0" width="10" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="wvt-KD-mbY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUE-uk-V6W">
+                                        <rect key="frame" x="478" y="0.0" width="65" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="HDS-5b-iXB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="surface-container-lowest"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NTL-s4-8UR" secondAttribute="trailing" constant="16" id="0iz-rh-OHo"/>
+                            <constraint firstItem="NTL-s4-8UR" firstAttribute="leading" secondItem="JgJ-Mk-l4i" secondAttribute="leading" constant="16" id="6yB-O5-mO6"/>
+                            <constraint firstItem="B0O-I9-kIc" firstAttribute="top" secondItem="NTL-s4-8UR" secondAttribute="bottom" constant="11" id="CDM-Ju-PMp"/>
+                            <constraint firstAttribute="bottom" secondItem="B0O-I9-kIc" secondAttribute="bottom" constant="11" id="JK9-ai-AVm"/>
+                            <constraint firstAttribute="trailing" secondItem="B0O-I9-kIc" secondAttribute="trailing" constant="16" id="P6u-At-nsf"/>
+                            <constraint firstItem="B0O-I9-kIc" firstAttribute="leading" secondItem="JgJ-Mk-l4i" secondAttribute="leading" constant="16" id="f6b-lc-H2s"/>
+                            <constraint firstItem="NTL-s4-8UR" firstAttribute="top" secondItem="JgJ-Mk-l4i" secondAttribute="top" constant="11" id="sss-Mi-7go"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHz-xh-uuZ">
+                        <rect key="frame" x="16" y="145.66666666666663" width="543" height="31.333333333333343"/>
+                        <string key="text">Rekomendari dari Greenovation:
+Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
+                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="12"/>
+                        <color key="textColor" name="on surface-low"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" name="surface"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Wv9-wJ-aNv" secondAttribute="trailing" constant="16" id="SWy-cW-RrW"/>
+                    <constraint firstItem="JgJ-Mk-l4i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VQK-1t-Z1O"/>
+                    <constraint firstAttribute="trailing" secondItem="jHz-xh-uuZ" secondAttribute="trailing" constant="16" id="XJf-CX-Js1"/>
+                    <constraint firstAttribute="bottom" secondItem="jHz-xh-uuZ" secondAttribute="bottom" id="b5Q-vu-v5g"/>
+                    <constraint firstItem="Wv9-wJ-aNv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="eZg-2R-nbg"/>
+                    <constraint firstItem="jHz-xh-uuZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ght-vx-wG3"/>
+                    <constraint firstAttribute="trailing" secondItem="JgJ-Mk-l4i" secondAttribute="trailing" id="n2M-KN-6Pt"/>
+                    <constraint firstItem="jHz-xh-uuZ" firstAttribute="top" secondItem="JgJ-Mk-l4i" secondAttribute="bottom" constant="5" id="oH6-kq-kDP"/>
+                    <constraint firstItem="Wv9-wJ-aNv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ujK-tY-fky"/>
+                    <constraint firstItem="JgJ-Mk-l4i" firstAttribute="top" secondItem="Wv9-wJ-aNv" secondAttribute="bottom" constant="5" id="y37-VI-yU7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="maxPhTextField" destination="hUE-uk-V6W" id="h3B-sS-eua"/>
+                <outlet property="maxPpmTextField" destination="hHA-GR-mnF" id="OXL-eE-5Hu"/>
+                <outlet property="minPhTextField" destination="PtQ-dh-6CU" id="fQc-Kg-7fe"/>
+                <outlet property="minPpmTextField" destination="uF7-AB-2NV" id="sR3-tv-unN"/>
+                <outlet property="recommendationLabel" destination="jHz-xh-uuZ" id="qOl-3w-O7I"/>
+            </connections>
+            <point key="canvasLocation" x="324.4274809160305" y="50.352112676056343"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="on surface-low">
+            <color red="0.36899998784065247" green="0.37299999594688416" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface">
+            <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface-container-lowest">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

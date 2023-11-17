@@ -11,6 +11,7 @@ import SwiftUI
 class DevicesViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     private let viewModel = DevicesViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,6 +25,9 @@ class DevicesViewController: UIViewController {
         viewModel.successGetDevices.bind { [weak self] _ in
             guard let self = self else { return }
             mainTableView.reloadData()
+            mainTableView.isHidden = viewModel.devices.isEmpty
+            emptyView.isHidden = !viewModel.devices.isEmpty
+            
         }
         viewModel.getDevices()
     }
@@ -54,12 +58,13 @@ class DevicesViewController: UIViewController {
     }
     
     @objc private func onAddDeviceClicked(_ sender: Any) {
-        // let viewController = PairingInstructionViewController()
-        let viewController = AddDeviceV2ViewController()
+         let viewController = PairingInstructionViewController()
+//        let viewController = AddDeviceV2ViewController(serialNumber: "device_001")
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func setupUI() {
+        emptyView.isHidden = false
         mainTableView.register(
             UINib(nibName: "DevicesItemTableViewCell", bundle: nil),
             forCellReuseIdentifier: "DeviceItemCell"
@@ -67,6 +72,11 @@ class DevicesViewController: UIViewController {
         mainTableView.backgroundColor = .surface
         mainTableView.dataSource = self
         mainTableView.delegate = self
+    }
+    @IBAction func onAddClicked(_ sender: Any) {
+        let viewController = PairingInstructionViewController()
+//        let viewController = AddDeviceV2ViewController(serialNumber: "device_001")
+       navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

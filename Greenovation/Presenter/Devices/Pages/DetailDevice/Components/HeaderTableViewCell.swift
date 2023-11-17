@@ -18,7 +18,7 @@ class HeaderTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        style()
+        setupUI()
     }
     
     func setupData(device: DeviceModel) {
@@ -36,7 +36,7 @@ class HeaderTableViewCell: UITableViewCell {
         
     }
     
-    private func style() {
+    private func setupUI() {
         // Edit Button
         editButton.titleLabel?.font = UIFont(name: "DMSans-SemiBold", size: 12)
         editButton.addTarget(self, action: #selector(editButtonTapped), for: .touchUpInside)

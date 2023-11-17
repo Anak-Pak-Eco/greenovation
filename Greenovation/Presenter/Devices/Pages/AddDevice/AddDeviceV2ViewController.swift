@@ -11,6 +11,10 @@ protocol AddDeviceGrowthStepDelegate {
     func onPhaseSelected(_ phase: PlantModel.PlantPhaseModel)
 }
 
+protocol AddDevicePlantFormulaDelegate {
+    func onFormulaSelected()
+}
+
 class AddDeviceV2ViewController: UIViewController {
     
     @IBOutlet var deviceNameTextField: UITextField!
@@ -19,11 +23,29 @@ class AddDeviceV2ViewController: UIViewController {
     @IBOutlet var growthStep: LocalizableLabel!
     @IBOutlet weak var plantTableView: UITableView!
     @IBOutlet var saveButton: LocalizableButton!
+    @IBOutlet weak var formulaView: UIView!
+    @IBOutlet weak var formulaPhLabel: UILabel!
+    @IBOutlet weak var formulaPpmLabel: UILabel!
+    @IBOutlet weak var formulaTitleLabel: LocalizableLabel!
     
-    private let viewModel = AddDeviceViewModel()
+    private let viewModel: AddDeviceViewModel
+    
+    init(serialNumber: String) {
+        self.viewModel = AddDeviceViewModel(serialNumber: serialNumber)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required convenience init?(coder: NSCoder) {
+        self.init(serialNumber: "")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.successAddDevice.bind { [unowned self] isSuccess in
+            if isSuccess {
+                navigationController?.popToRootViewController(animated: true)
+            }
+        }
         viewModel.successFetchPlants.bind { [unowned self] isSuccess in
             if isSuccess {
                 plantTableView.reloadData()
@@ -82,7 +104,7 @@ class AddDeviceV2ViewController: UIViewController {
     }
     
     @objc func saveButtonTapped() {
-        
+        viewModel.saveDevice(name: deviceNameTextField.text ?? "")
     }
     
     @IBAction func onGrowthStepButtonClicked(_ sender: UIButton) {
@@ -100,6 +122,7 @@ class AddDeviceV2ViewController: UIViewController {
     private func openGrowthStepBottomSheet(plant: PlantModel?, selectedPhase: PlantModel.PlantPhaseModel?) {
         guard let plant = plant, let selectedPhase = selectedPhase else { return }
         let vc = HavePlantFormulaViewController(plant: plant, phase: selectedPhase)
+        vc.delegate = self
         vc.modalPresentationStyle = .pageSheet
         if #available(iOS 15.0, *), let sheet = vc.sheetPresentationController {
             sheet.detents = [.medium()]
@@ -108,6 +131,9 @@ class AddDeviceV2ViewController: UIViewController {
     }
     
     private func setupUI() {
+        formulaView.isHidden = true
+        formulaView.layer.cornerRadius = 10
+        
         // MARK: Plants Table View
         plantTableView.register(
             UINib(nibName: "PlantSearchItemCell", bundle: nil),
@@ -197,9 +223,18 @@ class AddDeviceV2ViewController: UIViewController {
     }
 }
 
-extension AddDeviceV2ViewController: AddDeviceGrowthStepDelegate {
+extension AddDeviceV2ViewController: AddDeviceGrowthStepDelegate, AddDevicePlantFormulaDelegate {
     func onPhaseSelected(_ phase: PlantModel.PlantPhaseModel) {
         viewModel.updateSelectedPhase(phase)
+    }
+    
+    func onFormulaSelected() {
+        if let phase = viewModel.selectedPhase {
+            formulaView.isHidden = false
+            formulaTitleLabel.text = "Formula Tanaman Fase \(phase.step.getText())"
+            formulaPpmLabel.text = "\(phase.min_ppm) - \(phase.max_ppm)"
+            formulaPhLabel.text = "\(phase.min_ph) - \(phase.max_ph)"
+        }
     }
 }
 
