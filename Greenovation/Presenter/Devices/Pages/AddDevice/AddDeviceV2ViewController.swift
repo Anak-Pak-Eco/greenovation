@@ -15,7 +15,7 @@ protocol AddDevicePlantFormulaDelegate {
     func onFormulaSelected()
 }
 
-class AddDeviceV2ViewController: UIViewController {
+class AddDeviceV2ViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
     
     @IBOutlet var deviceNameTextField: UITextField!
     @IBOutlet var plantTextField: UITextField!
@@ -124,13 +124,26 @@ class AddDeviceV2ViewController: UIViewController {
         let vc = HavePlantFormulaViewController(plant: plant, phase: selectedPhase)
         vc.delegate = self
         vc.modalPresentationStyle = .pageSheet
+        vc.presentationController?.delegate = self
+        vc.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height: 292)
         if #available(iOS 15.0, *), let sheet = vc.sheetPresentationController {
-            sheet.detents = [.medium()]
+            if #available(iOS 16.0, *) {
+                let fraction = UISheetPresentationController.Detent.custom { context in
+                    292
+                }
+                sheet.detents = [fraction]
+            }
         }
         present(vc, animated: true, completion: nil)
     }
     
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
     private func setupUI() {
+        plantTextField.delegate = self
+        
         formulaView.isHidden = true
         formulaView.layer.cornerRadius = 10
         
@@ -207,7 +220,7 @@ class AddDeviceV2ViewController: UIViewController {
         buttonImage.tintColor = UIColor.secondaryAccent
         buttonImage.addTarget(
             self,
-            action: #selector(onSearchButtonClicked(_:)), for: .touchUpInside
+            action: #selector(onSearchButtonClicked(_:)), for: .editingDidBegin
         )
         let containerView = UIView(
             frame: CGRect(x: 0, y: 0, width: imageWidth + 14 , height: Int(plantTextField.frame.height))
@@ -218,7 +231,7 @@ class AddDeviceV2ViewController: UIViewController {
     
     @objc private func onSearchButtonClicked(_ sender: Any) {
         viewModel.searchData(query: plantTextField.text ?? "")
-        plantTextField.endEditing(true)
+//        plantTextField.endEditing(true)
         plantTableView.isHidden = false
     }
 }
@@ -243,6 +256,15 @@ extension AddDeviceV2ViewController: UITextFieldDelegate {
         viewModel.searchData(query: textField.text ?? "")
         plantTableView.isHidden = false
         textField.resignFirstResponder()
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
+        
+        viewModel.searchData(query: updatedText)
+        plantTableView.isHidden = false
+        
         return true
     }
 }
