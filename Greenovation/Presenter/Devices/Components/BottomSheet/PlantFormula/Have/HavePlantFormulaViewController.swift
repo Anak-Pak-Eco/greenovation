@@ -60,12 +60,23 @@ class HavePlantFormulaViewController: UIViewController {
         )
         ppmLabel.adjustsFontSizeToFitWidth = true
         
-        ppmMin.text = String(describing: phase.min_ppm)
-        ppmMax.text = String(describing: phase.max_ppm)
+        let formatted_min_ppm = formatDoubleIfNeeded(phase.min_ppm)
+        let formatted_max_ppm = formatDoubleIfNeeded(phase.max_ppm)
+        
+        ppmMin.text = String(describing: formatted_min_ppm)
+        ppmMax.text = String(describing: formatted_max_ppm)
         phMin.text = String(describing: phase.min_ph)
         phMax.text = String(describing: phase.max_ph)
         
         saveButton.setTitle(String(localized: "save"), for: .normal)
+    }
+    
+    func formatDoubleIfNeeded(_ value: Double) -> String {
+        if value.truncatingRemainder(dividingBy: 1) == 0 {
+            return String(format: "%.0f", value)
+        } else {
+            return String(value)
+        }
     }
     
     @IBAction func onDismissButtonClicked(_ sender: UIButton) {

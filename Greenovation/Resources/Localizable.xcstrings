@@ -74,7 +74,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Plant Search"
+            "value" : "Search Plant"
           }
         },
         "id" : {
@@ -269,7 +269,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Growth Step"
+            "value" : "Growth Phase"
           }
         },
         "id" : {
