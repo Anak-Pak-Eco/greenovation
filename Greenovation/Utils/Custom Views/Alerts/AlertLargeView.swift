@@ -16,6 +16,8 @@ class AlertLargeView: UIView {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     
+    var didClickOnDeleteButton: (() -> ())?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -52,5 +54,9 @@ class AlertLargeView: UIView {
         let nibView = nib.instantiate(withOwner: self, options: nil).first as! UIView
 
         return nibView
+    }
+    
+    @IBAction func onDoneButtonClicked(_ sender: Any) {
+        didClickOnDeleteButton?()
     }
 }

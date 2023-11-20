@@ -63,7 +63,7 @@
                     </constraints>
                     <color key="textColor" name="on primary-container"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpb-Gs-wow">
                     <rect key="frame" x="16" y="273" width="361" height="40"/>

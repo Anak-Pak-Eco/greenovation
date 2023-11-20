@@ -39,6 +39,27 @@ class SignUpViewController: UIViewController {
             googleSignInButton.isEnabled = !isLoading
         }
         
+        viewModel.signUpError.bind { [weak self] message in
+            guard let self = self else { return }
+            if !message.isEmpty {
+                let alertController = UIAlertController(
+                    title: "Register Gagal",
+                    message: message,
+                    preferredStyle: .alert
+                )
+                alertController.addAction(
+                    .init(
+                        title: "OK",
+                        style: .destructive,
+                        handler: { action in
+                            alertController.dismiss(animated: true)
+                        }
+                    )
+                )
+                self.present(alertController, animated: true)
+            }
+        }
+        
         viewModel.signUpSuccess.bind { [weak self] success in
             guard let self = self else { return }
             if success {

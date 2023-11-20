@@ -74,7 +74,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igw-EL-FCc">
-                            <rect key="frame" x="16" y="98.333333333333371" width="361" height="40"/>
+                            <rect key="frame" x="16" y="98.333333333333343" width="361" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="gc1-Qf-a0U"/>
                             </constraints>
@@ -85,6 +85,9 @@
                                 <color key="baseForegroundColor" name="on primary-accent"/>
                                 <color key="baseBackgroundColor" name="primary-accent"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="onDoneButtonClicked:" destination="-1" eventType="touchUpInside" id="Uqs-ZZ-9aJ"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" name="secondary-container"/>

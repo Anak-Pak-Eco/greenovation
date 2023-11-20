@@ -14,6 +14,7 @@ final class ProfileViewController: UIViewController {
     @IBOutlet weak var privacyPolicyButton: UIStackView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var contactUsButton: UIStackView!
+    @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     private var editButton: UIBarButtonItem?
     private let viewModel = ProfileViewModel()
@@ -76,6 +77,7 @@ final class ProfileViewController: UIViewController {
         
         viewModel.loadingProfile.bind { [unowned self] isLoading in
             editButton?.isEnabled = !isLoading
+            signOutButton.isEnabled = !isLoading
         }
     }
     
@@ -93,7 +95,7 @@ final class ProfileViewController: UIViewController {
     private func setupToolbar() {
         title = String(localized: "profile")
         navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.navigationBar.titleTextAttributes = [
+        navigationController?.navigationBar .titleTextAttributes = [
             .font: UIFont(name: "DMSans-SemiBold", size: 17)!,
             .foregroundColor: UIColor.onPrimaryFixed
         ]

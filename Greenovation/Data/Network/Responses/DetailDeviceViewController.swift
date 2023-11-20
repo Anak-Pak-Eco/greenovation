@@ -34,7 +34,13 @@ class DetailDeviceViewController: UIViewController {
                 self.mainTableView.reloadData()
             }
         }
+        viewModel.deviceHistoryFetchSuccess.bind { [unowned self] isSuccess in
+            if isSuccess {
+                mainTableView.reloadData()
+            }
+        }
         viewModel.observeDevice(deviceId: deviceId)
+        viewModel.getHistories(deviceId: deviceId)
     }
     
     private func setupUI() {
@@ -89,37 +95,19 @@ extension DetailDeviceViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if viewModel.device.value != nil {
-            return 1
-        } else {
-            return 0
-        }
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        if let model = viewModel.device.value {
-            if 200...400 ~= model.currentPpm || 200...400 ~= model.currentPh {
-                return 2
-            } else {
+            if !viewModel.alerts.isEmpty {
                 return 3
+            } else {
+                return 2
             }
         } else {
             return 0
         }
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let uiView = UIView()
-        uiView.tag = section
-        return uiView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 15
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if mainTableView.numberOfSections == 3 {
-            if indexPath.section == 0 {
+        if mainTableView.numberOfRows(inSection: 0) == 3 {
+            if indexPath.row == 0 {
                 let cell = mainTableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell", for: indexPath) as! HeaderTableViewCell
                 
                 if let model = viewModel.device.value {
@@ -128,23 +116,36 @@ extension DetailDeviceViewController: UITableViewDelegate, UITableViewDataSource
                 cell.selectionStyle = .none
                 
                 return cell
-            } else if indexPath.section == 1 {
-                let cell = mainTableView.dequeueReusableCell(withIdentifier: "DetailDeviceAlertTableViewCell", for: indexPath) as! DetailDeviceAlertTableViewCell
+            } else if indexPath.row == 1 {
+                let cell = mainTableView.dequeueReusableCell(
+                    withIdentifier: "DetailDeviceAlertTableViewCell",
+                    for: indexPath
+                ) as! DetailDeviceAlertTableViewCell
                 
-                if let model = viewModel.device.value {
-                    cell.setupData(phLevel: model.currentPh, ppmLevel: model.currentPpm)
+                cell.setupData(alerts: viewModel.alerts)
+                cell.didSelectDoneButton = { [unowned self] type in
+                    viewModel.onDeleteAlert(type: type)
                 }
                 cell.selectionStyle = .none
                 
                 return cell
             } else {
-                let cell = mainTableView.dequeueReusableCell(withIdentifier: "HistoryGraphTableViewCell", for: indexPath) as! HistoryGraphTableViewCell
+                let cell = mainTableView.dequeueReusableCell(
+                    withIdentifier: "HistoryGraphTableViewCell",
+                    for: indexPath
+                ) as! HistoryGraphTableViewCell
+                
+                cell.setupData(histories: viewModel.deviceHistories)
                 cell.selectionStyle = .none
+                
                 return cell
             }
         } else {
-            if indexPath.section == 0 {
-                let cell = mainTableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell", for: indexPath) as! HeaderTableViewCell
+            if indexPath.row == 0 {
+                let cell = mainTableView.dequeueReusableCell(
+                    withIdentifier: "HeaderTableViewCell",
+                    for: indexPath
+                ) as! HeaderTableViewCell
                 
                 if let model = viewModel.device.value {
                     cell.setupData(device: model)
@@ -153,8 +154,14 @@ extension DetailDeviceViewController: UITableViewDelegate, UITableViewDataSource
                 
                 return cell
             } else {
-                let cell = mainTableView.dequeueReusableCell(withIdentifier: "HistoryGraphTableViewCell", for: indexPath) as! HistoryGraphTableViewCell
+                let cell = mainTableView.dequeueReusableCell(
+                    withIdentifier: "HistoryGraphTableViewCell",
+                    for: indexPath
+                ) as! HistoryGraphTableViewCell
+                
                 cell.selectionStyle = .none
+                cell.setupData(histories: viewModel.deviceHistories)
+                
                 return cell
             }
         }

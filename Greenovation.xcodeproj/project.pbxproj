@@ -50,6 +50,8 @@
 		A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */; };
 		D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602258F2AEFA84700F3800F /* Date+Extension.swift */; };
 		D60225AA2AEFB3DD00F3800F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60225A92AEFB3DD00F3800F /* HeaderTableViewCell.swift */; };
+		D6047CE52B0B6531006468BB /* DeviceHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6047CE42B0B6531006468BB /* DeviceHistoryResponse.swift */; };
+		D6047CE72B0B67EB006468BB /* DeviceHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6047CE62B0B67EB006468BB /* DeviceHistoryModel.swift */; };
 		D608922A2AEA760200A1C530 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60892282AEA760200A1C530 /* OnboardingViewController.swift */; };
 		D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60892292AEA760200A1C530 /* OnboardingViewController.xib */; };
 		D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D609503E2AEF890000DD5FDD /* HistoryGraphTableViewCell.swift */; };
@@ -232,6 +234,8 @@
 		A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalizationStoryboard.swift; path = Greenovation/Utils/LocalizationStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		D602258F2AEFA84700F3800F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		D60225A92AEFB3DD00F3800F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		D6047CE42B0B6531006468BB /* DeviceHistoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHistoryResponse.swift; sourceTree = "<group>"; };
+		D6047CE62B0B67EB006468BB /* DeviceHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHistoryModel.swift; sourceTree = "<group>"; };
 		D60892282AEA760200A1C530 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D60892292AEA760200A1C530 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
 		D609503E2AEF890000DD5FDD /* HistoryGraphTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGraphTableViewCell.swift; sourceTree = "<group>"; };
@@ -447,6 +451,7 @@
 		A72C071E2AFA448C005395DB /* AddDevice */ = {
 			isa = PBXGroup;
 			children = (
+				D60225922AEFB0D700F3800F /* Components */,
 				A72C07272AFA4915005395DB /* AddDeviceV2ViewController.swift */,
 				A72C07282AFA4915005395DB /* AddDeviceV2ViewController.xib */,
 				D6D877232B028FA6005AE681 /* AddDeviceViewModel.swift */,
@@ -732,7 +737,6 @@
 		D663B0372B01D765004E7BCF /* Devices */ = {
 			isa = PBXGroup;
 			children = (
-				D60225922AEFB0D700F3800F /* Components */,
 				D6DFA58E2B02535900350C5A /* Pages */,
 			);
 			path = Devices;
@@ -780,6 +784,7 @@
 			children = (
 				D6BD3B702AD0CAB6005B85C3 /* DeviceResponse.swift */,
 				D67151A12B033F4C00C34585 /* DeviceBody.swift */,
+				D6047CE42B0B6531006468BB /* DeviceHistoryResponse.swift */,
 			);
 			path = Devices;
 			sourceTree = "<group>";
@@ -788,6 +793,7 @@
 			isa = PBXGroup;
 			children = (
 				D6BD3B782AD123C3005B85C3 /* DeviceModel.swift */,
+				D6047CE62B0B67EB006468BB /* DeviceHistoryModel.swift */,
 			);
 			path = Devices;
 			sourceTree = "<group>";
@@ -1442,12 +1448,14 @@
 				D68A03562B00790700CB4666 /* BluetoothPairingViewController.swift in Sources */,
 				D6D010252AC6C60800EC51FB /* AppDelegate.swift in Sources */,
 				A79DB2C62AF39786003D768A /* SaveSuccessViewController.swift in Sources */,
+				D6047CE72B0B67EB006468BB /* DeviceHistoryModel.swift in Sources */,
 				D6A8ABC22AEEC0B900D6466B /* NotificationRepository.swift in Sources */,
 				D67771232AFCCFB800EC8956 /* PlantResponse.swift in Sources */,
 				A73E1EA12AFCEF0F008053A9 /* EditDeviceViewController.swift in Sources */,
 				D69D171F2AEEC80100A5347C /* NotificationViewController.swift in Sources */,
 				D6EBCEAA2AFE263900EF5C51 /* EmptyPlantItemCell.swift in Sources */,
 				D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */,
+				D6047CE52B0B6531006468BB /* DeviceHistoryResponse.swift in Sources */,
 				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
 				D688F8C62B067A0F000A895C /* TypeOfPlantTableViewCell.swift in Sources */,
 				D6D010272AC6C60800EC51FB /* SceneDelegate.swift in Sources */,
@@ -1636,7 +1644,7 @@
 				CODE_SIGN_ENTITLEMENTS = Greenovation/Greenovation.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 47BZXPDJKC;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1672,7 +1680,7 @@
 				CODE_SIGN_ENTITLEMENTS = Greenovation/Greenovation.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 47BZXPDJKC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Greenovation/Resources/Info.plist;

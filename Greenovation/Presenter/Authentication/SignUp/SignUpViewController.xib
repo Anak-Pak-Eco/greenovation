@@ -80,7 +80,7 @@
                     </constraints>
                     <color key="textColor" name="on primary-container"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konfirmasi Kata Sandi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZb-vD-cY8" userLabel="label_password">
                     <rect key="frame" x="16" y="315" width="361" height="21"/>
@@ -95,7 +95,7 @@
                     </constraints>
                     <color key="textColor" name="on primary-container"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqX-Qv-qc7">
                     <rect key="frame" x="16" y="427" width="361" height="40"/>

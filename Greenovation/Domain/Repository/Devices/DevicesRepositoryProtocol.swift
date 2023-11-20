@@ -9,4 +9,5 @@ import Combine
 
 protocol DevicesRepositoryProtocol {
     func saveDevice(body: DeviceBody) -> AnyPublisher<String, Error>
+    func getDeviceHistory(_ deviceId: String) -> AnyPublisher<[DeviceHistoryModel], Error>
 }

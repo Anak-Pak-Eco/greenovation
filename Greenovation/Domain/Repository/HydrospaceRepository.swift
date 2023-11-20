@@ -27,7 +27,6 @@ class HydrospaceRepository: HydrospaceRepositoryProtocol {
         return hydrospaceDataSource.getDeviceStatus(id: id)
             .map { response in
                 if let response = response {
-                    print("Response: \(response)")
                     return self.mapResponseToDevice(response)
                 } else {
                     return nil

@@ -228,6 +228,23 @@
         }
       }
     },
+    "find-device" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Find Device"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cari Perangkat"
+          }
+        }
+      }
+    },
     "Formula di bawah ini merupakan formula yang kamu buat untuk **%@** pada **%@**" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -334,6 +351,9 @@
         }
       }
     },
+    "Hours" : {
+
+    },
     "intermediate-vegetative-phase" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -399,9 +419,6 @@
           }
         }
       }
-    },
-    "Month" : {
-
     },
     "notification" : {
       "extractionState" : "manual",
@@ -605,9 +622,6 @@
         }
       }
     },
-    "Revenue" : {
-
-    },
     "save" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -777,6 +791,9 @@
           }
         }
       }
+    },
+    "Value" : {
+
     }
   },
   "version" : "1.0"

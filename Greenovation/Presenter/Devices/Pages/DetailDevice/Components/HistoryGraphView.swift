@@ -8,26 +8,11 @@
 import SwiftUI
 import Charts
 
-struct Item: Identifiable {
-    var id = UUID()
-    let type: String
-    let value: Double
-}
-
 struct HistoryGraphView: View {
     
-    let items: [Item] = [
-        Item(type: "00.00", value: 900 ),
-        Item(type: "03.00", value: 1100 ),
-        Item(type: "06.00", value: 500 ),
-        Item(type: "09.00", value: 800 ),
-        Item(type: "12.00", value: 600 ),
-        Item(type: "15.00", value: 500 ),
-        Item(type: "18.00", value: 1000 ),
-    ]
+    let items: [DeviceHistoryModel]
     
     var body: some View {
-        
         let curColor = Color.primaryAccent
         let curGradient = LinearGradient(
             gradient: SwiftUI.Gradient (
@@ -45,12 +30,12 @@ struct HistoryGraphView: View {
         if #available(iOS 16.0, *) {
             Chart(items) { item in
                 LineMark(
-                    x: .value("Month", item.type),
-                    y: .value("Revenue", item.value)
+                    x: .value("Hours", item.created_at.formatToHour),
+                    y: .value("Value", item.current_ppm)
                 )
                 .foregroundStyle(
                     LinearGradient(
-                        colors: [Color.green],
+                        colors: [Color(uiColor: UIColor.primaryAccent)],
                         startPoint: .top,
                         endPoint: .bottom
                     )
@@ -58,8 +43,8 @@ struct HistoryGraphView: View {
                 .interpolationMethod(.catmullRom)
                 
                 AreaMark(
-                    x: .value("Month", item.type),
-                    y: .value("Revenue", item.value)
+                    x: .value("Hours", item.created_at.formatToHour),
+                    y: .value("Value", item.current_ppm)
                 )
                 .interpolationMethod(.catmullRom)
                 .foregroundStyle(curGradient)
@@ -75,15 +60,28 @@ struct HistoryGraphView: View {
                     AxisValueLabel()
                 }
             }
-            .frame(height: 137)
+            .frame(height: 200)
             .padding()
         } else {
-            // Fallback for earlier iOS versions
             Text("Chart not available")
         }
     }
 }
 
+extension Date {
+    var formatToHour: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        return formatter.string(from: self)
+    }
+}
+
 #Preview {
-    HistoryGraphView()
+    HistoryGraphView(
+        items: [
+            .init(current_ph: 2, created_at: Date.now + 3600, serial_number: "20202020200", current_ppm: 1000),
+            .init(current_ph: 50, created_at: Date() + 7200, serial_number: "20202020200", current_ppm: 1200),
+            .init(current_ph: 80, created_at: Date() + 10800, serial_number: "20202020200", current_ppm: 1300)]
+    )
+        .frame(height: 200)
 }

@@ -35,7 +35,7 @@ class DevicesItemTableViewCell: UITableViewCell {
         phLabel.text = String.format(device.currentPh, format: "%.2f")
         phaseLabel.text = device.currentSteps.capitalized
         deviceStatusLabel.text = device.status.capitalized
-        phaseImage.image = UIImage(named: getPlantImage(phaseName: device.phase.step))
+        phaseImage.image = UIImage(named: getPlantImage(phaseName: device.currentSteps))
         
         errorStackView.subviews.forEach { view in
             errorStackView.removeArrangedSubview(view)

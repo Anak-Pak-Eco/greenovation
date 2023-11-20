@@ -55,7 +55,6 @@ final class APIDataSource {
             .publishString()
             .value()
             .map { response in
-                print("Response: \(response)")
                 return response
             }
             .mapError { error in
@@ -69,7 +68,6 @@ final class APIDataSource {
             .publishString()
             .value()
             .map { response in
-                print("Response: \(response)")
                 return response
             }
             .mapError { error in
@@ -83,7 +81,6 @@ final class APIDataSource {
             .publishString()
             .value()
             .map { response in
-                print("Response: \(response)")
                 return response
             }
             .mapError { error in
@@ -102,6 +99,19 @@ final class APIDataSource {
             .mapError { error in
                 return error
             }
+            .eraseToAnyPublisher()
+    }
+    
+    func getDeviceHistories(_ deviceId: String) -> AnyPublisher<[DeviceHistoryResponse], AFError> {
+        print("baseURL: \(baseURL + APIEndpoint.devices.rawValue + "/get-history/\(deviceId)")")
+        return AF.request(baseURL + APIEndpoint.devices.rawValue + "/get-history/\(deviceId)", method: .get)
+            .publishDecodable(type: BaseResponse<[DeviceHistoryResponse]>.self)
+            .value()
+            .map {
+                print("\($0.data)")
+                return $0.data
+            }
+            .mapError { $0 }
             .eraseToAnyPublisher()
     }
     

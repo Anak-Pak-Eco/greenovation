@@ -22,6 +22,7 @@
                 <outlet property="emailLabel" destination="oBh-hT-ia0" id="Jp6-2C-p7c"/>
                 <outlet property="nameTextField" destination="Dhm-lq-SNs" id="ftb-OB-23u"/>
                 <outlet property="privacyPolicyButton" destination="Izg-a3-Vo1" id="10z-ra-6P0"/>
+                <outlet property="signOutButton" destination="RpE-Oh-hXB" id="Nwe-Zx-Ptx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
