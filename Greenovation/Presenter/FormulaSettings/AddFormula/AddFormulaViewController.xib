@@ -34,7 +34,7 @@
                         <constraint firstAttribute="height" constant="45" id="ROB-vq-Lgq"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cari Tanaman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-mT-HmS">
                     <rect key="frame" x="16" y="74" width="361" height="19.666666666666671"/>

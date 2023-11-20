@@ -7,33 +7,22 @@
 
 import UIKit
 
-class EditFormulaViewController: UIViewController {
+protocol EditFormulaDelegate {
+    func onDeleteFormulaClicked()
+}
+
+class EditFormulaViewController: UIViewController, EditFormulaDelegate {
     
-    @IBOutlet var plantName: UILabel!
-    @IBOutlet var ppmMinFaseAnakan: UITextField!
-    @IBOutlet var ppmMaxFaseAnakan: UITextField!
-    @IBOutlet var phMinFaseAnakan: UITextField!
-    @IBOutlet var phMaxFaseAnakan: UITextField!
-    @IBOutlet var ppmMinFaseAwal: UITextField!
-    @IBOutlet var ppmMaxFaseAwal: UITextField!
-    @IBOutlet var phMinFaseAwal: UITextField!
-    @IBOutlet var phMaxFaseAwal: UITextField!
-    @IBOutlet var ppmMinFaseMenengah: UITextField!
-    @IBOutlet var ppmMaxFaseMenengah: UITextField!
-    @IBOutlet var phMinFaseMenengah: UITextField!
-    @IBOutlet var phMaxFaseMenengah: UITextField!
-    @IBOutlet var deleteButton: LocalizableButton!
-    @IBOutlet var ppmLabelFaseAnakan: LocalizableLabel!
-    @IBOutlet var ppmLabelFaseAwal: LocalizableLabel!
-    @IBOutlet var ppmLabelFaseMenengah: LocalizableLabel!
-    
+    @IBOutlet weak var editFormulaTableView: UITableView!
+    private var anakanPhaseCell: AnakanPhaseTableViewCell?
+    private var awalPhaseCell: AwalPhaseTableViewCell?
+    private var menengahPhaseCell: MenengahPhaseTableViewCell?
+    private var deleteFormulaButtonCell: DeleteFormulaButtonCell?
     private var editButton: UIBarButtonItem?
-    
-    private let viewModel = EditFormulaViewModel()
-    private let plant: PlantModel
+    private let viewModel: EditFormulaViewModel
     
     init(plant: PlantModel) {
-        self.plant = plant
+        self.viewModel = EditFormulaViewModel(plant: plant)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -45,19 +34,21 @@ class EditFormulaViewController: UIViewController {
         super.viewDidLoad()
         viewModel.successSaveFormula.bind { [unowned self] success in
             if success {
-//                navigationController?.popToRootViewController(animated: true)
-                editButton?.isEnabled = true
+                 editButton?.isEnabled = true
             }
         }
+        
         viewModel.deletedSaveFormula.bind { [unowned self] deleted in
             if deleted {
                 navigationController?.popToRootViewController(animated: true)
             }
         }
+        
         viewModel.loadingSaveFormula.bind { [unowned self] isLoading in
             editButtonItem.isEnabled = !isLoading
-            deleteButton.isEnabled = !isLoading
+            deleteFormulaButtonCell?.deleteFormulaButton.isEnabled = !isLoading
         }
+        
         viewModel.errorSaveFormula.bind { [unowned self] error in
             if !error.isEmpty {
                 let alertController = UIAlertController(
@@ -79,6 +70,30 @@ class EditFormulaViewController: UIViewController {
         }
         setupToolbar()
         setupUI()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification, object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height ?? 0
+        let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+        editFormulaTableView.contentInset = contentInsets
+        editFormulaTableView.scrollIndicatorInsets = contentInsets
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        let contentInsets: UIEdgeInsets = .zero
+        editFormulaTableView.contentInset = contentInsets
+        editFormulaTableView.scrollIndicatorInsets = contentInsets
     }
     
     @objc func backButtonTapped() {
@@ -87,20 +102,31 @@ class EditFormulaViewController: UIViewController {
     
     @objc func saveButtonTapped() {
         if viewModel.editMode {
-            let anakanMinPpm = ppmMinFaseAnakan.text ?? ""
-            let anakanMaxPpm = ppmMaxFaseAnakan.text ?? ""
-            let anakanMinPh = phMinFaseAnakan.text ?? ""
-            let anakanMaxPh = phMaxFaseAnakan.text ?? ""
-            let vegetatifAwalMaxPpm = ppmMaxFaseAwal.text ?? ""
-            let vegetatifAwalMinPpm = ppmMinFaseAwal.text ?? ""
-            let vegetatifAwalMaxPh = phMaxFaseAwal.text ?? ""
-            let vegetatifAwalMinPh = phMinFaseAwal.text ?? ""
-            let vegetatifMenengahMaxPpm = ppmMaxFaseMenengah.text ?? ""
-            let vegetatifMenengahMinPpm = ppmMinFaseMenengah.text ?? ""
-            let vegetatifMenengahMaxPh = phMaxFaseMenengah.text ?? ""
-            let vegetatifMenengahMinPh = phMinFaseMenengah.text ?? ""
+            let anakanMinPpm = anakanPhaseCell?.minPpmTextField.text ?? ""
+            let anakanMaxPpm = anakanPhaseCell?.maxPpmTextField.text ?? ""
+            let anakanMinPh = anakanPhaseCell?.minPhTextField.text ?? ""
+            let anakanMaxPh = anakanPhaseCell?.maxPhTextField.text ?? ""
+            let vegetatifAwalMaxPpm = awalPhaseCell?.maxPpmTextField.text ?? ""
+            let vegetatifAwalMinPpm = awalPhaseCell?.minPpmTextField.text ?? ""
+            let vegetatifAwalMaxPh = awalPhaseCell?.maxPhTextField.text ?? ""
+            let vegetatifAwalMinPh = awalPhaseCell?.minPhTextField.text ?? ""
+            let vegetatifMenengahMaxPpm = menengahPhaseCell?.maxPpmTextField.text ?? ""
+            let vegetatifMenengahMinPpm = menengahPhaseCell?.minPpmTextField.text ?? ""
+            let vegetatifMenengahMaxPh = menengahPhaseCell?.maxPhTextField.text ?? ""
+            let vegetatifMenengahMinPh = menengahPhaseCell?.minPhTextField.text ?? ""
             
-            if anakanMinPh.isEmpty || anakanMaxPh.isEmpty || anakanMinPpm.isEmpty || anakanMaxPpm.isEmpty || vegetatifAwalMinPpm.isEmpty || vegetatifAwalMaxPpm.isEmpty || vegetatifAwalMinPh.isEmpty || vegetatifAwalMaxPh.isEmpty || vegetatifMenengahMinPh.isEmpty || vegetatifMenengahMaxPh.isEmpty || vegetatifMenengahMinPpm.isEmpty || vegetatifMenengahMaxPpm.isEmpty {
+            if anakanMinPh.isEmpty 
+                || anakanMaxPh.isEmpty
+                || anakanMinPpm.isEmpty
+                || anakanMaxPpm.isEmpty
+                || vegetatifAwalMinPpm.isEmpty
+                || vegetatifAwalMaxPpm.isEmpty
+                || vegetatifAwalMinPh.isEmpty
+                || vegetatifAwalMaxPh.isEmpty
+                || vegetatifMenengahMinPh.isEmpty
+                || vegetatifMenengahMaxPh.isEmpty
+                || vegetatifMenengahMinPpm.isEmpty
+                || vegetatifMenengahMaxPpm.isEmpty {
                 
                 let alertController = UIAlertController(
                     title: "Gagal Mengubah Tanaman",
@@ -119,8 +145,8 @@ class EditFormulaViewController: UIViewController {
                 self.present(alertController, animated: true)
             } else {
                 viewModel.saveFormula(
-                    name: plant.name,
-                    plantId: plant.id,
+                    name: viewModel.plant.name,
+                    plantId: viewModel.plant.id,
                     anakanMinPh: anakanMinPh,
                     anakanMaxPh: anakanMaxPh,
                     anakanMinPpm: anakanMinPpm,
@@ -134,65 +160,15 @@ class EditFormulaViewController: UIViewController {
                     vegetatifMenengahMinPpm: vegetatifMenengahMinPpm,
                     vegetatifMenengahMaxPpm: vegetatifMenengahMaxPpm
                 )
-                ppmMinFaseAwal.isEnabled = false
-                ppmMaxFaseAwal.isEnabled = false
-                phMinFaseAwal.isEnabled = false
-                phMaxFaseAwal.isEnabled = false
-                ppmMinFaseAnakan.isEnabled = false
-                ppmMaxFaseAnakan.isEnabled = false
-                phMinFaseAnakan.isEnabled = false
-                phMaxFaseAnakan.isEnabled = false
-                ppmMinFaseMenengah.isEnabled = false
-                ppmMaxFaseMenengah.isEnabled = false
-                phMinFaseMenengah.isEnabled = false
-                phMaxFaseMenengah.isEnabled = false
                 editButton?.title = "Edit"
                 editButton?.isEnabled = false
             }
         } else {
-            ppmMinFaseAwal.isEnabled = true
-            ppmMaxFaseAwal.isEnabled = true
-            phMinFaseAwal.isEnabled = true
-            phMaxFaseAwal.isEnabled = true
-            ppmMinFaseAnakan.isEnabled = true
-            ppmMaxFaseAnakan.isEnabled = true
-            phMinFaseAnakan.isEnabled = true
-            phMaxFaseAnakan.isEnabled = true
-            ppmMinFaseMenengah.isEnabled = true
-            ppmMaxFaseMenengah.isEnabled = true
-            phMinFaseMenengah.isEnabled = true
-            phMaxFaseMenengah.isEnabled = true
             editButton?.title = String(localized: "save")
         }
         
         viewModel.editMode.toggle()
-    }
-    
-    @IBAction func deleteButtonTapped() {
-        let alertController = UIAlertController(
-            title: "Hapus Formula",
-            message: "Apakah kamu yakin ingin menghapus formula untuk tanaman \(plant.name)",
-            preferredStyle: .alert
-        )
-        alertController.addAction(
-            .init(
-                title: "Hapus",
-                style: .default,
-                handler: { [unowned self] _ in
-                    viewModel.deletePlant(id: plant.id)
-                }
-            )
-        )
-        alertController.addAction(
-            .init(
-                title: "Batal",
-                style: .cancel,
-                handler: { _ in
-                    alertController.dismiss(animated: true)
-                }
-            )
-        )
-        self.present(alertController, animated: true)
+        editFormulaTableView.reloadData()
     }
     
     private func setupToolbar() {
@@ -217,116 +193,31 @@ class EditFormulaViewController: UIViewController {
     }
     
     private func setupUI() {
-        // PPM Label
-        ppmLabelFaseAnakan.adjustsFontSizeToFitWidth = true
-        ppmLabelFaseAwal.adjustsFontSizeToFitWidth = true
-        ppmLabelFaseMenengah.adjustsFontSizeToFitWidth = true
-        
-        // Fase Anakan ppm Min
-        ppmMinFaseAnakan.layer.cornerRadius = 6
-        ppmMinFaseAnakan.layer.borderWidth = 1.0
-        ppmMinFaseAnakan.layer.borderColor = UIColor.primaryAccent.cgColor
-        ppmMinFaseAnakan.clipsToBounds = true
-        
-        // Fase Anakan ppm Max
-        ppmMaxFaseAnakan.layer.cornerRadius = 6
-        ppmMaxFaseAnakan.layer.borderWidth = 1.0
-        ppmMaxFaseAnakan.layer.borderColor = UIColor.primaryAccent.cgColor
-        ppmMaxFaseAnakan.clipsToBounds = true
-        
-        // Fase Anakan ph Min
-        phMinFaseAnakan.layer.cornerRadius = 6
-        phMinFaseAnakan.layer.borderWidth = 1.0
-        phMinFaseAnakan.layer.borderColor = UIColor.primaryAccent.cgColor
-        phMinFaseAnakan.clipsToBounds = true
-        
-        // Fase Anakan ph Max
-        phMaxFaseAnakan.layer.cornerRadius = 6
-        phMaxFaseAnakan.layer.borderWidth = 1.0
-        phMaxFaseAnakan.layer.borderColor = UIColor.primaryAccent.cgColor
-        phMaxFaseAnakan.clipsToBounds = true
-        
-        // Fase Vegetatif Awal ppm Min
-        ppmMinFaseAwal.layer.cornerRadius = 6
-        ppmMinFaseAwal.layer.borderWidth = 1.0
-        ppmMinFaseAwal.layer.borderColor = UIColor.primaryAccent.cgColor
-        ppmMinFaseAwal.clipsToBounds = true
-        
-        // Fase Vegetatif Awal ppm Max
-        ppmMaxFaseAwal.layer.cornerRadius = 6
-        ppmMaxFaseAwal.layer.borderWidth = 1.0
-        ppmMaxFaseAwal.layer.borderColor = UIColor.primaryAccent.cgColor
-        ppmMaxFaseAwal.clipsToBounds = true
-        
-        // Fase Vegetatif Awal ph Min
-        phMinFaseAwal.layer.cornerRadius = 6
-        phMinFaseAwal.layer.borderWidth = 1.0
-        phMinFaseAwal.layer.borderColor = UIColor.primaryAccent.cgColor
-        phMinFaseAwal.clipsToBounds = true
-        
-        // Fase Vegetatif Awal ph Max
-        phMaxFaseAwal.layer.cornerRadius = 6
-        phMaxFaseAwal.layer.borderWidth = 1.0
-        phMaxFaseAwal.layer.borderColor = UIColor.primaryAccent.cgColor
-        phMaxFaseAwal.clipsToBounds = true
-        
-        // Fase Vegetatif Menengah ppm Min
-        ppmMinFaseMenengah.layer.cornerRadius = 6
-        ppmMinFaseMenengah.layer.borderWidth = 1.0
-        ppmMinFaseMenengah.layer.borderColor = UIColor.primaryAccent.cgColor
-        ppmMinFaseMenengah.clipsToBounds = true
-        
-        // Fase Vegetatif Menengah ppm Max
-        ppmMaxFaseMenengah.layer.cornerRadius = 6
-        ppmMaxFaseMenengah.layer.borderWidth = 1.0
-        ppmMaxFaseMenengah.layer.borderColor = UIColor.primaryAccent.cgColor
-        ppmMaxFaseMenengah.clipsToBounds = true
-        
-        // Fase Vegetatif Menengah ph Min
-        phMinFaseMenengah.layer.cornerRadius = 6
-        phMinFaseMenengah.layer.borderWidth = 1.0
-        phMinFaseMenengah.layer.borderColor = UIColor.primaryAccent.cgColor
-        phMinFaseMenengah.clipsToBounds = true
-        
-        // Fase Vegetatif Menengah ph Max
-        phMaxFaseMenengah.layer.cornerRadius = 6
-        phMaxFaseMenengah.layer.borderWidth = 1.0
-        phMaxFaseMenengah.layer.borderColor = UIColor.primaryAccent.cgColor
-        phMaxFaseMenengah.clipsToBounds = true
-        
-        plantName.text = plant.name
-        
-        let anakan = plant.phases.first(where: {$0.step == .anakan})
-        ppmMinFaseAnakan.text = String(describing: anakan?.min_ppm ?? 0)
-        ppmMaxFaseAnakan.text = String(describing: anakan?.max_ppm ?? 0)
-        phMinFaseAnakan.text = String(describing: anakan?.min_ph ?? 0)
-        phMaxFaseAnakan.text = String(describing: anakan?.max_ph ?? 0)
-        
-        let awal = plant.phases.first(where: {$0.step == .vegetatif_awal})
-        ppmMinFaseAwal.text = String(describing: awal?.min_ppm ?? 0)
-        ppmMaxFaseAwal.text = String(describing: awal?.max_ppm ?? 0)
-        phMinFaseAwal.text = String(describing: awal?.min_ph ?? 0)
-        phMaxFaseAwal.text = String(describing: awal?.max_ph ?? 0)
-        
-        let menengah = plant.phases.first(where: {$0.step == .vegetatif_menengah})
-        ppmMinFaseMenengah.text = String(describing: menengah?.min_ppm ?? 0)
-        ppmMaxFaseMenengah.text = String(describing: menengah?.max_ppm ?? 0)
-        phMinFaseMenengah.text = String(describing: menengah?.min_ph ?? 0)
-        phMaxFaseMenengah.text = String(describing: menengah?.max_ph ?? 0)
-        
-        // MARK: Disabled Text Field
-        ppmMinFaseAwal.isEnabled = false
-        ppmMaxFaseAwal.isEnabled = false
-        phMinFaseAwal.isEnabled = false
-        phMaxFaseAwal.isEnabled = false
-        ppmMinFaseAnakan.isEnabled = false
-        ppmMaxFaseAnakan.isEnabled = false
-        phMinFaseAnakan.isEnabled = false
-        phMaxFaseAnakan.isEnabled = false
-        ppmMinFaseMenengah.isEnabled = false
-        ppmMaxFaseMenengah.isEnabled = false
-        phMinFaseMenengah.isEnabled = false
-        phMaxFaseMenengah.isEnabled = false
+        editFormulaTableView.register(
+            UINib(nibName: "TypeOfPlantTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "TypeOfPlantTableViewCell"
+        )
+        editFormulaTableView.register(
+            UINib(nibName: "AnakanPhaseTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "AnakanPhaseTableViewCell"
+        )
+        editFormulaTableView.register(
+            UINib(nibName: "AwalPhaseTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "AwalPhaseTableViewCell"
+        )
+        editFormulaTableView.register(
+            UINib(nibName: "MenengahPhaseTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "MenengahPhaseTableViewCell"
+        )
+        editFormulaTableView.register(
+            UINib(nibName: "DeleteFormulaButtonCell", bundle: nil),
+            forCellReuseIdentifier: "DeleteFormulaButtonCell"
+        )
+        editFormulaTableView.allowsSelection = false
+        editFormulaTableView.separatorStyle = .none
+        editFormulaTableView.dataSource = self
+        editFormulaTableView.delegate = self
+        editFormulaTableView.reloadData()
         
         let tap = UITapGestureRecognizer(
             target: self,
@@ -337,5 +228,103 @@ class EditFormulaViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func onDeleteFormulaClicked() {
+        let alertController = UIAlertController(
+            title: "Hapus Formula",
+            message: "Apakah kamu yakin ingin menghapus formula untuk tanaman \(viewModel.plant.name)",
+            preferredStyle: .alert
+        )
+        alertController.addAction(
+            .init(
+                title: "Hapus",
+                style: .default,
+                handler: { [unowned self] _ in
+                    viewModel.deletePlant(id: viewModel.plant.id)
+                }
+            )
+        )
+        alertController.addAction(
+            .init(
+                title: "Batal",
+                style: .cancel,
+                handler: { _ in
+                    alertController.dismiss(animated: true)
+                }
+            )
+        )
+        self.present(alertController, animated: true)
+    }
+}
+
+extension EditFormulaViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            // Type of Formula Section
+            let cell = editFormulaTableView.dequeueReusableCell(
+                withIdentifier: "TypeOfPlantTableViewCell",
+                for: indexPath
+            ) as! TypeOfPlantTableViewCell
+            
+            cell.setPlantType(viewModel.plant.name)
+            
+            return cell
+        case 1:
+            // Anakan Phase Section
+            anakanPhaseCell = editFormulaTableView.dequeueReusableCell(
+                withIdentifier: "AnakanPhaseTableViewCell",
+                for: indexPath
+            ) as? AnakanPhaseTableViewCell
+            
+            if let anakan = viewModel.plant.phases.first(where: { $0.step == .anakan }) {
+                anakanPhaseCell?.setup(isEditingMode: viewModel.editMode, phase: anakan)
+            }
+            
+            return anakanPhaseCell!
+        case 2:
+            // Awal Phase Section
+            awalPhaseCell = editFormulaTableView.dequeueReusableCell(
+                withIdentifier: "AwalPhaseTableViewCell",
+                for: indexPath
+            ) as? AwalPhaseTableViewCell
+            
+            if let awal = viewModel.plant.phases.first(where: { $0.step == .vegetatif_awal }) {
+                awalPhaseCell?.setup(isEditingMode: viewModel.editMode, phase: awal)
+            }
+            
+            return awalPhaseCell!
+        case 3:
+            // Menengah Phase Section
+            menengahPhaseCell = editFormulaTableView.dequeueReusableCell(
+                withIdentifier: "MenengahPhaseTableViewCell",
+                for: indexPath
+            ) as? MenengahPhaseTableViewCell
+            
+            if let menengah = viewModel.plant.phases.first(where: { $0.step == .vegetatif_menengah }) {
+                menengahPhaseCell?.setup(isEditingMode: viewModel.editMode, phase: menengah)
+            }
+            
+            return menengahPhaseCell!
+        case 4:
+            // Anakan Phase Section
+            deleteFormulaButtonCell = editFormulaTableView.dequeueReusableCell(
+                withIdentifier: "DeleteFormulaButtonCell",
+                for: indexPath
+            ) as? DeleteFormulaButtonCell
+            
+            deleteFormulaButtonCell?.selectionStyle = .none
+            deleteFormulaButtonCell?.delegate = self
+            
+            return deleteFormulaButtonCell!
+        default:
+            let cell = UITableViewCell()
+            return cell
+        }
     }
 }

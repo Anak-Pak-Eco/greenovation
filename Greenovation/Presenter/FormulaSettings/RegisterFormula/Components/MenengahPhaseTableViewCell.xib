@@ -24,7 +24,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fase Vegetatif Menengah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8W-Ov-IeU" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                        <rect key="frame" x="20" y="19" width="489" height="19.666666666666671"/>
+                        <rect key="frame" x="16" y="19" width="497" height="19.666666666666671"/>
                         <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                         <color key="textColor" name="primary-accent"/>
                         <nil key="highlightedColor"/>
@@ -139,14 +139,14 @@ Kepekatan Nutrisi: 1050-1400 &amp; Tingkat pH: 5,5-6,5</string>
                     <constraint firstAttribute="trailingMargin" secondItem="00R-es-dD6" secondAttribute="trailing" id="BdX-Mi-PRv"/>
                     <constraint firstAttribute="trailing" secondItem="2WP-pT-Nq3" secondAttribute="trailing" id="EDH-lX-EGK"/>
                     <constraint firstAttribute="bottomMargin" secondItem="00R-es-dD6" secondAttribute="bottom" id="GwU-ve-Vei"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="h8W-Ov-IeU" secondAttribute="trailing" id="KJr-lT-ZvY"/>
+                    <constraint firstAttribute="trailing" secondItem="h8W-Ov-IeU" secondAttribute="trailing" constant="16" id="KJr-lT-ZvY"/>
                     <constraint firstItem="2WP-pT-Nq3" firstAttribute="top" secondItem="h8W-Ov-IeU" secondAttribute="bottom" constant="5" id="S8c-cb-a4a"/>
-                    <constraint firstItem="h8W-Ov-IeU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="WMf-gf-F4s"/>
+                    <constraint firstItem="h8W-Ov-IeU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="WMf-gf-F4s"/>
                     <constraint firstItem="00R-es-dD6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="aa7-Cp-fYI"/>
                     <constraint firstItem="2WP-pT-Nq3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cRy-5X-h4b"/>
                     <constraint firstItem="00R-es-dD6" firstAttribute="top" secondItem="2WP-pT-Nq3" secondAttribute="bottom" constant="5" id="dcw-sb-CI7"/>
                     <constraint firstItem="00R-es-dD6" firstAttribute="top" secondItem="2WP-pT-Nq3" secondAttribute="bottom" constant="5" id="n8L-9H-MyQ"/>
-                    <constraint firstItem="h8W-Ov-IeU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rtS-us-wTn"/>
+                    <constraint firstItem="h8W-Ov-IeU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="rtS-us-wTn"/>
                     <constraint firstItem="2WP-pT-Nq3" firstAttribute="top" secondItem="h8W-Ov-IeU" secondAttribute="bottom" constant="5" id="tTN-JF-iNK"/>
                 </constraints>
             </tableViewCellContentView>

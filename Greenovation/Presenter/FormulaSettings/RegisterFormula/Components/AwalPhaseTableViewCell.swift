@@ -21,6 +21,7 @@ class AwalPhaseTableViewCell: UITableViewCell {
         maxPpmTextField.setBorder()
         minPhTextField.setBorder()
         maxPhTextField.setBorder()
+        recommendationLabel.isHidden = true
     }
     
     func setRecommendation(_ text: String, isHidden: Bool) {
@@ -32,4 +33,27 @@ class AwalPhaseTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func setup(isEditingMode: Bool, phase: PlantModel.PlantPhaseModel) {
+        minPpmTextField.isEnabled = isEditingMode
+        maxPpmTextField.isEnabled = isEditingMode
+        minPhTextField.isEnabled = isEditingMode
+        maxPhTextField.isEnabled = isEditingMode
+        
+        if isEditingMode {
+            minPpmTextField.setBorder()
+            maxPpmTextField.setBorder()
+            minPhTextField.setBorder()
+            maxPhTextField.setBorder()
+        } else {
+            minPpmTextField.removeBorder()
+            maxPpmTextField.removeBorder()
+            minPhTextField.removeBorder()
+            maxPhTextField.removeBorder()
+        }
+        
+        minPpmTextField.text = phase.min_ppm.clean
+        maxPpmTextField.text = phase.max_ppm.clean
+        minPhTextField.text = phase.min_ph.clean
+        maxPhTextField.text = phase.max_ph.clean
+    }
 }

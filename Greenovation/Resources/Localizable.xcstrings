@@ -85,6 +85,9 @@
         }
       }
     },
+    "Chart not available" : {
+
+    },
     "choose-formula" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -109,6 +112,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Device data that has been deleted cannot be restored."
+          }
+        }
+      }
+    },
+    "delete-formula" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Formula"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Pengaturan"
           }
         }
       }
@@ -297,23 +317,6 @@
         }
       }
     },
-    "hapus-pengaturan" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Delete Formula"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hapus Pengaturan"
-          }
-        }
-      }
-    },
     "hapus-perangkat-ini?" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -396,6 +399,9 @@
           }
         }
       }
+    },
+    "Month" : {
+
     },
     "notification" : {
       "extractionState" : "manual",
@@ -566,29 +572,18 @@
         }
       }
     },
-    "Rekomendasi yang diberikan Greenovation untuk %@ pada %@ adalah Kepekatan Nutrisi: %@ppm dan Tingkat pH: %@" : {
+    "recommendation_label %@ %@ %@ %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The recommendations given by Greenovation for %@ on %@ are Nutrient Concentration: %@ppm and pH Level: %@"
+            "value" : "Recommendation from Greenovation:\nNutrient Solution: %@ - %@ & pH Level: %@ - %@"
           }
         },
         "id" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Rekomendasi yang diberikan Greenovation untuk %1$@ pada %2$@ adalah Kepekatan Nutrisi: %3$@ppm dan Tingkat pH: %4$@"
-          }
-        }
-      }
-    },
-    "Rekomendasi yang kami berikan didapatkan dari blabla untuk **%@** pada **%@**\"" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "The recommendations we provide are obtained from blabla for **%@** on **%@**\""
+            "value" : "Rekomendari dari Greenovation:\nKepekatan Nutrisi: %@ - %@ & Tingkat pH: %@ - %@"
           }
         }
       }
@@ -609,6 +604,9 @@
           }
         }
       }
+    },
+    "Revenue" : {
+
     },
     "save" : {
       "extractionState" : "manual",
@@ -657,17 +655,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menyemai"
-          }
-        }
-      }
-    },
-    "Sekitar %@ untuk tiap liter untuk mengembalikan keseimbangan ppm di jangkauan %@" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Approximately %@ for each liter to restore ppm balance within the %@ range"
           }
         }
       }

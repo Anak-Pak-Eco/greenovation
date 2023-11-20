@@ -13,10 +13,15 @@ final class EditFormulaViewModel {
     let deletedSaveFormula: Box<Bool> = Box(false)
     let errorSaveFormula = Box("")
     let loadingSaveFormula = Box(false)
+    var plant: PlantModel
     var editMode = false
     
     private var cancellables: Set<AnyCancellable> = []
     private let repository = PlantRepository()
+    
+    init(plant: PlantModel) {
+        self.plant = plant
+    }
     
     func saveFormula(
         name: String,
@@ -35,27 +40,28 @@ final class EditFormulaViewModel {
         vegetatifMenengahMaxPpm: String
     ) {
         loadingSaveFormula.value = true
+        
         let body = PlantBody(
             name: name,
             image_url: nil,
             users_id: nil,
             phases: [
                 .init(
-                    step: "anakan",
+                    step: PlantModel.PlantPhaseModel.Step.anakan.rawValue,
                     min_ppm: anakanMinPpm.toDouble(),
                     max_ppm: anakanMaxPpm.toDouble(),
                     min_ph: anakanMinPh.toDouble(),
                     max_ph: anakanMaxPh.toDouble()
                 ),
                 .init(
-                    step: "vegetatif_awal",
+                    step: PlantModel.PlantPhaseModel.Step.vegetatif_awal.rawValue,
                     min_ppm: vegetatifAwalMinPpm.toDouble(),
                     max_ppm: vegetatifAwalMaxPpm.toDouble(),
                     min_ph: vegetatifAwalMinPh.toDouble(),
                     max_ph: vegetatifAwalMaxPh.toDouble()
                 ),
                 .init(
-                    step: "vegetatif_menengah",
+                    step: PlantModel.PlantPhaseModel.Step.vegetatif_menengah.rawValue,
                     min_ppm: vegetatifMenengahMinPpm.toDouble(),
                     max_ppm: vegetatifMenengahMaxPpm.toDouble(),
                     min_ph: vegetatifMenengahMinPh.toDouble(),
@@ -64,15 +70,37 @@ final class EditFormulaViewModel {
             ]
         )
         
+        plant.phases = [
+            .init(
+                max_ppm: anakanMaxPpm.toDouble(),
+                min_ppm: anakanMinPpm.toDouble(),
+                max_ph: anakanMaxPh.toDouble(),
+                min_ph: anakanMinPh.toDouble(),
+                step: PlantModel.PlantPhaseModel.Step.anakan
+            ),
+            .init(
+                max_ppm: vegetatifAwalMaxPpm.toDouble(),
+                min_ppm: vegetatifAwalMinPpm.toDouble(),
+                max_ph: vegetatifAwalMaxPh.toDouble(),
+                min_ph: vegetatifAwalMinPh.toDouble(),
+                step: PlantModel.PlantPhaseModel.Step.vegetatif_awal
+            ),
+            .init(
+                max_ppm: vegetatifMenengahMaxPpm.toDouble(),
+                min_ppm: vegetatifMenengahMinPpm.toDouble(),
+                max_ph: vegetatifMenengahMaxPh.toDouble(),
+                min_ph: vegetatifMenengahMinPh.toDouble(),
+                step: PlantModel.PlantPhaseModel.Step.vegetatif_menengah
+            )
+        ]
+        
         repository.updatePlant(id: plantId, body: body)
             .sink { [unowned self] completion in
                 loadingSaveFormula.value = false
                 switch completion {
                 case .finished:
-                    print("Finished Request")
                     successSaveFormula.value = true
                 case .failure(let error):
-                    print("Error: \(error)")
                     errorSaveFormula.value = error.localizedDescription
                 }
             } receiveValue: { response in

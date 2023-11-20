@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct PlantModel: Identifiable {
+struct PlantModel: Identifiable, Equatable {
     let id: String
     let image_url: String
     let users_id: String
-    let phases: [PlantPhaseModel]
+    var phases: [PlantPhaseModel]
     let name: String
     
-    struct PlantPhaseModel {
+    struct PlantPhaseModel: Equatable {
         let max_ppm: Double
         let min_ppm: Double
         let max_ph: Double
@@ -63,5 +63,9 @@ struct PlantModel: Identifiable {
                 name: $0.name ?? ""
             )
         }
+    }
+    
+    static func == (lhs: PlantModel, rhs: PlantModel) -> Bool {
+        return lhs.id == rhs.id
     }
 }

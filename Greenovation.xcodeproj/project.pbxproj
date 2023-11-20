@@ -39,8 +39,6 @@
 		A756C1E52AFA2028004E58A0 /* PlantSearchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756C1E32AFA2028004E58A0 /* PlantSearchItemCell.swift */; };
 		A756C1E62AFA2028004E58A0 /* PlantSearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A756C1E42AFA2028004E58A0 /* PlantSearchItemCell.xib */; };
 		A76083B02B04ABC3005FF08A /* HistoryGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76083AF2B04ABC3005FF08A /* HistoryGraphView.swift */; };
-		A76083CE2B04D9A3005FF08A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76083CC2B04D9A3005FF08A /* TestViewController.swift */; };
-		A76083CF2B04D9A3005FF08A /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76083CD2B04D9A3005FF08A /* TestViewController.xib */; };
 		A77F03242AFB900500C5021D /* DontHavePlantFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F03222AFB900500C5021D /* DontHavePlantFormulaViewController.swift */; };
 		A77F03252AFB900500C5021D /* DontHavePlantFormulaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A77F03232AFB900500C5021D /* DontHavePlantFormulaViewController.xib */; };
 		A77F03282AFB999B00C5021D /* HavePlantFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F03262AFB999B00C5021D /* HavePlantFormulaViewController.swift */; };
@@ -72,6 +70,9 @@
 		D630F50D2AD8112A00A355D0 /* DMSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4FB2AD8112A00A355D0 /* DMSans-LightItalic.ttf */; };
 		D630F50F2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4FD2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf */; };
 		D630F5112AD8112A00A355D0 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D630F4FF2AD8112A00A355D0 /* DMSans-Medium.ttf */; };
+		D633911B2B08853800C22DBC /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D633911A2B08853800C22DBC /* Double+Extension.swift */; };
+		D633911F2B088A6300C22DBC /* DeleteFormulaButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D633911D2B088A6300C22DBC /* DeleteFormulaButtonCell.swift */; };
+		D63391202B088A6300C22DBC /* DeleteFormulaButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D633911E2B088A6300C22DBC /* DeleteFormulaButtonCell.xib */; };
 		D640E2022AC7A32D007E993F /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D640E2012AC7A32D007E993F /* Box.swift */; };
 		D64547092AEA96FE0077DA04 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64547072AEA96FE0077DA04 /* SignInViewController.swift */; };
 		D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64547082AEA96FE0077DA04 /* SignInViewController.xib */; };
@@ -220,8 +221,6 @@
 		A756C1E32AFA2028004E58A0 /* PlantSearchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSearchItemCell.swift; sourceTree = "<group>"; };
 		A756C1E42AFA2028004E58A0 /* PlantSearchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantSearchItemCell.xib; sourceTree = "<group>"; };
 		A76083AF2B04ABC3005FF08A /* HistoryGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGraphView.swift; sourceTree = "<group>"; };
-		A76083CC2B04D9A3005FF08A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		A76083CD2B04D9A3005FF08A /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		A77F03222AFB900500C5021D /* DontHavePlantFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontHavePlantFormulaViewController.swift; sourceTree = "<group>"; };
 		A77F03232AFB900500C5021D /* DontHavePlantFormulaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DontHavePlantFormulaViewController.xib; sourceTree = "<group>"; };
 		A77F03262AFB999B00C5021D /* HavePlantFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HavePlantFormulaViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +252,9 @@
 		D630F4FB2AD8112A00A355D0 /* DMSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		D630F4FD2AD8112A00A355D0 /* DMSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		D630F4FF2AD8112A00A355D0 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		D633911A2B08853800C22DBC /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		D633911D2B088A6300C22DBC /* DeleteFormulaButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFormulaButtonCell.swift; sourceTree = "<group>"; };
+		D633911E2B088A6300C22DBC /* DeleteFormulaButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteFormulaButtonCell.xib; sourceTree = "<group>"; };
 		D640E2012AC7A32D007E993F /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		D64547072AEA96FE0077DA04 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D64547082AEA96FE0077DA04 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
@@ -483,6 +485,7 @@
 		A73E1EA32AFDF678008053A9 /* EditFormula */ = {
 			isa = PBXGroup;
 			children = (
+				D633911C2B0888F300C22DBC /* Components */,
 				A73E1EA62AFDF6CE008053A9 /* EditFormulaViewController.swift */,
 				A73E1EA72AFDF6CE008053A9 /* EditFormulaViewController.xib */,
 				D6EBCEBD2AFF541300EF5C51 /* EditFormulaViewModel.swift */,
@@ -535,15 +538,6 @@
 				A756C1E42AFA2028004E58A0 /* PlantSearchItemCell.xib */,
 			);
 			path = SearchPlantItem;
-			sourceTree = "<group>";
-		};
-		A76083CB2B04D98A005FF08A /* Tesr */ = {
-			isa = PBXGroup;
-			children = (
-				A76083CC2B04D9A3005FF08A /* TestViewController.swift */,
-				A76083CD2B04D9A3005FF08A /* TestViewController.xib */,
-			);
-			path = Tesr;
 			sourceTree = "<group>";
 		};
 		A77F03182AFB8F8F00C5021D /* GrowthStep */ = {
@@ -641,6 +635,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		D633911C2B0888F300C22DBC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D633911D2B088A6300C22DBC /* DeleteFormulaButtonCell.swift */,
+				D633911E2B088A6300C22DBC /* DeleteFormulaButtonCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D640E1E92AC730F2007E993F /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -716,6 +719,7 @@
 			children = (
 				D6239CD52AF234330097E8D1 /* Custom Views */,
 				D640E2012AC7A32D007E993F /* Box.swift */,
+				D633911A2B08853800C22DBC /* Double+Extension.swift */,
 				D65C58822AE26D2F00FE8D1E /* String+Extension.swift */,
 				D6DFD64D2AE7DEE200215428 /* View+Extension.swift */,
 				A7D78E152AE92822006577AE /* LocalizationStoryboard.swift */,
@@ -1086,7 +1090,6 @@
 		D6D010562AC6DB5000EC51FB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				A76083CB2B04D98A005FF08A /* Tesr */,
 				D663B0392B01D78D004E7BCF /* Authentication */,
 				D663B0382B01D77F004E7BCF /* FormulaSettings */,
 				D663B0372B01D765004E7BCF /* Devices */,
@@ -1297,12 +1300,12 @@
 				D6EBCEAB2AFE263900EF5C51 /* EmptyPlantItemCell.xib in Resources */,
 				D688F8D72B06ECF3000A895C /* SubmitButtonTableViewCell.xib in Resources */,
 				D6239CD22AF22BEF0097E8D1 /* AlertView.xib in Resources */,
-				A76083CF2B04D9A3005FF08A /* TestViewController.xib in Resources */,
 				D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */,
 				D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */,
 				D6EBCEB02AFE2D6800EF5C51 /* AddFormulaViewController.xib in Resources */,
 				D69D172B2AEF600900A5347C /* HeaderTableViewCell.xib in Resources */,
 				D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */,
+				D63391202B088A6300C22DBC /* DeleteFormulaButtonCell.xib in Resources */,
 				D68D4E7E2AF5FA4200F61B1E /* ProfileViewController.xib in Resources */,
 				A73E1EA92AFDF6CE008053A9 /* EditFormulaViewController.xib in Resources */,
 				D6F463962AF38CFF00814C7D /* AlertLargeView.xib in Resources */,
@@ -1372,6 +1375,7 @@
 				A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */,
 				A76083B02B04ABC3005FF08A /* HistoryGraphView.swift in Sources */,
 				D6917A2E2AEA9E6B00CD7F5C /* UITextField+Extensions.swift in Sources */,
+				D633911B2B08853800C22DBC /* Double+Extension.swift in Sources */,
 				D68D4E7D2AF5FA4200F61B1E /* ProfileViewController.swift in Sources */,
 				D6BD3B772AD1224E005B85C3 /* HydrospaceRepositoryProtocol.swift in Sources */,
 				D677712B2AFCD8A200EC8956 /* PlantRepositoryProtocol.swift in Sources */,
@@ -1409,6 +1413,7 @@
 				D6EBCEB22AFE318000EF5C51 /* AddFormulaViewModel.swift in Sources */,
 				D67151A52B03403B00C34585 /* DevicesRepositoryProtocol.swift in Sources */,
 				D68D4E8C2AF6B88100F61B1E /* AuthenticationRepository.swift in Sources */,
+				D633911F2B088A6300C22DBC /* DeleteFormulaButtonCell.swift in Sources */,
 				D68D4E782AF5F7F400F61B1E /* CustomLoadingCell.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
 				D6CF2CCA2AF4E01800BC6225 /* SignInViewModel.swift in Sources */,
@@ -1441,7 +1446,6 @@
 				D67771232AFCCFB800EC8956 /* PlantResponse.swift in Sources */,
 				A73E1EA12AFCEF0F008053A9 /* EditDeviceViewController.swift in Sources */,
 				D69D171F2AEEC80100A5347C /* NotificationViewController.swift in Sources */,
-				A76083CE2B04D9A3005FF08A /* TestViewController.swift in Sources */,
 				D6EBCEAA2AFE263900EF5C51 /* EmptyPlantItemCell.swift in Sources */,
 				D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */,
 				D60225902AEFA84700F3800F /* Date+Extension.swift in Sources */,
