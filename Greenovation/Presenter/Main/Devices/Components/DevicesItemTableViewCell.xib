@@ -99,16 +99,19 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="vgP-vl-fcA">
-                                                <rect key="frame" x="91.333333333333343" y="119.66666666666667" width="384.66666666666663" height="55.666666666666671"/>
+                                                <rect key="frame" x="91.333333333333343" y="112.99999999999999" width="384.66666666666663" height="62.333333333333329"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iqx-DD-JNP">
-                                                        <rect key="frame" x="322" y="0.0" width="62.666666666666686" height="55.666666666666664"/>
+                                                        <rect key="frame" x="310.66666666666669" y="0.0" width="74" height="62.333333333333336"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-mengengah" translatesAutoresizingMaskIntoConstraints="NO" id="ECa-hg-5SD">
-                                                                <rect key="frame" x="17.666666666666686" y="0.0" width="27.333333333333329" height="33.333333333333336"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-awal" translatesAutoresizingMaskIntoConstraints="NO" id="ECa-hg-5SD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="nNK-hy-KlJ"/>
+                                                                </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeN-Or-zkN">
-                                                                <rect key="frame" x="0.0" y="33.333333333333314" width="62.666666666666664" height="22.333333333333329"/>
+                                                                <rect key="frame" x="5.6666666666666821" y="40" width="62.666666666666657" height="22.333333333333329"/>
                                                                 <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="17"/>
                                                                 <color key="textColor" name="on primary-container"/>
                                                                 <nil key="highlightedColor"/>
@@ -166,7 +169,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="image-mengengah" width="27.333333969116211" height="33.333332061767578"/>
+        <image name="image-awal" width="74" height="100"/>
         <namedColor name="on primary-container">
             <color red="0.0" green="0.13300000131130219" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

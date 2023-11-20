@@ -7,6 +7,7 @@
 
 import Combine
 import FirebaseMessaging
+import FirebaseAuth
 
 final class DevicesViewModel {
     
@@ -17,8 +18,10 @@ final class DevicesViewModel {
     private let repository: HydrospaceRepositoryProtocol = HydrospaceRepository.shared
     
     func getDevices() {
+        let userId = Auth.auth().currentUser?.uid ?? ""
+        
         repository
-            .observeDevicesValue()
+            .observeDevicesValue(userId: userId)
             .sink { [weak self] model in
                 guard let self = self else { return }
                 self.devices = model

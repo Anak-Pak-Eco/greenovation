@@ -30,55 +30,67 @@ class DevicesItemTableViewCell: UITableViewCell {
     func setup(device: DeviceModel) {
         self.device = device
         deviceNameLabel.text = device.name
-        plantNameLabel.text = device.plantId
+        plantNameLabel.text = device.plant.name
         ppmLabel.text = String.format(device.currentPpm, format: "%.2f")
         phLabel.text = String.format(device.currentPh, format: "%.2f")
         phaseLabel.text = device.currentSteps.capitalized
-        deviceStatusLabel.text = device.deviceStatus
+        deviceStatusLabel.text = device.status.capitalized
+        phaseImage.image = UIImage(named: getPlantImage(phaseName: device.phase.step))
         
         errorStackView.subviews.forEach { view in
             errorStackView.removeArrangedSubview(view)
             view.removeFromSuperview()
         }
         
-        if device.currentPpm < 200 {
+        if device.currentPpm < device.plant.min_ppm {
             let alertView = AlertView()
-            let valueToAdd = (5 * (200 - device.currentPpm)) / 1000
             alertView.setLabel(
                 String.getStringAttributed(
-                    from: "Nilai PPM rendah. Tambahkan larutan nutrisi A dan B sebanyak \(valueToAdd) ml untuk menjaga keseimbangan nutrisi",
+                    from: "Nilai PPM terlalu rendah. Tambahkan larutan nutrisi",
                     boldStrings: ["rendah"]
                 )
             )
             errorStackView.addArrangedSubview(alertView)
-        } else if device.currentPpm > 400 {
+        } else if device.currentPpm > device.plant.max_ppm {
             let alertView = AlertView()
-            alertView.setLabel(
-                String.getStringAttributed(from: "Nilai PPM tinggi. Tambahkan air bersih sampai keseimbangan nutrisi tercapai kembali.", boldStrings: ["tinggi"])
-            )
-            errorStackView.addArrangedSubview(alertView)
-        }
-        
-        if device.currentPh < 200 {
-            let alertView = AlertView()
-            let valueToAdd = (0.7692 * 1) - (0.6 * device.currentPpm) + (0.3 * 400)
             alertView.setLabel(
                 String.getStringAttributed(
-                    from: "Nilai pH rendah. Tambahkan larutan ph UP sebanyak \(String.format(valueToAdd, format: "%.2f")) ml untuk menjaga keseimbangan pH larutan hidroponik.",
-                    boldStrings: ["rendah"]
-                )
-            )
-            errorStackView.addArrangedSubview(alertView)
-        } else if device.currentPpm > 400 {
-            let alertView = AlertView()
-            let valueToAdd = (0.0925 * 1) - (0.02 * device.currentPh) + (0.25 * 200)
-            alertView.setLabel(
-                String.getStringAttributed(
-                    from: "Nilai pH tinggi. Tambahkan larutan ph DOWN sebanyak \(valueToAdd) ml untuk menjaga keseimbangan pH larutan hidroponik",
+                    from: "Nilai PPM terlalu tinggi. Tambahkan air baku.",
                     boldStrings: ["tinggi"]
                 )
             )
             errorStackView.addArrangedSubview(alertView)
+        }
+        
+        if device.currentPh < device.plant.min_ph {
+            let alertView = AlertView()
+            alertView.setLabel(
+                String.getStringAttributed(
+                    from: "Nilai pH terlalu rendah. Tambahkan larutan pH UP.",
+                    boldStrings: ["rendah"]
+                )
+            )
+            errorStackView.addArrangedSubview(alertView)
+        } else if device.currentPpm > device.plant.max_ppm {
+            let alertView = AlertView()
+            alertView.setLabel(
+                String.getStringAttributed(
+                    from: "Nilai pH tinggi. Tambahkan larutan pH DOWN.",
+                    boldStrings: ["tinggi"]
+                )
+            )
+            
+            errorStackView.addArrangedSubview(alertView)
+        }
+    }
+    
+    private func getPlantImage(phaseName: String) -> String {
+        if phaseName == PlantModel.PlantPhaseModel.Step.anakan.rawValue {
+            return "image-anakan"
+        } else if phaseName == PlantModel.PlantPhaseModel.Step.vegetatif_awal.rawValue {
+            return "image-awal"
+        } else {
+            return "image-menengah"
         }
     }
 

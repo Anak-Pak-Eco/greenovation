@@ -143,6 +143,15 @@ extension AddFormulaViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
+        
+        viewModel.searchData(query: updatedText)
+        plantsTableView.isHidden = false
+        
+        return true
+    }
 }
 
 extension AddFormulaViewController: UITableViewDelegate, UITableViewDataSource {

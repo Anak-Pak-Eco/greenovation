@@ -14,7 +14,7 @@ class RTDBDataSource {
     static let shared = RTDBDataSource()
     private let db = Database.database().reference()
     
-    func getDevicesStatus() -> AnyPublisher<[DeviceResponse], Never> {
+    func getDevices(userId: String) -> AnyPublisher<[DeviceResponse], Never> {
         let subject = CurrentValueSubject<[DeviceResponse], Never>([])
         
         let handle = db.child(DeviceResponse.reference).observe(.value) { snapshot in
@@ -25,6 +25,8 @@ class RTDBDataSource {
                         response: value.object(forKey: key) as! NSDictionary,
                         id: key as! String
                     )
+                }.filter { response in
+                    response.users_id == userId
                 }
                 subject.send(responses)
             }
@@ -37,8 +39,6 @@ class RTDBDataSource {
     
     func getDeviceStatus(id: String) -> AnyPublisher<DeviceResponse?, Never> {
         let subject = CurrentValueSubject<DeviceResponse?, Never>(nil)
-        
-        print("Device ID: \(id)")
         
         let handle = db.child(DeviceResponse.reference).child(id).observe(.value) { snapshot in
             let value = snapshot.value as? NSDictionary

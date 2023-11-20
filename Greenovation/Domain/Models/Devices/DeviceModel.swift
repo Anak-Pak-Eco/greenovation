@@ -9,11 +9,28 @@ import Foundation
 
 struct DeviceModel: Identifiable {
     let id: String
+    let name: String
     let currentPh: Double
     let currentSteps: String
     let currentPpm: Double
-    let name: String
-    let plantId: String
-    let userId: String
-    let deviceStatus: String
+    let plant: DevicePlantModel
+    let phase: DevicePhaseModel
+    let usersId: String
+    let status: String
+    
+    struct DevicePhaseModel {
+        let max_ph: Double
+        let min_ph: Double
+        let max_ppm: Double
+        let min_ppm: Double
+        let step: String
+    }
+    
+    struct DevicePlantModel {
+        let max_ph: Double
+        let min_ph: Double
+        let max_ppm: Double
+        let min_ppm: Double
+        let name: String
+    }
 }

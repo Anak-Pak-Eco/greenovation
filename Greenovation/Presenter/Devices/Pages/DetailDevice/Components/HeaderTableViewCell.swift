@@ -22,7 +22,7 @@ class HeaderTableViewCell: UITableViewCell {
     }
     
     func setupData(device: DeviceModel) {
-        plantNameLabel.text = device.plantId
+        plantNameLabel.text = device.plant.name
         ppmLabel.text = String.format(device.currentPpm, format: "%.2f")
         phLabel.text = String.format(device.currentPh, format: "%.2f")
         phaseLabel.text = device.currentSteps

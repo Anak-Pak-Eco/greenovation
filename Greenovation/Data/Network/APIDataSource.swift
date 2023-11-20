@@ -97,7 +97,6 @@ final class APIDataSource {
             .publishString()
             .value()
             .map { response in
-                print("Response: \(response)")
                 return response
             }
             .mapError { error in
