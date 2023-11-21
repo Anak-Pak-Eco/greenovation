@@ -73,6 +73,7 @@ class AddDeviceV2ViewController: UIViewController, UIAdaptivePresentationControl
         viewModel.updateSelectedPhase.bind { [unowned self] phase in
             if let phase = phase {
                 growthStep.text = phase.step.getText()
+                growthStep.textColor = .black
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [unowned self] in
                     openGrowthStepBottomSheet(plant: viewModel.selectedPlant, selectedPhase: phase)
                 }

@@ -288,14 +288,14 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Growth Phase"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "That Pertumbuhan"
+            "value" : "Tahap Pertumbuhan"
           }
         }
       }
