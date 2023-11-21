@@ -33,7 +33,7 @@ class DevicesItemTableViewCell: UITableViewCell {
         plantNameLabel.text = device.plant.name
         ppmLabel.text = String.format(device.currentPpm, format: "%.2f")
         phLabel.text = String.format(device.currentPh, format: "%.2f")
-        phaseLabel.text = device.currentSteps.capitalized
+        phaseLabel.text = device.currentSteps.capitalized.replacingOccurrences(of: "_", with: " ")
         deviceStatusLabel.text = device.status.capitalized
         phaseImage.image = UIImage(named: getPlantImage(phaseName: device.currentSteps))
         

@@ -22,7 +22,7 @@ class FormulaTableViewCell: UITableViewCell {
     }
     
     func setupData(_ plant: PlantModel, isLast: Bool) {
-        formulaImage.image = UIImage(named: plant.image_url) ?? UIImage(named: "image-anakan-growthstep")
+        formulaImage.image = UIImage(named: plant.image_url) ?? UIImage(named: "image-plant-default")
         formulaLabel.text = plant.name
         separator.isHidden = isLast
     }

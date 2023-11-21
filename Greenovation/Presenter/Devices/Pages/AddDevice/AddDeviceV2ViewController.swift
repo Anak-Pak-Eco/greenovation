@@ -231,8 +231,8 @@ class AddDeviceV2ViewController: UIViewController, UIAdaptivePresentationControl
     
     @objc private func onSearchButtonClicked(_ sender: Any) {
         viewModel.searchData(query: plantTextField.text ?? "")
-//        plantTextField.endEditing(true)
-        plantTableView.isHidden = false
+        plantTextField.endEditing(true)
+        plantTableView.isHidden = plantTextField.text?.isEmpty == true
     }
 }
 
@@ -254,7 +254,7 @@ extension AddDeviceV2ViewController: AddDeviceGrowthStepDelegate, AddDevicePlant
 extension AddDeviceV2ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         viewModel.searchData(query: textField.text ?? "")
-        plantTableView.isHidden = false
+        plantTableView.isHidden = textField.text?.isEmpty == true
         textField.resignFirstResponder()
         return true
     }
@@ -263,7 +263,7 @@ extension AddDeviceV2ViewController: UITextFieldDelegate {
         let updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
         
         viewModel.searchData(query: updatedText)
-        plantTableView.isHidden = false
+        plantTableView.isHidden = updatedText.isEmpty
         
         return true
     }

@@ -17,7 +17,6 @@ class PlantSearchItemCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         cardView.layer.cornerRadius = 10
         cardView.layer.borderWidth = 0.3
         cardView.layer.borderColor = UIColor.secondaryAccent.cgColor
@@ -34,6 +33,7 @@ class PlantSearchItemCell: UITableViewCell {
     
     func setup(plant: PlantModel) {
         plantLabel.text = plant.name
+        plantImage.image = UIImage(named: plant.image_url.isEmpty ? "image-plant-default" : plant.image_url)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -34,4 +34,10 @@ final class DevicesRepository: DevicesRepositoryProtocol {
             .mapError { $0 }
             .eraseToAnyPublisher()
     }
+    
+    func deleteDevice(_ deviceId: String) -> AnyPublisher<String, Error> {
+        return api.deleteDevice(deviceId)
+            .mapError { $0 }
+            .eraseToAnyPublisher()
+    }
 }

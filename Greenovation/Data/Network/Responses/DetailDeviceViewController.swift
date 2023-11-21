@@ -79,11 +79,18 @@ class DetailDeviceViewController: UIViewController {
             UIBarButtonItem(
                 image: UIImage(systemName: "gearshape.fill"),
                 style: .plain,
-                target: nil,
-                action: nil
+                target: self,
+                action: #selector(onDeviceSettingClicked(_:))
             ),
             animated: true
         )
+    }
+    
+    @objc func onDeviceSettingClicked(_ sender: UIBarButtonItem) {
+        if let device = viewModel.device.value {
+            let vc = EditDeviceViewController(device: device)
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @objc func onBackButtonClicked(_ sender: UIBarButtonItem) {
@@ -109,6 +116,13 @@ extension DetailDeviceViewController: UITableViewDelegate, UITableViewDataSource
         if mainTableView.numberOfRows(inSection: 0) == 3 {
             if indexPath.row == 0 {
                 let cell = mainTableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell", for: indexPath) as! HeaderTableViewCell
+                
+                cell.didSelectEditButton = { [unowned self] in
+                    if let device = viewModel.device.value {
+                        let vc = EditDevicePlantViewController(device: device)
+                        navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
                 
                 if let model = viewModel.device.value {
                     cell.setupData(device: model)

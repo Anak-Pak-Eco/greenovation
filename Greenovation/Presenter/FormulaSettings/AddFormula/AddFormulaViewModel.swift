@@ -39,7 +39,7 @@ final class AddFormulaViewModel {
     
     func searchData(query: String) {
         if query.isEmpty {
-            searchedPlants = plants
+            searchedPlants = []
         } else {
             searchedPlants = plants.filter { plant in
                 plant.name.lowercased().contains(query.lowercased())

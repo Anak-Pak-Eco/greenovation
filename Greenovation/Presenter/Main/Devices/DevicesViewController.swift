@@ -58,8 +58,8 @@ class DevicesViewController: UIViewController {
     }
     
     @objc private func onAddDeviceClicked(_ sender: Any) {
-         let viewController = PairingInstructionViewController()
-//        let viewController = AddDeviceV2ViewController(serialNumber: "device_001")
+//         let viewController = PairingInstructionViewController()
+        let viewController = AddDeviceV2ViewController(serialNumber: UUID().uuidString)
         navigationController?.pushViewController(viewController, animated: true)
     }
     

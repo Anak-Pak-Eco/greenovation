@@ -15,28 +15,7 @@ struct DeviceResponse: Codable {
     let name: String?
     let status: String?
     let users_id: String?
-    let phase: DevicePhaseResponse?
     let plant: DevicePlantResponse?
-    
-    struct DevicePhaseResponse: Codable {
-        let max_ph: Double?
-        let min_ph: Double?
-        let max_ppm: Double?
-        let min_ppm: Double?
-        let step: String?
-        
-        static let reference = "phase"
-        
-        static func from(response: NSDictionary?) -> DevicePhaseResponse {
-            return DevicePhaseResponse(
-                max_ph: response?[DeviceResponse.maxPhReference] as? Double,
-                min_ph: response?[DeviceResponse.minPhReference] as? Double,
-                max_ppm: response?[DeviceResponse.maxPpmReference] as? Double,
-                min_ppm: response?[DeviceResponse.minPpmReference] as? Double,
-                step: response?[DeviceResponse.stepReference] as? String
-            )
-        }
-    }
     
     struct DevicePlantResponse: Codable {
         let max_ph: Double?
@@ -44,6 +23,8 @@ struct DeviceResponse: Codable {
         let max_ppm: Double?
         let min_ppm: Double?
         let name: String?
+        let image_url: String?
+        let id: String?
         
         static let reference = "plant"
         
@@ -53,7 +34,9 @@ struct DeviceResponse: Codable {
                 min_ph: response?[DeviceResponse.minPhReference] as? Double,
                 max_ppm: response?[DeviceResponse.maxPpmReference] as? Double,
                 min_ppm: response?[DeviceResponse.minPpmReference] as? Double,
-                name: response?[DeviceResponse.nameReference] as? String
+                name: response?[DeviceResponse.nameReference] as? String,
+                image_url: response?[DeviceResponse.imageUrlReference] as? String,
+                id: response?[DeviceResponse.idReference] as? String
             )
         }
     }
@@ -62,11 +45,13 @@ struct DeviceResponse: Codable {
 // MARK: Realtime Database Setup
 extension DeviceResponse {
     static let reference = "devices"
+    static let idReference = "id"
     static let usersIdReference = "users_id"
     static let currentPhReference = "current_ph"
     static let currentStepsReference = "current_steps"
     static let currentPpmReference = "current_ppm"
     static let nameReference = "name"
+    static let imageUrlReference = "image_url"
     static let phaseReference = "phase"
     static let stepReference = "step"
     static let deviceStatusReference = "status"
@@ -84,7 +69,6 @@ extension DeviceResponse {
             name: response[DeviceResponse.nameReference] as? String,
             status: response[DeviceResponse.deviceStatusReference] as? String,
             users_id: response[DeviceResponse.usersIdReference] as? String,
-            phase: DevicePhaseResponse.from(response: response[DevicePhaseResponse.reference] as? NSDictionary),
             plant: DevicePlantResponse.from(response: response[DevicePlantResponse.reference] as? NSDictionary)
         )
     }

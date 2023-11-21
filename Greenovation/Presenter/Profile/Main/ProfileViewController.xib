@@ -18,10 +18,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
                 <outlet property="contactUsButton" destination="Mp7-SY-BBv" id="qfE-V9-d3L"/>
-                <outlet property="deleteAccountButton" destination="Izg-a3-Vo1" id="p98-Vi-9ei"/>
+                <outlet property="deleteAccountButton" destination="Izg-a3-Vo1" id="NBL-N2-VJd"/>
                 <outlet property="emailLabel" destination="oBh-hT-ia0" id="Jp6-2C-p7c"/>
                 <outlet property="nameTextField" destination="Dhm-lq-SNs" id="ftb-OB-23u"/>
-                <outlet property="privacyPolicyButton" destination="Izg-a3-Vo1" id="10z-ra-6P0"/>
+                <outlet property="privacyPolicyButton" destination="pgo-oB-H9a" id="94V-Yv-XXC"/>
                 <outlet property="signOutButton" destination="RpE-Oh-hXB" id="Nwe-Zx-Ptx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

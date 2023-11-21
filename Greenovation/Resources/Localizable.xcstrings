@@ -86,7 +86,14 @@
       }
     },
     "Chart not available" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chart Not Available"
+          }
+        }
+      }
     },
     "choose-formula" : {
       "extractionState" : "manual",
@@ -167,6 +174,40 @@
         }
       }
     },
+    "device-sensor" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Device Sensor"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensor Perangkat"
+          }
+        }
+      }
+    },
+    "device-setting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Device Setting"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengaturan Perangkat"
+          }
+        }
+      }
+    },
     "devices" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -197,6 +238,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fase Vegetatif Awal"
+          }
+        }
+      }
+    },
+    "error-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gagal"
           }
         }
       }
@@ -233,7 +291,7 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Find Device"
           }
         },
@@ -352,7 +410,14 @@
       }
     },
     "Hours" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hours"
+          }
+        }
+      }
     },
     "intermediate-vegetative-phase" : {
       "extractionState" : "manual",
@@ -707,6 +772,23 @@
         }
       }
     },
+    "success-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Success"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berhasil"
+          }
+        }
+      }
+    },
     "tambah-formula" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -792,8 +874,49 @@
         }
       }
     },
+    "update" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ubah"
+          }
+        }
+      }
+    },
+    "update-device-success" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Device updated successfully"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berhasil mengubah perangkat"
+          }
+        }
+      }
+    },
     "Value" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Value"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

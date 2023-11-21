@@ -17,7 +17,6 @@ class AddFormulaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewModel.loadingGetPlants.bind { [unowned self] isLoading in
             loadingBar.isHidden = !isLoading
         }
@@ -132,23 +131,27 @@ class AddFormulaViewController: UIViewController {
     @objc private func onSearchButtonClicked(_ sender: Any) {
         viewModel.searchData(query: searchTextField.text ?? "")
         searchTextField.endEditing(true)
-        plantsTableView.isHidden = false
+        plantsTableView.isHidden = searchTextField.text?.isEmpty == true
     }
 }
 
 extension AddFormulaViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         viewModel.searchData(query: textField.text ?? "")
-        plantsTableView.isHidden = false
+        plantsTableView.isHidden = textField.text?.isEmpty == true
         textField.resignFirstResponder()
         return true
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func textField(
+        _ textField: UITextField,
+        shouldChangeCharactersIn range: NSRange,
+        replacementString string: String
+    ) -> Bool {
         let updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
         
         viewModel.searchData(query: updatedText)
-        plantsTableView.isHidden = false
+        plantsTableView.isHidden = updatedText.isEmpty
         
         return true
     }

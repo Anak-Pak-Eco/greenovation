@@ -99,10 +99,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="vgP-vl-fcA">
-                                                <rect key="frame" x="91.333333333333343" y="112.99999999999999" width="384.66666666666663" height="62.333333333333329"/>
+                                                <rect key="frame" x="91.333333333333343" y="114.33333333333331" width="384.66666666666663" height="61"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iqx-DD-JNP">
-                                                        <rect key="frame" x="310.66666666666669" y="0.0" width="74" height="62.333333333333336"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="iqx-DD-JNP">
+                                                        <rect key="frame" x="310.66666666666669" y="0.0" width="74" height="61"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-awal" translatesAutoresizingMaskIntoConstraints="NO" id="ECa-hg-5SD">
                                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="40"/>
@@ -111,8 +111,8 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeN-Or-zkN">
-                                                                <rect key="frame" x="5.6666666666666821" y="40" width="62.666666666666657" height="22.333333333333329"/>
-                                                                <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="17"/>
+                                                                <rect key="frame" x="19.333333333333311" y="40" width="54.666666666666657" height="21"/>
+                                                                <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
                                                                 <color key="textColor" name="on primary-container"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>

@@ -39,7 +39,7 @@
                         <constraint firstAttribute="height" constant="45" id="69T-h1-aaY"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Poi-Mm-KPt" userLabel="separator">
                     <rect key="frame" x="0.0" y="112" width="393" height="0.0"/>

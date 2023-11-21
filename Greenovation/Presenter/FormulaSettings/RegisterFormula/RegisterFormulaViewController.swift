@@ -167,10 +167,10 @@ class RegisterFormulaViewController: UIViewController, RegisterFormulaDelegate {
     }
     
     func onSubmit() {
-        let anakanMinPpm = anakanPhaseCell?.minPpmTextField.text ?? ""
         let anakanMaxPpm = anakanPhaseCell?.maxPpmTextField.text ?? ""
+        let anakanMinPpm = anakanPhaseCell?.minPpmTextField.text ?? ""
+        let anakanMaxPh = anakanPhaseCell?.maxPhTextField.text ?? ""
         let anakanMinPh = anakanPhaseCell?.minPhTextField.text ?? ""
-        let anakanMaxPh = anakanPhaseCell?.minPpmTextField.text ?? ""
         let vegetatifAwalMaxPpm = awalPhaseCell?.maxPpmTextField.text ?? ""
         let vegetatifAwalMinPpm = awalPhaseCell?.minPpmTextField.text ?? ""
         let vegetatifAwalMaxPh = awalPhaseCell?.maxPhTextField.text ?? ""
@@ -210,18 +210,18 @@ class RegisterFormulaViewController: UIViewController, RegisterFormulaDelegate {
             self.present(alertController, animated: true)
         } else {
             viewModel.saveFormula(
-                anakanMinPh: anakanMinPh,
-                anakanMaxPh: anakanMaxPh,
-                anakanMinPpm: anakanMinPpm,
-                anakanMaxPpm: anakanMaxPpm,
-                vegetatifAwalMinPh: vegetatifAwalMinPh,
-                vegetatifAwalMaxPh: vegetatifAwalMaxPh,
-                vegetatifAwalMinPpm: vegetatifAwalMinPpm,
-                vegetatifAwalMaxPpm: vegetatifAwalMaxPpm,
-                vegetatifMenengahMinPh: vegetatifMenengahMinPh,
-                vegetatifMenengahMaxPh: vegetatifMenengahMaxPh,
-                vegetatifMenengahMinPpm: vegetatifMenengahMinPpm,
-                vegetatifMenengahMaxPpm: vegetatifMenengahMaxPpm
+                anakanMinPh: anakanMinPh.replacingOccurrences(of: ",", with: "."),
+                anakanMaxPh: anakanMaxPh.replacingOccurrences(of: ",", with: "."),
+                anakanMinPpm: anakanMinPpm.replacingOccurrences(of: ",", with: "."),
+                anakanMaxPpm: anakanMaxPpm.replacingOccurrences(of: ",", with: "."),
+                vegetatifAwalMinPh: vegetatifAwalMinPh.replacingOccurrences(of: ",", with: "."),
+                vegetatifAwalMaxPh: vegetatifAwalMaxPh.replacingOccurrences(of: ",", with: "."),
+                vegetatifAwalMinPpm: vegetatifAwalMinPpm.replacingOccurrences(of: ",", with: "."),
+                vegetatifAwalMaxPpm: vegetatifAwalMaxPpm.replacingOccurrences(of: ",", with: "."),
+                vegetatifMenengahMinPh: vegetatifMenengahMinPh.replacingOccurrences(of: ",", with: "."),
+                vegetatifMenengahMaxPh: vegetatifMenengahMaxPh.replacingOccurrences(of: ",", with: "."),
+                vegetatifMenengahMinPpm: vegetatifMenengahMinPpm.replacingOccurrences(of: ",", with: "."),
+                vegetatifMenengahMaxPpm: vegetatifMenengahMaxPpm.replacingOccurrences(of: ",", with: ".")
             )
         }
     }

@@ -14,23 +14,16 @@ struct DeviceModel: Identifiable {
     let currentSteps: String
     let currentPpm: Double
     let plant: DevicePlantModel
-    let phase: DevicePhaseModel
     let usersId: String
     let status: String
     
-    struct DevicePhaseModel {
-        let max_ph: Double
-        let min_ph: Double
-        let max_ppm: Double
-        let min_ppm: Double
-        let step: String
-    }
-    
-    struct DevicePlantModel {
+    struct DevicePlantModel: Identifiable {
         let max_ph: Double
         let min_ph: Double
         let max_ppm: Double
         let min_ppm: Double
         let name: String
+        let image_url: String
+        let id: String
     }
 }

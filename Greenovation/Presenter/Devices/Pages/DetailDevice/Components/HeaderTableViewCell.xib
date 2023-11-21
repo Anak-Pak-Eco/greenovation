@@ -114,6 +114,9 @@
                             <color key="baseForegroundColor" name="on primary-accent"/>
                             <color key="baseBackgroundColor" name="primary-accent"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="editButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="L2J-vJ-Qge"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" name="surface"/>
@@ -138,6 +141,7 @@
                 <outlet property="labelUIView" destination="we1-Ot-OBV" id="HfN-zZ-qsI"/>
                 <outlet property="phLabel" destination="Tqq-d1-biC" id="vvV-Nd-QSG"/>
                 <outlet property="phaseLabel" destination="XuL-6O-caa" id="QEd-lW-dVs"/>
+                <outlet property="plantImageView" destination="dmn-sM-lgJ" id="ahF-6N-sQM"/>
                 <outlet property="plantNameLabel" destination="UZm-fp-0Dz" id="VL2-qV-QFs"/>
                 <outlet property="ppmLabel" destination="kQc-WG-kj6" id="sj7-vT-P2c"/>
             </connections>

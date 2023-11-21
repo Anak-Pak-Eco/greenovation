@@ -47,14 +47,9 @@ class HydrospaceRepository: HydrospaceRepositoryProtocol {
                 min_ph: response.plant?.min_ph ?? 0,
                 max_ppm: response.plant?.max_ppm ?? 0,
                 min_ppm: response.plant?.min_ppm ?? 0,
-                name: response.plant?.name ?? ""
-            ),
-            phase: DeviceModel.DevicePhaseModel(
-                max_ph: response.phase?.max_ph ?? 0,
-                min_ph: response.phase?.min_ph ?? 0,
-                max_ppm: response.phase?.max_ppm ?? 0,
-                min_ppm: response.phase?.min_ppm ?? 0,
-                step: response.phase?.step ?? ""
+                name: response.plant?.name ?? "",
+                image_url: response.plant?.image_url ?? "",
+                id: response.plant?.id ?? ""
             ),
             usersId: response.users_id ?? "",
             status: response.status ?? ""

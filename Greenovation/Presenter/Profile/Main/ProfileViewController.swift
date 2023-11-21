@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-final class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     @IBOutlet weak var deleteAccountButton: UIStackView!
     @IBOutlet weak var privacyPolicyButton: UIStackView!
@@ -85,6 +85,31 @@ final class ProfileViewController: UIViewController {
         nameTextField.isEnabled = false
         emailLabel.text = viewModel.user?.email ?? "-"
         nameTextField.text = viewModel.user?.displayName ?? ""
+        
+        let tapGestureDetector = UITapGestureRecognizer(target: self, action: #selector(onSelectedPrivacyPolicyButton(_:)))
+        privacyPolicyButton.addGestureRecognizer(tapGestureDetector)
+        
+        let contactUsTapGestureDetector = UITapGestureRecognizer(
+            target: self,
+            action: #selector(onContactUsClicked(_:))
+        )
+        contactUsButton.addGestureRecognizer(contactUsTapGestureDetector)
+        
+        let deleteAccountTapGestureDetector = UITapGestureRecognizer(
+            target: self,
+            action: #selector(onContactUsClicked(_:))
+        )
+        deleteAccountButton.addGestureRecognizer(deleteAccountTapGestureDetector)
+    }
+    
+    @objc private func onSelectedPrivacyPolicyButton(_ sender: UIStackView) {
+        let vc = WebPageViewController(url: "https://greenovation-landing-page.vercel.app/privacy-policy")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func onContactUsClicked(_ sender: UIStackView) {
+        let vc = WebPageViewController(url: "https://greenovation-landing-page.vercel.app/contact")
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

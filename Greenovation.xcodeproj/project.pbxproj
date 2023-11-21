@@ -52,6 +52,8 @@
 		D60225AA2AEFB3DD00F3800F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60225A92AEFB3DD00F3800F /* HeaderTableViewCell.swift */; };
 		D6047CE52B0B6531006468BB /* DeviceHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6047CE42B0B6531006468BB /* DeviceHistoryResponse.swift */; };
 		D6047CE72B0B67EB006468BB /* DeviceHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6047CE62B0B67EB006468BB /* DeviceHistoryModel.swift */; };
+		D6047CEC2B0BBD45006468BB /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6047CEA2B0BBD45006468BB /* WebPageViewController.swift */; };
+		D6047CED2B0BBD45006468BB /* WebPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6047CEB2B0BBD45006468BB /* WebPageViewController.xib */; };
 		D608922A2AEA760200A1C530 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60892282AEA760200A1C530 /* OnboardingViewController.swift */; };
 		D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60892292AEA760200A1C530 /* OnboardingViewController.xib */; };
 		D60950402AEF890000DD5FDD /* HistoryGraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D609503E2AEF890000DD5FDD /* HistoryGraphTableViewCell.swift */; };
@@ -169,6 +171,10 @@
 		D6EBCEB92AFF083800EF5C51 /* PlantBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBCEB82AFF083800EF5C51 /* PlantBody.swift */; };
 		D6EBCEBB2AFF0B9100EF5C51 /* RegisterFormulaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBCEBA2AFF0B9100EF5C51 /* RegisterFormulaViewModel.swift */; };
 		D6EBCEBE2AFF541300EF5C51 /* EditFormulaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EBCEBD2AFF541300EF5C51 /* EditFormulaViewModel.swift */; };
+		D6F236592B0C416600966A91 /* EditDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F236582B0C416600966A91 /* EditDeviceViewModel.swift */; };
+		D6F2365D2B0C486000966A91 /* EditDevicePlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F2365B2B0C486000966A91 /* EditDevicePlantViewController.swift */; };
+		D6F2365E2B0C486000966A91 /* EditDevicePlantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F2365C2B0C486000966A91 /* EditDevicePlantViewController.xib */; };
+		D6F236602B0C4AB400966A91 /* EditDevicePlantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F2365F2B0C4AB400966A91 /* EditDevicePlantViewModel.swift */; };
 		D6F463942AF38CE600814C7D /* AlertLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F463932AF38CE600814C7D /* AlertLargeView.swift */; };
 		D6F463962AF38CFF00814C7D /* AlertLargeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F463952AF38CFF00814C7D /* AlertLargeView.xib */; };
 /* End PBXBuildFile section */
@@ -236,6 +242,8 @@
 		D60225A92AEFB3DD00F3800F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		D6047CE42B0B6531006468BB /* DeviceHistoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHistoryResponse.swift; sourceTree = "<group>"; };
 		D6047CE62B0B67EB006468BB /* DeviceHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHistoryModel.swift; sourceTree = "<group>"; };
+		D6047CEA2B0BBD45006468BB /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
+		D6047CEB2B0BBD45006468BB /* WebPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebPageViewController.xib; sourceTree = "<group>"; };
 		D60892282AEA760200A1C530 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D60892292AEA760200A1C530 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
 		D609503E2AEF890000DD5FDD /* HistoryGraphTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGraphTableViewCell.swift; sourceTree = "<group>"; };
@@ -358,6 +366,10 @@
 		D6EBCEB82AFF083800EF5C51 /* PlantBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantBody.swift; sourceTree = "<group>"; };
 		D6EBCEBA2AFF0B9100EF5C51 /* RegisterFormulaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormulaViewModel.swift; sourceTree = "<group>"; };
 		D6EBCEBD2AFF541300EF5C51 /* EditFormulaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFormulaViewModel.swift; sourceTree = "<group>"; };
+		D6F236582B0C416600966A91 /* EditDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeviceViewModel.swift; sourceTree = "<group>"; };
+		D6F2365B2B0C486000966A91 /* EditDevicePlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDevicePlantViewController.swift; sourceTree = "<group>"; };
+		D6F2365C2B0C486000966A91 /* EditDevicePlantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDevicePlantViewController.xib; sourceTree = "<group>"; };
+		D6F2365F2B0C4AB400966A91 /* EditDevicePlantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDevicePlantViewModel.swift; sourceTree = "<group>"; };
 		D6F463932AF38CE600814C7D /* AlertLargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLargeView.swift; sourceTree = "<group>"; };
 		D6F463952AF38CFF00814C7D /* AlertLargeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertLargeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -483,6 +495,7 @@
 				A71FC0C72AF232BC00875CBF /* Components */,
 				A73E1E9F2AFCEF0F008053A9 /* EditDeviceViewController.swift */,
 				A73E1EA02AFCEF0F008053A9 /* EditDeviceViewController.xib */,
+				D6F236582B0C416600966A91 /* EditDeviceViewModel.swift */,
 			);
 			path = EditDevice;
 			sourceTree = "<group>";
@@ -588,6 +601,25 @@
 				A72C072B2AFB6E92005395DB /* BottomSheet */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D6047CE82B0BBD25006468BB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D68D4E7B2AF5FA4200F61B1E /* ProfileViewController.swift */,
+				D68D4E7C2AF5FA4200F61B1E /* ProfileViewController.xib */,
+				D68A034A2B00657F00CB4666 /* ProfileViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D6047CE92B0BBD30006468BB /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				D6047CEA2B0BBD45006468BB /* WebPageViewController.swift */,
+				D6047CEB2B0BBD45006468BB /* WebPageViewController.xib */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		D60892272AEA75EE00A1C530 /* Onboarding */ = {
@@ -938,9 +970,8 @@
 		D68D4E7A2AF5FA3300F61B1E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D68D4E7B2AF5FA4200F61B1E /* ProfileViewController.swift */,
-				D68D4E7C2AF5FA4200F61B1E /* ProfileViewController.xib */,
-				D68A034A2B00657F00CB4666 /* ProfileViewModel.swift */,
+				D6047CE92B0BBD30006468BB /* WebView */,
+				D6047CE82B0BBD25006468BB /* Main */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1132,10 +1163,21 @@
 			children = (
 				D68A034C2B00734C00CB4666 /* PairingDevice */,
 				D6AC85862AD013B80033B665 /* DetailDevice */,
+				D6F2365A2B0C484900966A91 /* EditDevicePlant */,
 				A73E1E9A2AFCEEBF008053A9 /* EditDevice */,
 				A72C071E2AFA448C005395DB /* AddDevice */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		D6F2365A2B0C484900966A91 /* EditDevicePlant */ = {
+			isa = PBXGroup;
+			children = (
+				D6F2365B2B0C486000966A91 /* EditDevicePlantViewController.swift */,
+				D6F2365C2B0C486000966A91 /* EditDevicePlantViewController.xib */,
+				D6F2365F2B0C4AB400966A91 /* EditDevicePlantViewModel.swift */,
+			);
+			path = EditDevicePlant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1293,6 +1335,7 @@
 				A79DB2C72AF39786003D768A /* SaveSuccessViewController.xib in Resources */,
 				D6D0102E2AC6C60900EC51FB /* Assets.xcassets in Resources */,
 				A72C07032AFA266F005395DB /* RegisterFormulaViewController.xib in Resources */,
+				D6047CED2B0BBD45006468BB /* WebPageViewController.xib in Resources */,
 				D630F50D2AD8112A00A355D0 /* DMSans-LightItalic.ttf in Resources */,
 				D688F8CB2B067AC0000A895C /* AnakanPhaseTableViewCell.xib in Resources */,
 				D630F5002AD8112A00A355D0 /* DMSans-MediumItalic.ttf in Resources */,
@@ -1309,6 +1352,7 @@
 				D608922B2AEA760200A1C530 /* OnboardingViewController.xib in Resources */,
 				D645470A2AEA96FE0077DA04 /* SignInViewController.xib in Resources */,
 				D6EBCEB02AFE2D6800EF5C51 /* AddFormulaViewController.xib in Resources */,
+				D6F2365E2B0C486000966A91 /* EditDevicePlantViewController.xib in Resources */,
 				D69D172B2AEF600900A5347C /* HeaderTableViewCell.xib in Resources */,
 				D6AC85742ACFFA000033B665 /* MainViewController.xib in Resources */,
 				D63391202B088A6300C22DBC /* DeleteFormulaButtonCell.xib in Resources */,
@@ -1379,6 +1423,7 @@
 				D6B607662AEFEEFC007D45C1 /* DetailDeviceViewModel.swift in Sources */,
 				D60225AA2AEFB3DD00F3800F /* HeaderTableViewCell.swift in Sources */,
 				A7D78E162AE92822006577AE /* LocalizationStoryboard.swift in Sources */,
+				D6F2365D2B0C486000966A91 /* EditDevicePlantViewController.swift in Sources */,
 				A76083B02B04ABC3005FF08A /* HistoryGraphView.swift in Sources */,
 				D6917A2E2AEA9E6B00CD7F5C /* UITextField+Extensions.swift in Sources */,
 				D633911B2B08853800C22DBC /* Double+Extension.swift in Sources */,
@@ -1392,6 +1437,7 @@
 				D6BD3B732AD0CB39005B85C3 /* RTDBDataSource.swift in Sources */,
 				A77F03282AFB999B00C5021D /* HavePlantFormulaViewController.swift in Sources */,
 				D6BD3B732AD0CB39005B85C3 /* RTDBDataSource.swift in Sources */,
+				D6F236592B0C416600966A91 /* EditDeviceViewModel.swift in Sources */,
 				D67151A72B03406E00C34585 /* DevicesRepository.swift in Sources */,
 				D68D4E8A2AF6B83900F61B1E /* AuthenticationProtocol.swift in Sources */,
 				D6BD3B712AD0CAB6005B85C3 /* DeviceResponse.swift in Sources */,
@@ -1423,6 +1469,7 @@
 				D68D4E782AF5F7F400F61B1E /* CustomLoadingCell.swift in Sources */,
 				D6AC85832ACFFD7E0033B665 /* FormulaSettingViewModel.swift in Sources */,
 				D6CF2CCA2AF4E01800BC6225 /* SignInViewModel.swift in Sources */,
+				D6047CEC2B0BBD45006468BB /* WebPageViewController.swift in Sources */,
 				D6BD3B792AD123C4005B85C3 /* DeviceModel.swift in Sources */,
 				D688F8D22B06EBA5000A895C /* MenengahPhaseTableViewCell.swift in Sources */,
 				D6DFD64E2AE7DEE200215428 /* View+Extension.swift in Sources */,
@@ -1464,6 +1511,7 @@
 				D688F8CA2B067AC0000A895C /* AnakanPhaseTableViewCell.swift in Sources */,
 				D6EBCEBE2AFF541300EF5C51 /* EditFormulaViewModel.swift in Sources */,
 				A72C07292AFA4915005395DB /* AddDeviceV2ViewController.swift in Sources */,
+				D6F236602B0C4AB400966A91 /* EditDevicePlantViewModel.swift in Sources */,
 				D6239CD42AF22C940097E8D1 /* AlertView.swift in Sources */,
 				A72C07022AFA266F005395DB /* RegisterFormulaViewController.swift in Sources */,
 				A756C1CE2AF8F29F004E58A0 /* FormulaTableViewCell.swift in Sources */,

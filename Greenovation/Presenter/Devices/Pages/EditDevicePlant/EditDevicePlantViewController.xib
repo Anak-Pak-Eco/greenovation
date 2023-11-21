@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+        <array key="DMSans-SemiBold.ttf">
+            <string>DMSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditDevicePlantViewController" customModule="Greenovation" customModuleProvider="target">
+            <connections>
+                <outlet property="growthStepButton" destination="9T1-eI-2q4" id="fWq-LR-hep"/>
+                <outlet property="phLabel" destination="YG7-jp-dew" id="omT-rC-DqR"/>
+                <outlet property="phTitleLabel" destination="8hB-mB-Lwn" id="qYn-cA-eU7"/>
+                <outlet property="phaseLabel" destination="UfH-TV-0co" id="kqf-7W-0A4"/>
+                <outlet property="phaseTextField" destination="kjF-LA-w1z" id="3j3-K6-e7K"/>
+                <outlet property="phaseView" destination="4BV-fe-Un5" id="Idu-hy-1JJ"/>
+                <outlet property="phaseViewTitleLabel" destination="izZ-JB-5Px" id="1wy-st-6LY"/>
+                <outlet property="plantTableView" destination="Luo-fN-1c6" id="Cca-VB-Ey7"/>
+                <outlet property="plantTypeLabel" destination="YWG-8d-oLQ" id="UAF-2p-pfU"/>
+                <outlet property="plantTypeTextField" destination="aH4-7P-evf" id="stH-se-SFr"/>
+                <outlet property="ppmLabel" destination="ZTz-RW-Bgi" id="d3S-BY-BO2"/>
+                <outlet property="ppmTitleLabel" destination="Znh-QA-ZdK" id="nZ1-C0-JGn"/>
+                <outlet property="saveButton" destination="7jk-0c-C26" id="CHz-92-MpT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis Tanaman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-8d-oLQ" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="16" y="74" width="361" height="19.666666666666671"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
+                    <color key="textColor" name="primary-accent"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="plant-type"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Jenis Tanaman" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aH4-7P-evf">
+                    <rect key="frame" x="16" y="98.666666666666671" width="361" height="45.000000000000014"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="tXF-nm-Gbl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tahap Pertumbuhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfH-TV-0co" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="16" y="158.66666666666666" width="361" height="19.666666666666657"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
+                    <color key="textColor" name="primary-accent"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="growth-step"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9T1-eI-2q4" userLabel="GrowthStepButton">
+                    <rect key="frame" x="16" y="183.33333333333334" width="361" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="eIF-P4-DgX"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="">
+                        <color key="baseForegroundColor" name="surface-container-highest"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="growthStepButtonClicked:" destination="-1" eventType="touchUpInside" id="dLt-Dc-JZY"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjF-LA-w1z" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                    <rect key="frame" x="29.999999999999993" y="194.66666666666666" width="98.333333333333314" height="22.333333333333343"/>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                    <color key="textColor" name="on primary-container"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="fase-anakan"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yE2-GL-MSn">
+                    <rect key="frame" x="344" y="201.66666666666669" width="19" height="9"/>
+                    <color key="tintColor" name="secondary-accent"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="L8I-0v-0pU"/>
+                        <constraint firstAttribute="width" constant="19" id="ROU-Wv-NWI"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BV-fe-Un5" userLabel="White Background">
+                    <rect key="frame" x="16" y="253.33333333333334" width="361" height="123.66666666666666"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqS-9m-Afu" userLabel="Secondary Background">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="43"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formula Tanaman Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izZ-JB-5Px" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                    <rect key="frame" x="14" y="13.999999999999973" width="221.66666666666666" height="19.666666666666671"/>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="Formula Tanaman Fase Anakan"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="secondary-container"/>
+                            <constraints>
+                                <constraint firstItem="izZ-JB-5Px" firstAttribute="leading" secondItem="iqS-9m-Afu" secondAttribute="leading" constant="14" id="Bdd-Gv-s93"/>
+                                <constraint firstAttribute="height" constant="43" id="UfK-pD-Rp0"/>
+                                <constraint firstItem="izZ-JB-5Px" firstAttribute="top" secondItem="iqS-9m-Afu" secondAttribute="top" constant="14" id="bzU-o9-Pqx"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNP-8s-IHd">
+                            <rect key="frame" x="16" y="52.999999999999979" width="329" height="22.333333333333336"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-QA-ZdK" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="244" height="22.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ppm-level"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 - 400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTz-RW-Bgi">
+                                    <rect key="frame" x="244" y="0.0" width="85" height="22.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                                    <color key="textColor" name="on primary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P29-5p-ded">
+                            <rect key="frame" x="16" y="85.333333333333343" width="329" height="22.333333333333329"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hB-mB-Lwn" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="244" height="22.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ph-level"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 - 400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG7-jp-dew">
+                                    <rect key="frame" x="244" y="0.0" width="85" height="22.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                                    <color key="textColor" name="on primary-container"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="P29-5p-ded" firstAttribute="top" secondItem="YNP-8s-IHd" secondAttribute="bottom" constant="10" id="9qZ-Wl-1Wq"/>
+                        <constraint firstAttribute="bottom" secondItem="P29-5p-ded" secondAttribute="bottom" constant="16" id="Mzf-xs-g7T"/>
+                        <constraint firstItem="YNP-8s-IHd" firstAttribute="leading" secondItem="4BV-fe-Un5" secondAttribute="leading" constant="16" id="QSc-T6-nDa"/>
+                        <constraint firstAttribute="trailing" secondItem="YNP-8s-IHd" secondAttribute="trailing" constant="16" id="efF-Sf-ela"/>
+                        <constraint firstItem="iqS-9m-Afu" firstAttribute="leading" secondItem="4BV-fe-Un5" secondAttribute="leading" id="kT3-QZ-DNL"/>
+                        <constraint firstAttribute="trailing" secondItem="P29-5p-ded" secondAttribute="trailing" constant="16" id="mAD-Za-N4P"/>
+                        <constraint firstAttribute="trailing" secondItem="iqS-9m-Afu" secondAttribute="trailing" id="nnu-wj-uMX"/>
+                        <constraint firstItem="P29-5p-ded" firstAttribute="leading" secondItem="4BV-fe-Un5" secondAttribute="leading" constant="16" id="oAq-ff-Jam"/>
+                        <constraint firstItem="iqS-9m-Afu" firstAttribute="top" secondItem="4BV-fe-Un5" secondAttribute="top" id="pSH-av-lMM"/>
+                        <constraint firstItem="YNP-8s-IHd" firstAttribute="top" secondItem="iqS-9m-Afu" secondAttribute="bottom" constant="10" id="yi8-vK-TCi"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Luo-fN-1c6" userLabel="PlantTableView">
+                    <rect key="frame" x="16" y="151.66666666666669" width="361" height="590.33333333333326"/>
+                    <color key="backgroundColor" name="surface"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jk-0c-C26">
+                    <rect key="frame" x="16" y="758" width="361" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ZGW-9l-1D8"/>
+                    </constraints>
+                    <color key="tintColor" name="primary-accent"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Simpan">
+                        <backgroundConfiguration key="background" cornerRadius="10"/>
+                        <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
+                        <color key="baseForegroundColor" name="on primary-accent"/>
+                        <color key="baseBackgroundColor" name="primary-accent"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="save"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="saveButtonClicked:" destination="-1" eventType="touchUpInside" id="g7l-XQ-FVn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="surface"/>
+            <constraints>
+                <constraint firstItem="Luo-fN-1c6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="3De-cS-KV9"/>
+                <constraint firstItem="YWG-8d-oLQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="3Gm-Ka-sNj"/>
+                <constraint firstItem="yE2-GL-MSn" firstAttribute="centerY" secondItem="9T1-eI-2q4" secondAttribute="centerY" id="9Yf-iT-xp3"/>
+                <constraint firstItem="kjF-LA-w1z" firstAttribute="leading" secondItem="9T1-eI-2q4" secondAttribute="leading" constant="14" id="BEh-dM-SW3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7jk-0c-C26" secondAttribute="bottom" constant="20" id="Dga-ze-VSh"/>
+                <constraint firstItem="4BV-fe-Un5" firstAttribute="top" secondItem="9T1-eI-2q4" secondAttribute="bottom" constant="25" id="H2X-HB-2q4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Luo-fN-1c6" secondAttribute="trailing" constant="16" id="IJJ-eV-QLI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9T1-eI-2q4" secondAttribute="trailing" constant="16" id="ITM-G7-P5a"/>
+                <constraint firstItem="9T1-eI-2q4" firstAttribute="top" secondItem="UfH-TV-0co" secondAttribute="bottom" constant="5" id="JdD-ve-RA2"/>
+                <constraint firstItem="Luo-fN-1c6" firstAttribute="top" secondItem="aH4-7P-evf" secondAttribute="bottom" constant="8" id="K84-jl-FZ3"/>
+                <constraint firstItem="9T1-eI-2q4" firstAttribute="trailing" secondItem="yE2-GL-MSn" secondAttribute="trailing" constant="14" id="MKi-GV-57M"/>
+                <constraint firstItem="4BV-fe-Un5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Mub-qx-ZFU"/>
+                <constraint firstItem="UfH-TV-0co" firstAttribute="top" secondItem="aH4-7P-evf" secondAttribute="bottom" constant="15" id="PH2-7D-xjR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7jk-0c-C26" secondAttribute="trailing" constant="16" id="QOk-uH-VPB"/>
+                <constraint firstItem="kjF-LA-w1z" firstAttribute="centerY" secondItem="9T1-eI-2q4" secondAttribute="centerY" id="YeN-3I-Pe5"/>
+                <constraint firstItem="7jk-0c-C26" firstAttribute="top" secondItem="Luo-fN-1c6" secondAttribute="bottom" constant="16" id="bOU-j4-eLF"/>
+                <constraint firstItem="aH4-7P-evf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="clE-Sx-iIX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4BV-fe-Un5" secondAttribute="trailing" constant="16" id="fqW-vn-YdS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YWG-8d-oLQ" secondAttribute="trailing" constant="16" id="gKk-NY-On4"/>
+                <constraint firstItem="YWG-8d-oLQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hf7-MP-bFY"/>
+                <constraint firstItem="9T1-eI-2q4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hjL-X5-h0X"/>
+                <constraint firstItem="7jk-0c-C26" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="kSn-uK-58B"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aH4-7P-evf" secondAttribute="trailing" constant="16" id="m5G-CG-fps"/>
+                <constraint firstItem="UfH-TV-0co" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="oPa-gj-B3E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UfH-TV-0co" secondAttribute="trailing" constant="16" id="wbb-DR-sl8"/>
+                <constraint firstItem="aH4-7P-evf" firstAttribute="top" secondItem="YWG-8d-oLQ" secondAttribute="bottom" constant="5" id="wtf-82-rnS"/>
+                <constraint firstItem="9T1-eI-2q4" firstAttribute="top" secondItem="UfH-TV-0co" secondAttribute="bottom" constant="5" id="y4a-Xc-pt7"/>
+            </constraints>
+            <point key="canvasLocation" x="60" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <namedColor name="on primary-accent">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="on primary-container">
+            <color red="0.0" green="0.13300000131130219" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary-accent">
+            <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary-accent">
+            <color red="0.56499999761581421" green="0.45500001311302185" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary-container">
+            <color red="1" green="0.94099998474121094" blue="0.79199999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface">
+            <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="surface-container-highest">
+            <color red="0.77999997138977051" green="0.77999997138977051" blue="0.74900001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

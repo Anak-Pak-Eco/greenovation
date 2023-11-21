@@ -41,7 +41,7 @@ final class RegisterFormulaViewModel {
         let userId = Auth.auth().currentUser?.uid ?? ""
         let body = PlantBody(
             name: plant.name,
-            image_url: "caisim",
+            image_url: plant.image_url.isEmpty ? "image-plant-default" : plant.image_url,
             users_id: userId,
             phases: [
                 .init(
