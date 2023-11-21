@@ -52,7 +52,8 @@ class HydrospaceRepository: HydrospaceRepositoryProtocol {
                 id: response.plant?.id ?? ""
             ),
             usersId: response.users_id ?? "",
-            status: response.status ?? ""
+            status: response.status ?? "",
+            serial_number: response.serial_number ?? ""
         )
     }
 }

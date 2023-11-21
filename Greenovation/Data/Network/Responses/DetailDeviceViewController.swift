@@ -64,7 +64,7 @@ class DetailDeviceViewController: UIViewController {
     }
     
     private func setupToolbar() {
-        title = "Perangkat 3"
+        title = ""
         navigationController?.navigationBar.titleTextAttributes = [
             .font: UIFont(name: "DMSans-SemiBold", size: 17)!,
             .foregroundColor: UIColor.onPrimaryFixed

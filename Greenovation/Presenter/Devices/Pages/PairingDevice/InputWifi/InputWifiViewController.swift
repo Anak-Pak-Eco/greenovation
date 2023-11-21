@@ -13,6 +13,7 @@ class InputWifiViewController: UIViewController, CBPeripheralDelegate {
     @IBOutlet weak var ssidTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var peripheral: CBPeripheral?
+    @IBOutlet weak var connectButton: UIButton!
     var characteristic: CBCharacteristic?
 
     override func viewDidLoad() {
@@ -55,6 +56,7 @@ class InputWifiViewController: UIViewController, CBPeripheralDelegate {
     }
     
     @IBAction func onSubmitButtonClicked(_ sender: UIButton) {
+        sender.isEnabled = false
         if ssidTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true {
             let alertController = UIAlertController(
                 title: "Gagal Menyambungkan",
@@ -66,6 +68,7 @@ class InputWifiViewController: UIViewController, CBPeripheralDelegate {
                     title: "OK",
                     style: .destructive,
                     handler: { action in
+                        sender.isEnabled = true
                         alertController.dismiss(animated: true)
                     }
                 )
@@ -99,37 +102,41 @@ class InputWifiViewController: UIViewController, CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        if let value = characteristic.value {
-            let data = String(decoding: value, as: UTF8.self)
-            if data.contains("true") {
-                let vc = AddDeviceV2ViewController(serialNumber: String(data.split(separator: ",").last ?? ""))
-                navigationController?.pushViewController(vc, animated: true)
-            } else if data == "false" {
-                let alertController = UIAlertController(
-                    title: "Gagal Menyambungkan",
-                    message: "SSID atau Password salah",
-                    preferredStyle: .alert
-                )
-                alertController.addAction(
-                    .init(
-                        title: "OK",
-                        style: .destructive,
-                        handler: { action in
-                            alertController.dismiss(animated: true)
-                        }
-                    )
-                )
-                self.present(alertController, animated: true)
-            }
-        }
+//        print("didWriteValueFor: \(String(describing: characteristic.value))")
+//        if let value = characteristic.value {
+//            let data = String(decoding: value, as: UTF8.self)
+//            if data.contains("true") {
+//                let vc = AddDeviceV2ViewController(serialNumber: String(data.split(separator: ",").last ?? ""))
+//                connectButton.isEnabled = true
+//                navigationController?.pushViewController(vc, animated: true)
+//            } else if data == "false" {
+//                let alertController = UIAlertController(
+//                    title: "Gagal Menyambungkan",
+//                    message: "SSID atau Password salah",
+//                    preferredStyle: .alert
+//                )
+//                alertController.addAction(
+//                    .init(
+//                        title: "OK",
+//                        style: .destructive,
+//                        handler: { [unowned self] action in
+//                            connectButton.isEnabled = true
+//                            alertController.dismiss(animated: true)
+//                        }
+//                    )
+//                )
+//                self.present(alertController, animated: true)
+//            }
+//        }
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if let value = characteristic.value {
-            print("updatedValue: \(String(decoding: value, as: UTF8.self))")
             let data = String(decoding: value, as: UTF8.self)
+            print("didUpdateValueFor: \(data)")
             if data.contains("true") {
                 let vc = AddDeviceV2ViewController(serialNumber: String(data.split(separator: ",").last ?? ""))
+                connectButton.isEnabled = true
                 navigationController?.pushViewController(vc, animated: true)
             } else if data == "false" {
                 let alertController = UIAlertController(
@@ -141,7 +148,8 @@ class InputWifiViewController: UIViewController, CBPeripheralDelegate {
                     .init(
                         title: "OK",
                         style: .destructive,
-                        handler: { action in
+                        handler: { [unowned self] action in
+                            connectButton.isEnabled = true
                             alertController.dismiss(animated: true)
                         }
                     )
@@ -157,9 +165,6 @@ class InputWifiViewController: UIViewController, CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
         print("didUpdateNotificationStateFor: \(peripheral)")
-//        if let value = characteristic.value {
-//            print("didUpdateNotificationState: \(String(decoding: value, as: UTF8.self))")
-//        }
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor descriptor: CBDescriptor, error: Error?) {

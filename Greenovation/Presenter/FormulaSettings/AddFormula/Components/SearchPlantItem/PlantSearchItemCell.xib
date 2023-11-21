@@ -19,11 +19,11 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlantSearchItemCell" id="KGk-i7-Jjw" customClass="PlantSearchItemCell" customModule="Greenovation" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="358" height="76"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="358" height="76"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-yf-x1K">
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-yf-x1K">
                         <rect key="frame" x="0.0" y="0.0" width="358" height="76"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kangkung" translatesAutoresizingMaskIntoConstraints="NO" id="NPr-Zb-M22">
@@ -34,7 +34,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cd-vu-ORC">
-                                <rect key="frame" x="56" y="27.666666666666671" width="287" height="21"/>
+                                <rect key="frame" x="56" y="27.666666666666664" width="287" height="21"/>
                                 <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                 </subviews>
                 <color key="backgroundColor" name="surface"/>
                 <constraints>
-                    <constraint firstItem="3lP-yf-x1K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1qT-ih-7Ua"/>
+                    <constraint firstItem="3lP-yf-x1K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="1qT-ih-7Ua"/>
                     <constraint firstAttribute="trailing" secondItem="3lP-yf-x1K" secondAttribute="trailing" id="Atx-eh-KMr"/>
                     <constraint firstItem="3lP-yf-x1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Iqu-ui-Gdy"/>
                     <constraint firstAttribute="bottom" secondItem="3lP-yf-x1K" secondAttribute="bottom" id="g8l-Ba-XJZ"/>

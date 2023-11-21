@@ -68,17 +68,13 @@ final class RegisterFormulaViewModel {
             ]
         )
         
-        print("Body: \(body)")
-        
         repository.savePlant(body: body)
             .sink { [unowned self] completion in
                 loadingSaveFormula.value = false
                 switch completion {
                 case .finished:
-                    print("Finished Request")
                     successSaveFormula.value = true
                 case .failure(let error):
-                    print("Error: \(error)")
                     errorSaveFormula.value = error.localizedDescription
                 }
             } receiveValue: { response in

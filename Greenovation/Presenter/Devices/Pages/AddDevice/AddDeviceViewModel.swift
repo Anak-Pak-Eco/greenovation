@@ -33,7 +33,7 @@ final class AddDeviceViewModel {
     private let repository: PlantRepositoryProtocol = PlantRepository()
     private let deviceRepository: DevicesRepositoryProtocol = DevicesRepository()
     
-    func getPlants() {
+    func getPlants(query: String = "") {
         loadingAddDevice.value = true
         let userId = Auth.auth().currentUser?.uid ?? ""
         repository.getPlants(usersId: userId, userOnly: "true")
@@ -42,6 +42,9 @@ final class AddDeviceViewModel {
                 switch completion {
                 case .finished:
                     successFetchPlants.value = true
+                    if !query.isEmpty {
+                        searchData(query: query)
+                    }
                 case .failure(let error):
                     errorFetchPlants.value = error.localizedDescription
                 }

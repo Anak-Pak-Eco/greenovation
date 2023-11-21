@@ -83,7 +83,7 @@ class AddDeviceV2ViewController: UIViewController, UIAdaptivePresentationControl
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.getPlants()
+        viewModel.getPlants(query: plantTextField.text ?? "")
     }
     
     private func setupToolbar() {
@@ -243,6 +243,7 @@ extension AddDeviceV2ViewController: AddDeviceGrowthStepDelegate, AddDevicePlant
     
     func onFormulaSelected() {
         if let phase = viewModel.selectedPhase {
+            growthStep.textColor = UIColor.onPrimaryContainer
             formulaView.isHidden = false
             formulaTitleLabel.text = "Formula Tanaman Fase \(phase.step.getText())"
             formulaPpmLabel.text = "\(phase.min_ppm) - \(phase.max_ppm)"

@@ -12,8 +12,8 @@ import Combine
 final class APIDataSource {
     
     static let shared = APIDataSource()
-//    private let baseURL = "https://pak-eco.pat-pet.my.id"
-    private let baseURL = "http://192.168.100.19:8000"
+    private let baseURL = "https://pak-eco.pat-pet.my.id"
+//    private let baseURL = "http://192.168.100.19:8000"
     
     func getNotifications() -> AnyPublisher<[NotificationResponse], AFError> {
         return AF.request(baseURL + APIEndpoint.notifications.rawValue, method: .get)
@@ -112,6 +112,19 @@ final class APIDataSource {
                 return $0.data
             }
             .mapError { $0 }
+            .eraseToAnyPublisher()
+    }
+    
+    func getDevices() -> AnyPublisher<[DeviceResponse], AFError> {
+        return AF.request(baseURL + APIEndpoint.devices.rawValue + "/get-devices", method: .get)
+            .publishDecodable(type: BaseResponse<[DeviceResponse]>.self)
+            .value()
+            .map {
+                $0.data
+            }
+            .mapError { error in
+                error
+            }
             .eraseToAnyPublisher()
     }
     

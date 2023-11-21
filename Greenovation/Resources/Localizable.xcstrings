@@ -24,7 +24,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Menyemai"
+            "value" : "Seedling Phase"
           }
         },
         "id" : {
@@ -65,6 +65,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Caisim"
+          }
+        }
+      }
+    },
+    "cari-bluetooth" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find Bluetooth"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cari Bluetooth"
           }
         }
       }
@@ -370,7 +387,7 @@
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "That Pertumbuhan"
+            "value" : "Tahap Pertumbuhan"
           }
         }
       }
@@ -415,6 +432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hours"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jam"
           }
         }
       }
@@ -727,7 +750,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Seeding"
+            "value" : "Seedling"
           }
         },
         "id" : {
@@ -761,7 +784,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "I Have Correct the Sollution"
+            "value" : "I Have Correct the Solution"
           }
         },
         "id" : {
@@ -829,7 +852,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tillering Phase"
+            "value" : "Seedling Phase"
           }
         },
         "id" : {
@@ -914,6 +937,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Value"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai"
           }
         }
       }

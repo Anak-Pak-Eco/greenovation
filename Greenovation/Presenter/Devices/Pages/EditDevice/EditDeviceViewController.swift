@@ -25,7 +25,7 @@ class EditDeviceViewController: UIViewController {
     }
     
     required convenience init?(coder: NSCoder) {
-        self.init(device: .init(id: "", name: "", currentPh: 0, currentSteps: "", currentPpm: 0, plant: .init(max_ph: 0, min_ph: 0, max_ppm: 0, min_ppm: 0, name: "test", image_url: "image_url", id: "test"), usersId: "test", status: "test"))
+        self.init(device: .init(id: "", name: "", currentPh: 0, currentSteps: "", currentPpm: 0, plant: .init(max_ph: 0, min_ph: 0, max_ppm: 0, min_ppm: 0, name: "test", image_url: "image_url", id: "test"), usersId: "test", status: "test", serial_number: ""))
     }
     
     override func viewDidLoad() {
@@ -113,6 +113,16 @@ class EditDeviceViewController: UIViewController {
         sensorSwitch.isOn = device.status == "ON"
         deviceNameLabel.text = String(localized: "device-name")
         deviceNameTextField.text = device.name
+        
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard)
+        )
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func onSaveButtonClicked(_ sender: Any) {

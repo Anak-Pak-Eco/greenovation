@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputWifiViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
+                <outlet property="connectButton" destination="2mD-ta-4CA" id="xhI-BJ-Nc3"/>
                 <outlet property="passwordTextField" destination="PGO-n8-c6R" id="BoG-Zo-a21"/>
                 <outlet property="ssidTextField" destination="LqV-oG-ypS" id="Lcn-XZ-iTm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -47,7 +48,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kata Sandi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zG-in-kcI">
-                    <rect key="frame" x="16" y="294.33333333333331" width="361" height="20"/>
+                    <rect key="frame" x="16" y="294.33333333333331" width="361" height="19.666666666666686"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                     <color key="textColor" name="primary-accent"/>
                     <nil key="highlightedColor"/>
@@ -58,7 +59,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGO-n8-c6R">
-                    <rect key="frame" x="16" y="319.33333333333331" width="361" height="34"/>
+                    <rect key="frame" x="16" y="319" width="361" height="34"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>

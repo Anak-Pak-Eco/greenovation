@@ -33,7 +33,7 @@ class EditDevicePlantViewController: UIViewController {
     }
     
     required convenience init?(coder: NSCoder) {
-        self.init(device: .init(id: "", name: "", currentPh: 0, currentSteps: "", currentPpm: 0, plant: .init(max_ph: 0, min_ph: 0, max_ppm: 0, min_ppm: 0, name: "", image_url: "", id: ""), usersId: "", status: ""))
+        self.init(device: .init(id: "", name: "", currentPh: 0, currentSteps: "", currentPpm: 0, plant: .init(max_ph: 0, min_ph: 0, max_ppm: 0, min_ppm: 0, name: "", image_url: "", id: ""), usersId: "", status: "", serial_number: ""))
     }
 
     override func viewDidLoad() {

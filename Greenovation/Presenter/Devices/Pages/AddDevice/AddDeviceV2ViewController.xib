@@ -27,6 +27,7 @@
                 <outlet property="formulaView" destination="0Yq-9g-2aO" id="DLq-Ap-SUe"/>
                 <outlet property="growthStep" destination="ROe-gp-os3" id="qdx-HO-h9w"/>
                 <outlet property="growthStepButton" destination="We5-g7-R7z" id="WDv-NY-N8a"/>
+                <outlet property="plantTableView" destination="d0O-aF-bMC" id="Qpq-I5-TMc"/>
                 <outlet property="plantTextField" destination="yfb-Bo-CCs" id="0Mx-Gv-Fvw"/>
                 <outlet property="saveButton" destination="LNH-B7-4nu" id="nws-1w-RUe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -207,6 +208,12 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="save"/>
                     </userDefinedRuntimeAttributes>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d0O-aF-bMC" userLabel="PlantTableView">
+                    <rect key="frame" x="16" y="237" width="361" height="509"/>
+                    <color key="backgroundColor" name="surface"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>
@@ -218,8 +225,10 @@
                 <constraint firstItem="yfb-Bo-CCs" firstAttribute="top" secondItem="M7Z-d4-mPK" secondAttribute="bottom" constant="5" id="7Gb-DH-eKX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="We5-g7-R7z" secondAttribute="trailing" constant="16" id="BBa-Nk-ruD"/>
                 <constraint firstItem="LNH-B7-4nu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Bbx-Qm-2yx"/>
+                <constraint firstItem="LNH-B7-4nu" firstAttribute="top" secondItem="d0O-aF-bMC" secondAttribute="bottom" constant="16" id="DLM-QV-QI9"/>
                 <constraint firstItem="trh-93-jyx" firstAttribute="top" secondItem="yfb-Bo-CCs" secondAttribute="bottom" constant="15.5" id="G5x-cl-KLV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XNT-DM-Kn7" secondAttribute="trailing" constant="16" id="Jfy-2i-GLh"/>
+                <constraint firstItem="d0O-aF-bMC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ley-ZB-gqA"/>
                 <constraint firstItem="ROe-gp-os3" firstAttribute="leading" secondItem="We5-g7-R7z" secondAttribute="leading" constant="14" id="Lt9-bh-dnV"/>
                 <constraint firstItem="XNT-DM-Kn7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="M6J-OP-ffx"/>
                 <constraint firstItem="0Yq-9g-2aO" firstAttribute="top" secondItem="We5-g7-R7z" secondAttribute="bottom" constant="16" id="OOT-nj-aI9"/>
@@ -227,6 +236,7 @@
                 <constraint firstItem="sVK-pv-zsx" firstAttribute="centerY" secondItem="We5-g7-R7z" secondAttribute="centerY" id="QNp-vp-nvW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M7Z-d4-mPK" secondAttribute="trailing" constant="16" id="R3R-zv-AVy"/>
                 <constraint firstItem="awz-uY-odR" firstAttribute="top" secondItem="XNT-DM-Kn7" secondAttribute="bottom" constant="5" id="YMC-77-wRu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d0O-aF-bMC" secondAttribute="trailing" constant="16" id="Zbz-qC-Xx7"/>
                 <constraint firstItem="trh-93-jyx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aU9-Su-kzz"/>
                 <constraint firstItem="ROe-gp-os3" firstAttribute="centerY" secondItem="We5-g7-R7z" secondAttribute="centerY" id="b1f-a0-btf"/>
                 <constraint firstItem="We5-g7-R7z" firstAttribute="trailing" secondItem="sVK-pv-zsx" secondAttribute="trailing" constant="14" id="cd2-kp-ItW"/>
@@ -237,6 +247,7 @@
                 <constraint firstItem="awz-uY-odR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="m5z-Br-bEo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yfb-Bo-CCs" secondAttribute="trailing" constant="16" id="mUr-P6-c3t"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="trh-93-jyx" secondAttribute="trailing" constant="16" id="nyK-wR-k6h"/>
+                <constraint firstItem="d0O-aF-bMC" firstAttribute="top" secondItem="yfb-Bo-CCs" secondAttribute="bottom" constant="8" id="o3K-VY-9M7"/>
                 <constraint firstItem="We5-g7-R7z" firstAttribute="top" secondItem="trh-93-jyx" secondAttribute="bottom" constant="5" id="pPC-Nd-H6X"/>
                 <constraint firstItem="We5-g7-R7z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zvi-tb-QkL"/>
             </constraints>

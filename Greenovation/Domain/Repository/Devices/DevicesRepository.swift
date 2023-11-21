@@ -40,4 +40,37 @@ final class DevicesRepository: DevicesRepositoryProtocol {
             .mapError { $0 }
             .eraseToAnyPublisher()
     }
+    
+    func getDevices() -> AnyPublisher<[DeviceModel], Error> {
+        return api.getDevices()
+            .map {
+                return $0.map { [unowned self] response in
+                    return self.mapResponseToDevice(response)
+                }
+            }
+            .mapError { $0 }
+            .eraseToAnyPublisher()
+    }
+    
+    private func mapResponseToDevice(_ response: DeviceResponse) -> DeviceModel {
+        return DeviceModel(
+            id: response.id ?? "",
+            name: response.name ?? "",
+            currentPh: response.current_ph ?? 0,
+            currentSteps: response.current_steps ?? "",
+            currentPpm: response.current_ppm ?? 0,
+            plant: DeviceModel.DevicePlantModel(
+                max_ph: response.plant?.max_ph ?? 0,
+                min_ph: response.plant?.min_ph ?? 0,
+                max_ppm: response.plant?.max_ppm ?? 0,
+                min_ppm: response.plant?.min_ppm ?? 0,
+                name: response.plant?.name ?? "",
+                image_url: response.plant?.image_url ?? "",
+                id: response.plant?.id ?? ""
+            ),
+            usersId: response.users_id ?? "",
+            status: response.status ?? "",
+            serial_number: response.serial_number ?? ""
+        )
+    }
 }

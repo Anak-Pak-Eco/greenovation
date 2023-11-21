@@ -67,7 +67,7 @@ class BluetoothPairingViewController: UIViewController {
         bluetoothListTableView.delegate = self
         
         // MARK: Search Bar Field
-        searchTextField.placeholder = String(localized: "cari-tanaman")
+        searchTextField.placeholder = String(localized: "cari-bluetooth")
         searchTextField.layer.borderWidth = 0.3
         searchTextField.layer.cornerRadius = 10
         searchTextField.layer.borderColor = UIColor.secondaryAccent.cgColor

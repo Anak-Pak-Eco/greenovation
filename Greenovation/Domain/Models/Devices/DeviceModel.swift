@@ -16,6 +16,7 @@ struct DeviceModel: Identifiable {
     let plant: DevicePlantModel
     let usersId: String
     let status: String
+    let serial_number: String
     
     struct DevicePlantModel: Identifiable {
         let max_ph: Double

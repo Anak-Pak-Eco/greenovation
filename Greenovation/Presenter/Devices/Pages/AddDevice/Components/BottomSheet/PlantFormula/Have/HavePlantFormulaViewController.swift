@@ -46,7 +46,7 @@ class HavePlantFormulaViewController: UIViewController {
     private func setupUI() {
         descLabel.attributedText = String.getStringAttributed(
             from: String(localized: "Formula di bawah ini merupakan formula yang kamu buat untuk \(plant.name) pada \(phase.step.getText().capitalized)"),
-            boldStrings: ["\(plant.name)", "\(phase.step.rawValue.capitalized)"],
+            boldStrings: ["\(plant.name)", "\(phase.step.getText().capitalized)"],
             regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!,
             boldTextStyle: UIFont(name: "DMSans-Bold", size: 12)!
         )
@@ -60,23 +60,12 @@ class HavePlantFormulaViewController: UIViewController {
         )
         ppmLabel.adjustsFontSizeToFitWidth = true
         
-        let formatted_min_ppm = formatDoubleIfNeeded(phase.min_ppm)
-        let formatted_max_ppm = formatDoubleIfNeeded(phase.max_ppm)
-        
-        ppmMin.text = String(describing: formatted_min_ppm)
-        ppmMax.text = String(describing: formatted_max_ppm)
-        phMin.text = String(describing: phase.min_ph)
-        phMax.text = String(describing: phase.max_ph)
+        ppmMin.text = phase.min_ppm.clean
+        ppmMax.text = phase.max_ppm.clean
+        phMin.text = phase.min_ph.clean
+        phMax.text = phase.max_ph.clean
         
         saveButton.setTitle(String(localized: "save"), for: .normal)
-    }
-    
-    func formatDoubleIfNeeded(_ value: Double) -> String {
-        if value.truncatingRemainder(dividingBy: 1) == 0 {
-            return String(format: "%.0f", value)
-        } else {
-            return String(value)
-        }
     }
     
     @IBAction func onDismissButtonClicked(_ sender: UIButton) {

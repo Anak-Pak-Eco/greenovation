@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -69,88 +69,92 @@
                         </button>
                     </subviews>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xZ-9M-SFM" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="130.66666666666666" width="177.33333333333334" height="19.666666666666657"/>
-                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ppm-level"/>
-                    </userDefinedRuntimeAttributes>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formula di bawah ini merupakan formula yang kamu buat untuk Caisim pada Fase Anakan" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYo-aT-oHn">
                     <rect key="frame" x="16" y="72" width="432" height="36.666666666666657"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
                     <color key="textColor" name="on primary-container"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-D7-hqb">
-                    <rect key="frame" x="388" y="123.66666666666669" width="58" height="34"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="34" id="Jm7-qR-s7j"/>
-                        <constraint firstAttribute="width" constant="58" id="Oxm-Ra-m6G"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joI-tb-Q0j">
-                    <rect key="frame" x="380.33333333333331" y="123.66666666666669" width="7.6666666666666856" height="34"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="34" id="ede-hK-63g"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fa2-jx-dG8">
-                    <rect key="frame" x="322.33333333333331" y="123.66666666666669" width="58" height="34"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="34" id="Ljl-YR-U8A"/>
-                        <constraint firstAttribute="width" constant="58" id="VzB-Mg-rJQ"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6,5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRb-9H-eLb">
-                    <rect key="frame" x="407" y="167.66666666666666" width="39" height="34"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="34" id="P6D-eZ-yyx"/>
-                        <constraint firstAttribute="width" constant="39" id="iqm-bd-W2F"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb3-EG-h9d">
-                    <rect key="frame" x="399.33333333333331" y="167.66666666666666" width="7.6666666666666856" height="34"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="34" id="6UF-Hq-Wsr"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mz-W1-iYg">
-                    <rect key="frame" x="360.33333333333331" y="167.66666666666666" width="39" height="34"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="39" id="GXY-o3-xOh"/>
-                        <constraint firstAttribute="height" constant="34" id="rPZ-aH-sBG"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tingkah pH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdC-yQ-Cir" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                    <rect key="frame" x="16" y="174.33333333333334" width="80.333333333333329" height="19.666666666666657"/>
-                    <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ph-level"/>
-                    </userDefinedRuntimeAttributes>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pE1-XR-Tlw">
+                    <rect key="frame" x="16" y="118.66666666666669" width="432" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="248" text="Kepekatan Nutrisi (ppm)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xZ-9M-SFM" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="304.33333333333331" height="34"/>
+                            <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ppm-level"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fa2-jx-dG8">
+                            <rect key="frame" x="312.33333333333331" y="0.0" width="48" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="Ljl-YR-U8A"/>
+                                <constraint firstAttribute="width" constant="48" id="VzB-Mg-rJQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joI-tb-Q0j">
+                            <rect key="frame" x="368.33333333333331" y="0.0" width="7.6666666666666856" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-D7-hqb">
+                            <rect key="frame" x="384" y="0.0" width="48" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="Jm7-qR-s7j"/>
+                                <constraint firstAttribute="width" constant="48" id="Oxm-Ra-m6G"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="obJ-SB-OcY">
+                    <rect key="frame" x="16" y="162.66666666666666" width="432" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="248" text="Tingkah pH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdC-yQ-Cir" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="304.33333333333331" height="34"/>
+                            <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="ph-level"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mz-W1-iYg">
+                            <rect key="frame" x="312.33333333333331" y="0.0" width="48" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="GXY-o3-xOh"/>
+                                <constraint firstAttribute="height" constant="34" id="rPZ-aH-sBG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb3-EG-h9d">
+                            <rect key="frame" x="368.33333333333331" y="0.0" width="7.6666666666666856" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6,5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRb-9H-eLb">
+                            <rect key="frame" x="384" y="0.0" width="48" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="P6D-eZ-yyx"/>
+                                <constraint firstAttribute="width" constant="48" id="iqm-bd-W2F"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaC-4E-3MD">
                     <rect key="frame" x="16" y="431" width="432" height="40"/>
                     <constraints>
@@ -176,30 +180,20 @@
             <color key="backgroundColor" name="surface"/>
             <constraints>
                 <constraint firstItem="HYo-aT-oHn" firstAttribute="top" secondItem="5s9-5P-bqm" secondAttribute="bottom" constant="16" id="02O-MK-MxQ"/>
-                <constraint firstItem="Jb3-EG-h9d" firstAttribute="leading" secondItem="1Mz-W1-iYg" secondAttribute="trailing" id="4Ve-tW-G67"/>
-                <constraint firstItem="1Mz-W1-iYg" firstAttribute="top" secondItem="fa2-jx-dG8" secondAttribute="bottom" constant="10" id="4rl-9q-4hE"/>
-                <constraint firstItem="0xZ-9M-SFM" firstAttribute="top" secondItem="HYo-aT-oHn" secondAttribute="bottom" constant="22" id="9c0-Cd-Clx"/>
-                <constraint firstItem="YdC-yQ-Cir" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Amn-p4-4ho"/>
+                <constraint firstItem="pE1-XR-Tlw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="FaP-Lf-CRn"/>
+                <constraint firstItem="pE1-XR-Tlw" firstAttribute="top" secondItem="HYo-aT-oHn" secondAttribute="bottom" constant="10" id="IK8-ld-fDb"/>
                 <constraint firstItem="5s9-5P-bqm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="IWB-7C-5XI"/>
+                <constraint firstItem="obJ-SB-OcY" firstAttribute="top" secondItem="pE1-XR-Tlw" secondAttribute="bottom" constant="10" id="JT9-aV-qh9"/>
                 <constraint firstItem="HYo-aT-oHn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PaQ-Ts-mmf"/>
-                <constraint firstItem="joI-tb-Q0j" firstAttribute="top" secondItem="HYo-aT-oHn" secondAttribute="bottom" constant="15" id="Rtx-Rj-owz"/>
-                <constraint firstItem="fa2-jx-dG8" firstAttribute="top" secondItem="HYo-aT-oHn" secondAttribute="bottom" constant="15" id="XRy-wk-KfV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="obJ-SB-OcY" secondAttribute="trailing" constant="16" id="VMU-Oy-mBb"/>
                 <constraint firstItem="5s9-5P-bqm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Y4K-Ny-hZd"/>
-                <constraint firstItem="Jb3-EG-h9d" firstAttribute="top" secondItem="fa2-jx-dG8" secondAttribute="bottom" constant="10" id="ZW2-HR-Eo9"/>
-                <constraint firstItem="0xZ-9M-SFM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ac6-3P-dst"/>
-                <constraint firstItem="joI-tb-Q0j" firstAttribute="leading" secondItem="fa2-jx-dG8" secondAttribute="trailing" id="bdn-vh-dwB"/>
-                <constraint firstItem="DDa-D7-hqb" firstAttribute="leading" secondItem="joI-tb-Q0j" secondAttribute="trailing" id="gOC-Tv-9zk"/>
-                <constraint firstItem="YdC-yQ-Cir" firstAttribute="top" secondItem="0xZ-9M-SFM" secondAttribute="bottom" constant="24" id="h7t-ph-url"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pE1-XR-Tlw" secondAttribute="trailing" constant="16" id="bXX-ec-t4Y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aaC-4E-3MD" secondAttribute="trailing" constant="16" id="hNt-cb-rkT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HYo-aT-oHn" secondAttribute="trailing" constant="16" id="hVN-zC-2qn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aaC-4E-3MD" secondAttribute="bottom" constant="16" id="ieU-PC-KlS"/>
-                <constraint firstItem="ZRb-9H-eLb" firstAttribute="top" secondItem="DDa-D7-hqb" secondAttribute="bottom" constant="10" id="jQR-rh-jgB"/>
                 <constraint firstAttribute="trailing" secondItem="5s9-5P-bqm" secondAttribute="trailing" constant="16" id="joe-WL-iA4"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DDa-D7-hqb" secondAttribute="trailing" constant="18" id="mPE-vr-1DZ"/>
+                <constraint firstItem="obJ-SB-OcY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="juc-mu-m42"/>
                 <constraint firstItem="aaC-4E-3MD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="tp7-Ze-EY0"/>
-                <constraint firstItem="DDa-D7-hqb" firstAttribute="top" secondItem="HYo-aT-oHn" secondAttribute="bottom" constant="15" id="vyh-OI-Dk3"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZRb-9H-eLb" secondAttribute="trailing" constant="18" id="x7R-3A-Aa4"/>
-                <constraint firstItem="ZRb-9H-eLb" firstAttribute="leading" secondItem="Jb3-EG-h9d" secondAttribute="trailing" id="yxw-Kk-JsI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="102.29007633587786" y="-53.169014084507047"/>

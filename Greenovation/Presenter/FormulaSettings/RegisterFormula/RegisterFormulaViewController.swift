@@ -20,23 +20,6 @@ class RegisterFormulaViewController: UIViewController, RegisterFormulaDelegate {
     private var awalPhaseCell: AwalPhaseTableViewCell?
     private var menengahPhaseCell: MenengahPhaseTableViewCell?
     private var submitButtonCell: SubmitButtonTableViewCell?
-//    @IBOutlet weak var anakanRecommendationLabel: UILabel!
-//    @IBOutlet weak var vegetatifMenengahRecommendationLabel: UILabel!
-//    @IBOutlet weak var vegetatifAwalRecommendationLabel: UILabel!
-//    @IBOutlet var plantName: UILabel!
-//    @IBOutlet var faseAnakan_ppmMin: UITextField!
-//    @IBOutlet var faseAnakan_ppmMax: UITextField!
-//    @IBOutlet var faseAnakan_phMin: UITextField!
-//    @IBOutlet var faseAnakan_phMax: UITextField!
-//    @IBOutlet var faseVegetatifAwal_ppmMin: UITextField!
-//    @IBOutlet var faseVegetatifAwal_ppmMax: UITextField!
-//    @IBOutlet var faseVegetatifAwal_phMin: UITextField!
-//    @IBOutlet var faseVegetatifAwal_phMax: UITextField!
-//    @IBOutlet var faseVegetatifMenengah_ppmMin: UITextField!
-//    @IBOutlet var faseVegetatifMenengah_ppmMax: UITextField!
-//    @IBOutlet var faseVegetatifMenengah_phMin: UITextField!
-//    @IBOutlet var faseVegetatifMenengah_phMax: UITextField!
-//    @IBOutlet var saveButton: LocalizableButton!
     
     let plant: PlantModel
     var isAddDevice = false

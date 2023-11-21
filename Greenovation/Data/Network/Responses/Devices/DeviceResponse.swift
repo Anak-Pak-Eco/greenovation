@@ -16,6 +16,7 @@ struct DeviceResponse: Codable {
     let status: String?
     let users_id: String?
     let plant: DevicePlantResponse?
+    let serial_number: String?
     
     struct DevicePlantResponse: Codable {
         let max_ph: Double?
@@ -69,7 +70,8 @@ extension DeviceResponse {
             name: response[DeviceResponse.nameReference] as? String,
             status: response[DeviceResponse.deviceStatusReference] as? String,
             users_id: response[DeviceResponse.usersIdReference] as? String,
-            plant: DevicePlantResponse.from(response: response[DevicePlantResponse.reference] as? NSDictionary)
+            plant: DevicePlantResponse.from(response: response[DevicePlantResponse.reference] as? NSDictionary),
+            serial_number: nil
         )
     }
 }
