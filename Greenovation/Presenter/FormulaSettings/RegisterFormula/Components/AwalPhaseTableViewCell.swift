@@ -13,10 +13,12 @@ class AwalPhaseTableViewCell: UITableViewCell {
     @IBOutlet weak var minPhTextField: UITextField!
     @IBOutlet weak var minPpmTextField: UITextField!
     @IBOutlet weak var recommendationLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var maxPpmTextField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        titleLabel.text = String(localized: "awal")
         minPpmTextField.setBorder()
         maxPpmTextField.setBorder()
         minPhTextField.setBorder()

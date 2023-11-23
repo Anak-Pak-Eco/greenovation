@@ -22,11 +22,11 @@ class AddDeviceV2ViewController: UIViewController, UIAdaptivePresentationControl
     @IBOutlet var growthStepButton: UIButton!
     @IBOutlet var growthStep: LocalizableLabel!
     @IBOutlet weak var plantTableView: UITableView!
-    @IBOutlet var saveButton: LocalizableButton!
     @IBOutlet weak var formulaView: UIView!
     @IBOutlet weak var formulaPhLabel: UILabel!
     @IBOutlet weak var formulaPpmLabel: UILabel!
     @IBOutlet weak var formulaTitleLabel: LocalizableLabel!
+    @IBOutlet weak var saveButton: UIButton!
     
     private let viewModel: AddDeviceViewModel
     
@@ -142,6 +142,15 @@ class AddDeviceV2ViewController: UIViewController, UIAdaptivePresentationControl
     }
     
     private func setupUI() {
+        saveButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "save"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .onPrimaryAccent
+            ),
+            for: .normal
+        )
+        
         plantTextField.delegate = self
         
         formulaView.isHidden = true
@@ -245,9 +254,9 @@ extension AddDeviceV2ViewController: AddDeviceGrowthStepDelegate, AddDevicePlant
         if let phase = viewModel.selectedPhase {
             growthStep.textColor = UIColor.onPrimaryContainer
             formulaView.isHidden = false
-            formulaTitleLabel.text = "Formula Tanaman Fase \(phase.step.getText())"
-            formulaPpmLabel.text = "\(phase.min_ppm) - \(phase.max_ppm)"
-            formulaPhLabel.text = "\(phase.min_ph) - \(phase.max_ph)"
+            formulaTitleLabel.text = "Formula \(phase.step.getText())"
+            formulaPpmLabel.text = "\(phase.min_ppm.clean) - \(phase.max_ppm.clean)"
+            formulaPhLabel.text = "\(phase.min_ph.clean) - \(phase.max_ph.clean)"
         }
     }
 }

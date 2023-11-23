@@ -14,6 +14,14 @@ class SubmitButtonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        submitButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "save"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .onPrimaryAccent
+            ),
+            for: .normal
+        )
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

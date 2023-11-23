@@ -47,6 +47,15 @@ class EditDevicePlantViewController: UIViewController {
         plantTypeTextField.text = device.plant.name
         plantTypeTextField.delegate = self
         
+        saveButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "save"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .onPrimaryAccent
+            ),
+            for: .normal
+        )
+        
         phaseView.isHidden = true
         phaseView.layer.cornerRadius = 10
         
@@ -266,7 +275,7 @@ extension EditDevicePlantViewController: AddDeviceGrowthStepDelegate, AddDeviceP
     func onFormulaSelected() {
         if let phase = viewModel.selectedPhase {
             phaseView.isHidden = false
-            phaseViewTitleLabel.text = "Formula Tanaman Fase \(phase.step.getText())"
+            phaseViewTitleLabel.text = "Formula Fase \(phase.step.getText())"
             ppmLabel.text = "\(phase.min_ppm.clean) - \(phase.max_ppm.clean)"
             phLabel.text = "\(phase.min_ph.clean) - \(phase.max_ph.clean)"
         }

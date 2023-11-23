@@ -33,6 +33,7 @@ final class SignUpViewModel: NSObject {
             guard let self = self else { return }
             
             if let error = error {
+                try? Auth.auth().signOut()
                 self.isSignUpLoading.value = false
                 self.signUpError.value = error.localizedDescription
                 return
@@ -43,6 +44,7 @@ final class SignUpViewModel: NSObject {
                 changeRequest.displayName = name
                 changeRequest.commitChanges { error in
                     if let error = error {
+                        try? Auth.auth().signOut()
                         self.isSignUpLoading.value = false
                         self.signUpError.value = error.localizedDescription
                         return
@@ -52,6 +54,7 @@ final class SignUpViewModel: NSObject {
                     self.signUpSuccess.value = true
                 }
             } else {
+                try? Auth.auth().signOut()
                 self.isSignUpLoading.value = false
                 self.signUpError.value = "Failed to sign up"
                 return

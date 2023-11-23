@@ -11,7 +11,7 @@ class DontHavePlantFormulaViewController: UIViewController {
     
     private var isDisabled = false
     private var plantName = String(localized: "caisim")
-    private var growthStep = String(localized: "fase-anakan")
+    private var growthStep = String(localized: "anakan-phase-title")
     private var ppm = "1300 - 1500"
     private var ph = "6,0 - 7,0"
 

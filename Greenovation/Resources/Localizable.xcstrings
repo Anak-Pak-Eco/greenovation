@@ -1,6 +1,40 @@
 {
   "sourceLanguage" : "id",
   "strings" : {
+    "add-device-button-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Devices"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah Perangkat"
+          }
+        }
+      }
+    },
+    "add-formula" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Formula"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah Formula"
+          }
+        }
+      }
+    },
     "add-plants" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -18,7 +52,58 @@
         }
       }
     },
+    "already-have-account" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Already have an account? "
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sudah memiliki akun? "
+          }
+        }
+      }
+    },
     "anakan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seedling"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anakan"
+          }
+        }
+      }
+    },
+    "anakan-phase-description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The phase starts from the seed and continues with the plant starting to develop true leaves."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fase dimulai dari benih dan berlanjut dengan tanaman mulai mengembangkan daun sejati."
+          }
+        }
+      }
+    },
+    "anakan-phase-title" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -30,7 +115,58 @@
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Anakan"
+            "value" : "Fase Anakan"
+          }
+        }
+      }
+    },
+    "awal" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Early Vegetative"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vegetatif Awal"
+          }
+        }
+      }
+    },
+    "awal-phase-description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plants begin to have strong roots and develop leaves and branches."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanaman mulai mempunyai akar yang kuat dan mengembangkan daun dan cabang."
+          }
+        }
+      }
+    },
+    "awal-phase-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Early Vegetative Phase"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fase Vegetatif Awal"
           }
         }
       }
@@ -69,23 +205,6 @@
         }
       }
     },
-    "cari-bluetooth" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Find Bluetooth"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cari Bluetooth"
-          }
-        }
-      }
-    },
     "cari-tanaman" : {
       "localizations" : {
         "en" : {
@@ -109,6 +228,29 @@
             "state" : "translated",
             "value" : "Chart Not Available"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chart tidak tersedia"
+          }
+        }
+      }
+    },
+    "choose-bluetooth-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select Bluetooth according to your device name."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih Bluetooth yang sesuai dengan nama perangkatmu. "
+          }
         }
       }
     },
@@ -129,6 +271,57 @@
         }
       }
     },
+    "connect-bluetooth-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connect with Bluetooth"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sambungkan Dengan Bluetooth"
+          }
+        }
+      }
+    },
+    "connect-wifi-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connect Device To the Wifi"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sambungkan Perangkat ke Wifi"
+          }
+        }
+      }
+    },
+    "contact-us" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact Us"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hubungi Kami"
+          }
+        }
+      }
+    },
     "Data perangkat yang telah dihapus tidak dapat dikembalikan." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -136,6 +329,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Device data that has been deleted cannot be restored."
+          }
+        }
+      }
+    },
+    "delete-account" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Account"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Akun"
+          }
+        }
+      }
+    },
+    "delete-device" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Device"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Perangkat"
           }
         }
       }
@@ -242,19 +469,86 @@
         }
       }
     },
-    "early-vegetative-phase" : {
+    "do-not-have-account" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Early Vegetative Phase"
+            "value" : "Do not have any account yet? "
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fase Vegetatif Awal"
+            "value" : "Belum memiliki akun? "
+          }
+        }
+      }
+    },
+    "edit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ubah"
+          }
+        }
+      }
+    },
+    "email-title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        }
+      }
+    },
+    "empty-device-description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connect IoT devices to get information about your plants."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sambungkan perangkat IoT untuk mendapatkan informasi tentang tanamanmu."
+          }
+        }
+      }
+    },
+    "empty-device-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Devices Yet"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak Ada Perangkat"
           }
         }
       }
@@ -272,33 +566,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gagal"
-          }
-        }
-      }
-    },
-    "Fase dimulai dari benih dan berlanjut dengan tanaman mulai mengembangkan daun sejati." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The phase starts from the seed and continues with the plant starting to develop true leaves."
-          }
-        }
-      }
-    },
-    "fase-anakan" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seeding Phase"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fase Anakan"
           }
         }
       }
@@ -343,17 +610,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Formula di bawah ini merupakan formula yang kamu buat untuk %1$@ pada %2$@"
-          }
-        }
-      }
-    },
-    "Formula Tanaman Fase Anakan" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seeding Phase Plant Formula"
           }
         }
       }
@@ -426,6 +682,142 @@
         }
       }
     },
+    "help" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bantuan"
+          }
+        }
+      }
+    },
+    "high" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "high"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tinggi"
+          }
+        }
+      }
+    },
+    "high-ph-alert" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pH value is too high. Add pH DOWN solution."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai pH tinggi. Tambahkan larutan pH DOWN."
+          }
+        }
+      }
+    },
+    "high-ph-alert-description %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add %@ml pH DOWN solution to maintain the pH balance of the hydroponic solution"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambahkan larutan ph DOWN sebanyak %@ml untuk menjaga keseimbangan pH larutan hidroponik"
+          }
+        }
+      }
+    },
+    "high-ph-alert-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pH value is high"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai pH tinggi"
+          }
+        }
+      }
+    },
+    "high-ppm-alert" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PPM value is too high. Add raw water"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai PPM terlalu tinggi. Tambahkan air baku"
+          }
+        }
+      }
+    },
+    "high-ppm-alert-description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add clean water until nutritional balance is achieved again."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambahkan air bersih sampai keseimbangan nutrisi tercapai kembali."
+          }
+        }
+      }
+    },
+    "high-ppm-alert-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "High PPM Value"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai PPM tinggi"
+          }
+        }
+      }
+    },
     "Hours" : {
       "localizations" : {
         "en" : {
@@ -442,30 +834,87 @@
         }
       }
     },
-    "intermediate-vegetative-phase" : {
+    "instruction-description-1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Intermediate Vegetative Phase"
+            "value" : "Select Bluetooth with the name of the device you want to connect to."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fase Vegetatif Menengah"
+            "value" : "Pilih Bluetooth dengan nama perangkat yang ingin dihubungkan."
           }
         }
       }
     },
-    "Kamu belum pernah membuat formula untuk Jenis Tanaman dan Tahap Pertumbuhan ini. Silahkan buat." : {
+    "instruction-description-2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "You have never made a formula for this type of plant and growth stage. Please do it."
+            "value" : "Enter the SSID and password of the Wifi you want to use."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masukkan SSID dan kata sandi dari Wifi yang ingin digunakan."
+          }
+        }
+      }
+    },
+    "instruction-description-3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press the pairing button on the device."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekan tombol pairing yang terdapat pada perangkat."
+          }
+        }
+      }
+    },
+    "instruction-description-4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue device registration."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanjutkan pendaftaran perangkat."
+          }
+        }
+      }
+    },
+    "instruction-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instruction"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instruksi"
           }
         }
       }
@@ -487,6 +936,125 @@
         }
       }
     },
+    "low" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "low"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "rendah"
+          }
+        }
+      }
+    },
+    "low-ph-alert" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pH value is too low. Add pH UP solution."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai pH terlalu rendah. Tambahkan larutan pH UP."
+          }
+        }
+      }
+    },
+    "low-ph-alert-description %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add pH UP solution as much as %@ml to maintain the pH balance of the hydroponic solution."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambahkan larutan ph UP sebanyak %@ml untuk menjaga keseimbangan pH larutan hidroponik."
+          }
+        }
+      }
+    },
+    "low-ph-alert-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pH value is low"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai pH Rendah"
+          }
+        }
+      }
+    },
+    "low-ppm-alert" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PPM value is too low. Add nutrient solution"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai PPM terlalu rendah. Tambahkan larutan nutrisi"
+          }
+        }
+      }
+    },
+    "low-ppm-alert-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Low PPM value"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai PPM rendah"
+          }
+        }
+      }
+    },
+    "low-ppm-description %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add nutrient solution A and B as much as %@ml to maintain nutritional balance"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambahkan larutan nutrisi A dan B sebanyak %@ml untuk menjaga keseimbangan nutrisi"
+          }
+        }
+      }
+    },
     "Max" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -494,6 +1062,63 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Max"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maksimal"
+          }
+        }
+      }
+    },
+    "menengah" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intermediate Vegetative"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vegetatif Menengah"
+          }
+        }
+      }
+    },
+    "menengah-phase-description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plants experience rapid growth of leaves, stems and roots until the harvest time for leaf vegetables arrives."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanaman mengalami pertumbuhan daun, batang, dan akar yang berlangsung dengan cepat hingga masa panen sayuran daun tiba."
+          }
+        }
+      }
+    },
+    "menengah-phase-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intermediate Vegetative Phase"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fase Vegetatif Menengah"
           }
         }
       }
@@ -504,6 +1129,46 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Min"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minimal"
+          }
+        }
+      }
+    },
+    "name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nama"
+          }
+        }
+      }
+    },
+    "no" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak"
           }
         }
       }
@@ -521,6 +1186,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notifikasi"
+          }
+        }
+      }
+    },
+    "notification-empty-description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The notifications you get will appear here."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifikasi yang kamu dapatkan akan muncul di sini.  "
+          }
+        }
+      }
+    },
+    "notification-empty-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Notification"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak Ada Notifikasi"
           }
         }
       }
@@ -559,6 +1258,125 @@
         }
       }
     },
+    "onboarding-description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Equip farmers with critical information about crop conditions to maximize yields and optimize farming operations."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membekali petani dengan informasi penting tentang kondisi tanaman untuk memaksimalkan hasil panen dan mengoptimalkan operasi pertanian."
+          }
+        }
+      }
+    },
+    "onboarding-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Know Your Plants"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketahui Kondisi Tanamanmu"
+          }
+        }
+      }
+    },
+    "or" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "or"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "atau"
+          }
+        }
+      }
+    },
+    "password-confirmation-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password Confirmation"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konfirmasi Password"
+          }
+        }
+      }
+    },
+    "password-hint" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "min. 8 characters"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "maks. 8 karakter"
+          }
+        }
+      }
+    },
+    "password-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kata Sandi"
+          }
+        }
+      }
+    },
+    "personal-info" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personal Info"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info Pribadi"
+          }
+        }
+      }
+    },
     "Perubahan berhasil disimpan" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -589,23 +1407,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tingkat pH"
-          }
-        }
-      }
-    },
-    "plant-formula" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Formula Settings"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Formula Tanaman"
           }
         }
       }
@@ -657,6 +1458,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kepekatan Nutrisi (ppm)"
+          }
+        }
+      }
+    },
+    "privacy-policy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kebijakan Privasi"
           }
         }
       }
@@ -778,6 +1596,125 @@
         }
       }
     },
+    "sign-in" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign In"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masuk"
+          }
+        }
+      }
+    },
+    "sign-in-apple" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue with Apple"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanjutkan dengan Apple"
+          }
+        }
+      }
+    },
+    "sign-in-google" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue with Google"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanjutkan dengan Google"
+          }
+        }
+      }
+    },
+    "sign-out" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign Out"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keluar Akun"
+          }
+        }
+      }
+    },
+    "sign-out-description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to log out of your account?"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apakah anda yakin akan keluar dari akun anda?"
+          }
+        }
+      }
+    },
+    "sign-out-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign out from your account?"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keluar dari akun?"
+          }
+        }
+      }
+    },
+    "sign-up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SIgn Up"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daftar"
+          }
+        }
+      }
+    },
     "sollution-corrected" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -812,23 +1749,6 @@
         }
       }
     },
-    "tambah-formula" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add Formula"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tambah Formula"
-          }
-        }
-      }
-    },
     "tambah-pengaturan-baru" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -846,23 +1766,6 @@
         }
       }
     },
-    "tillering-phase" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seedling Phase"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fase Anakan"
-          }
-        }
-      }
-    },
     "today" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -876,23 +1779,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hari Ini"
-          }
-        }
-      }
-    },
-    "ubah" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Edit"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ubah"
           }
         }
       }
@@ -931,6 +1817,40 @@
         }
       }
     },
+    "update-profile-description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile updated successfully"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berhasil mengubah profile"
+          }
+        }
+      }
+    },
+    "update-profile-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update Profile"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ubah Profil"
+          }
+        }
+      }
+    },
     "Value" : {
       "localizations" : {
         "en" : {
@@ -943,6 +1863,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nilai"
+          }
+        }
+      }
+    },
+    "yes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ya"
           }
         }
       }

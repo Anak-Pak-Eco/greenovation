@@ -9,7 +9,9 @@ import UIKit
 
 class NotificationViewController: UIViewController {
     
-    @IBOutlet weak var notifcationTableView: UITableView!
+    @IBOutlet weak var emptyTitleLabel: UILabel!
+    @IBOutlet weak var emptyDescriptionLabel: UILabel!
+    @IBOutlet weak var notificationTableView: UITableView!
     @IBOutlet weak var emptyView: UIStackView!
     private let viewModel = NotificationViewModel()
 
@@ -20,23 +22,25 @@ class NotificationViewController: UIViewController {
     }
     
     private func initUI() {
+        emptyTitleLabel.text = String(localized: "notification-empty-title")
+        emptyDescriptionLabel.text = String(localized: "notification-empty-description")
         emptyView.isHidden = true
-        notifcationTableView.register(
+        notificationTableView.register(
             UINib(nibName: "NotificationItemTableViewCell", bundle: nil),
             forCellReuseIdentifier: "NotificationItemTableViewCell"
         )
-        notifcationTableView.register(
+        notificationTableView.register(
             UINib(nibName: "CustomLoadingCell", bundle: nil),
             forCellReuseIdentifier: "CustomLoadingCell"
         )
-        notifcationTableView.refreshControl = UIRefreshControl()
-        notifcationTableView.refreshControl?.addTarget(
+        notificationTableView.refreshControl = UIRefreshControl()
+        notificationTableView.refreshControl?.addTarget(
             self,
             action: #selector(onRefreshTableView(_:)),
             for: .valueChanged
         )
-        notifcationTableView.dataSource = self
-        notifcationTableView.delegate = self
+        notificationTableView.dataSource = self
+        notificationTableView.delegate = self
     }
     
     @objc private func onRefreshTableView(_ sender: UIRefreshControl) {
@@ -48,15 +52,15 @@ class NotificationViewController: UIViewController {
     
     private func initObserver() {
         viewModel.fetchNotificationLoading.bind { isLoading in
-            self.notifcationTableView.reloadData()
+            self.notificationTableView.reloadData()
         }
         
         viewModel.fetchNotificationSuccess.bind { [weak self] isSuccess in
             guard let self = self else { return }
             if isSuccess {
                 self.emptyView.isHidden = !viewModel.notifications.isEmpty
-                self.notifcationTableView.isHidden = viewModel.notifications.isEmpty
-                self.notifcationTableView.reloadData()
+                self.notificationTableView.isHidden = viewModel.notifications.isEmpty
+                self.notificationTableView.reloadData()
             }
         }
         
@@ -64,7 +68,7 @@ class NotificationViewController: UIViewController {
             guard let self = self else { return }
             if !message.isEmpty {
                 let alertController = UIAlertController(
-                    title: "Login Gagal",
+                    title: "Gagal Mendapatkan Notifikasi",
                     message: message,
                     preferredStyle: .alert
                 )
@@ -95,7 +99,7 @@ class NotificationViewController: UIViewController {
     }
     
     private func setupToolbar() {
-        tabBarController?.title = "Notifikasi"
+        tabBarController?.title = String(localized: "notification")
         tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
     }
 }

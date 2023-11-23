@@ -43,16 +43,24 @@ extension String {
         from: String,
         boldStrings: [String] = [],
         regularTextStyle: UIFont = UIFont(name: "DMSans-Regular", size: 11)!,
-        boldTextStyle: UIFont = UIFont(name: "DMSans-Bold", size: 11)!
+        boldTextStyle: UIFont = UIFont(name: "DMSans-Bold", size: 11)!,
+        textColor: UIColor = .onPrimaryContainer
     ) -> NSMutableAttributedString {
         let text = from as NSString
         let attrString = NSMutableAttributedString(
             string: text as String,
-            attributes: [.font: regularTextStyle]
+            attributes: [
+                .font: regularTextStyle,
+                .foregroundColor: textColor
+            ]
         )
         
         boldStrings.forEach { boldString in
-            attrString.addAttribute(.font, value: boldTextStyle, range: text.range(of: boldString))
+            attrString.addAttribute(
+                .font, 
+                value: boldTextStyle,
+                range: text.range(of: boldString)
+            )
         }
         
         return attrString

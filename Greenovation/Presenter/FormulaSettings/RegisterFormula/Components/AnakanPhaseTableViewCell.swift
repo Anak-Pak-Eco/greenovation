@@ -13,10 +13,12 @@ class AnakanPhaseTableViewCell: UITableViewCell {
     @IBOutlet weak var minPhTextField: UITextField!
     @IBOutlet weak var maxPpmTextField: UITextField!
     @IBOutlet weak var recommendationLabel: UILabel!
+    @IBOutlet weak var titleLabel: LocalizableLabel!
     @IBOutlet weak var minPpmTextField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        titleLabel.text = String(localized: "anakan")
         minPpmTextField.setBorder()
         maxPpmTextField.setBorder()
         minPhTextField.setBorder()

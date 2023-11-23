@@ -10,7 +10,7 @@ import UIKit
 class HavePlantFormulaViewController: UIViewController {
     
     let plantName = String(localized: "caisim")
-    let growthStep = String(localized: "fase-anakan")
+    let growthStep = String(localized: "anakan-phase-title")
     
     @IBOutlet var ppmLabel: LocalizableLabel!
     @IBOutlet var pHLabel: LocalizableLabel!

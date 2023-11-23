@@ -9,13 +9,18 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    @IBOutlet weak var nameTitleLabel: UILabel!
+    @IBOutlet weak var emailTitleLabel: UILabel!
+    @IBOutlet weak var passwordTitleLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var passwordConfirmationTitleLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var appleSignInButton: UIButton!
     @IBOutlet weak var googleSignInButton: UIButton!
+    @IBOutlet weak var signInTitleLabel: UILabel!
     @IBOutlet weak var signInButton: UILabel!
     
     private let viewModel = SignUpViewModel()
@@ -77,6 +82,40 @@ class SignUpViewController: UIViewController {
         signInButton.addGestureRecognizer(
             UITapGestureRecognizer(target: self, action: #selector(onSignInTextClicked(_:)))
         )
+        
+        nameTitleLabel.text = String(localized: "name")
+        nameTextField.placeholder = String(localized: "name")
+        emailTitleLabel.text = String(localized: "email-title")
+        passwordTitleLabel.text = String(localized: "password-title")
+        passwordTextField.placeholder = String(localized: "password-hint")
+        passwordConfirmationTitleLabel.text = String(localized: "password-confirmation-title")
+        passwordConfirmationTextField.placeholder = String(localized: "password-hint")
+        registerButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "sign-up"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .onPrimaryAccent
+            ),
+            for: .normal
+        )
+        appleSignInButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "sign-in-apple"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .black
+            ),
+            for: .normal
+        )
+        googleSignInButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "sign-in-google"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .black
+            ),
+            for: .normal
+        )
+        signInTitleLabel.text = String(localized: "already-have-account")
+        signInButton.text = String(localized: "sign-in")
     }
     
     @objc private func onSignInTextClicked(_ sender: Any) {
@@ -86,7 +125,7 @@ class SignUpViewController: UIViewController {
     }
     
     private func setupToolbar() {
-        title = "Daftar"
+        title = String(localized: "sign-up")
         navigationController?.navigationBar.titleTextAttributes = [
             .font: UIFont(name: "DMSans-SemiBold", size: 17)!,
             .foregroundColor: UIColor.onPrimaryFixed

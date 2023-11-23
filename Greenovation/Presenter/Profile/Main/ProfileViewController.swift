@@ -10,11 +10,17 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var deleteAccountLabel: UILabel!
+    @IBOutlet weak var privacyPolicyLabel: UILabel!
+    @IBOutlet weak var contactUsLabel: UILabel!
+    @IBOutlet weak var helpLabel: UILabel!
+    @IBOutlet weak var personalInfoLabel: UILabel!
     @IBOutlet weak var deleteAccountButton: UIStackView!
     @IBOutlet weak var privacyPolicyButton: UIStackView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var contactUsButton: UIStackView!
     @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet weak var nameTitleLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     private var editButton: UIBarButtonItem?
     private let viewModel = ProfileViewModel()
@@ -29,12 +35,12 @@ class ProfileViewController: UIViewController {
     private func setupObserver() {
         viewModel.errorUpdateProfile.bind { [unowned self] error in
             if !error.isEmpty {
-                editButton?.title = "Edit"
+                editButton?.title = String(localized: "edit")
                 nameTextField.textColor = UIColor.onPrimaryContainer
                 nameTextField.isEnabled = false
                 
                 let alertController = UIAlertController(
-                    title: "Login Gagal",
+                    title: "Failed to update profile",
                     message: error,
                     preferredStyle: .alert
                 )
@@ -54,8 +60,8 @@ class ProfileViewController: UIViewController {
         viewModel.successUpdateProfile.bind { [unowned self] success in
             if success {
                 let alertController = UIAlertController(
-                    title: "Ubah Profil",
-                    message: "Berhasil mengubah profile",
+                    title: String(localized: "update-profile-title"),
+                    message: String(localized: "update-profile-description"),
                     preferredStyle: .alert
                 )
                 alertController.addAction(
@@ -69,7 +75,7 @@ class ProfileViewController: UIViewController {
                 )
                 self.present(alertController, animated: true)
                 
-                editButton?.title = "Edit"
+                editButton?.title = String(localized: "edit")
                 nameTextField.textColor = UIColor.onPrimaryContainer
                 nameTextField.isEnabled = false
             }
@@ -82,9 +88,24 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupUI() {
+        nameTitleLabel.text = String(localized: "name")
         nameTextField.isEnabled = false
         emailLabel.text = viewModel.user?.email ?? "-"
         nameTextField.text = viewModel.user?.displayName ?? ""
+        
+        personalInfoLabel.text = String(localized: "personal-info")
+        helpLabel.text = String(localized: "help")
+        contactUsLabel.text = String(localized: "contact-us")
+        privacyPolicyLabel.text = String(localized: "privacy-policy")
+        deleteAccountLabel.text = String(localized: "delete-account")
+        signOutButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "sign-out"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .errorAccent
+            ),
+            for: .normal
+        )
         
         let tapGestureDetector = UITapGestureRecognizer(target: self, action: #selector(onSelectedPrivacyPolicyButton(_:)))
         privacyPolicyButton.addGestureRecognizer(tapGestureDetector)
@@ -132,7 +153,7 @@ class ProfileViewController: UIViewController {
         )
         
         editButton = UIBarButtonItem(
-            title: "Edit",
+            title: String(localized: "edit"),
             style: .plain,
             target: self,
             action: #selector(onEditButtonClicked(_:))
@@ -150,7 +171,7 @@ class ProfileViewController: UIViewController {
             nameTextField.isEnabled = false
             viewModel.updateUser(name: nameTextField.text ?? "")
         } else {
-            editButton?.title = "Simpan"
+            editButton?.title = String(localized: "save")
             nameTextField.isEnabled = true
             nameTextField.textColor = UIColor.primaryAccent
         }
@@ -161,13 +182,13 @@ class ProfileViewController: UIViewController {
     @IBAction func onLogoutClicked(_ sender: UIButton) {
         
         let alertController = UIAlertController(
-            title: "Keluar dari akun?",
-            message: "Apakah anda yakin akan keluar dari akun anda?",
+            title: String(localized: "sign-out-title"),
+            message: String(localized: "sign-out-description"),
             preferredStyle: .alert
         )
         alertController.addAction(
             .init(
-                title: "Tidak",
+                title: String(localized: "no"),
                 style: .default,
                 handler: { action in
                     alertController.dismiss(animated: true)
@@ -176,7 +197,7 @@ class ProfileViewController: UIViewController {
         )
         alertController.addAction(
             .init(
-                title: "Ya",
+                title: String(localized: "yes"),
                 style: .destructive,
                 handler: { action in
                     alertController.dismiss(animated: true)
@@ -185,7 +206,7 @@ class ProfileViewController: UIViewController {
                         self.navigationController?.setViewControllers([OnboardingViewController()], animated: true)
                     } catch {
                         let alertController = UIAlertController(
-                            title: "Logout Gagal",
+                            title: "Failed to Sign Out",
                             message: error.localizedDescription,
                             preferredStyle: .alert
                         )

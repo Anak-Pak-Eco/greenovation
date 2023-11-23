@@ -13,10 +13,12 @@ class MenengahPhaseTableViewCell: UITableViewCell {
     @IBOutlet weak var maxPhTextField: UITextField!
     @IBOutlet weak var minPhTextField: UITextField!
     @IBOutlet weak var maxPpmTextField: UITextField!
+    @IBOutlet weak var titleLabel: LocalizableLabel!
     @IBOutlet weak var minPpmTextField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        titleLabel.text = String(localized: "menengah")
         minPpmTextField.setBorder()
         maxPpmTextField.setBorder()
         minPhTextField.setBorder()

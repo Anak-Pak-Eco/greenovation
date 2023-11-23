@@ -31,9 +31,10 @@ class DevicesItemTableViewCell: UITableViewCell {
         self.device = device
         deviceNameLabel.text = device.name
         plantNameLabel.text = device.plant.name
-        ppmLabel.text = String.format(device.currentPpm, format: "%.2f")
-        phLabel.text = String.format(device.currentPh, format: "%.2f")
-        phaseLabel.text = device.currentSteps.capitalized.replacingOccurrences(of: "_", with: " ")
+        ppmLabel.text = device.currentPpm.clean
+        phLabel.text = device.currentPh.clean
+        let phase = PlantModel.PlantPhaseModel.Step(rawValue: device.currentSteps)
+        phaseLabel.text = phase?.getText() ?? ""
         deviceStatusLabel.text = device.status.capitalized
         phaseImage.image = UIImage(named: getPlantImage(phaseName: device.currentSteps))
         
@@ -46,8 +47,8 @@ class DevicesItemTableViewCell: UITableViewCell {
             let alertView = AlertView()
             alertView.setLabel(
                 String.getStringAttributed(
-                    from: "Nilai PPM terlalu rendah. Tambahkan larutan nutrisi",
-                    boldStrings: ["rendah"]
+                    from: String(localized: "low-ppm-alert"),
+                    boldStrings: [String(localized: "low")]
                 )
             )
             errorStackView.addArrangedSubview(alertView)
@@ -55,8 +56,8 @@ class DevicesItemTableViewCell: UITableViewCell {
             let alertView = AlertView()
             alertView.setLabel(
                 String.getStringAttributed(
-                    from: "Nilai PPM terlalu tinggi. Tambahkan air baku.",
-                    boldStrings: ["tinggi"]
+                    from: String(localized: "high-ppm-alert"),
+                    boldStrings: [String(localized: "high")]
                 )
             )
             errorStackView.addArrangedSubview(alertView)
@@ -66,17 +67,17 @@ class DevicesItemTableViewCell: UITableViewCell {
             let alertView = AlertView()
             alertView.setLabel(
                 String.getStringAttributed(
-                    from: "Nilai pH terlalu rendah. Tambahkan larutan pH UP.",
-                    boldStrings: ["rendah"]
+                    from: String(localized: "low-ph-alert"),
+                    boldStrings: [String(localized: "low")]
                 )
             )
             errorStackView.addArrangedSubview(alertView)
-        } else if device.currentPpm > device.plant.max_ppm {
+        } else if device.currentPh > device.plant.max_ph {
             let alertView = AlertView()
             alertView.setLabel(
                 String.getStringAttributed(
-                    from: "Nilai pH tinggi. Tambahkan larutan pH DOWN.",
-                    boldStrings: ["tinggi"]
+                    from: String(localized: "high-ph-alert"),
+                    boldStrings: [String(localized: "high")]
                 )
             )
             

@@ -16,6 +16,14 @@ class EmptyPlantItemCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        buttonAddPlant.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "add-plants"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .onPrimaryAccent
+            ),
+            for: .normal
+        )
         cardView.layer.borderColor = UIColor.secondaryAccent.cgColor
         cardView.layer.borderWidth = 0.3
         cardView.layer.cornerRadius = 10

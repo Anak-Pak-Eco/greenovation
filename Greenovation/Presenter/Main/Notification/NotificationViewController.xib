@@ -19,8 +19,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
+                <outlet property="emptyDescriptionLabel" destination="78E-1J-C3N" id="Uhq-zO-45Y"/>
+                <outlet property="emptyTitleLabel" destination="cV7-zM-akF" id="vgd-hz-kHv"/>
                 <outlet property="emptyView" destination="voR-0z-z8d" id="2UM-P5-Iof"/>
-                <outlet property="notifcationTableView" destination="u4S-LX-cCs" id="4mg-hi-Tmt"/>
+                <outlet property="notificationTableView" destination="u4S-LX-cCs" id="4mg-hi-Tmt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

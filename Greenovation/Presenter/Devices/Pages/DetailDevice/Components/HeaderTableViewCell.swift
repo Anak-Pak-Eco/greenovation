@@ -26,9 +26,18 @@ class HeaderTableViewCell: UITableViewCell {
     
     func setupData(device: DeviceModel) {
         plantNameLabel.text = device.plant.name
-        ppmLabel.text = String.format(device.currentPpm, format: "%.2f")
-        phLabel.text = String.format(device.currentPh, format: "%.2f")
-        phaseLabel.text = device.currentSteps.capitalized.replacingOccurrences(of: "_", with: " ")
+        ppmLabel.text = device.currentPpm.clean
+        phLabel.text = device.currentPh.clean
+        let phase = PlantModel.PlantPhaseModel.Step(rawValue: device.currentSteps)
+        phaseLabel.text = phase?.getText()
+        editButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "update"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 12)!,
+                textColor: .onPrimaryAccent
+            ),
+            for: .normal
+        )
         
         if device.currentSteps == PlantModel.PlantPhaseModel.Step.anakan.rawValue {
             plantImageView.image = UIImage(named: "image-anakan")

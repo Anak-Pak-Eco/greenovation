@@ -23,12 +23,17 @@
             <connections>
                 <outlet property="appleSignInButton" destination="eIx-U0-15S" id="x0J-uD-ArQ"/>
                 <outlet property="emailTextField" destination="Ngz-q9-6ec" id="GSt-8M-c7z"/>
+                <outlet property="emailTitleLabel" destination="9Ff-Qw-LkS" id="3vM-3d-1RC"/>
                 <outlet property="googleSignInButton" destination="IFt-A7-nJb" id="5rl-gA-GM1"/>
                 <outlet property="nameTextField" destination="yez-9y-px1" id="2Nn-Gw-dHL"/>
+                <outlet property="nameTitleLabel" destination="a0y-7a-hRh" id="NJD-s9-d2J"/>
                 <outlet property="passwordConfirmationTextField" destination="2NX-sJ-KrP" id="AHk-14-whU"/>
+                <outlet property="passwordConfirmationTitleLabel" destination="JZb-vD-cY8" id="Sd5-wh-KK9"/>
                 <outlet property="passwordTextField" destination="c6R-gx-bDV" id="Fgi-C7-AHA"/>
+                <outlet property="passwordTitleLabel" destination="9Hv-zd-Haq" id="14H-kT-TVn"/>
                 <outlet property="registerButton" destination="QqX-Qv-qc7" id="rzC-Om-84R"/>
                 <outlet property="signInButton" destination="BLp-4S-mzF" id="UbK-vS-yqE"/>
+                <outlet property="signInTitleLabel" destination="rzT-SJ-4D8" id="XO5-dy-eNU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

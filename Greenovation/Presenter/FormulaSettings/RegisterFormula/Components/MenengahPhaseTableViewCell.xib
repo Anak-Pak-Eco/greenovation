@@ -75,7 +75,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Lqv-WO-A82">
-                                <rect key="frame" x="16" y="55.999999999999986" width="497" height="34"/>
+                                <rect key="frame" x="16" y="56" width="497" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="248" text="Tingkat pH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vm1-QW-ivC" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="34"/>
@@ -157,6 +157,7 @@ Kepekatan Nutrisi: 1050-1400 &amp; Tingkat pH: 5,5-6,5</string>
                 <outlet property="minPhTextField" destination="Qlw-g9-dhg" id="ecp-P2-2jT"/>
                 <outlet property="minPpmTextField" destination="uGK-rp-UMb" id="248-sk-Ua5"/>
                 <outlet property="recommendationLabel" destination="00R-es-dD6" id="EdT-87-asZ"/>
+                <outlet property="titleLabel" destination="h8W-Ov-IeU" id="jAw-NK-pyP"/>
             </connections>
             <point key="canvasLocation" x="237.40458015267174" y="58.802816901408455"/>
         </tableViewCell>

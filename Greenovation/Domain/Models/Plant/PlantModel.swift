@@ -32,7 +32,7 @@ struct PlantModel: Identifiable, Equatable {
                     min_ppm: phase.min_ppm ?? 0,
                     max_ph: phase.max_ph ?? 0,
                     min_ph: phase.min_ph ?? 0,
-                    step: Step(rawValue: phase.step ?? "anakan") ?? .anakan
+                    step: Step(rawValue: phase.step ?? Step.anakan.rawValue) ?? .anakan
                 )
             }
         }
@@ -43,11 +43,11 @@ struct PlantModel: Identifiable, Equatable {
             func getText() -> String {
                 switch self {
                 case .anakan:
-                    return "Anakan"
+                    return String(localized: "anakan")
                 case .vegetatif_awal:
-                    return "Vegetatif Awal"
+                    return String(localized: "awal")
                 case .vegetatif_menengah:
-                    return "Vegetatif Menengah"
+                    return String(localized: "menengah")
                 }
             }
         }

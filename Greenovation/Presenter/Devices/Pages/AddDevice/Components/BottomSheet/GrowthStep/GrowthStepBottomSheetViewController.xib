@@ -23,11 +23,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GrowthStepBottomSheetViewController">
             <connections>
                 <outlet property="anakanImageView" destination="c1Q-kH-HTy" id="1Xh-LK-dBU"/>
+                <outlet property="anakanPhaseDescriptionLabel" destination="Ugk-Kt-8Q6" id="0xS-cO-IOc"/>
                 <outlet property="anakanPhaseStackView" destination="FbE-ha-xan" id="zrG-S3-5dS"/>
+                <outlet property="anakanPhaseTitleLabel" destination="eQs-4d-d3c" id="EMQ-6k-Pdw"/>
                 <outlet property="awalImageView" destination="ZQS-Lb-btM" id="7G3-iV-Z5j"/>
+                <outlet property="awalPhaseDescriptionLabel" destination="Xsw-wE-hx4" id="xeI-b6-9B6"/>
                 <outlet property="awalPhaseStackView" destination="nUb-8i-SYJ" id="uSz-H7-9iZ"/>
+                <outlet property="awalPhaseTitleLabel" destination="B4c-Bz-M2d" id="jz7-pv-TAY"/>
                 <outlet property="menengahImageView" destination="efA-gn-Kyi" id="qHw-A7-vFu"/>
+                <outlet property="menengahPhaseDescriptionLabel" destination="4rT-5d-JK3" id="GPG-fr-Ucc"/>
                 <outlet property="menengahPhaseStackView" destination="B7U-Ml-xSU" id="6AD-4t-AGi"/>
+                <outlet property="menengahPhaseTitleLabel" destination="7cN-85-YSM" id="s6s-7h-ABa"/>
                 <outlet property="separatorOne" destination="cRl-XF-Aat" id="yo6-GR-Tjm"/>
                 <outlet property="separatorTwo" destination="AOq-W7-ezb" id="Qlh-wy-VKi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

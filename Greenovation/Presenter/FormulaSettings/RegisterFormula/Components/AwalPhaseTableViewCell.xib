@@ -23,13 +23,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="487" height="259"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fase Vegetatif Awal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKV-kl-ccy" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fase Vegetatif Awal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKV-kl-ccy">
                         <rect key="frame" x="16" y="8" width="455" height="19.666666666666671"/>
                         <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
                         <color key="textColor" name="primary-accent"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="early-vegetative-phase"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="awal"/>
                         </userDefinedRuntimeAttributes>
                     </label>
                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcS-iq-WwB" userLabel="Fase Vegetatif Awal">
@@ -157,6 +157,7 @@ Kepekatan Nutrisi: 500-800 &amp; Tingkat pH: 5,5-6,5</string>
                 <outlet property="minPhTextField" destination="0aT-v6-75i" id="W8J-oT-Hjr"/>
                 <outlet property="minPpmTextField" destination="sHZ-eW-j8B" id="cvK-om-noe"/>
                 <outlet property="recommendationLabel" destination="iyH-X7-G9E" id="T9a-4i-zgp"/>
+                <outlet property="titleLabel" destination="MKV-kl-ccy" id="wim-Dp-0KQ"/>
             </connections>
             <point key="canvasLocation" x="193.12977099236642" y="94.718309859154928"/>
         </tableViewCell>

@@ -11,6 +11,7 @@ class AddFormulaViewController: UIViewController {
 
     @IBOutlet weak var plantsTableView: UITableView!
     @IBOutlet weak var loadingBar: UIActivityIndicatorView!
+    @IBOutlet weak var searchTitleLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     
     private let viewModel: AddFormulaViewModel = AddFormulaViewModel()
@@ -53,7 +54,7 @@ class AddFormulaViewController: UIViewController {
     }
     
     private func setupToolbar() {
-        title = "Tambah Formula"
+        title = String(localized: "add-formula")
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.titleTextAttributes = [
             .font: UIFont(name: "DMSans-SemiBold", size: 17)!,
@@ -88,6 +89,7 @@ class AddFormulaViewController: UIViewController {
         plantsTableView.dataSource = self
         
         // MARK: Search Bar Field
+        searchTitleLabel.text = String(localized: "plant-type")
         searchTextField.placeholder = String(localized: "cari-tanaman")
         searchTextField.layer.borderWidth = 0.3
         searchTextField.layer.cornerRadius = 10

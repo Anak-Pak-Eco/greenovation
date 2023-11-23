@@ -114,6 +114,24 @@ class EditDeviceViewController: UIViewController {
         deviceNameLabel.text = String(localized: "device-name")
         deviceNameTextField.text = device.name
         
+        saveButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "save"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .onPrimaryAccent
+            ),
+            for: .normal
+        )
+        
+        deleteButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "delete-device"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .errorAccent
+            ),
+            for: .normal
+        )
+        
         let tap = UITapGestureRecognizer(
             target: self,
             action: #selector(dismissKeyboard)

@@ -9,6 +9,12 @@ import UIKit
 
 final class GrowthStepBottomSheetViewController: UIViewController {
     
+    @IBOutlet weak var menengahPhaseDescriptionLabel: UILabel!
+    @IBOutlet weak var menengahPhaseTitleLabel: UILabel!
+    @IBOutlet weak var awalPhaseDescriptionLabel: UILabel!
+    @IBOutlet weak var awalPhaseTitleLabel: UILabel!
+    @IBOutlet weak var anakanPhaseDescriptionLabel: UILabel!
+    @IBOutlet weak var anakanPhaseTitleLabel: UILabel!
     @IBOutlet weak var menengahImageView: UIImageView!
     @IBOutlet weak var awalImageView: UIImageView!
     @IBOutlet weak var anakanImageView: UIImageView!
@@ -38,6 +44,13 @@ final class GrowthStepBottomSheetViewController: UIViewController {
     }
     
     private func setupUI() {
+        anakanPhaseTitleLabel.text = String(localized: "anakan-phase-title")
+        anakanPhaseDescriptionLabel.text = String(localized: "anakan-phase-description")
+        awalPhaseTitleLabel.text = String(localized: "awal-phase-title")
+        awalPhaseDescriptionLabel.text = String(localized: "awal-phase-description")
+        menengahPhaseTitleLabel.text = String(localized: "menengah-phase-title")
+        menengahPhaseDescriptionLabel.text = String(localized: "menengah-phase-description")
+        
         separatorOne.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         separatorTwo.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         

@@ -22,8 +22,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="HGe-g3-yEI" id="NL8-dh-uBJ"/>
+                <outlet property="emailTitleLabel" destination="CBk-dm-PzB" id="Vdx-0Z-Tdc"/>
+                <outlet property="orLabel" destination="LvO-JK-LeP" id="b4W-N1-r5J"/>
                 <outlet property="passwordTextField" destination="8Dc-aY-tDz" id="ZBW-Au-be6"/>
+                <outlet property="passwordTitleLabel" destination="kBe-fX-3IN" id="aUR-67-Tiv"/>
                 <outlet property="registerButton" destination="NmZ-T1-oDW" id="gkz-fN-vIw"/>
+                <outlet property="registerTitleLabel" destination="Pa7-SB-rlc" id="bHT-WX-K38"/>
                 <outlet property="signInAppleButton" destination="3pf-Yu-bfY" id="vwI-Ud-SYc"/>
                 <outlet property="signInButton" destination="Fpb-Gs-wow" id="Ao5-pA-qg8"/>
                 <outlet property="signInGoogleButton" destination="TyH-jL-TXb" id="wI1-T8-uXq"/>
@@ -66,7 +70,7 @@
                     <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpb-Gs-wow">
-                    <rect key="frame" x="16" y="273" width="361" height="40"/>
+                    <rect key="frame" x="16" y="263" width="361" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="B9f-lt-Xta"/>
                     </constraints>
@@ -81,8 +85,32 @@
                         <action selector="onSignInButtonClicked:" destination="-1" eventType="touchUpInside" id="6bq-mg-iW0"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="atau" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvO-JK-LeP">
+                    <rect key="frame" x="180" y="318" width="33.333333333333343" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyH-jL-TXb">
+                    <rect key="frame" x="16" y="413.33333333333331" width="361" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Ytx-NI-PuI"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="image-google" title="Lanjutkan dengan Google" imagePadding="15">
+                        <backgroundConfiguration key="background" cornerRadius="8">
+                            <color key="strokeColor" systemColor="labelColor"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                        <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onSignInGoogleClicked:" destination="-1" eventType="touchUpInside" id="EMZ-s5-QD2"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pf-Yu-bfY">
-                    <rect key="frame" x="16" y="323" width="361" height="50"/>
+                    <rect key="frame" x="16" y="353.33333333333331" width="361" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="2Lj-yT-IgR"/>
                     </constraints>
@@ -100,26 +128,22 @@
                         <action selector="onSignInWithAppleButtonClicked:" destination="-1" eventType="touchUpInside" id="cz4-Rf-8kd"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyH-jL-TXb">
-                    <rect key="frame" x="16" y="383" width="361" height="50"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwR-AI-Tz5">
+                    <rect key="frame" x="16" y="328" width="150" height="0.33333333333331439"/>
+                    <color key="backgroundColor" name="secondary-accent"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Ytx-NI-PuI"/>
+                        <constraint firstAttribute="height" constant="0.20000000000000001" id="hUA-Nv-BgT"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" image="image-google" title="Lanjutkan dengan Google" imagePadding="15">
-                        <backgroundConfiguration key="background" cornerRadius="8">
-                            <color key="strokeColor" systemColor="labelColor"/>
-                        </backgroundConfiguration>
-                        <fontDescription key="titleFontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="17"/>
-                        <color key="baseForegroundColor" systemColor="labelColor"/>
-                        <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="onSignInGoogleClicked:" destination="-1" eventType="touchUpInside" id="EMZ-s5-QD2"/>
-                    </connections>
-                </button>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGo-9y-pg9">
+                    <rect key="frame" x="227.33333333333337" y="328" width="149.66666666666663" height="0.33333333333331439"/>
+                    <color key="backgroundColor" name="secondary-accent"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.20000000000000001" id="O7q-gx-EGg"/>
+                    </constraints>
+                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NBY-vk-0Fm">
-                    <rect key="frame" x="90.666666666666671" y="473" width="211.66666666666663" height="21"/>
+                    <rect key="frame" x="90.666666666666671" y="503.33333333333326" width="211.66666666666663" height="21"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Belum memiliki akun? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pa7-SB-rlc">
                             <rect key="frame" x="0.0" y="0.0" width="163" height="21"/>
@@ -139,29 +163,37 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>
             <constraints>
+                <constraint firstItem="LvO-JK-LeP" firstAttribute="top" secondItem="Fpb-Gs-wow" secondAttribute="bottom" constant="15" id="1C8-s2-XrO"/>
                 <constraint firstItem="kBe-fX-3IN" firstAttribute="top" secondItem="HGe-g3-yEI" secondAttribute="bottom" constant="15" id="4M9-zb-W95"/>
                 <constraint firstItem="kBe-fX-3IN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5qT-1r-9LL"/>
+                <constraint firstItem="3pf-Yu-bfY" firstAttribute="top" secondItem="LvO-JK-LeP" secondAttribute="bottom" constant="15" id="65P-ap-Ft2"/>
+                <constraint firstItem="LvO-JK-LeP" firstAttribute="leading" secondItem="xwR-AI-Tz5" secondAttribute="trailing" constant="14" id="6MJ-Ty-52A"/>
                 <constraint firstItem="HGe-g3-yEI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="8MM-0v-Pei"/>
+                <constraint firstItem="SGo-9y-pg9" firstAttribute="leading" secondItem="LvO-JK-LeP" secondAttribute="trailing" constant="14" id="8fe-1h-kwY"/>
+                <constraint firstItem="SGo-9y-pg9" firstAttribute="centerY" secondItem="LvO-JK-LeP" secondAttribute="centerY" id="9Rq-SX-8mE"/>
                 <constraint firstItem="HGe-g3-yEI" firstAttribute="top" secondItem="CBk-dm-PzB" secondAttribute="bottom" constant="2" id="A5Z-Yq-Ll8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3pf-Yu-bfY" secondAttribute="trailing" constant="16" id="Abn-yd-gRa"/>
-                <constraint firstItem="3pf-Yu-bfY" firstAttribute="top" secondItem="Fpb-Gs-wow" secondAttribute="bottom" constant="10" id="BAr-VU-QDK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TyH-jL-TXb" secondAttribute="trailing" constant="16" id="BsG-XZ-z49"/>
                 <constraint firstItem="3pf-Yu-bfY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ca7-uo-STr"/>
+                <constraint firstItem="xwR-AI-Tz5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="EMb-fh-LhJ"/>
+                <constraint firstAttribute="trailing" secondItem="SGo-9y-pg9" secondAttribute="trailing" constant="16" id="IzO-22-tEy"/>
+                <constraint firstItem="NBY-vk-0Fm" firstAttribute="top" secondItem="TyH-jL-TXb" secondAttribute="bottom" constant="40" id="KHU-6z-dTk"/>
                 <constraint firstItem="NBY-vk-0Fm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LQL-jb-G04"/>
                 <constraint firstItem="8Dc-aY-tDz" firstAttribute="top" secondItem="kBe-fX-3IN" secondAttribute="bottom" constant="2" id="NEk-Rw-hvN"/>
                 <constraint firstItem="Fpb-Gs-wow" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="NrL-Ag-6Io"/>
-                <constraint firstItem="Fpb-Gs-wow" firstAttribute="top" secondItem="8Dc-aY-tDz" secondAttribute="bottom" constant="50" id="Tq5-TD-XqU"/>
+                <constraint firstItem="xwR-AI-Tz5" firstAttribute="centerY" secondItem="LvO-JK-LeP" secondAttribute="centerY" id="OWc-up-ssI"/>
+                <constraint firstItem="Fpb-Gs-wow" firstAttribute="top" secondItem="8Dc-aY-tDz" secondAttribute="bottom" constant="40" id="Tq5-TD-XqU"/>
                 <constraint firstItem="8Dc-aY-tDz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VCU-s3-sl0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fpb-Gs-wow" secondAttribute="trailing" constant="16" id="W3t-MW-Pf8"/>
                 <constraint firstItem="CBk-dm-PzB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="YcO-gp-114"/>
+                <constraint firstItem="LvO-JK-LeP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yok-nz-8ya"/>
                 <constraint firstItem="CBk-dm-PzB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Z6o-4p-khX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CBk-dm-PzB" secondAttribute="trailing" constant="16" id="bIW-eo-2re"/>
                 <constraint firstItem="TyH-jL-TXb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cBA-B6-9x2"/>
-                <constraint firstItem="NBY-vk-0Fm" firstAttribute="top" secondItem="TyH-jL-TXb" secondAttribute="bottom" constant="40" id="dsN-fC-ioV"/>
+                <constraint firstItem="TyH-jL-TXb" firstAttribute="top" secondItem="3pf-Yu-bfY" secondAttribute="bottom" constant="10" id="fnr-QM-Bwy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Dc-aY-tDz" secondAttribute="trailing" constant="16" id="gOv-Mc-W1F"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HGe-g3-yEI" secondAttribute="trailing" constant="16" id="iW1-VU-ube"/>
                 <constraint firstItem="8Dc-aY-tDz" firstAttribute="top" secondItem="kBe-fX-3IN" secondAttribute="bottom" constant="2" id="odh-2g-B4E"/>
-                <constraint firstItem="TyH-jL-TXb" firstAttribute="top" secondItem="3pf-Yu-bfY" secondAttribute="bottom" constant="10" id="soy-fK-8vm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kBe-fX-3IN" secondAttribute="trailing" constant="16" id="ypM-B8-glT"/>
             </constraints>
             <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
@@ -181,6 +213,9 @@
         </namedColor>
         <namedColor name="primary-accent">
             <color red="0.15299999713897705" green="0.42399999499320984" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary-accent">
+            <color red="0.56499999761581421" green="0.45500001311302185" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="surface">
             <color red="0.98400002717971802" green="0.97600001096725464" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

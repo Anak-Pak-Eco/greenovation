@@ -26,8 +26,6 @@
 		A72C071D2AFA2D5F005395DB /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = A72C071C2AFA2D5F005395DB /* DGCharts */; };
 		A72C07292AFA4915005395DB /* AddDeviceV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C07272AFA4915005395DB /* AddDeviceV2ViewController.swift */; };
 		A72C072A2AFA4915005395DB /* AddDeviceV2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72C07282AFA4915005395DB /* AddDeviceV2ViewController.xib */; };
-		A73E1E982AFCD931008053A9 /* MyChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E1E962AFCD931008053A9 /* MyChoiceViewController.swift */; };
-		A73E1E992AFCD931008053A9 /* MyChoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1E972AFCD931008053A9 /* MyChoiceViewController.xib */; };
 		A73E1EA12AFCEF0F008053A9 /* EditDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E1E9F2AFCEF0F008053A9 /* EditDeviceViewController.swift */; };
 		A73E1EA22AFCEF0F008053A9 /* EditDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73E1EA02AFCEF0F008053A9 /* EditDeviceViewController.xib */; };
 		A73E1EA82AFDF6CE008053A9 /* EditFormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E1EA62AFDF6CE008053A9 /* EditFormulaViewController.swift */; };
@@ -216,8 +214,6 @@
 		A72C07012AFA266F005395DB /* RegisterFormulaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFormulaViewController.xib; sourceTree = "<group>"; };
 		A72C07272AFA4915005395DB /* AddDeviceV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceV2ViewController.swift; sourceTree = "<group>"; };
 		A72C07282AFA4915005395DB /* AddDeviceV2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceV2ViewController.xib; sourceTree = "<group>"; };
-		A73E1E962AFCD931008053A9 /* MyChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChoiceViewController.swift; sourceTree = "<group>"; };
-		A73E1E972AFCD931008053A9 /* MyChoiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChoiceViewController.xib; sourceTree = "<group>"; };
 		A73E1E9F2AFCEF0F008053A9 /* EditDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeviceViewController.swift; sourceTree = "<group>"; };
 		A73E1EA02AFCEF0F008053A9 /* EditDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDeviceViewController.xib; sourceTree = "<group>"; };
 		A73E1EA62AFDF6CE008053A9 /* EditFormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFormulaViewController.swift; sourceTree = "<group>"; };
@@ -480,15 +476,6 @@
 			path = BottomSheet;
 			sourceTree = "<group>";
 		};
-		A73E1E952AFCD912008053A9 /* MyChoice */ = {
-			isa = PBXGroup;
-			children = (
-				A73E1E962AFCD931008053A9 /* MyChoiceViewController.swift */,
-				A73E1E972AFCD931008053A9 /* MyChoiceViewController.xib */,
-			);
-			path = MyChoice;
-			sourceTree = "<group>";
-		};
 		A73E1E9A2AFCEEBF008053A9 /* EditDevice */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,7 +584,6 @@
 		D60225922AEFB0D700F3800F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A73E1E952AFCD912008053A9 /* MyChoice */,
 				A72C072B2AFB6E92005395DB /* BottomSheet */,
 			);
 			path = Components;
@@ -1022,8 +1008,8 @@
 			isa = PBXGroup;
 			children = (
 				D681D56F2AE68CB3005A0BAC /* Devices */,
-				D6AC857B2ACFFD0C0033B665 /* FormulaSetting */,
 				D6AC857A2ACFFD060033B665 /* Notification */,
+				D6AC857B2ACFFD0C0033B665 /* FormulaSetting */,
 				D6AC85712ACFF7700033B665 /* MainViewController.swift */,
 				D6AC85732ACFFA000033B665 /* MainViewController.xib */,
 			);
@@ -1365,7 +1351,6 @@
 				D688F8C72B067A0F000A895C /* TypeOfPlantTableViewCell.xib in Resources */,
 				D6917A332AEAB4F800CD7F5C /* SignUpViewController.xib in Resources */,
 				D681D5732AE68CD3005A0BAC /* DevicesViewController.xib in Resources */,
-				A73E1E992AFCD931008053A9 /* MyChoiceViewController.xib in Resources */,
 				A71FC0DA2AF2519300875CBF /* DeleteDeviceViewController.xib in Resources */,
 				D68A035E2B00823900CB4666 /* PeripheralItemCell.xib in Resources */,
 				D68D4E8E2AF6BFD500F61B1E /* GoogleService-Info.plist in Resources */,
@@ -1444,7 +1429,6 @@
 				D68D4E872AF6B66900F61B1E /* AuthDataSource.swift in Sources */,
 				D681D5772AE68D0E005A0BAC /* DevicesItemTableViewCell.swift in Sources */,
 				D646B4562AE902CA00BE78EC /* DevicesViewModel.swift in Sources */,
-				A73E1E982AFCD931008053A9 /* MyChoiceViewController.swift in Sources */,
 				D64547092AEA96FE0077DA04 /* SignInViewController.swift in Sources */,
 				D6F463942AF38CE600814C7D /* AlertLargeView.swift in Sources */,
 				A73E1EA82AFDF6CE008053A9 /* EditFormulaViewController.swift in Sources */,
@@ -1692,7 +1676,7 @@
 				CODE_SIGN_ENTITLEMENTS = Greenovation/Greenovation.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 47BZXPDJKC;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1710,7 +1694,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "id.pak-eco.greenovation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1731,7 +1715,7 @@
 				CODE_SIGN_ENTITLEMENTS = Greenovation/Greenovation.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 47BZXPDJKC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Greenovation/Resources/Info.plist;
@@ -1748,7 +1732,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "id.pak-eco.greenovation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

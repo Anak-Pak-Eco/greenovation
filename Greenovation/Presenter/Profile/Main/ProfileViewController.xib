@@ -18,10 +18,16 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
                 <outlet property="contactUsButton" destination="Mp7-SY-BBv" id="qfE-V9-d3L"/>
+                <outlet property="contactUsLabel" destination="gix-Kj-EXV" id="kAB-K3-04q"/>
                 <outlet property="deleteAccountButton" destination="Izg-a3-Vo1" id="NBL-N2-VJd"/>
+                <outlet property="deleteAccountLabel" destination="aeB-JA-Web" id="AfT-bZ-mzJ"/>
                 <outlet property="emailLabel" destination="oBh-hT-ia0" id="Jp6-2C-p7c"/>
+                <outlet property="helpLabel" destination="0es-uI-K74" id="TSN-3c-sjt"/>
                 <outlet property="nameTextField" destination="Dhm-lq-SNs" id="ftb-OB-23u"/>
+                <outlet property="nameTitleLabel" destination="L6l-bT-Rvp" id="lKs-rg-66U"/>
+                <outlet property="personalInfoLabel" destination="qcY-jZ-4Bk" id="HRG-AC-3CL"/>
                 <outlet property="privacyPolicyButton" destination="pgo-oB-H9a" id="94V-Yv-XXC"/>
+                <outlet property="privacyPolicyLabel" destination="J5Y-xc-JJY" id="yj9-0X-ruw"/>
                 <outlet property="signOutButton" destination="RpE-Oh-hXB" id="Nwe-Zx-Ptx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

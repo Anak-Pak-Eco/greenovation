@@ -19,6 +19,7 @@
                 <outlet property="loadingBar" destination="phE-bR-ed2" id="JL4-b8-jo8"/>
                 <outlet property="plantsTableView" destination="4gD-PA-uUt" id="A5a-nO-EbQ"/>
                 <outlet property="searchTextField" destination="4RN-vQ-UV5" id="Kwv-fa-meB"/>
+                <outlet property="searchTitleLabel" destination="wFb-mT-HmS" id="ceG-tE-FUD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -45,7 +45,7 @@ class FormulaSettingViewController: UIViewController {
         viewModel.errorGetPlants.bind { [unowned self] error in
             if !error.isEmpty {
                 let alertController = UIAlertController(
-                    title: "Login Gagal",
+                    title: "Gagal Mendapatkan Formula",
                     message: error,
                     preferredStyle: .alert
                 )
@@ -117,7 +117,7 @@ class FormulaSettingViewController: UIViewController {
     }
     
     private func setupToolbar() {
-        tabBarController?.title = String(localized: "plant-formula")  
+        tabBarController?.title = String(localized: "formula-setting")
         navigationController?.navigationBar.prefersLargeTitles = true
         tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
         

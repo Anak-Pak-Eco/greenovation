@@ -19,6 +19,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DevicesViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
+                <outlet property="addDeviceButton" destination="ut4-Xz-CWi" id="tB8-gR-kcR"/>
+                <outlet property="emptyDescriptionLabel" destination="Cyi-nC-vBF" id="GrD-TH-7ov"/>
+                <outlet property="emptyTitleLabel" destination="d3r-z4-u1K" id="UFF-yd-Wbp"/>
                 <outlet property="emptyView" destination="oKS-qk-sJ6" id="Ojc-T4-ICI"/>
                 <outlet property="mainTableView" destination="7jk-S1-sAY" id="lB5-qK-oJV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

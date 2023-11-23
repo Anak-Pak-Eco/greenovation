@@ -67,6 +67,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="plantTypeLabel" destination="MvX-Qh-qk8" id="Dtj-ea-5aM"/>
+                <outlet property="plantTypeTitleLabel" destination="I9r-rn-2CQ" id="WXS-wc-OpW"/>
             </connections>
             <point key="canvasLocation" x="229.00763358778624" y="11.971830985915494"/>
         </tableViewCell>

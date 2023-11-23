@@ -51,7 +51,7 @@ class RegisterFormulaViewController: UIViewController, RegisterFormulaDelegate {
         viewModel.errorSaveFormula.bind { [unowned self] error in
             if !error.isEmpty {
                 let alertController = UIAlertController(
-                    title: "Login Gagal",
+                    title: "Gagal Menambah Formula",
                     message: error,
                     preferredStyle: .alert
                 )
@@ -96,7 +96,7 @@ class RegisterFormulaViewController: UIViewController, RegisterFormulaDelegate {
     }
     
     private func setupToolbar() {
-        title = String(localized: "tambah-formula")
+        title = String(localized: "add-formula")
         
         let backButton = UIBarButtonItem(
             image: UIImage(systemName: "chevron.left"),

@@ -12,6 +12,9 @@ class DevicesViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var emptyTitleLabel: UILabel!
+    @IBOutlet weak var emptyDescriptionLabel: UILabel!
+    @IBOutlet weak var addDeviceButton: UIButton!
     private let viewModel = DevicesViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +37,7 @@ class DevicesViewController: UIViewController {
     
     private func setupToolbar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        tabBarController?.title = "Perangkat"
+        tabBarController?.title = String(localized: "devices")
         tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
         
         let profileBarButton = UIBarButtonItem(
@@ -63,6 +66,17 @@ class DevicesViewController: UIViewController {
     }
     
     private func setupUI() {
+        emptyTitleLabel.text = String(localized: "empty-device-title")
+        emptyDescriptionLabel.text = String(localized: "empty-device-description")
+        addDeviceButton.setAttributedTitle(
+            String.getStringAttributed(
+                from: String(localized: "add-device-button-title"),
+                regularTextStyle: UIFont(name: "DMSans-SemiBold", size: 17)!,
+                textColor: .onPrimaryAccent
+            ),
+            for: .normal
+        )
+        
         emptyView.isHidden = false
         mainTableView.register(
             UINib(nibName: "DevicesItemTableViewCell", bundle: nil),
@@ -74,8 +88,7 @@ class DevicesViewController: UIViewController {
     }
     @IBAction func onAddClicked(_ sender: Any) {
         let viewController = PairingInstructionViewController()
-//        let viewController = AddDeviceV2ViewController(serialNumber: "device_001")
-       navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

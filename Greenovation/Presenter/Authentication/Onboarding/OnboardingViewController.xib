@@ -19,6 +19,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
+                <outlet property="onboardingDescriptionLabel" destination="UAw-jF-lAY" id="74b-Hv-5bO"/>
+                <outlet property="onboardingTitleLabel" destination="gN6-9B-Ort" id="eo7-SZ-kgR"/>
                 <outlet property="signInButton" destination="ETk-49-PhI" id="22R-Jv-JWi"/>
                 <outlet property="signUpButton" destination="H1X-TI-1eF" id="yyP-HP-ZKf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

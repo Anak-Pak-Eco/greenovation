@@ -10,9 +10,11 @@ import UIKit
 class TypeOfPlantTableViewCell: UITableViewCell {
 
     @IBOutlet weak var plantTypeLabel: UILabel!
+    @IBOutlet weak var plantTypeTitleLabel: LocalizableLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        plantTypeTitleLabel.text = String(localized: "plant-type")
     }
     
     func setPlantType(_ plantType: String) {

@@ -9,8 +9,9 @@ import UIKit
 
 class BluetoothPairingViewController: UIViewController {
 
+    @IBOutlet weak var chooseBluetoothTitleLabel: UILabel!
     @IBOutlet weak var bluetoothListTableView: UITableView!
-    @IBOutlet weak var searchTextField: UITextField!
+//    @IBOutlet weak var searchTextField: UITextField!
     
     private let viewModel = BluetoothPairingViewModel()
     
@@ -57,7 +58,9 @@ class BluetoothPairingViewController: UIViewController {
     }
     
     private func setupUI() {
-        // MARK: TableView
+        chooseBluetoothTitleLabel.text = String(localized: "choose-bluetooth-title")
+        
+        // MARK: TableViewx
         bluetoothListTableView.register(
             UINib(nibName: "PeripheralItemCell", bundle: nil),
             forCellReuseIdentifier: "PeripheralItemCell"
@@ -67,44 +70,44 @@ class BluetoothPairingViewController: UIViewController {
         bluetoothListTableView.delegate = self
         
         // MARK: Search Bar Field
-        searchTextField.placeholder = String(localized: "cari-bluetooth")
-        searchTextField.layer.borderWidth = 0.3
-        searchTextField.layer.cornerRadius = 10
-        searchTextField.layer.borderColor = UIColor.secondaryAccent.cgColor
-        searchTextField.delegate = self
-        
-        let paddingView = UIView(
-            frame: CGRect(
-                x: 0,
-                y: 0,
-                width: 10,
-                height: searchTextField.frame.size.height
-            )
-        )
-        searchTextField.leftView = paddingView
-        searchTextField.leftViewMode = .always
-        
-        let imageWidth = 24
-        searchTextField.rightViewMode = .always
-        let buttonImage = UIButton(frame: CGRect(
-            x: 2,
-            y: 0,
-            width: 24,
-            height: searchTextField.frame.height)
-        )
-        let image = UIImage(systemName: "magnifyingglass")
-        buttonImage.setImage(image, for: .normal)
-        buttonImage.contentMode = .scaleAspectFit
-        buttonImage.tintColor = UIColor.secondaryAccent
-        buttonImage.addTarget(
-            self,
-            action: #selector(onSearchButtonClicked(_:)), for: .touchUpInside
-        )
-        let containerView = UIView(
-            frame: CGRect(x: 0, y: 0, width: imageWidth + 14 , height: Int(searchTextField.frame.height))
-        )
-        containerView.addSubview(buttonImage)
-        searchTextField.rightView = containerView
+//        searchTextField.placeholder = String(localized: "find-bluetooth")
+//        searchTextField.layer.borderWidth = 0.3
+//        searchTextField.layer.cornerRadius = 10
+//        searchTextField.layer.borderColor = UIColor.secondaryAccent.cgColor
+//        searchTextField.delegate = self
+//        
+//        let paddingView = UIView(
+//            frame: CGRect(
+//                x: 0,
+//                y: 0,
+//                width: 10,
+//                height: searchTextField.frame.size.height
+//            )
+//        )
+//        searchTextField.leftView = paddingView
+//        searchTextField.leftViewMode = .always
+//        
+//        let imageWidth = 24
+//        searchTextField.rightViewMode = .always
+//        let buttonImage = UIButton(frame: CGRect(
+//            x: 2,
+//            y: 0,
+//            width: 24,
+//            height: searchTextField.frame.height)
+//        )
+//        let image = UIImage(systemName: "magnifyingglass")
+//        buttonImage.setImage(image, for: .normal)
+//        buttonImage.contentMode = .scaleAspectFit
+//        buttonImage.tintColor = UIColor.secondaryAccent
+//        buttonImage.addTarget(
+//            self,
+//            action: #selector(onSearchButtonClicked(_:)), for: .touchUpInside
+//        )
+//        let containerView = UIView(
+//            frame: CGRect(x: 0, y: 0, width: imageWidth + 14 , height: Int(searchTextField.frame.height))
+//        )
+//        containerView.addSubview(buttonImage)
+//        searchTextField.rightView = containerView
     }
     
     @objc private func onSearchButtonClicked(_ sender: Any) {

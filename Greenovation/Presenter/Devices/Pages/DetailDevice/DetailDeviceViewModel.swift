@@ -32,14 +32,14 @@ final class DetailDeviceViewModel {
                             Alert(
                                 type: .ppm,
                                 title: String.getStringAttributed(
-                                    from: "Nilai PPM rendah",
-                                    boldStrings: ["Nilai PPM rendah"],
+                                    from: String(localized: "low-ppm-alert-title"),
+                                    boldStrings: [String(localized: "low-ppm-alert-title")],
                                     regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!,
                                     boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 12)!
                                 ),
                                 message: String.getStringAttributed(
-                                    from: "Tambahkan larutan nutrisi A dan B sebanyak \(valueToAdd)ml untuk menjaga keseimbangan nutrisi",
-                                    boldStrings: ["\(valueToAdd)ml"],
+                                    from: String(localized: "low-ppm-description \(valueToAdd.clean)"),
+                                    boldStrings: ["\(valueToAdd.clean)ml"],
                                     regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!,
                                     boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 12)!
                                 )
@@ -50,13 +50,13 @@ final class DetailDeviceViewModel {
                             Alert(
                                 type: .ppm,
                                 title: String.getStringAttributed(
-                                    from: "Nilai PPM tinggi",
-                                    boldStrings: ["Nilai PPM tinggi"],
+                                    from: String(localized: "high-ppm-alert-title"),
+                                    boldStrings: [String(localized: "high-ppm-alert-title")],
                                     regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!,
                                     boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 12)!
                                 ),
                                 message: String.getStringAttributed(
-                                    from: "Tambahkan air bersih sampai keseimbangan nutrisi tercapai kembali.",
+                                    from: String(localized: "high-ppm-alert-description"),
                                     regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!,
                                     boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 12)!
                                 )
@@ -70,14 +70,14 @@ final class DetailDeviceViewModel {
                             Alert(
                                 type: .ph,
                                 title: String.getStringAttributed(
-                                    from: "Nilai pH rendah",
-                                    boldStrings: ["Nilai pH rendah"],
+                                    from: String(localized: "low-ph-alert-title"),
+                                    boldStrings: [String(localized: "low-ph-alert-title")],
                                     regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!,
                                     boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 12)!
                                 ),
                                 message: String.getStringAttributed(
-                                    from: "Tambahkan larutan ph UP sebanyak \(String.format(valueToAdd, format: "%.2f")) ml untuk menjaga keseimbangan pH larutan hidroponik.",
-                                    boldStrings: ["rendah"],
+                                    from: String(localized: "low-ph-alert-description \(valueToAdd.clean)"),
+                                    boldStrings: ["pH", "UP", "\(valueToAdd.clean)ml"],
                                     regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!,
                                     boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 12)!
                                 )
@@ -89,14 +89,14 @@ final class DetailDeviceViewModel {
                             Alert(
                                 type: .ph,
                                 title: String.getStringAttributed(
-                                    from: "Nilai pH tinggi",
-                                    boldStrings: ["Nilai pH tinggi"],
+                                    from: String(localized: "high-ph-alert-title"),
+                                    boldStrings: [String(localized: "high-ph-alert-title")],
                                     regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!,
                                     boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 12)!
                                 ),
                                 message: String.getStringAttributed(
-                                    from: "Tambahkan larutan ph DOWN sebanyak \(valueToAdd) ml untuk menjaga keseimbangan pH larutan hidroponik",
-                                    boldStrings: ["tinggi"],
+                                    from: String(localized: "high-ph-alert-description \(valueToAdd.clean)"),
+                                    boldStrings: ["\(valueToAdd.clean)ml", "pH", "UP"],
                                     regularTextStyle: UIFont(name: "DMSans-Regular", size: 12)!,
                                     boldTextStyle: UIFont(name: "DMSans-SemiBold", size: 12)!
                                 )

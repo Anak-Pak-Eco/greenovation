@@ -155,6 +155,7 @@ Kepekatan Nutrisi: 200-400 &amp; Tingkat pH: 5,5-6,5</string>
                 <outlet property="minPhTextField" destination="PtQ-dh-6CU" id="fQc-Kg-7fe"/>
                 <outlet property="minPpmTextField" destination="uF7-AB-2NV" id="sR3-tv-unN"/>
                 <outlet property="recommendationLabel" destination="jHz-xh-uuZ" id="qOl-3w-O7I"/>
+                <outlet property="titleLabel" destination="Wv9-wJ-aNv" id="ZAY-bq-1lC"/>
             </connections>
             <point key="canvasLocation" x="324.4274809160305" y="50.352112676056343"/>
         </tableViewCell>

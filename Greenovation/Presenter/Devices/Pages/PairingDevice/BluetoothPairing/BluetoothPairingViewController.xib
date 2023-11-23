@@ -17,7 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BluetoothPairingViewController" customModule="Greenovation" customModuleProvider="target">
             <connections>
                 <outlet property="bluetoothListTableView" destination="046-jM-iWT" id="Ini-Rt-Wjt"/>
-                <outlet property="searchTextField" destination="9Qh-QD-s8e" id="Tqm-yk-TkO"/>
+                <outlet property="chooseBluetoothTitleLabel" destination="1EE-1a-92N" id="ncn-yy-qHo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,17 +39,8 @@
                     <color key="textColor" name="on primary-container"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cari Bluetooth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Qh-QD-s8e">
-                    <rect key="frame" x="16" y="230.66666666666666" width="361" height="44.999999999999972"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="D5o-0v-v81"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="046-jM-iWT">
-                    <rect key="frame" x="16" y="290.66666666666669" width="361" height="512.33333333333326"/>
+                    <rect key="frame" x="16" y="230.66666666666669" width="361" height="572.33333333333326"/>
                     <color key="backgroundColor" name="surface"/>
                     <color key="separatorColor" name="surface"/>
                     <color key="sectionIndexBackgroundColor" name="surface"/>
@@ -58,15 +49,12 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Qh-QD-s8e" secondAttribute="trailing" constant="16" id="0zN-uP-Mcz"/>
                 <constraint firstAttribute="trailing" secondItem="1EE-1a-92N" secondAttribute="trailing" constant="56" id="8xQ-Gx-HJT"/>
                 <constraint firstItem="1EE-1a-92N" firstAttribute="top" secondItem="bY2-ei-mVa" secondAttribute="bottom" constant="10" id="CeZ-KY-DjT"/>
+                <constraint firstItem="046-jM-iWT" firstAttribute="top" secondItem="1EE-1a-92N" secondAttribute="bottom" constant="15" id="Ejf-dW-F9m"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="046-jM-iWT" secondAttribute="trailing" constant="16" id="Jmt-gY-oSc"/>
-                <constraint firstItem="9Qh-QD-s8e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="QVs-uN-p85"/>
-                <constraint firstItem="9Qh-QD-s8e" firstAttribute="top" secondItem="1EE-1a-92N" secondAttribute="bottom" constant="15" id="TWu-Sk-zAh"/>
                 <constraint firstItem="bY2-ei-mVa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="hnY-hH-lmf"/>
                 <constraint firstItem="046-jM-iWT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jWv-LL-pb4"/>
-                <constraint firstItem="046-jM-iWT" firstAttribute="top" secondItem="9Qh-QD-s8e" secondAttribute="bottom" constant="15" id="oje-xi-vqS"/>
                 <constraint firstItem="bY2-ei-mVa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qoQ-mA-6RB"/>
                 <constraint firstItem="1EE-1a-92N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="56" id="ujr-S6-Fvo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="046-jM-iWT" secondAttribute="bottom" constant="15" id="wiK-k3-xoh"/>

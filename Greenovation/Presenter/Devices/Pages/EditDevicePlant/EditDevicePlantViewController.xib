@@ -100,13 +100,13 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BV-fe-Un5" userLabel="White Background">
-                    <rect key="frame" x="16" y="253.33333333333334" width="361" height="123.66666666666666"/>
+                    <rect key="frame" x="16" y="253.33333333333337" width="361" height="148"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqS-9m-Afu" userLabel="Secondary Background">
-                            <rect key="frame" x="0.0" y="0.0" width="361" height="43"/>
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="67.333333333333329"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formula Tanaman Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izZ-JB-5Px" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                                    <rect key="frame" x="14" y="13.999999999999973" width="221.66666666666666" height="19.666666666666671"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formula Tanaman Fase Anakan jsqok okok ok ok o o k " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izZ-JB-5Px" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                    <rect key="frame" x="14" y="13.999999999999975" width="333" height="39.333333333333343"/>
                                     <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -118,12 +118,13 @@
                             <color key="backgroundColor" name="secondary-container"/>
                             <constraints>
                                 <constraint firstItem="izZ-JB-5Px" firstAttribute="leading" secondItem="iqS-9m-Afu" secondAttribute="leading" constant="14" id="Bdd-Gv-s93"/>
-                                <constraint firstAttribute="height" constant="43" id="UfK-pD-Rp0"/>
                                 <constraint firstItem="izZ-JB-5Px" firstAttribute="top" secondItem="iqS-9m-Afu" secondAttribute="top" constant="14" id="bzU-o9-Pqx"/>
+                                <constraint firstAttribute="trailing" secondItem="izZ-JB-5Px" secondAttribute="trailing" constant="14" id="dHu-Fr-xBY"/>
+                                <constraint firstAttribute="bottom" secondItem="izZ-JB-5Px" secondAttribute="bottom" constant="14" id="toh-rN-5en"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNP-8s-IHd">
-                            <rect key="frame" x="16" y="52.999999999999979" width="329" height="22.333333333333336"/>
+                            <rect key="frame" x="16" y="77.333333333333343" width="329" height="22.333333333333329"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-QA-ZdK" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="244" height="22.333333333333332"/>
@@ -143,7 +144,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P29-5p-ded">
-                            <rect key="frame" x="16" y="85.333333333333343" width="329" height="22.333333333333329"/>
+                            <rect key="frame" x="16" y="109.66666666666666" width="329" height="22.333333333333343"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hB-mB-Lwn" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="244" height="22.333333333333332"/>
@@ -177,12 +178,6 @@
                         <constraint firstItem="YNP-8s-IHd" firstAttribute="top" secondItem="iqS-9m-Afu" secondAttribute="bottom" constant="10" id="yi8-vK-TCi"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Luo-fN-1c6" userLabel="PlantTableView">
-                    <rect key="frame" x="16" y="151.66666666666669" width="361" height="590.33333333333326"/>
-                    <color key="backgroundColor" name="surface"/>
-                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jk-0c-C26">
                     <rect key="frame" x="16" y="758" width="361" height="40"/>
                     <constraints>
@@ -203,6 +198,12 @@
                         <action selector="saveButtonClicked:" destination="-1" eventType="touchUpInside" id="g7l-XQ-FVn"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Luo-fN-1c6" userLabel="PlantTableView">
+                    <rect key="frame" x="16" y="151.66666666666669" width="361" height="590.33333333333326"/>
+                    <color key="backgroundColor" name="surface"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="surface"/>

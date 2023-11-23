@@ -29,7 +29,7 @@
                 <outlet property="growthStepButton" destination="We5-g7-R7z" id="WDv-NY-N8a"/>
                 <outlet property="plantTableView" destination="d0O-aF-bMC" id="Qpq-I5-TMc"/>
                 <outlet property="plantTextField" destination="yfb-Bo-CCs" id="0Mx-Gv-Fvw"/>
-                <outlet property="saveButton" destination="LNH-B7-4nu" id="nws-1w-RUe"/>
+                <outlet property="saveButton" destination="LNH-B7-4nu" id="Xn0-cq-zwO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -97,13 +97,13 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Yq-9g-2aO" userLabel="White Background">
-                    <rect key="frame" x="16" y="330" width="361" height="123.66666666666669"/>
+                    <rect key="frame" x="16" y="330" width="361" height="128.33333333333337"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="im9-la-gAh" userLabel="Secondary Background">
-                            <rect key="frame" x="0.0" y="0.0" width="361" height="43"/>
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="47.666666666666664"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formula Tanaman Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yk-15-Yb7" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
-                                    <rect key="frame" x="14" y="14.000000000000002" width="221.66666666666666" height="19.666666666666671"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formula Tanaman Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yk-15-Yb7" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                                    <rect key="frame" x="14" y="14.000000000000002" width="333" height="19.666666666666671"/>
                                     <fontDescription key="fontDescription" name="DMSans-SemiBold" family="DM Sans" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -114,13 +114,14 @@
                             </subviews>
                             <color key="backgroundColor" name="secondary-container"/>
                             <constraints>
-                                <constraint firstItem="4yk-15-Yb7" firstAttribute="leading" secondItem="im9-la-gAh" secondAttribute="leading" constant="14" id="HE9-NF-fWJ"/>
-                                <constraint firstAttribute="height" constant="43" id="ivj-yC-ohc"/>
+                                <constraint firstAttribute="bottom" secondItem="4yk-15-Yb7" secondAttribute="bottom" constant="14" id="G0L-qP-v3w"/>
+                                <constraint firstItem="4yk-15-Yb7" firstAttribute="leading" secondItem="im9-la-gAh" secondAttribute="leading" constant="14" id="dJp-QC-oSA"/>
                                 <constraint firstItem="4yk-15-Yb7" firstAttribute="top" secondItem="im9-la-gAh" secondAttribute="top" constant="14" id="tDv-UO-BsP"/>
+                                <constraint firstAttribute="trailing" secondItem="4yk-15-Yb7" secondAttribute="trailing" constant="14" id="zIM-c6-RNU"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZh-Az-cTF">
-                            <rect key="frame" x="16" y="53.000000000000007" width="329" height="22.333333333333336"/>
+                            <rect key="frame" x="16" y="57.666666666666693" width="329" height="22.333333333333336"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLX-RO-JRR" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="244" height="22.333333333333332"/>
@@ -140,7 +141,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOl-6e-69X">
-                            <rect key="frame" x="16" y="85.333333333333314" width="329" height="22.333333333333329"/>
+                            <rect key="frame" x="16" y="90" width="329" height="22.333333333333329"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Kepekatan Nutrisi (ppm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S25-gK-e1r" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="244" height="22.333333333333332"/>
@@ -182,7 +183,7 @@
                         <constraint firstAttribute="width" constant="19" id="cw5-TL-nUH"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-gp-os3" customClass="LocalizableLabel" customModule="Greenovation" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fase Anakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-gp-os3">
                     <rect key="frame" x="29.999999999999993" y="280.33333333333331" width="98.333333333333314" height="22.333333333333314"/>
                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                     <color key="textColor" name="surface-container-highest"/>
